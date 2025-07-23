@@ -1,0 +1,80 @@
+<Defs>
+    <HediffDef ParentName="AddedBodyPartBase">
+        <defName>BionicArm</defName>
+        <label>bionic arm</label>
+        <labelNoun>a bionic arm</labelNoun>
+        <description>An installed bionic arm. Silenced mini-servos give great strength, while the biogel nerve-link gives exquisite control. A lattice-dust healing system allows it to recover from damage. It is better than a biological arm in almost every way.</description>
+        <descriptionHyperlinks>
+            <ThingDef>BionicArm</ThingDef>
+        </descriptionHyperlinks>
+        <comps>
+            <li Class="HediffCompProperties_VerbGiver">
+                <tools>
+                    <li>
+                        <label>fist</label>
+                        <capacities>
+                            <li>Blunt</li>
+                        </capacities>
+                        <power>12</power>
+                        <cooldownTime>2</cooldownTime>
+                        <soundMeleeHit>MeleeHit_BionicPunch</soundMeleeHit>
+                        <soundMeleeMiss>MeleeMiss_BionicPunch</soundMeleeMiss>
+                    </li>
+                </tools>
+            </li>
+        </comps>
+        <spawnThingOnRemoved>BionicArm</spawnThingOnRemoved>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.25</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+    </HediffDef>
+    <ThingDef ParentName="BodyPartBionicBase">
+        <defName>BionicArm</defName>
+        <label>bionic arm</label>
+        <description>An advanced artificial arm. Silenced mini-servos give great strength, while the biogel nerve-link gives exquisite control. A lattice-dust healing system allows it to recover from damage. It is better than a biological arm in almost every way.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>InstallBionicArm</RecipeDef>
+        </descriptionHyperlinks>
+        <costList>
+            <Plasteel>15</Plasteel>
+            <ComponentSpacer>4</ComponentSpacer>
+        </costList>
+        <thingSetMakerTags>
+            <li>RewardStandardMidFreq</li>
+        </thingSetMakerTags>
+        <statBases>
+            <Mass>5</Mass>
+        </statBases>
+    </ThingDef>
+    <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+        <defName>InstallBionicArm</defName>
+        <label>install bionic arm</label>
+        <description>Install a bionic arm.</description>
+        <descriptionHyperlinks>
+            <ThingDef>BionicArm</ThingDef>
+            <HediffDef>BionicArm</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Installing bionic arm.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>BionicArm</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>BionicArm</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Shoulder</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>BionicArm</addsHediff>
+    </RecipeDef>
+</Defs>

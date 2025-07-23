@@ -1,0 +1,62 @@
+<Defs>
+    <!--  Bionic spine  -->
+    <HediffDef ParentName="AddedBodyPartBase">
+        <defName>BionicSpine</defName>
+        <label>bionic spine</label>
+        <labelNoun>a bionic spine</labelNoun>
+        <description>An installed bionic spine. A biogel nerve bundle runs down an articulated plasteel core, surrounded by a lattice-dust healing system. It matches the performance of a biological spine.</description>
+        <descriptionHyperlinks>
+            <ThingDef>BionicSpine</ThingDef>
+        </descriptionHyperlinks>
+        <spawnThingOnRemoved>BionicSpine</spawnThingOnRemoved>
+        <addedPartProps>
+            <solid>true</solid>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+    </HediffDef>
+    <ThingDef ParentName="BodyPartBionicBase">
+        <defName>BionicSpine</defName>
+        <label>bionic spine</label>
+        <description>An advanced artificial spine. A biogel nerve bundle runs down an articulated plasteel core, surrounded by a lattice-dust healing system. It matches the performance of a biological spine.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>InstallBionicSpine</RecipeDef>
+        </descriptionHyperlinks>
+        <costList>
+            <Plasteel>15</Plasteel>
+            <ComponentSpacer>4</ComponentSpacer>
+        </costList>
+        <statBases>
+            <Mass>2</Mass>
+        </statBases>
+    </ThingDef>
+    <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+        <defName>InstallBionicSpine</defName>
+        <label>install bionic spine</label>
+        <description>Install a bionic spine.</description>
+        <descriptionHyperlinks>
+            <ThingDef>BionicSpine</ThingDef>
+            <HediffDef>BionicSpine</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Installing bionic spine.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>BionicSpine</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>BionicSpine</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Spine</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>BionicSpine</addsHediff>
+    </RecipeDef>
+
+</Defs>
