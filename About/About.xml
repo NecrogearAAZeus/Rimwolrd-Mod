@@ -4,7 +4,7 @@
     <!-- This is the internal identifier for your mod. -->
     <!-- It is recommended that you make it unique to as to avoid potential collisions with other authors; -->
     <!--   if Rimworld detects multiple mods with the same packageId then it will refuse to load all of them. -->
-    <packageId>BAMBI0220.TestArmorMod</packageId>
+    <packageId>BAMBI0220.IMPLANTPLUS</packageId>
 
     <!-- This is both the displayed name of your mod as well as the name used for patch targeting. -->
     <name>IMPLANT PLUS</name>
