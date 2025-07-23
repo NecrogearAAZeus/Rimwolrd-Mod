@@ -4,22 +4,26 @@
     <!-- This is the internal identifier for your mod. -->
     <!-- It is recommended that you make it unique to as to avoid potential collisions with other authors; -->
     <!--   if Rimworld detects multiple mods with the same packageId then it will refuse to load all of them. -->
-    <packageId>DotaIsGod.TestArmorMod</packageId>
+    <packageId>BAMBI0220.TestArmorMod</packageId>
 
     <!-- This is both the displayed name of your mod as well as the name used for patch targeting. -->
-    <name>TestArmorMod</name>
+    <name>IMPLANT PLUS</name>
 
     <!-- Your name goes here. -->
-    <author>DotaIsGod</author>
+    <author>BAMBI0220</author>
 
     <!-- These are the RimWorld game versions that your mod supports. -->
     <!-- It is recommended that you only list versions that you have explicitly tested to ensure they work, -->
     <!-- as even basic XML options can change between major versions of the game. -->
     <supportedVersions>
-        <li>1.5</li>
+        <li>version 0.0.0001</li>
     </supportedVersions>
 
     <!-- This is the description of your mod shown in both the vanilla mod manager as well as modded managers. -->
-    <description>This is Test Mod</description>
+    <description>IMPLANT PLUS &#10; &#10;  
+    This mod allows you to enhance your colonists' bodies in more diverse and strategic ways.
+    It adds not only standard performance-boosting implants, 
+    but also new ones with unique abilities that offer additional options in 
+    combat, productivity, and survival.</description>
 
 </ModMetaData>
