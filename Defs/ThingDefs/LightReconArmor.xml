@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Name = ApparelArmorReconBase -->
+<Defs>
+    <!-- 경량 강화갑옷 -->
+    <ThingDef ParentName="ArmorMachineableBase">
+        <defName>Apparel_LightReconArmor</defName>
+        <label>Light ReconarmorCustom</label>
+        <description>Test Text</description>
+        <graphicData>
+            <texPath>Things/Apparel/LightReconArmor</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <generateCommonality>2</generateCommonality>
+        <tradeTags>
+            <li>HiTechArmor</li>
+            <li>Armor</li>
+        </tradeTags>
+        <apparel>
+            <tags>
+                <li>SpacerMilitary</li>
+            </tags>
+            <bodyPartGroups>
+                <li>Torso</li>
+                <li>Neck</li>
+                <li>Shoulders</li>
+                <li>Arms</li>
+                <li>Legs</li>
+            </bodyPartGroups>
+            <wornGraphicPath>Things/Apparel/LightReconArmor</wornGraphicPath>
+        </apparel>
+        <statBases>
+            <WorkToMake>45000</WorkToMake>
+            <MaxHitPoints>280</MaxHitPoints>
+            <Mass>9</Mass>
+            <ArmorRating_Sharp>0.82</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.35</ArmorRating_Blunt>
+            <ArmorRating_Heat>0.41</ArmorRating_Heat>
+            <Insulation_Cold>26</Insulation_Cold>
+            <Insulation_Heat>6</Insulation_Heat>
+            <EquipDelay>15</EquipDelay>
+        </statBases>
+        <thingCategories>
+            <li>ApparelArmor</li>
+        </thingCategories>
+        <costList>
+            <ComponentSpacer>3</ComponentSpacer>
+            <Plasteel>80</Plasteel>
+            <Uranium>10</Uranium>
+        </costList>
+    </ThingDef>
+    <!-- 경량 강화갑옷 -->
+</Defs>

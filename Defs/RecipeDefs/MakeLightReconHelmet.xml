@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <RecipeDef>
+        <defName>Make_LightReconHelmet</defName>
+        <label>make light recon helmet</label>
+        <displayPriority>114</displayPriority>
+        <jobString>Making light recon helmet.</jobString>
+        <workAmount>15750</workAmount>
+        <requiredGiverWorkType>Smithing</requiredGiverWorkType>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>ConstructMetal</effectWorking>
+        <soundWorking>Recipe_Smith</soundWorking>
+        <recipeUsers>
+            <li>FabricationBench</li>
+        </recipeUsers>
+        <researchPrerequisite>ReconArmor</researchPrerequisite>
+        <skillRequirements>
+            <Crafting>6</Crafting>
+        </skillRequirements>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Plasteel</li>
+                    </thingDefs>
+                </filter>
+                <count>30</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentSpacer</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <products>
+            <li>
+                <thingDef>Apparel_LightReconHelmet</thingDef>
+                <count>1</count>
+            </li>
+        </products>
+    </RecipeDef>
+</Defs>
