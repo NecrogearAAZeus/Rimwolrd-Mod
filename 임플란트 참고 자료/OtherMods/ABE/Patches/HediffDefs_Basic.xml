@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/HediffDef[defName="WoodenFoot"]/addedPartProps/partEfficiency</xpath>
+		<value>
+			<partEfficiency>0.6</partEfficiency>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/HediffDef[defName="Denture"]/addedPartProps/partEfficiency</xpath>
+		<value>
+			<partEfficiency>0.6</partEfficiency>
+		</value>
+	</Operation>
+
+</Patch>

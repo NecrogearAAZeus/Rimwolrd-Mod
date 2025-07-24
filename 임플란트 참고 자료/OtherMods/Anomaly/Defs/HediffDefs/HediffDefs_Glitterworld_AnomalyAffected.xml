@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+<!-- IMPORTANT DEV NOTES -->
+<!-- Mostly a note from Tarojun to future Tarojun who will have memory of a goldfish -->
+<!-- aptitudes tag is annoyingly locked behind Anomaly DLC -->
+<!-- Lazy hotfix because too annoyed and frustrated by that fact, so that is why this is here -->
+<!-- If changing anything here, make sure to check that folder too -->
+
+	<!-- Auxiliary AI (construction) -->
+
+	<HediffDef ParentName="addedPartGlitteryImplants">
+		<defName>ConstructorCore</defName>
+		<label>auxiliary AI: construction</label>
+		<description>An installed auxiliary AI that aids with construction.</description>
+		<descriptionHyperlinks><ThingDef>EPIA_AuxiliaryAI_Worker</ThingDef></descriptionHyperlinks>
+		<spawnThingOnRemoved>EPIA_AuxiliaryAI_Worker</spawnThingOnRemoved>
+		<aptitudes>
+			<Construction>3</Construction>
+		</aptitudes>
+		<stages>
+			<li>
+				<statOffsets>
+					<ConstructionSpeed>0.10</ConstructionSpeed>
+					<ConstructSuccessChance>0.15</ConstructSuccessChance>
+					<FixBrokenDownBuildingSuccessChance>0.15</FixBrokenDownBuildingSuccessChance>
+					<SmoothingSpeed>0.10</SmoothingSpeed>
+				</statOffsets>
+			</li>
+		</stages>
+		<tags>
+			<li>AuxiliaryAI_Worker</li>
+		</tags>
+	</HediffDef>
+
+	<!-- Auxiliary AI (artisan) -->
+
+	<HediffDef ParentName="addedPartGlitteryImplants">
+		<defName>EPIA_AuxiliaryAI_Artisan</defName>
+		<label>auxiliary AI: artisan</label>
+		<description>An installed auxiliary AI that aids with general and skilled production labor such as stone blocks, making chemfuel at a refinery, burning items, tailoring clothes, creating art, smithing armor and weapons or smelting slag.</description>
+		<descriptionHyperlinks><ThingDef>EPIA_AuxiliaryAI_Worker</ThingDef></descriptionHyperlinks>
+		<spawnThingOnRemoved>EPIA_AuxiliaryAI_Worker</spawnThingOnRemoved>
+		<aptitudes>
+			<Crafting>3</Crafting>
+			<Artistic>3</Artistic>
+		</aptitudes>
+		<stages>
+			<li>
+				<statOffsets>
+					<GeneralLaborSpeed>0.10</GeneralLaborSpeed>
+					<SmeltingSpeed>0.20</SmeltingSpeed>
+					<ButcheryMechanoidSpeed>0.10</ButcheryMechanoidSpeed>
+					<ButcheryMechanoidEfficiency>0.10</ButcheryMechanoidEfficiency>
+				</statOffsets>
+			</li>
+		</stages>
+		<tags>
+			<li>AuxiliaryAI_Worker</li>
+		</tags>
+	</HediffDef>
+
+	<!-- Auxiliary AI (medical) -->
+
+	<HediffDef ParentName="addedPartGlitteryImplants">
+		<defName>DoctorCore</defName>
+		<label>auxiliary AI: medical</label>
+		<description>An installed auxiliary AI that aids with medical procedures.</description>
+		<descriptionHyperlinks><ThingDef>EPIA_AuxiliaryAI_Worker</ThingDef></descriptionHyperlinks>
+		<spawnThingOnRemoved>EPIA_AuxiliaryAI_Worker</spawnThingOnRemoved>
+		<aptitudes>
+			<Medicine>3</Medicine>
+		</aptitudes>
+		<stages>
+			<li>
+				<statOffsets>
+					<MedicalTendSpeed>0.10</MedicalTendSpeed>
+					<MedicalOperationSpeed>0.10</MedicalOperationSpeed>
+					<MedicalTendQuality>0.10</MedicalTendQuality>
+					<MedicalSurgerySuccessChance>0.10</MedicalSurgerySuccessChance>
+				</statOffsets>
+			</li>
+		</stages>
+		<tags>
+			<li>AuxiliaryAI_Worker</li>
+		</tags>
+	</HediffDef>
+
+	<!-- Auxiliary AI (mining) -->
+
+	<HediffDef ParentName="addedPartGlitteryImplants">
+		<defName>MinerCore</defName>
+		<label>auxiliary AI: mining</label>
+		<description>An installed auxiliary AI that aids with mining.</description>
+		<descriptionHyperlinks><ThingDef>EPIA_AuxiliaryAI_Worker</ThingDef></descriptionHyperlinks>
+		<spawnThingOnRemoved>EPIA_AuxiliaryAI_Worker</spawnThingOnRemoved>
+		<aptitudes>
+			<Mining>3</Mining>
+		</aptitudes>
+		<stages>
+			<li>
+				<statOffsets>
+					<MiningSpeed>0.10</MiningSpeed>
+					<DeepDrillingSpeed>0.10</DeepDrillingSpeed>
+					<MiningYield>0.10</MiningYield>
+					<SmoothingSpeed>0.10</SmoothingSpeed>
+				</statOffsets>
+			</li>
+		</stages>
+		<tags>
+			<li>AuxiliaryAI_Worker</li>
+		</tags>
+	</HediffDef>
+
+	<!-- Auxiliary AI (agricultural) -->
+
+	<HediffDef ParentName="addedPartGlitteryImplants">
+		<defName>FarmerCore</defName>
+		<label>auxiliary AI: agricultural</label>
+		<description>An installed auxiliary AI that aids with farming.</description>
+		<descriptionHyperlinks><ThingDef>EPIA_AuxiliaryAI_Worker</ThingDef></descriptionHyperlinks>
+		<spawnThingOnRemoved>EPIA_AuxiliaryAI_Worker</spawnThingOnRemoved>
+		<aptitudes>
+			<Plants>3</Plants>
+		</aptitudes>
+		<stages>
+			<li>
+				<statOffsets>
+					<PlantWorkSpeed>0.10</PlantWorkSpeed>
+					<PlantHarvestYield>0.10</PlantHarvestYield>
+					<DrugHarvestYield>0.10</DrugHarvestYield>
+					<PruningSpeed MayRequire="Ludeon.RimWorld.Ideology">0.10</PruningSpeed>
+				</statOffsets>
+			</li>
+		</stages>
+		<tags>
+			<li>AuxiliaryAI_Worker</li>
+		</tags>
+	</HediffDef>
+
+	<!-- Auxiliary AI (diplomatic) -->
+
+	<HediffDef ParentName="addedPartGlitteryImplants">
+		<defName>DiplomatCore</defName>
+		<label>auxiliary AI: diplomatic</label>
+		<description>An installed auxiliary AI that aids with diplomatic conversations. Chances to fall into a social fight is significantly reduced.</description>
+		<descriptionHyperlinks><ThingDef>EPIA_AuxiliaryAI_Worker</ThingDef></descriptionHyperlinks>
+		<spawnThingOnRemoved>EPIA_AuxiliaryAI_Worker</spawnThingOnRemoved>
+		<aptitudes>
+			<Social>3</Social>
+		</aptitudes>
+		<stages>
+			<li>
+				<socialFightChanceFactor>0.5</socialFightChanceFactor>
+				<statOffsets>
+					<NegotiationAbility>0.10</NegotiationAbility>
+					<SocialImpact>0.10</SocialImpact>
+					<ArrestSuccessChance>0.10</ArrestSuccessChance>
+					<SuppressionPower MayRequire="Ludeon.RimWorld.Ideology">0.10</SuppressionPower>
+					<ConversionPower MayRequire="Ludeon.RimWorld.Ideology">0.10</ConversionPower>
+				</statOffsets>
+			</li>
+		</stages>
+		<tags>
+			<li>AuxiliaryAI_Worker</li>
+		</tags>
+	</HediffDef>
+
+	<!-- Auxiliary AI (sharpshooter) -->
+
+	<HediffDef ParentName="addedPartGlitteryImplants">
+		<defName>EPIA_AuxiliaryAI_Sharpshooter</defName>
+		<label>auxiliary AI: sharpshooter</label>
+		<description>An installed auxiliary AI that aids combat, specializing in accuracy and long distance fire. Cannot be installed with other auxiliary AI.</description>
+		<descriptionHyperlinks><ThingDef>EPIA_AuxiliaryAI_Combat</ThingDef></descriptionHyperlinks>
+		<spawnThingOnRemoved>EPIA_AuxiliaryAI_Combat</spawnThingOnRemoved>
+		<aptitudes>
+			<Shooting>2</Shooting>
+		</aptitudes>
+		<stages>
+			<li>
+				<statFactors>
+					<ShootingAccuracyFactor_Long>1.25</ShootingAccuracyFactor_Long>
+					<ShootingAccuracyFactor_Medium>1.25</ShootingAccuracyFactor_Medium>
+				</statFactors>
+				<statOffsets>
+					<ShootingAccuracyPawn>+10</ShootingAccuracyPawn>
+					<AimingDelayFactor>-0.10</AimingDelayFactor>
+					<RangedCooldownFactor>-0.10</RangedCooldownFactor>
+					<MeleeHitChance>-3</MeleeHitChance>
+					<MortarMissRadiusFactor>-0.3</MortarMissRadiusFactor>
+				</statOffsets>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_ReactOnDamage">
+				<damageDefIncoming>EMP</damageDefIncoming>
+				<createHediff>EPIA_EMP_Disorientation_Sharpshooter</createHediff>
+			</li>
+		</comps>
+		<tags>
+			<li>AuxiliaryAI_Combat</li>
+		</tags>
+	</HediffDef>
+
+	<!-- Auxiliary AI (commando) -->
+
+	<HediffDef ParentName="addedPartGlitteryImplants">
+		<defName>EPIA_AuxiliaryAI_Commando</defName>
+		<label>auxiliary AI: commando</label>
+		<description>An installed auxiliary AI that aids combat, supporting the user in coping with the pressures of combat. Less affected by EMP compared with other combat AI. Cannot be installed with other auxiliary AI.</description>
+		<descriptionHyperlinks><ThingDef>EPIA_AuxiliaryAI_Combat</ThingDef></descriptionHyperlinks>
+		<spawnThingOnRemoved>EPIA_AuxiliaryAI_Combat</spawnThingOnRemoved>
+		<aptitudes>
+			<Melee>1</Melee>
+			<Shooting>1</Shooting>
+		</aptitudes>
+		<stages>
+			<li>
+				<painFactor>0.85</painFactor>
+				<statFactors>
+					<MeleeCooldownFactor>0.8</MeleeCooldownFactor>
+				</statFactors>
+				<statOffsets>
+					<ShootingAccuracyPawn>+5</ShootingAccuracyPawn>
+					<AimingDelayFactor>-0.15</AimingDelayFactor>
+					<RangedCooldownFactor>-0.15</RangedCooldownFactor>
+					<MentalBreakThreshold>-0.12</MentalBreakThreshold>
+				</statOffsets>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_ReactOnDamage">
+				<damageDefIncoming>EMP</damageDefIncoming>
+				<createHediff>EPIA_EMP_Disorientation_Commando</createHediff>
+			</li>
+		</comps>
+		<tags>
+			<li>AuxiliaryAI_Combat</li>
+		</tags>
+	</HediffDef>
+
+	<!-- Auxiliary AI (brawler) -->
+
+	<HediffDef ParentName="addedPartGlitteryImplants">
+		<defName>EPIA_AuxiliaryAI_Brawler</defName>
+		<label>auxiliary AI: brawler</label>
+		<description>An installed auxiliary AI that aids close quarter combat, supporting the user with life or death decisions. Cannot be installed with other auxiliary AI.</description>
+		<descriptionHyperlinks><ThingDef>EPIA_AuxiliaryAI_Combat</ThingDef></descriptionHyperlinks>
+		<spawnThingOnRemoved>EPIA_AuxiliaryAI_Combat</spawnThingOnRemoved>
+		<aptitudes>
+			<Melee>2</Melee>
+		</aptitudes>
+		<stages>
+			<li>
+				<painFactor>0.85</painFactor>
+				<statFactors>
+					<MeleeCooldownFactor>0.9</MeleeCooldownFactor>
+					<MeleeDamageFactor>1.1</MeleeDamageFactor>
+					<StaggerDurationFactor>0.9</StaggerDurationFactor>
+				</statFactors>
+				<statOffsets>
+					<ShootingAccuracyPawn>-4</ShootingAccuracyPawn>
+					<MentalBreakThreshold>-0.08</MentalBreakThreshold>
+					<MeleeHitChance>+8</MeleeHitChance>
+					<MeleeDodgeChance>+15</MeleeDodgeChance>
+				</statOffsets>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_ReactOnDamage">
+				<damageDefIncoming>EMP</damageDefIncoming>
+				<createHediff>EPIA_EMP_Disorientation_Brawler</createHediff>
+			</li>
+		</comps>
+		<tags>
+			<li>AuxiliaryAI_Combat</li>
+		</tags>
+	</HediffDef>
+
+	<!-- AI persona core -->
+
+	<HediffDef ParentName="addedPartGlitteryImplants">
+		<defName>AIPersonaCore</defName>
+		<label>AI persona core</label>
+		<labelNoun>an AI persona core</labelNoun>
+		<description>An installed AI persona core. Requires minimum 60% medical tending as maintenance to prevent the AI persona core from going rogue.</description>
+		<descriptionHyperlinks><ThingDef>AIPersonaCore</ThingDef></descriptionHyperlinks>
+		<spawnThingOnRemoved>AIPersonaCore</spawnThingOnRemoved>
+		<minSeverity>0.001</minSeverity>
+		<maxSeverity>1</maxSeverity>
+		<initialSeverity>1</initialSeverity>
+		<tendable>true</tendable>
+		<comps>
+			<li Class="HediffCompProperties_TendDuration">
+				<baseTendDurationHours>48</baseTendDurationHours>
+				<severityPerDayTended>0.418</severityPerDayTended>
+			</li>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.20</severityPerDay>
+			</li>
+			<li Class="HediffCompProperties_ReactOnDamage">
+				<damageDefIncoming>EMP</damageDefIncoming>
+				<createHediff>EPIA_AIPersonaCore_EMPed</createHediff>
+			</li>
+		</comps>
+		<aptitudes>
+			<Shooting>1</Shooting>
+			<Melee>1</Melee>
+			<Construction>1</Construction>
+			<Mining>1</Mining>
+			<Cooking>1</Cooking>
+			<Plants>1</Plants>
+			<Animals>1</Animals>
+			<Crafting>1</Crafting>
+			<Artistic>1</Artistic>
+			<Medicine>1</Medicine>
+			<Social>1</Social>
+			<Intellectual>1</Intellectual>
+		</aptitudes>
+		<stages>
+			<li>
+				<label>Unmaintained</label>
+				<painFactor>0.8</painFactor>
+				<restFallFactor>2</restFallFactor>
+				<hungerRateFactor>1.5</hungerRateFactor>
+				<partIgnoreMissingHP>true</partIgnoreMissingHP>
+				<statOffsets>
+					<MentalBreakThreshold>0.8</MentalBreakThreshold>
+					<HackingSpeed MayRequire="Ludeon.RimWorld.Ideology">1</HackingSpeed>
+				</statOffsets>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.65</setMax>
+					</li>
+				</capMods>
+				<hediffGivers>
+					<li Class="HediffGiver_Random">
+						<hediff>EPIA_AIPersonaCore_GlitchMajor</hediff>
+						<mtbDays>3</mtbDays>
+					</li>
+					<li Class="HediffGiver_Random">
+						<hediff>EPIA_AIPersonaCore_GlitchCritical</hediff>
+						<mtbDays>1</mtbDays>
+					</li>
+				</hediffGivers>
+			</li>
+			<li>
+				<minSeverity>0.01</minSeverity>
+				<label>Unmaintained</label>
+				<painFactor>0.8</painFactor>
+				<restFallFactor>2</restFallFactor>
+				<hungerRateFactor>1.5</hungerRateFactor>
+				<partIgnoreMissingHP>true</partIgnoreMissingHP>
+				<statOffsets>
+					<MentalBreakThreshold>0.18</MentalBreakThreshold>
+					<HackingSpeed MayRequire="Ludeon.RimWorld.Ideology">1</HackingSpeed>
+				</statOffsets>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.65</setMax>
+					</li>
+				</capMods>
+				<hediffGivers>
+					<li Class="HediffGiver_Random">
+						<hediff>EPIA_AIPersonaCore_GlitchMajor</hediff>
+						<mtbDays>25</mtbDays>
+					</li>
+					<li Class="HediffGiver_Random">
+						<hediff>EPIA_AIPersonaCore_GlitchCritical</hediff>
+						<mtbDays>5</mtbDays>
+					</li>
+				</hediffGivers>
+			</li>
+			<li>
+				<minSeverity>0.15</minSeverity>
+				<label>Maintenance critical</label>
+				<painFactor>0.8</painFactor>
+				<restFallFactor>1.5</restFallFactor>
+				<hungerRateFactor>1.25</hungerRateFactor>
+				<partIgnoreMissingHP>true</partIgnoreMissingHP>
+				<statOffsets>
+					<MentalBreakThreshold>0.06</MentalBreakThreshold>
+					<HackingSpeed MayRequire="Ludeon.RimWorld.Ideology">1</HackingSpeed>
+				</statOffsets>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.9</setMax>
+					</li>
+				</capMods>
+				<hediffGivers>
+					<li Class="HediffGiver_Random">
+						<hediff>EPIA_AIPersonaCore_GlitchMinor</hediff>
+						<mtbDays>25</mtbDays>
+					</li>
+					<li Class="HediffGiver_Random">
+						<hediff>EPIA_AIPersonaCore_GlitchMajor</hediff>
+						<mtbDays>5</mtbDays>
+					</li>
+				</hediffGivers>
+			</li>
+			<li>
+				<minSeverity>0.5</minSeverity>
+				<label>Maintenance required</label>
+				<painFactor>0.8</painFactor>
+				<hungerRateFactor>1.25</hungerRateFactor>
+				<partIgnoreMissingHP>true</partIgnoreMissingHP>
+				<statOffsets>
+					<MentalBreakThreshold>-0.04</MentalBreakThreshold>
+					<ReadingSpeed>0.10</ReadingSpeed>
+					<HackingSpeed MayRequire="Ludeon.RimWorld.Ideology">1</HackingSpeed>
+				</statOffsets>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.25</offset>
+					</li>
+				</capMods>
+				<hediffGivers>
+					<li Class="HediffGiver_Random">
+						<hediff>EPIA_AIPersonaCore_GlitchMinor</hediff>
+						<mtbDays>5</mtbDays>
+					</li>
+					<li Class="HediffGiver_Random">
+						<hediff>EPIA_AIPersonaCore_GlitchMajor</hediff>
+						<mtbDays>25</mtbDays>
+					</li>
+				</hediffGivers>
+			</li>
+			<li>
+				<minSeverity>0.7</minSeverity>
+				<painFactor>0.8</painFactor>
+				<restFallFactor>0.75</restFallFactor>
+				<hungerRateFactor>1.25</hungerRateFactor>
+				<partIgnoreMissingHP>true</partIgnoreMissingHP>
+				<statOffsets>
+					<MentalBreakThreshold>-0.04</MentalBreakThreshold>
+					<ShootingAccuracyPawn>3</ShootingAccuracyPawn>
+					<MeleeHitChance>2</MeleeHitChance>
+					<ReadingSpeed>0.25</ReadingSpeed>
+					<HackingSpeed MayRequire="Ludeon.RimWorld.Ideology">1</HackingSpeed>
+				</statOffsets>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.50</offset>
+					</li>
+				</capMods>
+				<hediffGivers>
+					<li Class="HediffGiver_Random">
+						<hediff>EPIA_AIPersonaCore_GlitchMinor</hediff>
+						<mtbDays>75</mtbDays>
+					</li>
+				</hediffGivers>
+			</li>
+		</stages>
+	</HediffDef>
+
+</Defs>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<TipSetDef>
+	<defName>EPOEForkedTips</defName>
+	<tips>
+<!-- Workstations -->
+<li TKey="EPOE_Tip_LinkBionicsWorkbench">Bionics workbench can link with a synthetic nano printer and fabrication bench to provide them increased production speed.</li>
+<li TKey="EPOE_Tip_LinkSyntheticNanoPrinter">Synthetic nano printer can link with a bionics workbench and fabrication bench to provide them increased production speed.</li>
+
+<!-- Items -->
+<li TKey="EPOE_Tip_SyntheticTissue">You can cure scars with synthetic tissue. You will need the Synthetic Repair research to make them.</li>
+<li TKey="EPOE_Tip_NeuromuscularFrameworkTip">Bad backs and frailty can be cured with neuromuscular framework. You will need the Synthetic Repair research to make them.</li>
+<li TKey="EPOE_Tip_NeuroCureFrameworkTip">Dementia and Alzheimers can be cured with neuro-cure framework. You will need the Neurological Treatment research to make them.</li>
+<li TKey="EPOE_Tip_ChemicalDamageFixTip">Chemical damage can be cured with neuromuscular framework. Chemical damage in the brain requires neuro-cure framework instead.</li>
+<li TKey="EPOE_Tip_BrokenScytherBladeTip">Broken scyther blades can be acquired from dismantling Scyther mechanoids. They can be smelted for plasteel, or restore them into Scyther blades weapon implants.</li>
+<li TKey="EPOE_Tip_OrganicOptimizers">Organic Optimizers nanobots are a new category of body upgrades. The Instinct Optimizers have unique benefits on different body parts. Body purists are safe to receive them, whilst Transhumanists abhor them.</li>
+<li TKey="EPOE_Tip_RibImplantNumber">Multiple rib implants can be installed together, but not of the same type.</li>
+<li TKey="EPOE_Tip_AuxiliaryAI">Different types of work based auxiliary AI can be installed together, but combat based auxiliary AI cannot be installed together with any other auxiliary AI.</li>
+<li TKey="EPOE_Tip_VFEProduction" MayRequire="VanillaExpanded.VFEProduction">Bionic workbench and synthetic nano printer can be linked with fabrication cabinets for increased production speed.</li>
+<li MayRequire="PeteTimesSix.ResearchReinvented.SteppingStones">Research Reinvented: Stepping Stones, changes surgery requirements. Check mod options to disable it or research Penoxycyline.</li>
+<li MayRequire="PeteTimesSix.ResearchReinvented.SteppingStones">Research Reinvented: Stepping Stones, changes surgery requirements. Research Penoxycyline or check mod options to disable it.</li>
+<li MayRequire="PeteTimesSix.ResearchReinvented.SteppingStones">Can't do surgery to install body parts? Check mod options for Research Reinvented: Stepping Stones to disable it or research Penoxycyline.</li>
+<li MayRequire="PeteTimesSix.ResearchReinvented.SteppingStones">Can't do surgery to install body parts? Research Penoxycyline or check mod options for Research Reinvented: Stepping Stones to disable it.</li>
+<li MayRequire="PeteTimesSix.ResearchReinvented.SteppingStones">Check mod options of Research Reinvented: Stepping Stones to disable it from changing surgery requirements, or research Penoxycyline.</li>
+<li MayRequire="PeteTimesSix.ResearchReinvented.SteppingStones">Research Penoxycyline or check mod options of Research Reinvented: Stepping Stones to disable it from changing surgery requirements.</li>
+	</tips>
+</TipSetDef>
+
+</Defs>

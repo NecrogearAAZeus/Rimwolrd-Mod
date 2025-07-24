@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ResearchProjectDef[defName="Prosthetics"]/tab</xpath>
+			<nomatch Class="PatchOperationAdd">
+				<xpath>Defs/ResearchProjectDef[defName="Prosthetics"]</xpath>
+				<value>
+					<tab>EPOE</tab>
+				</value>
+			</nomatch>
+			<match Class="PatchOperationReplace">
+				<xpath>Defs/ResearchProjectDef[defName="Prosthetics"]/tab</xpath>
+				<value>
+					<tab>EPOE</tab>
+				</value>
+			</match>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ResearchProjectDef[defName="Prosthetics"]/researchViewX</xpath>
+		<value>
+			<researchViewX>0</researchViewX>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ResearchProjectDef[defName="Prosthetics"]/researchViewY</xpath>
+		<value>
+			<researchViewY>2</researchViewY>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ResearchProjectDef[defName="Bionics"]/tab</xpath>
+			<nomatch Class="PatchOperationAdd">
+				<xpath>Defs/ResearchProjectDef[defName="Bionics"]</xpath>
+				<value>
+					<tab>EPOE</tab>
+				</value>
+			</nomatch>
+			<match Class="PatchOperationReplace">
+				<xpath>Defs/ResearchProjectDef[defName="Bionics"]/tab</xpath>
+				<value>
+					<tab>EPOE</tab>
+				</value>
+			</match>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ResearchProjectDef[defName="Bionics"]/prerequisites</xpath>
+		<value>
+			<li>Prosthetics</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationRemove">
+		<xpath>Defs/ResearchProjectDef[defName="Bionics"]/hiddenPrerequisites</xpath>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ResearchProjectDef[defName="Bionics"]/researchViewX</xpath>
+		<value>
+			<researchViewX>2</researchViewX>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ResearchProjectDef[defName="Bionics"]/researchViewY</xpath>
+		<value>
+			<researchViewY>2</researchViewY>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Schematic"]/comps/li[@Class="CompProperties_Book"]/doers/li[@Class="BookOutcomeProperties_GainResearch"]/tabs</xpath>
+		<value>
+			<EPOE />
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Schematic"]/comps/li[@Class="CompProperties_Book"]/doers/li[@Class="BookOutcomeProperties_GainResearch"]/exclude</xpath>
+		<value>
+			<EPOE_AIPersonaCoreImplant />
+		</value>
+	</Operation>
+
+</Patch>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingSetMakerDef[defName="MapGen_AncientComplexRoomLoot_Default"]/root/options</xpath>
+		<value>
+			<li>
+				<weight>0.10</weight>
+				<thingSetMaker Class="ThingSetMaker_StackCount">
+					<fixedParams>
+						<filter>
+							<thingDefs>
+								<li>EPOE_MAAI_Chip</li>
+							</thingDefs>
+						</filter>
+						<countRange>1~2</countRange>
+					</fixedParams>
+				</thingSetMaker>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Medical System Expansion 2</li>
+		</mods>
+		<nomatch Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingSetMakerDef[defName="MapGen_AncientComplexRoomLoot_Better"]/root/options</xpath>
+					<value>
+						<li>
+							<weight>0.10</weight>
+							<thingSetMaker Class="ThingSetMaker_StackCount">
+								<fixedParams>
+									<filter>
+										<thingDefs>
+											<li>EPOE_MAAI_Chip</li>
+											<li>AdvancedBionicEye</li>
+											<li>AdvancedBionicArm</li>
+											<li>AdvancedBionicLeg</li>
+											<li>AdvancedBionicSpine</li>
+											<li>ExoskeletonSuit</li>
+											<li>EPIA_ProtectiveExoskeleton</li>
+											<li>TacticalCorneaImplant</li>
+											<li>EPIA_AuxiliaryAI_Worker</li>
+											<li>EPIA_AuxiliaryAI_Combat</li>
+											<li>EPIA_TacticalBionicEye</li>
+											<li>EPOE_OrganicOptimizingNanobots</li>
+											<li>EPOE_InstinctOptimizingNanobots</li>
+											<li>AIChip</li>
+										</thingDefs>
+									</filter>
+									<countRange>1</countRange>
+								</fixedParams>
+							</thingSetMaker>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingSetMakerDef[defName="MapGen_AncientComplex_SecurityCrate"]/root/options</xpath>
+					<value>
+						<li>
+							<weight>0.60</weight>
+							<thingSetMaker Class="ThingSetMaker_StackCount">
+								<fixedParams>
+									<filter>
+										<thingDefs>
+											<li>AdvancedBionicEye</li>
+											<li>AdvancedBionicArm</li>
+											<li>AdvancedBionicLeg</li>
+											<li>AdvancedBionicSpine</li>
+											<li>ExoskeletonSuit</li>
+											<li>EPIA_ProtectiveExoskeleton</li>
+											<li>TacticalCorneaImplant</li>
+											<li>EPIA_AuxiliaryAI_Worker</li>
+											<li>EPIA_AuxiliaryAI_Combat</li>
+											<li>EPIA_TacticalBionicEye</li>
+											<li>EPOE_OrganicOptimizingNanobots</li>
+											<li>EPOE_InstinctOptimizingNanobots</li>
+										</thingDefs>
+									</filter>
+									<countRange>1</countRange>
+								</fixedParams>
+							</thingSetMaker>
+						</li>
+					</value>
+				</li>
+			</operations>
+		</nomatch>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingSetMakerDef[defName="MapGen_AncientComplexRoomLoot_Better"]/root/options</xpath>
+					<value>
+						<li>
+							<weight>0.10</weight>
+							<thingSetMaker Class="ThingSetMaker_StackCount">
+								<fixedParams>
+									<filter>
+										<thingDefs>
+											<li>EPOE_MAAI_Chip</li>
+											<li>AdvancedBionicEye</li>
+											<li>AdvancedBionicSpine</li>
+											<li>ExoskeletonSuit</li>
+											<li>EPIA_ProtectiveExoskeleton</li>
+											<li>TacticalCorneaImplant</li>
+											<li>EPIA_AuxiliaryAI_Worker</li>
+											<li>EPIA_AuxiliaryAI_Combat</li>
+											<li>EPIA_TacticalBionicEye</li>
+											<li>EPOE_OrganicOptimizingNanobots</li>
+											<li>EPOE_InstinctOptimizingNanobots</li>
+											<li>AIChip</li>
+										</thingDefs>
+									</filter>
+									<countRange>1</countRange>
+								</fixedParams>
+							</thingSetMaker>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingSetMakerDef[defName="MapGen_AncientComplex_SecurityCrate"]/root/options</xpath>
+					<value>
+						<li>
+							<weight>0.60</weight>
+							<thingSetMaker Class="ThingSetMaker_StackCount">
+								<fixedParams>
+									<filter>
+										<thingDefs>
+											<li>AdvancedBionicEye</li>
+											<li>AdvancedBionicSpine</li>
+											<li>ExoskeletonSuit</li>
+											<li>EPIA_ProtectiveExoskeleton</li>
+											<li>TacticalCorneaImplant</li>
+											<li>EPIA_AuxiliaryAI_Worker</li>
+											<li>EPIA_AuxiliaryAI_Combat</li>
+											<li>EPIA_TacticalBionicEye</li>
+											<li>EPOE_OrganicOptimizingNanobots</li>
+											<li>EPOE_InstinctOptimizingNanobots</li>
+										</thingDefs>
+									</filter>
+									<countRange>1</countRange>
+								</fixedParams>
+							</thingSetMaker>
+						</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+		
+</Patch>

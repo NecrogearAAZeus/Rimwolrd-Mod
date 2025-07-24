@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingSetMakerDef[defName="MapGen_FleshSackLoot"]</xpath>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingSetMakerDef[defName="MapGen_FleshSackLoot"]/root/options/li/thingSetMaker/fixedParams/filter/thingDefs[li="BionicEye"]</xpath>
+					<value>
+						<li>FSFAdvBionicEye</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingSetMakerDef[defName="MapGen_FleshSackLoot"]/root/options/li/thingSetMaker/fixedParams/filter/thingDefs[li="BionicSpine"]</xpath>
+					<value>
+						<li>FSFAdvBionicSpine</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingSetMakerDef[defName="MapGen_FleshSackLoot"]/root/options</xpath>
+					<value>
+						<li>
+							<weight>0.15</weight>
+							<thingSetMaker Class="ThingSetMaker_StackCount">
+								<fixedParams>
+									<filter>
+										<thingDefs>
+											<li>EPIA_AuxiliaryAI_Worker</li>
+											<li>EPIA_AuxiliaryAI_Combat</li>
+										</thingDefs>
+									</filter>
+									<countRange>1</countRange>
+								</fixedParams>
+							</thingSetMaker>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Medical System Expansion 2</li>
+					</mods>
+					<nomatch Class="PatchOperationSequence">
+						<operations>
+							<li Class="PatchOperationAdd">
+								<xpath>Defs/ThingSetMakerDef[defName="MapGen_FleshSackLoot"]/root/options/li/thingSetMaker/fixedParams/filter/thingDefs[li="BionicArm"]</xpath>
+								<value>
+									<li>FSFAdvBionicArm</li>
+								</value>
+							</li>
+							<li Class="PatchOperationAdd">
+								<xpath>Defs/ThingSetMakerDef[defName="MapGen_FleshSackLoot"]/root/options/li/thingSetMaker/fixedParams/filter/thingDefs[li="BionicLeg"]</xpath>
+								<value>
+									<li>FSFAdvBionicLeg</li>
+								</value>
+							</li>
+						</operations>
+					</nomatch>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+
+</Patch>

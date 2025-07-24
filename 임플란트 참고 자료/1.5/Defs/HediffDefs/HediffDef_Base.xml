@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<!-- List of base abstracts used -->
+
+	<!-- Quick search index with Search/Find -->
+
+	<!-- _Basic_ -->
+	<!-- _Prosthetic_ -->
+	<!-- _Surrogate_ -->
+	<!-- _Bionic_ -->
+	<!-- _Synthetic_ -->
+	<!-- _Synthetic Repair_ -->
+	<!-- _Bionic Ribs_ -->
+	<!-- _Advanced_ -->
+	<!-- _Glitterworld_ -->
+	<!-- _Organic Optimizers_ -->
+
+	<!-- ========================================================== -->
+
+	<!-- _Basic_ -->
+
+	<HediffDef Name="addedPartBasic" ParentName="AddedBodyPartBase" Abstract="True">
+		<defaultLabelColor>(148,117,14)</defaultLabelColor>
+	</HediffDef>
+
+	<ThingDef Name="BodyPartBasicBase" ParentName="BodyPartProstheticMakeableBase" Abstract="True">
+		<graphicData Inherit="False">
+			<texPath>Things/Item/BodyPart/BasicProsthesis</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techLevel>Medieval</techLevel>
+		<statBases>
+			<WorkToMake>2500</WorkToMake>
+		</statBases>
+		<recipeMaker>
+			<recipeUsers>
+				<li>FueledSmithy</li>
+				<li>ElectricSmithy</li>
+			</recipeUsers>
+			<skillRequirements>
+				<Crafting>3</Crafting>
+			</skillRequirements>
+			<researchPrerequisite>Smithing</researchPrerequisite>
+		</recipeMaker>
+	</ThingDef>
+
+	<RecipeDef Name="EPIASurgeryBasic" ParentName="SurgeryInstallBodyPartArtificialBase" Abstract="True">
+		<workAmount>1500</workAmount>
+		<skillRequirements>
+			<Medicine>3</Medicine>
+		</skillRequirements>
+	</RecipeDef>
+
+	<!-- _Prosthetic_ -->
+
+	<HediffDef Name="addedPartSimple" ParentName="AddedBodyPartBase" Abstract="True">
+		<defaultLabelColor>(102,178,255)</defaultLabelColor>
+	</HediffDef>
+
+	<!-- _Surrogate_ -->
+
+	<HediffDef Name="addedPartSurrogate" ParentName="AddedBodyPartBase" Abstract="True">
+		<defaultLabelColor>(233,129,69)</defaultLabelColor>
+	</HediffDef>
+
+	<ThingDef Name="EPIASurrogateBase" ParentName="BodyPartProstheticMakeableBase" Abstract="True">
+		<thingCategories Inherit="False">
+			<li>BodyPartsProsthetic</li>
+		</thingCategories>
+		<graphicData Inherit="False">
+			<texPath>Things/Item/BodyPart/SurrogatePart</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<recipeMaker>
+			<soundWorking>Recipe_Tailor</soundWorking>
+			<recipeUsers />
+			<skillRequirements>
+				<Crafting>5</Crafting>
+			</skillRequirements>
+			<unfinishedThingDef>UnfinishedProsthesis</unfinishedThingDef>
+			<researchPrerequisite>SurrogateOrgans</researchPrerequisite>
+		</recipeMaker>
+		<techHediffsTags>
+			<li>Simple</li>
+		</techHediffsTags>
+	</ThingDef>
+
+	<!-- Brain implants at prosthetic tier -->
+	<!-- No longer in use, kept just in case -->
+
+	<RecipeDef Name="EPIASurgerySurrogateImplant" ParentName="SurgeryInstallImplantBase" Abstract="True">
+		<skillRequirements>
+			<Medicine>7</Medicine>
+		</skillRequirements>
+	</RecipeDef>
+
+	<!-- _Bionic_ -->
+		
+	<HediffDef Name="addedPartBionics" ParentName="AddedBodyPartBase" Abstract="True">
+		<defaultLabelColor>(0.5, 0.5, 0.9)</defaultLabelColor>
+		<comps>
+			<li MayRequire="V1024.EBFramework" Class="EBF.Hediffs.HediffCompProperties_MaxHPAdjust">
+				<scaleAdjustment>0.20</scaleAdjustment>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<ThingDef Name="EPIA_UpgradeBodyPartBionicBase" ParentName="BodyPartBionicBase" Abstract="True">
+		<recipeMaker>
+			<recipeUsers Inherit="False" />
+		</recipeMaker>
+	</ThingDef>
+
+	<RecipeDef Name="EPIA_RecipeBaseProsthesis" Abstract="True">
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<soundWorking>Recipe_Smith</soundWorking>
+		<unfinishedThingDef>UnfinishedProsthesis</unfinishedThingDef>
+		<workSkill>Crafting</workSkill>
+	</RecipeDef>
+
+	<RecipeDef Name="RecipeBionicProsthesis" ParentName="EPIA_RecipeBaseProsthesis" Abstract="True">
+		<researchPrerequisite>Bionics</researchPrerequisite>
+		<workAmount>26000</workAmount>
+		<skillRequirements>
+			<Crafting>8</Crafting>
+		</skillRequirements>
+		<recipeUsers>
+			<li>TableBionics</li>
+		</recipeUsers>
+	</RecipeDef>
+
+	<RecipeDef Name="EPIA_RecipeUpgradeBionic" ParentName="RecipeBionicProsthesis" Abstract="True">
+		<workAmount>14000</workAmount>
+		<skillRequirements>
+			<Crafting>7</Crafting>
+		</skillRequirements>
+	</RecipeDef>
+
+
+	<!-- _Synthetic_ -->
+
+	<HediffDef Name="addedPart_SyntheticImplants" ParentName="ImplantHediffBase" Abstract="True">
+		<defaultLabelColor>(188,39,242)</defaultLabelColor>
+	</HediffDef>
+
+	<HediffDef Name="addedPartSynthetic" ParentName="AddedBodyPartBase" Abstract="True">
+		<defaultLabelColor>(188,39,242)</defaultLabelColor>
+		<comps>
+			<li MayRequire="V1024.EBFramework" Class="EBF.Hediffs.HediffCompProperties_MaxHPAdjust">
+				<scaleAdjustment>0.20</scaleAdjustment>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<ThingDef Name="EPIASyntheticBase" ParentName="BodyPartBionicBase" Abstract="True">
+		<graphicData Inherit="False">
+			<texPath>Things/Item/BodyPart/SyntheticPart</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<recipeMaker>
+			<soundWorking>Recipe_Tailor</soundWorking>
+			<unfinishedThingDef>UnfinishedProsthesis</unfinishedThingDef>
+			<recipeUsers Inherit="False">
+				<li>TableOrgans</li>
+			</recipeUsers>
+			<researchPrerequisite>SyntheticOrgans</researchPrerequisite>
+		</recipeMaker>
+	</ThingDef>
+
+	<ThingDef Name="EPIA_UpgradeSyntheticBase" ParentName="EPIASyntheticBase" Abstract="True">
+		<recipeMaker>
+			<recipeUsers Inherit="False" />
+		</recipeMaker>
+	</ThingDef>
+
+	<RecipeDef Name="RecipeSyntheticOrgan" ParentName="EPIA_RecipeBaseProsthesis"  Abstract="True">
+		<researchPrerequisite>SyntheticOrgans</researchPrerequisite>
+		<soundWorking>Recipe_Tailor</soundWorking>
+		<workAmount>26000</workAmount>
+		<skillRequirements>
+			<Crafting>8</Crafting>
+		</skillRequirements>
+		<recipeUsers>
+			<li>TableOrgans</li>
+		</recipeUsers>
+	</RecipeDef>
+
+	<RecipeDef Name="EPIA_RecipeUpgradeSynthetic" ParentName="RecipeSyntheticOrgan"  Abstract="True">
+		<workAmount>14000</workAmount>
+		<skillRequirements>
+			<Crafting>7</Crafting>
+		</skillRequirements>
+	</RecipeDef>
+
+	<!-- Brain implants at synthetic tier -->
+	<!-- No longer in use, kept just in case -->
+
+	<RecipeDef Name="EPIASurgerySyntheticImplant" ParentName="SurgeryInstallImplantBase" Abstract="True">
+		<skillRequirements>
+			<Medicine>7</Medicine>
+		</skillRequirements>
+	</RecipeDef>
+
+	<!-- _Synthetic Repair_ -->
+
+	<ThingDef Name="EPIA_ScarsRepairItemBase" ParentName="EPIASyntheticBase" Abstract="True">
+		<isTechHediff>false</isTechHediff>
+		<stackLimit>5</stackLimit>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<thingCategories Inherit="False">
+			<li>EPIA_BodyRestoration</li>
+		</thingCategories>
+	</ThingDef>
+
+	<RecipeDef Name="EPIA_SurgerySyntheticRepair" ParentName="SurgeryRemoveImplantBase" Abstract="True">
+		<isViolation>false</isViolation>
+		<ingredients Inherit="False" />
+	</RecipeDef>
+
+	<RecipeDef Name="EPIA_SurgerySyntheticRepair_SRP" ParentName="SurgeryFlesh" Abstract="True">
+		<factionPrerequisiteTags>
+			<li>EPOE_Redundancy_Debug</li>
+		</factionPrerequisiteTags>
+	</RecipeDef>
+
+	<!-- _Bionic Ribs_ -->
+
+	<HediffDef Name="addedPartBionicsRib" ParentName="ImplantHediffBase" Abstract="True">
+		<defaultLabelColor>(0.5, 0.5, 0.9)</defaultLabelColor>
+	</HediffDef>
+
+	<ThingDef Name="EPIA_BodyPartBlankRibBase" ParentName="EPIASyntheticBase" Abstract="True">
+		<recipeMaker>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<researchPrerequisite>RibReplacements</researchPrerequisite>
+		</recipeMaker>
+		<statBases>
+			<WorkToMake>17000</WorkToMake>
+		</statBases>
+	</ThingDef>
+
+	<ThingDef Name="EPIA_BodyPartBionicRibBase" ParentName="EPIASyntheticBase" Abstract="True">
+		<recipeMaker>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<recipeUsers Inherit="False" />
+			<researchPrerequisite>RibReplacements</researchPrerequisite>
+		</recipeMaker>
+	</ThingDef>
+
+	<RecipeDef Name="EPIA_RecipeUpgradeBionicRib" ParentName="EPIA_RecipeUpgradeSynthetic" Abstract="True">
+		<workAmount>9000</workAmount>
+		<researchPrerequisite>RibReplacements</researchPrerequisite>
+	</RecipeDef>
+
+
+	<!-- _Advanced_ -->
+
+	<HediffDef Name="addedPart_AdvancedImplant" ParentName="ImplantHediffBase" Abstract="True">
+		<defaultLabelColor>(18,215,57)</defaultLabelColor>
+	</HediffDef>
+
+	<HediffDef Name="addedPartAdvanced" ParentName="AddedBodyPartBase" Abstract="True">
+		<defaultLabelColor>(18,215,57)</defaultLabelColor>
+		<comps>
+			<li MayRequire="V1024.EBFramework" Class="EBF.Hediffs.HediffCompProperties_MaxHPAdjust">
+				<scaleAdjustment>0.40</scaleAdjustment>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<ThingDef Name="BodyPartAdvancedBionicBase" ParentName="BodyPartBionicBase" Abstract="True">
+		<techLevel>Spacer</techLevel>
+		<thingCategories Inherit="False">
+			<li>BodyPartsUltra</li>
+		</thingCategories>
+		<graphicData Inherit="False">
+			<texPath>Things/Item/BodyPart/AdvancedPart</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<WorkToMake>40000</WorkToMake>
+		</statBases>
+		<recipeMaker>
+			<skillRequirements>
+				<Crafting>10</Crafting>
+			</skillRequirements>
+			<researchPrerequisite>AdvancedBionics</researchPrerequisite>
+		</recipeMaker>
+	</ThingDef>
+
+	<ThingDef Name="EPIA_UpgradeBodyPartAdvancedBionicBase" ParentName="BodyPartAdvancedBionicBase" Abstract="True">
+		<recipeMaker>
+			<recipeUsers Inherit="False" />
+		</recipeMaker>
+	</ThingDef>
+
+	<RecipeDef Name="RecipeAdvancedProsthesis" ParentName="RecipeBionicProsthesis"  Abstract="True">
+		<researchPrerequisite>AdvancedBionics</researchPrerequisite>
+		<workAmount>40000</workAmount>
+		<skillRequirements>
+			<Crafting>11</Crafting>
+		</skillRequirements>
+	</RecipeDef>
+
+	<RecipeDef Name="EPIA_RecipeUpgradeAdvanced" ParentName="RecipeAdvancedProsthesis"  Abstract="True">
+		<workAmount>14000</workAmount>
+		<skillRequirements>
+			<Crafting>10</Crafting>
+		</skillRequirements>
+	</RecipeDef>
+
+	<RecipeDef Name="EPIASurgeryAdvancedBionic" ParentName="SurgeryInstallBodyPartArtificialBase" Abstract="True">
+		<skillRequirements>
+			<Medicine>7</Medicine>
+		</skillRequirements>
+	</RecipeDef>
+
+
+	<!-- _Glitterworld_ -->
+
+	<HediffDef Name="addedPartGlitteryImplants" ParentName="ImplantHediffBase" Abstract="True">
+		<defaultLabelColor>(244,210,131)</defaultLabelColor>
+	</HediffDef>
+
+	<HediffDef Name="addedPartGlitteryAddedBodyPart" ParentName="AddedBodyPartBase" Abstract="True">
+		<defaultLabelColor>(244,210,131)</defaultLabelColor>
+		<comps>
+			<li MayRequire="V1024.EBFramework" Class="EBF.Hediffs.HediffCompProperties_MaxHPAdjust">
+				<scaleAdjustment>0.40</scaleAdjustment>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<ThingDef Name="EPIAGlitterworldImplantBase" ParentName="EPIASyntheticBase" Abstract="True">
+	    <techLevel>Spacer</techLevel>
+		<thingCategories Inherit="False">
+			<li>BodyPartsUltra</li>
+		</thingCategories>
+		<graphicData Inherit="False">
+			<texPath>Things/Item/BodyPart/GlitterworldPart</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<WorkToMake>26000</WorkToMake>
+		</statBases>
+		<recipeMaker>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<skillRequirements>
+				<Crafting>12</Crafting>
+			</skillRequirements>
+			<researchPrerequisite>EPOE_Glitterworld_Implants</researchPrerequisite>
+		</recipeMaker>
+		<thingSetMakerTags>
+			<li>RewardStandardMidFreq</li>
+		</thingSetMakerTags>
+	</ThingDef>
+
+	<ThingDef Name="EPIAGlitterworldBionicBase" ParentName="BodyPartAdvancedBionicBase" Abstract="True">
+	    <techLevel>Spacer</techLevel>
+		<thingCategories Inherit="False">
+			<li>BodyPartsUltra</li>
+		</thingCategories>
+		<graphicData Inherit="False">
+			<texPath>Things/Item/BodyPart/GlitterworldPart</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<WorkToMake>40000</WorkToMake>
+		</statBases>
+		<recipeMaker>
+			<skillRequirements>
+				<Crafting>12</Crafting>
+			</skillRequirements>
+			<researchPrerequisite>EPOE_Glitterworld_Implants</researchPrerequisite>
+		</recipeMaker>
+		<thingSetMakerTags>
+			<li>RewardStandardMidFreq</li>
+		</thingSetMakerTags>
+	</ThingDef>
+
+	<RecipeDef Name="EPIASurgeryGlitterworld" ParentName="SurgeryInstallImplantBase" Abstract="True">
+		<deathOnFailedSurgeryChance>0.1</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>8</Medicine>
+		</skillRequirements>
+		<ingredients Inherit="False">
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+	</RecipeDef>
+
+
+	<!-- _Organic Optimizers_ -->
+
+	<HediffDef Name="addedPartOptimized" Abstract="True">
+		<defaultLabelColor>(244,210,131)</defaultLabelColor>
+		<hediffClass>Hediff_Implant</hediffClass>
+		<isBad>false</isBad>
+		<everCurableByItem>false</everCurableByItem>
+		<initialSeverity>0.001</initialSeverity>
+		<maxSeverity>1.0</maxSeverity>
+		<priceImpact>true</priceImpact>
+		<countsAsAddedPartOrImplant>false</countsAsAddedPartOrImplant>
+		<allowMothballIfLowPriorityWorldPawn>true</allowMothballIfLowPriorityWorldPawn>
+	</HediffDef>
+
+	<ThingDef Name="EPIAOrganicOptimizer" ParentName="EPIASyntheticBase" Abstract="True">
+	    <techLevel>Spacer</techLevel>
+		<thingCategories Inherit="False">
+			<li>EPIA_OrganicOptimizer</li>
+		</thingCategories>
+		<graphicData Inherit="False">
+			<texPath>Things/Item/BodyPart/GlitterworldPart</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<recipeMaker>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<skillRequirements>
+				<Crafting>10</Crafting>
+			</skillRequirements>
+			<researchPrerequisite>EPOE_OrganicOptimizer</researchPrerequisite>
+		</recipeMaker>
+		<techHediffsTags Inherit="False"/>
+	</ThingDef>
+
+	<RecipeDef Name="EPIASurgeryOptimizer" ParentName="SurgeryInstallImplantBase" Abstract="True">
+		<uiIconThing>EPOE_OrganicOptimizingNanobots</uiIconThing>
+		<deathOnFailedSurgeryChance>0.02</deathOnFailedSurgeryChance>
+		<jobString>Optimizing natural body part.</jobString>
+		<workAmount>3000</workAmount>
+		<skillRequirements>
+			<Medicine>7</Medicine>
+		</skillRequirements>
+	</RecipeDef>
+
+</Defs>

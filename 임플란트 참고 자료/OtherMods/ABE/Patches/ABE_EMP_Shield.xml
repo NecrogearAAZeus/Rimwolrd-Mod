@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/HediffDef[defName="EPIA_EMP_Disorientation_Sharpshooter" or
+								defName="EPIA_EMP_Disorientation_Commando" or
+								defName="EPIA_EMP_Disorientation_Brawler" or
+								defName="EPIA_EMP_ProtectiveExoskeleton" or
+								defName="EPIA_AIPersonaCore_EMPed"]/comps</xpath>
+		<value>
+			<li Class="HediffCompProperties_RemoveIfOtherHediff">
+				<hediffs>
+					<li>FSFImplantEMPShield</li>
+				</hediffs>
+			</li>
+		</value>
+	</Operation>
+
+</Patch>

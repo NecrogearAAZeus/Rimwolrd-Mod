@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<AbilityDef>
+		<defName>EPIA_Harden_ProtectiveExoskeleton</defName>
+		<label>harden exoskeleton</label>
+		<description>Harden the protective exoskeleton to increase armour rating, stagger resistance and protecting against being set on fire, at the expense of mobility.</description>
+		<iconPath>UI/Abilities/HardenProtectiveExoskeleton</iconPath>
+		<cooldownTicksRange>5400</cooldownTicksRange> <!-- 90 seconds -->
+		<hostile>false</hostile>
+		<groupAbility>true</groupAbility>
+		<displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+		<aiCanUse>true</aiCanUse>
+		<ai_IsOffensive>true</ai_IsOffensive>
+		<targetRequired>false</targetRequired>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<statBases>
+			<Ability_Duration>10</Ability_Duration>
+		</statBases>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<drawAimPie>false</drawAimPie>
+			<requireLineOfSight>false</requireLineOfSight>
+			<nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+			<soundCast>EnergyShield_Reset</soundCast>
+			<targetable>false</targetable>
+			<targetParams>
+				<canTargetSelf>true</canTargetSelf>
+			</targetParams>
+			<violent>false</violent>
+		</verbProperties>
+		<comps>
+			<li Class="CompProperties_AbilityGiveHediff">
+				<compClass>CompAbilityEffect_GiveHediff</compClass>
+				<hediffDef>EPIA_Harden_ProtectiveExoskeleton</hediffDef>
+				<onlyApplyToSelf>true</onlyApplyToSelf>
+				<replaceExisting>true</replaceExisting>
+			</li>
+		</comps>
+	</AbilityDef>
+
+	<AbilityDef>
+		<defName>EPIA_DeactivateHarden_ProtectiveExoskeleton</defName>
+		<label>Deactivate harden exoskeleton</label>
+		<description>Manually deactivate the full protective state of the protective exoskeleton.</description>
+		<iconPath>UI/Abilities/RemoveHardenProtectiveExoskeleton</iconPath>
+		<cooldownTicksRange>60</cooldownTicksRange> <!-- 1 seconds -->
+		<hostile>false</hostile>
+		<groupAbility>true</groupAbility>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<aiCanUse>false</aiCanUse>
+		<ai_IsOffensive>false</ai_IsOffensive>
+		<targetRequired>false</targetRequired>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<drawAimPie>false</drawAimPie>
+			<requireLineOfSight>false</requireLineOfSight>
+			<nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+			<!--soundCast>Can't think of one yet</soundCast-->
+			<targetable>false</targetable>
+			<targetParams>
+				<canTargetSelf>true</canTargetSelf>
+			</targetParams>
+			<violent>false</violent>
+		</verbProperties>
+		<comps>
+			<li Class="CompProperties_AbilityRemoveHediff">
+				<compClass>CompAbilityEffect_RemoveHediff</compClass>
+				<hediffDef>EPIA_Harden_ProtectiveExoskeleton</hediffDef>
+				<applyToSelf>true</applyToSelf>
+			</li>
+		</comps>
+	</AbilityDef>
+
+</Defs>

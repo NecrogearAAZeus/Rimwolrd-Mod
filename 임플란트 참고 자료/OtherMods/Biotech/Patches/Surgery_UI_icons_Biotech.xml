@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/RecipeDef[defName="InstallDetoxifierLung"]</xpath>
+		<value>
+			<uiIconThing>DetoxifierLung</uiIconThing>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/RecipeDef[defName="InstallDetoxifierKidney"]</xpath>
+		<value>
+			<uiIconThing>DetoxifierKidney</uiIconThing>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="DetoxifierLung"]/recipeMaker/recipeUsers</xpath>
+		<match Class="PatchOperationRemove">
+			<xpath>Defs/ThingDef[defName="DetoxifierLung"]/recipeMaker/recipeUsers</xpath>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="DetoxifierKidney"]/recipeMaker/recipeUsers</xpath>
+		<match Class="PatchOperationRemove">
+			<xpath>Defs/ThingDef[defName="DetoxifierKidney"]/recipeMaker/recipeUsers</xpath>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="DetoxifierLung"]/statBases/MarketValue</xpath>
+		<match Class="PatchOperationRemove">
+			<xpath>Defs/ThingDef[defName="DetoxifierLung"]/statBases/MarketValue</xpath>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="DetoxifierKidney"]/statBases/MarketValue</xpath>
+		<match Class="PatchOperationRemove">
+			<xpath>Defs/ThingDef[defName="DetoxifierKidney"]/statBases/MarketValue</xpath>
+		</match>
+	</Operation>
+
+</Patch>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[@Name="BodyPartBionicBase"]/recipeMaker/recipeUsers</xpath>
+		<value>
+			<li>TableBionics</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAttributeRemove">
+		<xpath>Defs/ThingDef[@Name="EPIASyntheticBase"]/recipeMaker/recipeUsers</xpath>
+		<attribute>Inherit</attribute>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/RecipeDef[@Name="RecipeBionicProsthesis"]/recipeUsers</xpath>
+		<value>
+			<li>FabricationBench</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/RecipeDef[@Name="RecipeSurrogateOrgan"]/recipeUsers</xpath>
+		<value>
+			<li>TableMachining</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/RecipeDef[@Name="RecipeSyntheticOrgan"]/recipeUsers</xpath>
+		<value>
+			<li>FabricationBench</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationRemove">
+		<xpath>Defs/ThingDef[defName="TableBionics"]/designationCategory</xpath>
+	</Operation>
+
+	<Operation Class="PatchOperationRemove">
+		<xpath>Defs/ThingDef[defName="TableOrgans"]/designationCategory</xpath>
+	</Operation>
+
+	<Operation Class="PatchOperationRemove">
+		<xpath>Defs/ThingDef[defName="TableBionics"]/researchPrerequisites</xpath>
+	</Operation>
+
+	<Operation Class="PatchOperationRemove">
+		<xpath>Defs/ThingDef[defName="TableOrgans"]/researchPrerequisites</xpath>
+	</Operation>
+
+</Patch>

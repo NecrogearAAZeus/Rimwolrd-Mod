@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<HugsLib.UpdateFeatureDef Abstract="true" Name="EPIA_UpdateFeatureBase">
+		<modNameReadable>EPOE-Forked</modNameReadable>
+		<modIdentifier>EPIA_EPOE_Forked</modIdentifier>
+		<linkUrl>https://steamcommunity.com/workshop/filedetails/?id=1949064302</linkUrl>
+	</HugsLib.UpdateFeatureDef>
+
+	<HugsLib.UpdateFeatureDef ParentName="EPIA_UpdateFeatureBase">
+		<defName>EPOE_Forked_4_4_6</defName>
+		<assemblyVersion>4.4.6</assemblyVersion>
+		<content>A compatibility update for [FSF] Advanced Bionics Expanded. We have spoken with the author of ABE, and exchanged ideas. The conclusion that the ratio of least effort to best consistency, was to alter mostly from EPOE-Forked's side, and ABE now adds UI icons to their surgery bills.
+One principle that EPOE-Forked had when it came to Archotech tier bionics, is that we do not touch it is for sake of player's choice of Archotech bionic mods, which is why Advanced bionics are at 135%. Since ABE has Archotech included, it was no longer a concern to bump the rest of non-overlapping Advanced bionics to fit in with the combined mods.
+All changes are only applied if ABE is active.
+
+|Patch notes:
+Added compatibility patch for [FSF] Advanced Bionics Expanded. When that mod is active, the major effects listed below:
+* EPOE-Forked's overlapping advanced bionics, surrogate and synthetic organs are removed. Existing ones in pawns' bodies during mod swaps will become debug versions to avoid pawn death.
+* EPOE-Forked's advanced bionics research is removed and now uses ABE's version.
+* EPOE-Forked workbench is forcefully disabled, and crafting method is forcefully set to "Direct Crafting Only".
+* Research tab rearrangement. ABE's research are moved into EPOE-Forked's prosthetics tab.
+* Now uses ABE's version of salvaging.
+
+If running both mods at the same time, the users will agree to the following:
+* EPOE-Forked and ABE not liable to any errors generated with other mod interactions due to running both mods.
+* EPOE-Forked and ABE not liable to texture inconsistencies due to running both mods.
+* EPOE-Forked and ABE will not attempt re-balancing stats to each other when both mods are active. Requests for this situation will be ignored by both parties.
+* EPOE-Forked and ABE will continue their respective independent development of their mods, and not liable to testing, checking or notifying each other if a new interaction conflict may appear.</content>
+	</HugsLib.UpdateFeatureDef>
+
+	<HugsLib.UpdateFeatureDef ParentName="EPIA_UpdateFeatureBase">
+		<defName>EPOE_Forked_4_4_5</defName>
+		<assemblyVersion>4.4.5</assemblyVersion>
+		<content>Minor update regarding interaction with Research Reinvented: Stepping Stones. EPOE-Forked must now load after it to stop it messing with the base game research tab placements of research.
+
+|Patch notes:
+* EPOE-Forked now must load after Research Reinvented: Stepping Stones.
+* This prevents that mod from messing up the Prosthetic research tab.
+* Added to game tips about that mod changing surgery requirements.
+* Patch to remove duplicate recipe user and market price from detoxifier lungs and kidneys defs. (Biotech DLC)</content>
+	</HugsLib.UpdateFeatureDef>
+
+	<HugsLib.UpdateFeatureDef ParentName="EPIA_UpdateFeatureBase">
+		<defName>EPOE_Forked_4_4_4</defName>
+		<assemblyVersion>4.4.4</assemblyVersion>
+		<content>An update for further tidying up and fixing inconsistencies.
+
+|Patch notes:
+* Removed the internal perfect replica of vanilla prosthetic and bionic items, to reduce future workload on game updates for consistency.
+* Silent Jaw Plasteel cost reduced from 15 to 10.
+* Advanced Bionic Jaw total costs corrected.
+* Restructured HediffDefs folder XML layout, moved all abstract bases into a single file.
+* Sorted crafting cost display order with rules:
+[MA-AI Chip][Other][Neutroamine][Metals][Steel][Plasteel][Components][Adv. Components]
+* Removed Replacement radius. Not sure how this was still here.
+* Fixed an oversight of Brain Stimulator and AI Chip unable to be installed into Creep Joiners (Anomaly).
+* Auxiliary AI: Artisan added buff: Mechanoid shredding speed and efficiency +10% to normal and Anomaly DLC versions.
+* Fixed work station linkable issues with other mods.</content>
+	</HugsLib.UpdateFeatureDef>
+
+	<HugsLib.UpdateFeatureDef ParentName="EPIA_UpdateFeatureBase">
+		<defName>EPOE_Forked_4_4_3</defName>
+		<assemblyVersion>4.4.3</assemblyVersion>
+		<content>A hotfix update involving MSE2, reverting some changes due to a Anomaly DLC feature lock, and tidying up some patches.
+Unfortunately, the skill modifer in health condition requires Anomaly DLC active in order for it to take effect. As a result of finding this out, Auxiliary AIs have been reverted for non-Anomaly games.
+
+|Patch notes:
+* Reverted all Auxiliary AI: Worker type changes for non-Anomaly users. The skill change effect regrettably needs that DLC active.
+* The stats of Auxiliary AI: Worker type will now differ between games that has Anomaly DLC active or not.
+* Auxiliary AI: Combat types have no stat difference other than their skill level changes needing Anomaly DLC active.
+* Auxiliary AI: Artisan added buff: Smelting speed +20% to both versions.
+* Auxiliary AI: Medical added buff: Medical operation speed +15% or +10% (DLC)
+* Auxiliary AI: Diplomatic added buff: Arrest success chance, Conversion power, and Suppression power +20% or +10% (DLC)
+* Auxiliary AI: Agricultural added buff: Pruning speed +25% or +10% (DLC)
+* AI persona core implant added buff: Reading speed +25%
+* Small reordering of Auxiliary AI: Worker in the list.
+* Hotfix involving MSE2, when adding Advanced Bionic Arm and Leg to map generated loot containers from Ideology and Anomaly.
+* Rearranged Elite Bionics Frameworks patch methods.
+* Split HediffDef bases for artifical parts and implants for SyntheticBase and AdvancedBase.
+* Changed Scyther blade sound to Power claw's. This removes a harmless yellow error if Royalty is not active.</content>
+	</HugsLib.UpdateFeatureDef>
+
+	<HugsLib.UpdateFeatureDef ParentName="EPIA_UpdateFeatureBase">
+		<defName>EPOE_Forked_4_4_2</defName>
+		<assemblyVersion>4.4.2</assemblyVersion>
+		<content>A major update to use new game mechanics like schematics (research from modded tabs not added automatically), integrating items to map generated loot containers in DLCs and rebalance some features of the unique implants to EPOE.
+
+The designed use of the Auxiliary AI was to assist lesser skilled pawns to become useful sooner, but the way most bonuses worked in game did not function as an addition, but a multipler to base values. This made the gap between lower and higher skilled pawns even wider.
+To fix this, the newly added skill level modifiers to health conditions now put to use for Auxiliary AI to fulfill their true intentions.
+
+The AI Chip and brain stimulator have received the most noticeable rebalance. Their primary core function has always been designed to bypass direct damage done to the brain, and now it achieves that more realistically without the extreme patchwork of simply slapping on consciousness to deal with it.
+
+|Patch notes:
+* Exoskeleton suit and protective exoskeleton now have reduced stagger duration of -10% and -30% respectively.
+* Protective Exoskeleton suit now have an ability to harden and gain increased armor rating at the expense of mobility for 10 seconds.
+* Rib implants cost globally increased crafting cost of needing 1 component.
+* Rebalanced stats of Auxiliary AI: Worker, they now give +3 levels to their related skills but reduced their existing stats overall.
+* Rebalanced stats of Auxiliary AI: Combat, making them more distinct in their speciality.
+* EMP effects on Auxiliary AI: Combat now have their individual penalties instead of a shared one.
+* AI Chip buffs: crafting skill down from 11 to 10, added +40% part efficiency, now ignores brain HP for part efficiency.
+* AI Chip nerfs: Consciousness down from +100% to +25%.
+* Brain stimulator buffs: Capped Consciousness increased from 80% to 90%, added +10% part efficiency, now ignores brain HP for part efficiency. 
+* Brain stimulator nerfs: Consciousness modifier removed.
+* Chance of Death on failed surgery to install brain stimulator down from 20% to 10%.
+* AI persona core implant now ignores brain HP for part efficiency.
+* AI persona core implant new buff additions: +1 skill levels to all skills, +100% hacking speed (Needs Ideology DLC).
+* AI persona core implant glitch nerfs: -1 skill levels to all skill for major glitch, -2 for critical glitch.
+* Minor rebalance of instinct optimizers.
+* Added items from this mod to ancient complexes and flesh sack loot tables. Compatible with [FSF] Better Ancient Complex Loot.
+* Allow schematics to work with research from this mod.</content>
+	</HugsLib.UpdateFeatureDef>
+
+	<HugsLib.UpdateFeatureDef ParentName="EPIA_UpdateFeatureBase">
+		<defName>EPOE_Forked_4_4_1</defName>
+		<assemblyVersion>4.4.1</assemblyVersion>
+		<content>A minor bugfix and streamlining of surgery inheritance to accommodate for Anomaly. Strange joiners should no longer have specific missing surgeries from this mod.
+
+Additionally, for EPOE-Forked: Royalty DLC Expansion users, the advanced drill arms now fixed to be installed in the shoulders, like every bionic arm variants.
+
+|Patch notes:
+* All surgeries should now inherit directly from base game surgery that targets Human, that also includes CreepJoiners.
+* For EPOE-Forked: Royalty DLC Expansion users, the advanced drill arm now installed in the shoulders.</content>
+	</HugsLib.UpdateFeatureDef>
+
+	<HugsLib.UpdateFeatureDef ParentName="EPIA_UpdateFeatureBase">
+		<defName>EPOE_Forked_4_4_0</defName>
+		<assemblyVersion>4.4.0</assemblyVersion>
+		<content>An update for 1.5 base game of RimWorld. It is now available for use in the unstable test.
+Advanced bionic fingers and toes will be removed for 1.5, in efforts to reduce clutter within the mod. The standard bionic fingers and toes will have their efficiency bumped up to replace them as a form to compensate and buff them for increased value towards being a viable option.
+		
+|Patch notes for 1.5 only:
+* Advanced bionic fingers and toes removed.
+* Bionic fingers and toes now have efficiency of 135%.</content>
+	</HugsLib.UpdateFeatureDef>
+
+	<HugsLib.UpdateFeatureDef ParentName="EPIA_UpdateFeatureBase">
+		<defName>EPOE_Forked_4_3_6</defName>
+		<assemblyVersion>4.3.6</assemblyVersion>
+		<content>A minor update that was meant to be pushed months prior, but the team rapidly fell into circumstances that did not allow us to do so.
+
+|Patch notes:
+* All Advanced Bionics tier crafting level requirement is now set to 10, down from the standard base of 11.
+* Our Combat Extended patch removed and archived. The Combat Extended team covers it more accurately to their mod.
+* Added incompatibility warning with the following mod: EPOE 1.4
+</content>
+	</HugsLib.UpdateFeatureDef>
+
+	<HugsLib.UpdateFeatureDef ParentName="EPIA_UpdateFeatureBase">
+		<defName>EPOE_Forked_4_3_5</defName>
+		<assemblyVersion>4.3.5</assemblyVersion>
+		<content>XML Extensions options have been updated for reintroduction of the Legacy mode as an experimental feature. This mode changes the material costs away from vanilla, to the old EPOE costs, only for those items that were featured there.
+
+We would kindly like to remind players of the fact that EPOE-Forked did not change or "rebalanced" the material costs of bionics, and for the most part it is actually left untouched in the base game. However, the original EPOE did, with changing the advanced component costs into components for bionics, and massively increasing steel and plasteel costs.
+Legacy mode is to resemble these changes as closely as possible.
+
+|Patch notes:
+* XML Extensions options update: Legacy mode as an experimental option has been re-added.
+* New XML Extensions options to add back the old prosthetic workbench, as an experimental option.
+* New XML Extensions options for when the mod DE Surgery is used. Experimental option to disable EPOE-Forked patch that removes overlapping surgeries.
+</content>
+	</HugsLib.UpdateFeatureDef>
+
+	<HugsLib.UpdateFeatureDef ParentName="EPIA_UpdateFeatureBase">
+		<defName>EPOE_Forked_4_3_4</defName>
+		<assemblyVersion>4.3.4</assemblyVersion>
+		<content>A bug fix update to a config error that appears when using Medical System Expansion 2 mod, as well as preventing it from appearing again if another mod does a similar patching.
+
+|Patch notes:
+* Apply a fix to a config error when Medical System Expansion 2 is used, and prevent other instances that can cause this to occur.
+</content>
+	</HugsLib.UpdateFeatureDef>
+
+	<HugsLib.UpdateFeatureDef ParentName="EPIA_UpdateFeatureBase">
+		<defName>EPOE_Forked_4_3_3</defName>
+		<assemblyVersion>4.3.3</assemblyVersion>
+		<content>A minor update focused mainly for Rimworld 1.3 to grant some 1.4 additions and a experimental option with XML Extensions.
+
+|Patch notes:
+* Prothesis traders now have a Body parts category generation in their stock, at minor generation. This means it can now very rarely sell psylink neuroformer and mechlinks again.
+
+Specific to Rimworld 1.3
+* Auxiliary AI (artisan) now available.
+* Prosthesis salvaging system has made a return and can be used again.
+* XML Extensions option added to use Rimworld 1.4 version of this mod's auxiliary AI more versatile set up.
+</content>
+	</HugsLib.UpdateFeatureDef>
+
+	<HugsLib.UpdateFeatureDef ParentName="EPIA_UpdateFeatureBase">
+		<defName>EPOE_Forked_4_3_2</defName>
+		<assemblyVersion>4.3.2</assemblyVersion>
+		<content>Old system of disassembling unwanted prosthetic items have made a return! And a new Auxiliary AI for 1.4 is introduced, a long awaited boost for crafters, the Artisan version! It provides a 15% boost to general labor speed, the stat primarily used in crafting and smithing.
+For XML Extensions, the option to toggle bionic eye textures have been restored. If you are using a texture mod for the eyes, keep this option turned off so it won't interfere with other mods.
+
+|Patch notes:
+* Removed the bad thought of having a silent jaw.
+* UI icons added for most vanilla and EPOE-Forked related surgeries.
+* Prosthesis orbital trader no longer sells psylink neuroformer and mechlinks.
+* New body part category added: Body restoration. Synthetic tissue and bone, and both neuromuscular and neurocure framework moved there for easier management.
+* New Auxiliary AI (artisan) option is now available. Provides a bonus of +15% general labor speed.
+* Auxiliary AI (agricultural) now have drug yield increase bonus.
+* Old prosthesis salvaging system has made a return and can be used again.
+* XML Extensions options to toggle textures for the bionic eyes is now available again.
+
+</content>
+	</HugsLib.UpdateFeatureDef>
+
+	<HugsLib.UpdateFeatureDef ParentName="EPIA_UpdateFeatureBase">
+		<defName>EPOE_Forked_4_3_1</defName>
+		<assemblyVersion>4.3.1</assemblyVersion>
+		<content>Some small quality of life updates, that the 1.3 version will get where it is applicable. You can now stack synthetic tissue and other more medical orientated related items, making it easier to store them away for when they're required to heal colonists.
+
+|Patch notes:
+* The following items now stack up to 5: Synthetic Tissue, Synthetic Bone, Neuromuscular Framework and Neurocure Framework.
+* New additional sprites for the stackable items.
+* UI icons added for optimizer, scars and ailments related surgeries.
+* Optimizers now identified as a implant by game mechanic, but not count as one. Should avoid situations that ends up removing them.
+* Prosthesis traders now have a chance to sell hospital beds and vital monitors.
+* Prosthesis traders have a very small chance to sell genepacks and archite capsules, at expensive price (Biotech required).
+* Fixed the XML Extensions option for the components crafting in EPOE-Forked workbenches.
+
+</content>
+	</HugsLib.UpdateFeatureDef>
+
+	<HugsLib.UpdateFeatureDef ParentName="EPIA_UpdateFeatureBase">
+		<defName>EPOE_Forked_4_3_0</defName>
+		<assemblyVersion>4.3.0</assemblyVersion>
+		<content>With Rimworld 1.4 unstable out, a little update for EPOE-Forked, and highlight the major changes between 1.3 and 1.4 version of this mod.		
+
+|Patch notes:
+* Updated for Rimworld 1.4 unstable.
+* New XML Extensions to toggle if components can be crafted in EPOE-Forked workbenches.
+
+|Specific to Rimworld 1.4, the following changes are to be applied:
+* Prosthetic workbench is removed. All recipes are sent over to the Machining Table.
+* Auxiliary AI items are now combined into two distinct items, the worker type and combat type, to reduce clutter. This means they are also now interchangable in their category.
+* The new Auxiliary AI (worker) is now used for installing construction, agricultural, mining, medical and diplomatic auxiliary AI.
+* The new Auxiliary AI (combat) is now used for installing sharpshooter, commando and brawler auxiliary AI.
+* XML extensions related: Legacy mode and bionic eye texture options disabled until stable release.
+</content>
+	</HugsLib.UpdateFeatureDef>
+
+	<HugsLib.UpdateFeatureDef ParentName="EPIA_UpdateFeatureBase">
+		<defName>EPOE_Forked_4_2_5</defName>
+		<assemblyVersion>4.2.5</assemblyVersion>
+		<content>Minor balance update, and removal of Basic Prosthetic research. With this removal, it brings it more back in line with vanilla as it did not require research.
+Neuro-cure framework now has a lower market value to that of healer mech serums, greatly increasing the viability of getting and using one.
+The Auxiliary AI: Sharpshooter has received a noticeable buff, as the Commando version is generally seen as the far greater superior choice that covers more areas and has that fantastic -15% aim delay factor.
+		
+|Patch notes:
+* Neuro-cure framework materials cost reduced from 15 Glitterworld medicine to 8 and removed advanced component.
+* Synthetic skin cost increased from 1 Glitterworld medicine to 2 Glitterworld medicine.
+* Basic Prosthetic research removed. All wooden prosthetic available by default to all faction style just like in vanilla.
+* Hook hand and Steel arm now requires Smithing research. (Their workstation needs that as minimum already, so no real difference.)
+* Protective exoskeleton incoming damage factor improved from 85% to 80%.
+* Auxiliary AI: Sharpshooter buffed. Gained -10% Aiming delay, and removed melee dodge penalty.
+* Updated DE Surgery patch
+* New XML Extensions to toggle EMP weakness of EPOE-Forked implants.</content>
+	</HugsLib.UpdateFeatureDef>
+
+	<HugsLib.UpdateFeatureDef ParentName="EPIA_UpdateFeatureBase">
+		<defName>EPOE_Forked_4_2_2</defName>
+		<assemblyVersion>4.2.2</assemblyVersion>
+		<content>Small update adding synthetic bones, a new XML extension settings to allow forcefully remove limbs, and a patch that removes beauty tag from the tongue.
+Any jaws added body parts, including base game's dentures, technically removes the tongue, but the opinion of disfigurement still happens. This is why we made the decision to remove the beauty tag. A setting option can disable this patch if you do disagree with this.
+
+A decision for a RBSE overlapping content removal patch was made because of how terribly it was written, and having received numerous avoidable bug reports due to ignoring incompatibilty warnings, this experimental patch has been made.
+It is still highly unrecommended to have both EPOE-Forked and RBSE running at the same time, as they cover too much similar areas and can lead to serious conflicts.
+
+|Patch notes:
+* New synthetic bone added. Used as a bone replacement similar to how synthetic tissue works for healing scars.
+* Torso associated bones that were previously handled by neuromuscular framework is now handled by the synthetic bone surgeries.
+* XML Extensions slight rewrite into Def form.
+* Added patch to remove beauty tag from the tongue body part. This patch can be disabled with XML Extensions.
+* New settings for forced removal of arm, legs, hands and feet. For your war crime needs.
+* Added a patch to remove overlapping RBSE content if people ignore the incompatibility warning. Incomplete and experimental, but looks more consistent at least. May stop certain settings from applying correctly.</content>
+	</HugsLib.UpdateFeatureDef>	
+
+	<HugsLib.UpdateFeatureDef ParentName="EPIA_UpdateFeatureBase">
+		<defName>EPOE_Forked_4_2_1</defName>
+		<assemblyVersion>4.2.1</assemblyVersion>
+		<content>Small update to bring workbenches a more in line with vanilla, now needing construction levels.
+Three new options available with XML Extensions mod, and now able to receive translations.
+
+|Patch notes:
+* Updated some details about the workbenches to match vanilla's layout.
+* Prosthetic table now requires level 4 construction, bionic workbench and synthetic nano printer now requires level 6 construction.
+
+|XML Extension mod related patch notes:
+* New settings for wooden prosthesis needing research or not.
+* New settings for organs rotting and needing refridgeration.
+* New settings for transhumanists' opinion about the organic and instinct optimizers.
+* Added translation keys for all the settings.
+* Made a TranslatorPackage folder, containing everything for a translator to easily start their work.</content>
+	</HugsLib.UpdateFeatureDef>	
+
+	<HugsLib.UpdateFeatureDef ParentName="EPIA_UpdateFeatureBase">
+		<defName>EPOE_Forked_4_2_0</defName>
+		<assemblyVersion>4.2.0</assemblyVersion>
+		<content>New set of updates not seen with EPOE-Forked until now. Firstly, HugsLib news feature will now be utilized to keep players up to date, and new mod settings being available with the assistance of the XML Extensions mod.
+|img:newsimages/XML_Extensions|caption:XML Extensions mod, made by Imranfish, extends the functionality of XML patch operations, and allows for the easy creation of mod settings.
+
+With XML Extensions active in your mod list, the following EPOE-Forked's add-on modules are now included in the settings, and no longer needs the actual side-mods to customize your game:
+- Allow direct crafting
+- Direct crafting only
+- Remove workbenches
+- Legacy mode (written up in a new way to patch)
+
+|New additional settings are:
+- Changing between this mod's or vanilla's item textures for artifical body part items
+- Disabling the bionic eyes on the colonist's face
+- Original EPOE migration mode, to keep the old prosthetic workbench for converting.
+
+The prosthetic workbench from original EPOE is renamed to "Original EPOE workbench (debug)", which can be deconstructed or destroyed and you will receive a prosthetic workbench and bionic workbench. Be sure to claim and rearrange your converted workbenches.
+
+|Once you have finished switching over, you should untick the migration mode to remove the redundant building from being loaded anymore when you launch the game.
+
+Rest of patch notes for v4.2.0:
+* Correctly assigning the component and advanced component bills to the synthetic nano printer instead of the prosthetic workbench.
+* Prosthesis trader now trades synthread, hyperweave, components, advanced components and MA-AI chips.
+* Prosthesis trader's inventory of available artificial body parts for sale have been increased in size.</content>
+	</HugsLib.UpdateFeatureDef>	
+
+</Defs>

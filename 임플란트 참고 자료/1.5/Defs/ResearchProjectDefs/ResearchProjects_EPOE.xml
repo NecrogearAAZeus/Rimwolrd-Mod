@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<ResearchProjectDef>
+		<defName>AdvancedBionics</defName>
+		<label>advanced bionics</label>
+		<description>Upgrade regular bionics to make them even better. Unlocks new recipes on the bionics workbench.</description>
+		<baseCost>2500</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>Bionics</li>
+			<li>AdvancedFabrication</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<tab>EPOE</tab>
+		<researchViewX>3</researchViewX>
+		<researchViewY>2</researchViewY>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->advanced bionic prosthesis</li>
+
+				<li>subject_story->worked primarily with bionically enhanced soldiers, seeking to further potential performance values</li>
+				<li>subject_story->examined an extensive amount of collected performance data to address any unforseen defects within the existing prosthetics framework</li>
+				<li>subject_story->has volunteered to have the advanced bionic prototypes implanted, ending up as more machine than man</li>
+
+				<li>subject_gerund->upgrading bionic prosthetics</li>
+				<li>subject_gerund->utilizing more efficient bionic body parts</li>
+			</rulesStrings>
+		</generalRules>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>RibReplacements</defName>
+		<label>rib implants</label>
+		<description>Selectively removing portions of the costal cartilage and inserting artificially crafted rib extensions, a new concept of implants was born - with dispensers to release their contents through nano-tubes into the manubrium where they are relayed in controlled doses to the correct areas of the body.</description>
+		<baseCost>500</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>SyntheticOrgans</li>
+			<li>MedicineProduction</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<tab>EPOE</tab>
+		<researchViewX>3</researchViewX>
+		<researchViewY>0.5</researchViewY>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->rib implants</li>
+
+				<li>subject_story->pondered about the endless possibilities of experimenting with synthetic rib extensions</li>
+				<li>subject_story->had a mad inspirational moment of utilizing the ribcage to cram in micro dispensers</li>
+				<li>subject_story->became a "Ribworld" lunatic, sacrificing valuable brain processing power to make any part of it a reality</li>
+
+				<li>subject_gerund->crafting rib implants</li>
+				<li>subject_gerund->utilizing the ribcage for implants</li>
+			</rulesStrings>
+		</generalRules>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>SurrogateOrgans</defName>
+		<label>surrogate organs</label>
+		<description>Build inexpensive prosthetic organs to replace lost or damaged ones. Requires a skilled doctor to transplant.</description>
+		<baseCost>300</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>Prosthetics</li>
+			<li>MicroelectronicsBasics</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<tab>EPOE</tab>
+		<researchViewX>1</researchViewX>
+		<researchViewY>1</researchViewY>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->surrogate organs</li>
+
+				<li>subject_story->had an organ replaced with a prosthetic one, to show how easy it was</li>
+				<li>subject_story->opened a clinic dealing with prosthetics</li>
+				<li>subject_story->began crafting bespoke surrogate prosthetic organs for the many war veterans in the area</li>
+
+				<li>subject_gerund->crafting surrogate organs</li>
+			</rulesStrings>
+		</generalRules>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>SyntheticOrgans</defName>
+		<label>synthetic organs</label>
+		<description>Further research in nano-technology allows you to print incredibly well-engineered synthetic organs.</description>
+		<baseCost>2000</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>SurrogateOrgans</li>
+			<li>Fabrication</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<tab>EPOE</tab>
+		<researchViewX>2</researchViewX>
+		<researchViewY>1</researchViewY>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->synthetic organs</li>
+
+				<li>subject_story->worked primarily with cancer patients, synthesizing bespoke bionic organs so they may overcome their cancer</li>
+				<li>subject_story->studied and experimented on many human organs to better mimic their functions in a synthetic design concept</li>
+				<li>subject_story->designed various synthetic nano printing machines of various scale</li>
+
+				<li>subject_gerund->printing synthetic organs</li>
+				<li>subject_gerund->utilising synthetic organs</li>
+			</rulesStrings>
+		</generalRules>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>EPOE_SyntheticRepair</defName>
+		<label>Synthetic repair</label>
+		<description>Further research into nano technology allows you to print incredibly well-engineered artificial tissues and nerves to aid with healing scars, frailty and bad backs. Unlocks synthetic tissue and neuromuscular framework recipes on the synthetic nano printer.</description>
+		<baseCost>300</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>SyntheticOrgans</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<tab>EPOE</tab>
+		<researchViewX>3</researchViewX>
+		<researchViewY>0</researchViewY>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->synthetic repair</li>
+
+				<li>subject_story->applied primarily to severely disfigured patients, conducting cosmetic surgeries that nigh-flawlessly restore their facial features</li>
+				<li>subject_story->studied the dermis and epidermis extensively to better understand and mimic the intricacy of skin - human and alien alike</li>
+				<li>subject_story->pushed for further precision of nano-printing technology</li>
+
+				<li>subject_gerund->printing synthetic tissue</li>
+				<li>subject_gerund->printing neuromuscular framework</li>
+			</rulesStrings>
+		</generalRules>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>EPOE_NeurologicalTreatment</defName>
+		<label>Neurological treatment</label>
+		<description>Extensive research into nano technology allows you to print incredibly well-engineered framework kit consisting of artificial adaptable brain tissues, nerves and nanomachines to aid with countering dementia, alzheimer, chemical damage and scars in the brain. Unlocks neuro-cure framework recipe on the synthetic nano printer.\n\nNeuro-cure framework only cures dementia and alzheimer, and does not prevent it from appearing again.</description>
+		<baseCost>1000</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+				<li>EPOE_SyntheticRepair</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<tab>EPOE</tab>
+		<researchViewX>5</researchViewX>
+		<researchViewY>0</researchViewY>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->neurological treatment</li>
+
+				<li>subject_story->volunteered for experimental surgery that successfully restored lost higher brain functions of an average Tower Hamlets dweller</li>
+				<li>subject_story->studied countless MRI scan results to better understand the human brain</li>
+				<li>subject_story->pushed the boundries for precision of nano-printing technology</li>
+
+				<li>subject_gerund->printing neuro-cure framework</li>
+			</rulesStrings>
+		</generalRules>
+		<discoveredLetterTitle>About: Neuro-cure Framework</discoveredLetterTitle>
+		<discoveredLetterText>You now have the technology to print the Neuro-cure Framework - but to properly utilise it will require the Brain Surgery research.</discoveredLetterText>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>BrainSurgery</defName>
+		<label>brain surgery</label>
+		<description>Allows you to perform surgery on the brain.</description>
+		<baseCost>750</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>MicroelectronicsBasics</li>
+		</prerequisites>
+		<tab>EPOE</tab>
+		<researchViewX>3</researchViewX>
+		<researchViewY>2.5</researchViewY>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->brain surgery</li>
+
+				<li>subject_story->devised post-surgery care routines for patients recovering from a recent procedure</li>
+				<li>subject_story->operated as a brain surgeon</li>
+				<li>subject_story->examined many patients with head injuries</li>
+
+				<li>subject_gerund->operating brain surgery</li>
+			</rulesStrings>
+		</generalRules>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>EPOE_Glitterworld_Implants</defName>
+		<label>Glitterworld implants</label>
+		<description>Allows you to make Glitterworld implants.</description>
+		<baseCost>2500</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>AdvancedBionics</li>
+			<li>SyntheticOrgans</li>
+			<li>BrainSurgery</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<tab>EPOE</tab>
+		<researchViewX>4</researchViewX>
+		<researchViewY>2</researchViewY>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->glitterworld implants</li>
+
+				<li>subject_story->supervised production at a glitterworld lighthouse factory for medical implants</li>
+				<li>subject_story->designed various AI prototypes for teaching and assisting the user directly through a brain implant</li>
+				<li>subject_story->salvaged glitterworld technology from crashed ships on a less technologically developed planet</li>
+
+				<li>subject_gerund->crafting glitterworld implants</li>
+			</rulesStrings>
+		</generalRules>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>EPOE_AIPersonaCoreImplant</defName>
+		<label>AI persona core implant</label>
+		<description>Allows you to perform the surgery to implant an AI persona core into the brain. It provides a powerful consciousness boost with the assistance of the AI, but it will require regular medical maintenance to avoid the AI turning rogue on the user.</description>
+		<baseCost>1000</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>EPOE_Glitterworld_Implants</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<tab>EPOE</tab>
+		<researchViewX>5</researchViewX>
+		<researchViewY>2</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>EPOE_OrganicOptimizer</defName>
+		<label>Organic optimization</label>
+		<description>Allows you to develop nanobots to optimize and bring out the full potential of the natural body, specifically designed to aid body purists.</description>
+		<baseCost>2000</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>SyntheticOrgans</li>
+			<li>AdvancedFabrication</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<tab>EPOE</tab>
+		<researchViewX>4</researchViewX>
+		<researchViewY>1</researchViewY>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->organic optimization</li>
+
+				<li>subject_story->researched for ways to assist body purists in unlocking their biological potential - all without upsetting their beliefs</li>
+				<li>subject_story->argued that body purists are not merely cannon fodder and walking organ donors </li>
+				<li>subject_story->disgusted transhumanists by working on organic optimization</li>
+
+				<li>subject_gerund->crafting organic optimization nanobots</li>
+			</rulesStrings>
+		</generalRules>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>EPOE_MAAIChip</defName>
+		<label>MA-AI chip</label>
+		<description>Allows you to manufacture your own MA-AI chip (Medical Assistant-AI chip), without needing to find an AI persona core.</description>
+		<baseCost>3000</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>AdvancedBionics</li>
+			<li>SyntheticOrgans</li>
+			<li>VitalsMonitor</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<tab>EPOE</tab>
+		<researchViewX>4</researchViewX>
+		<researchViewY>1.5</researchViewY>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->MA-AI chip</li>
+
+				<li>subject_story->learned of a specialized medical assistant-AI chip as a core component in glitterworld implants</li>
+				<li>subject_story->fully reverse engineered glitterworld implants to fabricate their production on a suffiently developed planet</li>
+				<li>subject_story->was made aware of an alternate method of producing an MA-AI chip without sacrificing valuable and mysterious AI persona cores</li>
+
+				<li>subject_gerund->crafting the MA-AI chip</li>
+			</rulesStrings>
+		</generalRules>
+	</ResearchProjectDef>
+
+</Defs>
