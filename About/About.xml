@@ -1,28 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-    <!-- This is both the displayed name of your mod as well as the name used for patch targeting. -->
     <name>IMPLANT PLUS</name>
-    <!-- This is the internal identifier for your mod. -->
-    <!-- It is recommended that you make it unique to as to avoid potential collisions with other authors; -->
-    <!--   if Rimworld detects multiple mods with the same packageId then it will refuse to load all of them. -->
-
-    <!-- Your name goes here. -->
     <author>BAMBI0220</author>
-    <packageId>BAMBI0220.IMPLANT PLUS</packageId>
-    <description>
-        IMPLANT PLUS &#10; &#10;  
-        This mod allows you to enhance your colonists' bodies in more diverse and strategic ways. &#10; 
-        It adds not only standard performance-boosting implants,&#10; 
-        but also new ones with unique abilities that offer additional options &#10;  
-        in combat, productivity, and survival.
-    </description>
-    <!-- These are the RimWorld game versions that your mod supports. -->
-    <!-- It is recommended that you only list versions that you have explicitly tested to ensure they work, -->
-    <!-- as even basic XML options can change between major versions of the game. -->
+    <packageId>BAMBI0220.implantplus</packageId>
+    <description>This mod allows you to enhance your colonists' bodies in more diverse  and strategic ways. It adds not only standard performance-boosting implants, but also new ones with unique abilities that offer additional options in combat, productivity, and survival.</description>
     <supportedVersions>
         <li>1.6</li>
     </supportedVersions>
-
-    <!-- This is the description of your mod shown in both the vanilla mod manager as well as modded managers. -->
-
 </ModMetaData>

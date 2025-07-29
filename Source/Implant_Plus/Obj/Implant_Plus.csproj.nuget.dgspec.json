@@ -1,0 +1,53 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\games\\steamapps\\common\\RimWorld\\Mods\\IMPLANT_PLUS\\Source\\Implant_Plus\\Implant_Plus.csproj": {}
+  },
+  "projects": {
+    "E:\\games\\steamapps\\common\\RimWorld\\Mods\\IMPLANT_PLUS\\Source\\Implant_Plus\\Implant_Plus.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\games\\steamapps\\common\\RimWorld\\Mods\\IMPLANT_PLUS\\Source\\Implant_Plus\\Implant_Plus.csproj",
+        "projectName": "Implant_Plus",
+        "projectPath": "E:\\games\\steamapps\\common\\RimWorld\\Mods\\IMPLANT_PLUS\\Source\\Implant_Plus\\Implant_Plus.csproj",
+        "packagesPath": "C:\\Users\\Yuhan\\.nuget\\packages\\",
+        "outputPath": "E:\\games\\steamapps\\common\\RimWorld\\Mods\\IMPLANT_PLUS\\Source\\Implant_Plus\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Yuhan\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "targetAlias": "net472",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "targetAlias": "net472",
+          "dependencies": {
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.2, )",
+              "autoReferenced": true
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.428\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "2A7M8BlUfnW/JHykC+VPGNgtfwBq7tUE6waxMMkRstU05o3ES43LN6i9vRJJ7XIXlvoxEKXMdfm+6lq0jQPjsA==",
+  "success": true,
+  "projectFilePath": "E:\\games\\steamapps\\common\\RimWorld\\Mods\\IMPLANT_PLUS\\Source\\Implant_Plus\\Implant_Plus.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Yuhan\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.2\\microsoft.netframework.referenceassemblies.1.0.2.nupkg.sha512",
+    "C:\\Users\\Yuhan\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net472\\1.0.2\\microsoft.netframework.referenceassemblies.net472.1.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

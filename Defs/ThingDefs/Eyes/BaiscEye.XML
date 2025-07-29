@@ -1,58 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
+<!-- 1티어 파츠 -->
+
+<!-- Prosthetic Eye -->
 <Defs>
-    <!--  Base: Bionic body part (spacer tech)  -->
-    <ThingDef Name="BodyPartBionicBase" ParentName="BodyPartBase" Abstract="True">
-        <techLevel>Spacer</techLevel>
-        <thingCategories>
-            <li>BodyPartsBionic</li>
-        </thingCategories>
-        <graphicData>
-            <texPath>Things/Item/Health/HealthItem</texPath>
-            <graphicClass>Graphic_Single</graphicClass>
-            <drawSize>0.80</drawSize>
-            <color>(189,169,118)</color>
-        </graphicData>
-        <tradeTags>
-            <li>Bionic</li>
-        </tradeTags>
-        <techHediffsTags>
-            <li>Advanced</li>
-        </techHediffsTags>
-        <statBases>
-            <WorkToMake>26000</WorkToMake>
-        </statBases>
-        <recipeMaker>
-            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
-            <workSkill>Crafting</workSkill>
-            <effectWorking>Smith</effectWorking>
-            <soundWorking>Recipe_Smith</soundWorking>
-            <unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
-            <skillRequirements>
-                <Crafting>8</Crafting>
-            </skillRequirements>
-            <researchPrerequisite>Bionics</researchPrerequisite>
-            <recipeUsers>
-                <li>FabricationBench</li>
-            </recipeUsers>
-            <displayPriority>300</displayPriority>
-        </recipeMaker>
-    </ThingDef>
-    <!--  Bionic eye  -->
     <HediffDef ParentName="AddedBodyPartBase">
-        <defName>BionicEye</defName>
-        <label>bionic eye</label>
-        <labelNoun>a bionic eye</labelNoun>
-        <description>An installed bionic eye. With its biogel nerve-link, internal signal pre-processor, and wide-spectrum sensors, it is better than a biological eye in almost every way. A lattice-dust healing system allows it to recover from damage.</description>
+        <defName>IP_ProstheticEye</defName>
+        <label>Prosthetic Eye</label>
+        <labelNoun>A basic prosthetic eye</labelNoun>
+        <!-- 이식된 의안입니다. 시신경에 저화상도 카메라를 연결해 미약하게나마 손실된 
+                시각을 보완해줍니다. 모든 면에서 생물학적 눈보다 열등합니다.-->
+        <description>An implanted prosthetic eye. A low-resolution camera is connected to the optic nerve, providing minimal restoration of lost vision. It is inferior to a biological eye in every way.</description>
         <descriptionHyperlinks>
-            <ThingDef>BionicEye</ThingDef>
+            <ThingDef>IP_ProstheticEye</ThingDef>
         </descriptionHyperlinks>
-        <spawnThingOnRemoved>BionicEye</spawnThingOnRemoved>
+        <spawnThingOnRemoved>IP_ProstheticEye</spawnThingOnRemoved>
         <addedPartProps>
             <solid>true</solid>
-            <partEfficiency>1.25</partEfficiency>
-            <betterThanNatural>true</betterThanNatural>
+            <partEfficiency>0.5</partEfficiency>
         </addedPartProps>
-        <renderNodeProperties>
+
+        <!-- 부착시 이미지 표시 -->
+
+        <!-- <renderNodeProperties>
             <li Class="PawnRenderNodeProperties_Eye">
                 <workerClass>PawnRenderNodeWorker_HediffEye</workerClass>
                 <texPath>Things/Pawn/Wounds/BionicEye</texPath>
@@ -68,40 +39,43 @@
                     </dataWest>
                 </drawData>
             </li>
-        </renderNodeProperties>
+        </renderNodeProperties> -->
     </HediffDef>
-    <ThingDef ParentName="BodyPartBionicBase">
-        <defName>BionicEye</defName>
-        <label>bionic eye</label>
-        <description>An advanced artificial eye. With its biogel nerve-link, internal signal pre-processor, and wide-spectrum sensors, it is better than a biological eye in almost every way. A lattice-dust healing system allows it to recover from damage.</description>
+
+    <ThingDef ParentName="BodyPartProstheticMakeableBase">
+        <defName>IP_ProstheticEye</defName>
+        <label>Prosthetic Eye</label>
+        <!--급조된 인공 눈 이식물 입니다. 시신경에 저화상도 카메라를 연결해 미약하게나마 손실된 
+        시각을 보완해줍니다. 모든 면에서 생물학적 눈보다 열등합니다. -->
+        <description>A hastily assembled artificial eye implant. It connects a low-resolution camera to the optic nerve, partially restoring lost vision. It is inferior to a biological eye in every way.</description>
         <descriptionHyperlinks>
-            <RecipeDef>InstallBionicEye</RecipeDef>
+            <RecipeDef>InstallProstheticEye</RecipeDef>
         </descriptionHyperlinks>
         <costList>
-            <Plasteel>15</Plasteel>
-            <ComponentSpacer>4</ComponentSpacer>
+            <Steel>20</Steel>
+            <ComponentIndustrial>4</ComponentIndustrial>
         </costList>
         <thingSetMakerTags>
-            <li>RewardStandardMidFreq</li>
+            <li>RewardStandardLowFreq</li>
         </thingSetMakerTags>
         <statBases>
             <Mass>0.3</Mass>
         </statBases>
+        <techHediffsTags>
+            <li>Simple</li>
+        </techHediffsTags>
     </ThingDef>
-    <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
-        <defName>InstallBionicEye</defName>
-        <label>install bionic eye</label>
-        <description>Install a bionic eye.</description>
-        <descriptionHyperlinks>
-            <ThingDef>BionicEye</ThingDef>
-            <HediffDef>BionicEye</HediffDef>
-        </descriptionHyperlinks>
-        <jobString>Installing bionic eye.</jobString>
+
+    <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
+        <defName>InstallProstheticEye</defName>
+        <label>Install Prosthetic Eye</label>
+        <description>Installs ProstheticEye.</description>
+        <jobString>Installing Prosthetic Eye.</jobString>
         <ingredients>
             <li>
                 <filter>
                     <thingDefs>
-                        <li>BionicEye</li>
+                        <li>IP_ProstheticEye</li>
                     </thingDefs>
                 </filter>
                 <count>1</count>
@@ -109,12 +83,12 @@
         </ingredients>
         <fixedIngredientFilter>
             <thingDefs>
-                <li>BionicEye</li>
+                <li>IP_ProstheticEye</li>
             </thingDefs>
         </fixedIngredientFilter>
         <appliedOnFixedBodyParts>
             <li>Eye</li>
         </appliedOnFixedBodyParts>
-        <addsHediff>BionicEye</addsHediff>
+        <addsHediff>IP_ProstheticEye</addsHediff>
     </RecipeDef>
 </Defs>

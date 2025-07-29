@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!-- 1티어 파츠 -->
+
+<!-- Combat A0 Chip -->
+<Defs>
+    <HediffDef ParentName="AddedBodyPartBase">
+        <defName>IP_CombatA0Chip</defName>
+        <label>Combat A0 Chip</label>
+        <labelNoun>Combat A0 Chip</labelNoun>
+        <!-- 과거 제국 군의 전투 보조를 위해 개발된 기초형 AI 칩의 시제품입니다. 스스로 이식할 수 있고 약간의 전투능력을 향상 시킵니다. -->
+        <description>A prototype combat-assist AI chip developed by the ancient empire. Provides minor combat support and can be self-installed. To prevent neural overload, it cannot be used alongside other chips.
+
+Shooting + 1
+
+Melee + 1
+        </description>
+        <descriptionHyperlinks>
+            <ThingDef>IP_CombatA0Chip</ThingDef>
+        </descriptionHyperlinks>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.0</partEfficiency>
+        </addedPartProps>
+        <spawnThingOnRemoved>IP_CombatA0Chip</spawnThingOnRemoved>
+        <stages>
+            <li>
+                <statFactors>
+                    <MeleeCooldownFactor>0.9</MeleeCooldownFactor>
+                </statFactors>
+                <statOffsets>
+                    <AimingDelayFactor>-0.1</AimingDelayFactor>
+                    <ShootingAccuracyPawn>0.01</ShootingAccuracyPawn>
+                    <MeleeHitChance>0.02</MeleeHitChance>
+                </statOffsets>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_ReactOnDamage">
+                <damageDefIncoming>EMP</damageDefIncoming>
+                <createHediff>BrainShock</createHediff>
+            </li>
+            <li Class="Implant_Plus.HediffCompProperties_SkillBoost">
+                <shootingBonus>1</shootingBonus>
+                <meleeBonus>1</meleeBonus>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <ThingDef ParentName="BodyPartProstheticMakeableBase">
+        <defName>IP_CombatA0Chip</defName>
+        <label>Combat A0 Chip</label>
+        <!-- 과거 제국의 군인들을 위해 연구,개발된 기초적인 전투 보조 AI 칩의 시제품입니다. 뇌에 과부하가 걸리는 것을 방지하기 위해, 다른 칩과는 중복 사용이 불가능합니다.-->
+        <description>A prototype of a basic combat-assist AI chip developed for the soldiers of the ancient empire. To prevent neural overload, it cannot be used in conjunction with other chips.
+
+Shooting + 1
+
+Melee + 1
+        </description>
+        <!-- 능력치 상승 바꾸기 버프능력이 아니라 단순히 레벨 증가면 분명히 요구 경험치량이 늘어날것 -->
+        <descriptionHyperlinks>
+            <RecipeDef>IP_CombatA0Chip</RecipeDef>
+        </descriptionHyperlinks>
+        <costList>
+            <Steel>15</Steel>
+            <ComponentIndustrial>4</ComponentIndustrial>
+        </costList>
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        <techHediffsTags>
+            <li>Simple</li>
+        </techHediffsTags>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
+        <defName>IP_CombatA0Chip</defName>
+        <label>Combat A0 Chip</label>
+        <description>Installs combat A0 Chip.</description>
+        <jobString>Installing combat A0 Chip.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IP_CombatA0Chip</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>IP_CombatA0Chip</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Brain</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>IP_CombatA0Chip</addsHediff>
+    </RecipeDef>
+
+    <!-- Servitor C0 Chip -->
+
+    <HediffDef ParentName="AddedBodyPartBase">
+        <defName>IP_ServitorC0Chip</defName>
+        <label>Servitor C0 Chip</label>
+        <labelNoun>Servitor C0 Chip</labelNoun>
+        <!-- 과거 제국 노동자들을 위해 개발된 기초적인 AI 칩입니다. 스스로 이식할 수 있는 이 칩은 뇌에 전기 자극을 주어 운반능력과 상승하고 기분을 좋게 만들어주며, 다른 칩과 중복 사용이 불가합니다. -->
+        <description>A basic AI chip developed for the laborers of the ancient empire. This self-implantable chip stimulates the brain to enhance hauling ability, improve mood. It cannot be used alongside other chips.</description>
+        <descriptionHyperlinks>
+            <ThingDef>IP_ServitorC0Chip</ThingDef>
+        </descriptionHyperlinks>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.0</partEfficiency>
+        </addedPartProps>
+        <spawnThingOnRemoved>IP_ServitorC0Chip</spawnThingOnRemoved>
+        <stages>
+            <li>
+                <statOffsets>
+                    <MentalBreakThreshold>-0.08</MentalBreakThreshold>                    <!-- 멘탈브레이크 임계치 감소 = 임계치 높아짐 -->
+                    <CarryCapacity>10</CarryCapacity>                    <!-- 운반 수량 증가 -->
+                </statOffsets>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_ReactOnDamage">
+                <damageDefIncoming>EMP</damageDefIncoming>
+                <createHediff>BrainShock</createHediff>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <ThingDef ParentName="BodyPartProstheticMakeableBase">
+        <defName>IP_ServitorC0Chip</defName>
+        <label>Servitor C0 Chip</label>
+        <!-- 과거 제국의 군인들을 위해 연구,개발된 기초적인 전투 보조 AI 칩의 시제품입니다. 뇌에 과부하가 걸리는 것을 방지하기 위해, 다른 칩과는 중복 사용이 불가능합니다.-->
+        <description>A prototype combat-assist AI chip, originally developed for soldiers of the ancient empire. To prevent neural overload, it cannot be used alongside other chips.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>IP_ServitorC0Chip</RecipeDef>
+        </descriptionHyperlinks>
+        <costList>
+            <Steel>15</Steel>
+            <ComponentIndustrial>4</ComponentIndustrial>
+        </costList>
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        <techHediffsTags>
+            <li>Simple</li>
+        </techHediffsTags>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
+        <defName>IP_ServitorC0Chip</defName>
+        <label>Servitor C0 Chip</label>
+        <description>Installs Servitor C0 Chip.</description>
+        <jobString>Installing Servitor C0 Chip.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IP_ServitorC0Chip</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>IP_ServitorC0Chip</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Brain</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>IP_ServitorC0Chip</addsHediff>
+    </RecipeDef>
+</Defs>
+<!-- 
+    채굴 원예 조련 
+    조리 사교
+    연구 의학  -->
