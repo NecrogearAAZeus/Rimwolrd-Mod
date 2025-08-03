@@ -1,0 +1,368 @@
+<Defs>
+
+    <ResearchTabDef>
+        <defName>IP_ImplantPlus</defName>
+        <label>Implant Plus</label>
+    </ResearchTabDef>
+
+    <!-- Advenced Prosthetic -->
+
+    <ResearchProjectDef>
+        <defName>IP_AdvencedProsthetic</defName>
+        <label>Advenced Prosthetic</label>
+        <description>Learn to create basic artificial intelligence systems for combat assistance. This technology allows the development of simple neural AI that can enhance a soldier's combat performance without overwhelming their neural pathways.</description>
+        <baseCost>1200</baseCost>
+        <techLevel>Industrial</techLevel>
+        <prerequisites>
+            <li>MicroelectronicsBasics</li>
+            <li>Prosthetics</li>
+        </prerequisites>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <tab>IP_ImplantPlus</tab>
+        <researchViewX>0.00</researchViewX>
+        <researchViewY>3.00</researchViewY>
+    </ResearchProjectDef>
+
+    <!-- Basic AI Chip -->
+
+    <ResearchProjectDef>
+        <defName>IP_BasicAI_Chip</defName>
+        <label>Basic AI Chip</label>
+        <description>Learn to create basic artificial intelligence systems for combat assistance. This technology allows the development of simple neural AI that can enhance a soldier's combat performance without overwhelming their neural pathways.</description>
+        <baseCost>600</baseCost>
+        <techLevel>Industrial</techLevel>
+        <prerequisites>
+            <li>IP_AdvencedProsthetic</li>
+        </prerequisites>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <tab>IP_ImplantPlus</tab>
+        <researchViewX>1.00</researchViewX>
+        <researchViewY>1.50</researchViewY>
+    </ResearchProjectDef>
+
+    <!-- Initial Augmentation -->
+
+    <ResearchProjectDef>
+        <defName>IP_InitialAugmentation</defName>
+        <label>Initial Augmentation</label>
+        <description>Learn to create basic artificial intelligence systems for combat assistance. This technology allows the development of simple neural AI that can enhance a soldier's combat performance without overwhelming their neural pathways.</description>
+        <baseCost>800</baseCost>
+        <techLevel>Industrial</techLevel>
+        <prerequisites>
+            <li>IP_AdvencedProsthetic</li>
+        </prerequisites>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <tab>IP_ImplantPlus</tab>
+        <researchViewX>1.00</researchViewX>
+        <researchViewY>2.50</researchViewY>
+    </ResearchProjectDef>
+
+    <!-- IDC Basic Module -->
+
+    <ResearchProjectDef>
+        <defName>IP_IDC_BasicModule</defName>
+        <label>IDC Basic Module</label>
+        <description>Learn to create basic artificial intelligence systems for combat assistance. This technology allows the development of simple neural AI that can enhance a soldier's combat performance without overwhelming their neural pathways.</description>
+        <baseCost>600</baseCost>
+        <techLevel>Industrial</techLevel>
+        <prerequisites>
+            <li>IP_AdvencedProsthetic</li>
+        </prerequisites>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <tab>IP_ImplantPlus</tab>
+        <researchViewX>2.00</researchViewX>
+        <researchViewY>1.50</researchViewY>
+    </ResearchProjectDef>
+
+    <!-- Initiation Protocol -->
+
+    <ResearchProjectDef>
+        <defName>IP_InitiationProtocol</defName>
+        <label>Initiation Protocol</label>
+        <description>Learn to create basic artificial intelligence systems for combat assistance. This technology allows the development of simple neural AI that can enhance a soldier's combat performance without overwhelming their neural pathways.</description>
+        <baseCost>800</baseCost>
+        <techLevel>Industrial</techLevel>
+        <prerequisites>
+            <li>IP_AdvencedProsthetic</li>
+        </prerequisites>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <tab>IP_ImplantPlus</tab>
+        <researchViewX>2.00</researchViewX>
+        <researchViewY>2.50</researchViewY>
+    </ResearchProjectDef>
+
+    <!-- DaoN Standard Series -->
+
+    <ResearchProjectDef>
+        <defName>IP_DaoN_StandardSeries</defName>
+        <label>DaoN Lite Series</label>
+        <description>Learn to create basic artificial intelligence systems for combat assistance. This technology allows the development of simple neural AI that can enhance a soldier's combat performance without overwhelming their neural pathways.</description>
+        <baseCost>600</baseCost>
+        <techLevel>Industrial</techLevel>
+        <prerequisites>
+            <li>IP_AdvencedProsthetic</li>
+        </prerequisites>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <tab>IP_ImplantPlus</tab>
+        <researchViewX>2.00</researchViewX>
+        <researchViewY>3.50</researchViewY>
+    </ResearchProjectDef>
+
+    <!-- Sentinel Project -->
+
+    <ResearchProjectDef>
+        <defName>IP_SentinelProject</defName>
+        <label>Sentinel Project</label>
+        <description>Learn to create basic artificial intelligence systems for combat assistance. This technology allows the development of simple neural AI that can enhance a soldier's combat performance without overwhelming their neural pathways.</description>
+        <baseCost>600</baseCost>
+        <techLevel>Industrial</techLevel>
+        <prerequisites>
+            <li>IP_AdvencedProsthetic</li>
+        </prerequisites>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <tab>IP_ImplantPlus</tab>
+        <researchViewX>2.00</researchViewX>
+        <researchViewY>4.50</researchViewY>
+    </ResearchProjectDef>
+
+    <!-- Implant Plus -->
+
+    <ResearchProjectDef>
+        <defName>IP_ImplantPlus</defName>
+        <label>Implant Plus</label>
+        <description>Learn to create basic artificial intelligence systems for combat assistance. This technology allows the development of simple neural AI that can enhance a soldier's combat performance without overwhelming their neural pathways.</description>
+        <baseCost>2500</baseCost>
+        <techLevel>Spacer</techLevel>
+        <prerequisites>
+            <li>IP_AdvencedProsthetic</li>
+            <li>Bionics</li>
+        </prerequisites>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <requiredResearchBuilding>MultiAnalyzer</requiredResearchBuilding>
+        <tab>IP_ImplantPlus</tab>
+        <researchViewX>3.00</researchViewX>
+        <researchViewY>3.00</researchViewY>
+    </ResearchProjectDef>
+
+    <!-- Advenced AI Chip -->
+
+    <ResearchProjectDef>
+        <defName>IP_AdvencedAI_Chip</defName>
+        <label>Advenced AI Chip</label>
+        <description>Learn to create basic artificial intelligence systems for combat assistance. This technology allows the development of simple neural AI that can enhance a soldier's combat performance without overwhelming their neural pathways.</description>
+        <baseCost>1000</baseCost>
+        <techLevel>Spacer</techLevel>
+        <prerequisites>
+            <li>IP_ImplantPlus</li>
+        </prerequisites>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <requiredResearchBuilding>MultiAnalyzer</requiredResearchBuilding>
+        <tab>IP_ImplantPlus</tab>
+        <researchViewX>4.00</researchViewX>
+        <researchViewY>1.50</researchViewY>
+    </ResearchProjectDef>
+
+    <!-- Full Augmentation -->
+
+    <ResearchProjectDef>
+        <defName>IP_FullAugmentation</defName>
+        <label>Full Augmentation</label>
+        <description>Learn to create basic artificial intelligence systems for combat assistance. This technology allows the development of simple neural AI that can enhance a soldier's combat performance without overwhelming their neural pathways.</description>
+        <baseCost>1500</baseCost>
+        <techLevel>Spacer</techLevel>
+        <prerequisites>
+            <li>IP_ImplantPlus</li>
+        </prerequisites>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <requiredResearchBuilding>MultiAnalyzer</requiredResearchBuilding>
+        <tab>IP_ImplantPlus</tab>
+        <researchViewX>4.00</researchViewX>
+        <researchViewY>2.50</researchViewY>
+    </ResearchProjectDef>
+
+    <!-- Specialized Organs -->
+
+    <ResearchProjectDef>
+        <defName>IP_SpecializedOrgans</defName>
+        <label>Specialized Organs</label>
+        <description>Learn to create basic artificial intelligence systems for combat assistance. This technology allows the development of simple neural AI that can enhance a soldier's combat performance without overwhelming their neural pathways.</description>
+        <baseCost>800</baseCost>
+        <techLevel>Spacer</techLevel>
+        <prerequisites>
+            <li>IP_ImplantPlus</li>
+        </prerequisites>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <requiredResearchBuilding>MultiAnalyzer</requiredResearchBuilding>
+        <tab>IP_ImplantPlus</tab>
+        <researchViewX>4.00</researchViewX>
+        <researchViewY>3.50</researchViewY>
+    </ResearchProjectDef>
+
+    <!-- IDC Enhanced Module -->
+
+    <ResearchProjectDef>
+        <defName>IP_IDC_AdvModule</defName>
+        <label>IDC Adv Module</label>
+        <description>Learn to create basic artificial intelligence systems for combat assistance. This technology allows the development of simple neural AI that can enhance a soldier's combat performance without overwhelming their neural pathways.</description>
+        <baseCost>2000</baseCost>
+        <techLevel>Spacer</techLevel>
+        <prerequisites>
+            <li>IP_ImplantPlus</li>
+        </prerequisites>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <requiredResearchBuilding>MultiAnalyzer</requiredResearchBuilding>
+        <tab>IP_ImplantPlus</tab>
+        <researchViewX>5.00</researchViewX>
+        <researchViewY>1.50</researchViewY>
+    </ResearchProjectDef>
+
+    <!-- Elevation Protocol -->
+
+    <ResearchProjectDef>
+        <defName>IP_ElevationProtocol</defName>
+        <label>Elevation Protocol</label>
+        <description>Learn to create basic artificial intelligence systems for combat assistance. This technology allows the development of simple neural AI that can enhance a soldier's combat performance without overwhelming their neural pathways.</description>
+        <baseCost>2000</baseCost>
+        <techLevel>Spacer</techLevel>
+        <prerequisites>
+            <li>IP_ImplantPlus</li>
+        </prerequisites>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <requiredResearchBuilding>MultiAnalyzer</requiredResearchBuilding>
+        <tab>IP_ImplantPlus</tab>
+        <researchViewX>5.00</researchViewX>
+        <researchViewY>2.50</researchViewY>
+    </ResearchProjectDef>
+
+    <!-- DaoN Prime Series -->
+
+    <ResearchProjectDef>
+        <defName>IP_DaoN_PrimeSeries</defName>
+        <label>DaoN Prime Series</label>
+        <description>Learn to create basic artificial intelligence systems for combat assistance. This technology allows the development of simple neural AI that can enhance a soldier's combat performance without overwhelming their neural pathways.</description>
+        <baseCost>2000</baseCost>
+        <techLevel>Spacer</techLevel>
+        <prerequisites>
+            <li>IP_ImplantPlus</li>
+        </prerequisites>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <requiredResearchBuilding>MultiAnalyzer</requiredResearchBuilding>
+        <tab>IP_ImplantPlus</tab>
+        <researchViewX>5.00</researchViewX>
+        <researchViewY>3.50</researchViewY>
+    </ResearchProjectDef>
+
+    <!-- Predator Project -->
+
+    <ResearchProjectDef>
+        <defName>IP_PredatorProject</defName>
+        <label>Predator Project</label>
+        <description>Learn to create basic artificial intelligence systems for combat assistance. This technology allows the development of simple neural AI that can enhance a soldier's combat performance without overwhelming their neural pathways.</description>
+        <baseCost>2000</baseCost>
+        <techLevel>Spacer</techLevel>
+        <prerequisites>
+            <li>IP_ImplantPlus</li>
+        </prerequisites>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <requiredResearchBuilding>MultiAnalyzer</requiredResearchBuilding>
+        <tab>IP_ImplantPlus</tab>
+        <researchViewX>5.00</researchViewX>
+        <researchViewY>4.50</researchViewY>
+    </ResearchProjectDef>
+
+    <!-- IDC Master Module -->
+
+    <ResearchProjectDef>
+        <defName>IP_IDC_MasterModule</defName>
+        <label>IDC Master Module</label>
+        <description>Learn to create basic artificial intelligence systems for combat assistance. This technology allows the development of simple neural AI that can enhance a soldier's combat performance without overwhelming their neural pathways.</description>
+        <baseCost>4000</baseCost>
+        <techLevel>Spacer</techLevel>
+        <prerequisites>
+            <li>IP_IDC_AdvModule</li>
+        </prerequisites>
+        <techprintCount>1</techprintCount>
+        <techprintCommonality>1</techprintCommonality>
+        <heldByFactionCategoryTags>
+            <li>Empire</li>
+            <li>Outlander</li>
+        </heldByFactionCategoryTags>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <requiredResearchBuilding>MultiAnalyzer</requiredResearchBuilding>
+        <tab>IP_ImplantPlus</tab>
+        <researchViewX>6.00</researchViewX>
+        <researchViewY>1.50</researchViewY>
+    </ResearchProjectDef>
+
+    <!-- Ascension Protocol -->
+
+    <ResearchProjectDef>
+        <defName>IP_AscensionProtocol</defName>
+        <label>Ascension Protocol</label>
+        <description>Learn to create basic artificial intelligence systems for combat assistance. This technology allows the development of simple neural AI that can enhance a soldier's combat performance without overwhelming their neural pathways.</description>
+        <baseCost>4000</baseCost>
+        <techLevel>Spacer</techLevel>
+        <prerequisites>
+            <li>IP_ElevationProtocol</li>
+        </prerequisites>
+        <techprintCount>1</techprintCount>
+        <techprintCommonality>1</techprintCommonality>
+        <heldByFactionCategoryTags>
+            <li>Empire</li>
+            <li>Outlander</li>
+        </heldByFactionCategoryTags>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <requiredResearchBuilding>MultiAnalyzer</requiredResearchBuilding>
+        <tab>IP_ImplantPlus</tab>
+        <researchViewX>6.00</researchViewX>
+        <researchViewY>2.50</researchViewY>
+    </ResearchProjectDef>
+
+    <!-- DaoN Elite Series -->
+
+    <ResearchProjectDef>
+        <defName>IP_DaoN_EliteSeries</defName>
+        <label>DaoN Elite Series</label>
+        <description>Learn to create basic artificial intelligence systems for combat assistance. This technology allows the development of simple neural AI that can enhance a soldier's combat performance without overwhelming their neural pathways.</description>
+        <baseCost>4000</baseCost>
+        <techLevel>Spacer</techLevel>
+        <prerequisites>
+            <li>IP_DaoN_PrimeSeries</li>
+        </prerequisites>
+        <techprintCount>1</techprintCount>
+        <techprintCommonality>1</techprintCommonality>
+        <heldByFactionCategoryTags>
+            <li>Empire</li>
+            <li>Outlander</li>
+        </heldByFactionCategoryTags>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <requiredResearchBuilding>MultiAnalyzer</requiredResearchBuilding>
+        <tab>IP_ImplantPlus</tab>
+        <researchViewX>6.00</researchViewX>
+        <researchViewY>3.50</researchViewY>
+    </ResearchProjectDef>
+
+    <!-- Juggernaut Project -->
+
+    <ResearchProjectDef>
+        <defName>IP_JuggernautProject</defName>
+        <label>Juggernaut Project</label>
+        <description>Learn to create basic artificial intelligence systems for combat assistance. This technology allows the development of simple neural AI that can enhance a soldier's combat performance without overwhelming their neural pathways.</description>
+        <baseCost>4000</baseCost>
+        <techLevel>Spacer</techLevel>
+        <prerequisites>
+            <li>IP_PredatorProject</li>
+        </prerequisites>
+        <techprintCount>1</techprintCount>
+        <techprintCommonality>1</techprintCommonality>
+        <heldByFactionCategoryTags>
+            <li>Empire</li>
+            <li>Outlander</li>
+        </heldByFactionCategoryTags>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <requiredResearchBuilding>MultiAnalyzer</requiredResearchBuilding>
+        <tab>IP_ImplantPlus</tab>
+        <researchViewX>6.00</researchViewX>
+        <researchViewY>4.50</researchViewY>
+    </ResearchProjectDef>
+</Defs>

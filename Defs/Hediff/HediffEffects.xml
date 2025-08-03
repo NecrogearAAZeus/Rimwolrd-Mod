@@ -1,0 +1,42 @@
+<Defs>
+
+    <!-- 디버프 -->
+
+    <!-- Brain Shock(Weak) -->
+
+    <HediffDef>
+        <defName>BrainShock_Weak</defName>
+        <label>Brain Shock (Weak) </label>
+
+        <description>It is the result of electrical feedback from a simple neural device, triggered by electromagnetic pulses. While milder than a typical neural shock, it causes temporary confusion and impaired motor function.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(1, 1, 0)</defaultLabelColor>
+        <maxSeverity>1.0</maxSeverity>
+        <initialSeverity>1.0</initialSeverity>
+        <tendable>false</tendable>
+        <isBad>true</isBad>
+
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>1800</disappearsAfterTicks>
+                <showRemainingTime>true</showRemainingTime>
+            </li>
+        </comps>
+
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <setMax>0.7</setMax>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+
+    <!-- 버프  -->
+
+
+</Defs>
