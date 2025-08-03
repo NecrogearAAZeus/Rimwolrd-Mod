@@ -138,7 +138,9 @@
             <li>Bionics</li>
         </prerequisites>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-        <requiredResearchBuilding>MultiAnalyzer</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>MultiAnalyzer</li>
+        </requiredResearchFacilities>
         <tab>IP_ImplantPlus</tab>
         <researchViewX>3.00</researchViewX>
         <researchViewY>3.00</researchViewY>
@@ -156,7 +158,9 @@
             <li>IP_ImplantPlus</li>
         </prerequisites>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-        <requiredResearchBuilding>MultiAnalyzer</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>MultiAnalyzer</li>
+        </requiredResearchFacilities>
         <tab>IP_ImplantPlus</tab>
         <researchViewX>4.00</researchViewX>
         <researchViewY>1.50</researchViewY>
@@ -174,7 +178,9 @@
             <li>IP_ImplantPlus</li>
         </prerequisites>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-        <requiredResearchBuilding>MultiAnalyzer</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>MultiAnalyzer</li>
+        </requiredResearchFacilities>
         <tab>IP_ImplantPlus</tab>
         <researchViewX>4.00</researchViewX>
         <researchViewY>2.50</researchViewY>
@@ -192,7 +198,9 @@
             <li>IP_ImplantPlus</li>
         </prerequisites>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-        <requiredResearchBuilding>MultiAnalyzer</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>MultiAnalyzer</li>
+        </requiredResearchFacilities>
         <tab>IP_ImplantPlus</tab>
         <researchViewX>4.00</researchViewX>
         <researchViewY>3.50</researchViewY>
@@ -210,7 +218,9 @@
             <li>IP_ImplantPlus</li>
         </prerequisites>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-        <requiredResearchBuilding>MultiAnalyzer</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>MultiAnalyzer</li>
+        </requiredResearchFacilities>
         <tab>IP_ImplantPlus</tab>
         <researchViewX>5.00</researchViewX>
         <researchViewY>1.50</researchViewY>
@@ -228,7 +238,9 @@
             <li>IP_ImplantPlus</li>
         </prerequisites>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-        <requiredResearchBuilding>MultiAnalyzer</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>MultiAnalyzer</li>
+        </requiredResearchFacilities>
         <tab>IP_ImplantPlus</tab>
         <researchViewX>5.00</researchViewX>
         <researchViewY>2.50</researchViewY>
@@ -246,7 +258,9 @@
             <li>IP_ImplantPlus</li>
         </prerequisites>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-        <requiredResearchBuilding>MultiAnalyzer</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>MultiAnalyzer</li>
+        </requiredResearchFacilities>
         <tab>IP_ImplantPlus</tab>
         <researchViewX>5.00</researchViewX>
         <researchViewY>3.50</researchViewY>
@@ -264,7 +278,9 @@
             <li>IP_ImplantPlus</li>
         </prerequisites>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-        <requiredResearchBuilding>MultiAnalyzer</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>MultiAnalyzer</li>
+        </requiredResearchFacilities>
         <tab>IP_ImplantPlus</tab>
         <researchViewX>5.00</researchViewX>
         <researchViewY>4.50</researchViewY>
@@ -288,7 +304,9 @@
             <li>Outlander</li>
         </heldByFactionCategoryTags>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-        <requiredResearchBuilding>MultiAnalyzer</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>MultiAnalyzer</li>
+        </requiredResearchFacilities>
         <tab>IP_ImplantPlus</tab>
         <researchViewX>6.00</researchViewX>
         <researchViewY>1.50</researchViewY>
@@ -312,7 +330,9 @@
             <li>Outlander</li>
         </heldByFactionCategoryTags>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-        <requiredResearchBuilding>MultiAnalyzer</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>MultiAnalyzer</li>
+        </requiredResearchFacilities>
         <tab>IP_ImplantPlus</tab>
         <researchViewX>6.00</researchViewX>
         <researchViewY>2.50</researchViewY>
@@ -336,7 +356,9 @@
             <li>Outlander</li>
         </heldByFactionCategoryTags>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-        <requiredResearchBuilding>MultiAnalyzer</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>MultiAnalyzer</li>
+        </requiredResearchFacilities>
         <tab>IP_ImplantPlus</tab>
         <researchViewX>6.00</researchViewX>
         <researchViewY>3.50</researchViewY>
@@ -360,7 +382,9 @@
             <li>Outlander</li>
         </heldByFactionCategoryTags>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-        <requiredResearchBuilding>MultiAnalyzer</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>MultiAnalyzer</li>
+        </requiredResearchFacilities>
         <tab>IP_ImplantPlus</tab>
         <researchViewX>6.00</researchViewX>
         <researchViewY>4.50</researchViewY>
