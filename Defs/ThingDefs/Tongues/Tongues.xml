@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+    <!-- 1티어 파츠 -->
+
+    <!-- Advenced Prosthesis Tongue -->
+
+    <HediffDef ParentName="ImplantHediffBase">
+        <defName>IP_AdvencedProsthesisTongue</defName>
+        <label>Advenced Prosthesis Tongue</label>
+        <labelNoun>An Advenced Prosthesis Tongue</labelNoun>
+        <!-- 기술의 발전으로 만들어진 보강된 보철물 혀 입니다. 기존의 혀보다 약간 열등하지만 다른 선택지가 없을 경우 사용됩니다.  -->
+        <description>A reinforced prosthetic tongue developed through technological progress. Slightly inferior to both natural tongues, but used when no better options are available.</description>
+        <descriptionHyperlinks>
+            <ThingDef>IP_AdvencedProsthesisTongue</ThingDef>
+        </descriptionHyperlinks>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>0.9</partEfficiency>
+        </addedPartProps>
+        <spawnThingOnRemoved>IP_AdvencedProsthesisTongue</spawnThingOnRemoved>
+    </HediffDef>
+
+    <ThingDef ParentName="BodyPartProstheticMakeableBase">
+        <defName>IP_AdvencedProsthesisTongue</defName>
+        <label>Advenced Prosthesis Tongue</label>
+        <!-- 기술의 발전으로 만들어진 보강된 보철물 혀 입니다. 생체공학 혀와 기존의 혀보다 약간 열등하지만 다른 선택지가 없을 경우 사용됩니다.  -->
+        <description>A reinforced prosthetic tongue developed through technological progress. Slightly inferior to both natural tongues, but used when no better options are available.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>IP_AdvencedProsthesisTongue</RecipeDef>
+        </descriptionHyperlinks>
+        <costList>
+            <Steel>10</Steel>
+            <ComponentIndustrial>2</ComponentIndustrial>
+        </costList>
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        <techHediffsTags>
+            <li>Industrial</li>
+        </techHediffsTags>
+        <recipeMaker>
+            <researchPrerequisite>IP_AdvencedProsthetic</researchPrerequisite>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <unfinishedThingDef>UnfinishedHealthItemProsthetic</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>5</Crafting>
+            </skillRequirements>
+            <workAmount>15000</workAmount>
+        </recipeMaker>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>IP_AdvencedProsthesisTongue</defName>
+        <label>Installing Advenced Prosthesis Tongue</label>
+        <description>Installs Advenced Prosthesis Tongue.</description>
+        <jobString>Installing Advenced Prosthesis Tongue.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IP_AdvencedProsthesisTongue</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Medicine>3</Medicine>
+        </skillRequirements>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>IP_AdvencedProsthesisTongue</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Tongue</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>IP_AdvencedProsthesisTongue</addsHediff>
+    </RecipeDef>
+
+</Defs>

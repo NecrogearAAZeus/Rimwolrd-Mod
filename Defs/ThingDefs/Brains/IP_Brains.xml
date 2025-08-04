@@ -60,7 +60,7 @@
             <RecipeDef>IP_CombatAssistAI_01_CAAI</RecipeDef>
         </descriptionHyperlinks>
         <costList>
-            <Plasteel>20</Plasteel>
+            <Steel>30</Steel>
             <ComponentIndustrial>4</ComponentIndustrial>
         </costList>
         <thingSetMakerTags>
@@ -175,7 +175,7 @@
             <RecipeDef>IP_ServantOptimizerAI_01_SOAI</RecipeDef>
         </descriptionHyperlinks>
         <costList>
-            <Plasteel>20</Plasteel>
+            <Steel>30</Steel>
             <ComponentIndustrial>4</ComponentIndustrial>
         </costList>
         <thingSetMakerTags>
@@ -271,7 +271,7 @@
             <RecipeDef>IP_WorkerSupportAI_01_WSAI</RecipeDef>
         </descriptionHyperlinks>
         <costList>
-            <Plasteel>20</Plasteel>
+            <Steel>30</Steel>
             <ComponentIndustrial>4</ComponentIndustrial>
         </costList>
         <thingSetMakerTags>
@@ -374,7 +374,7 @@
             <RecipeDef>IP_ScholarOperatorAI_01_SOAI</RecipeDef>
         </descriptionHyperlinks>
         <costList>
-            <Plasteel>20</Plasteel>
+            <Steel>30</Steel>
             <ComponentIndustrial>4</ComponentIndustrial>
         </costList>
         <thingSetMakerTags>
@@ -475,7 +475,7 @@
             <RecipeDef>IP_NobleProtocolAI_01_NPAI</RecipeDef>
         </descriptionHyperlinks>
         <costList>
-            <Plasteel>20</Plasteel>
+            <Steel>30</Steel>
             <ComponentIndustrial>4</ComponentIndustrial>
         </costList>
         <thingSetMakerTags>

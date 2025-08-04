@@ -1,53 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!-- 할일
-
-중복 장착 안되게 만들기
-
--->
-
-
-
 <Defs>
 
     <!-- 1티어 파츠 -->
 
-    <!-- Advenced Cochlear implant -->
+    <!-- Advenced Cochlear Implant -->
 
     <HediffDef ParentName="ImplantHediffBase">
-        <defName>IP_AdvencedProstheticArm</defName>
-        <label>Advenced Prosthetic Arm</label>
-        <labelNoun>An advenced Prosthetic Arm</labelNoun>
-        <!-- 기술의 발전으로 만들어진 보강된 보철 팔입니다. 단순한 보철물이나 기존 팔보다는 우수하지만, 진정한 생체공학 팔에는 미치지 못합니다. 플라스틸이나 고급 부품 없이도 제작 가능하지만, 정밀한 설계와 조립이 요구되어 제작에는 상당한 시간이 소요됩니다. -->
-        <description>A reinforced prosthetic arm, built as a result of technological progress. It surpasses a simple prosthesis and even natural arms in some ways, but still falls short of true bionics. Though it requires only steel and components rather than plasteel or advanced parts, its intricate design and assembly demand significant labor.</description>
+        <defName>IP_AdvencedCochlearImplant</defName>
+        <label>Advenced Cochlear Implant</label>
+        <labelNoun>Advenced Cochlear Implant</labelNoun>
+        <!-- 기술의 발전으로 만들어진 보강된 와우입니다. 단순한 보철물이나 기존 와우보다는 우수하지만, 생체공학 팔에는 미치지 못합니다. 플라스틸이나 고급 부품 없이도 제작 가능하지만, 정밀한 설계와 조립이 요구되어 제작에는 상당한 시간이 소요됩니다. -->
+        <description>An advanced cochlear implant developed through technological progress. Superior to simple prosthetics and conventional cochlear devices, though still not on par with true bionic ears. While it can be crafted without plasteel or advanced components, its precise design and intricate assembly require significant time to produce.</description>
         <descriptionHyperlinks>
-            <ThingDef>IP_AdvencedProstheticArm</ThingDef>
+            <ThingDef>IP_AdvencedCochlearImplant</ThingDef>
         </descriptionHyperlinks>
         <addedPartProps>
             <solid>true</solid>
             <partEfficiency>1.15</partEfficiency>
             <betterThanNatural>true</betterThanNatural>
         </addedPartProps>
-        <spawnThingOnRemoved>IP_AdvencedProstheticArm</spawnThingOnRemoved>
+        <spawnThingOnRemoved>IP_AdvencedCochlearImplant</spawnThingOnRemoved>
     </HediffDef>
 
     <ThingDef ParentName="BodyPartProstheticMakeableBase">
-        <defName>IP_AdvencedProstheticArm</defName>
-        <label>Advenced Prosthetic Arm</label>
-        <!-- 기술의 발전으로 만들어진 보철 팔입니다. 단순한 보철물이나 자연 팔보다는 우수하지만, 진정한 생체공학 팔에는 미치지 못합니다. 플라스틸이나 고급 부품 없이도 제작 가능하지만, 정밀한 설계와 조립이 요구되어 제작에는 상당한 시간이 소요됩니다. -->
-        <description>This prosthetic arm is a product of technological advancement. It surpasses a simple prosthesis and even natural arms in some ways, but still falls short of true bionics. Though it requires only steel and components rather than plasteel or advanced parts, its intricate design and assembly demand significant labor.</description>
+        <defName>IP_AdvencedCochlearImplant</defName>
+        <label>Advenced Cochlear Implant</label>
+        <!-- 기술의 발전으로 만들어진 보강된 와우입니다. 단순한 보철물이나 기존 와우보다는 우수하지만, 생체공학 팔에는 미치지 못합니다. 플라스틸이나 고급 부품 없이도 제작 가능하지만, 정밀한 설계와 조립이 요구되어 제작에는 상당한 시간이 소요됩니다. -->
+        <description>An advanced cochlear implant developed through technological progress. Superior to simple prosthetics and conventional cochlear devices, though still not on par with true bionic ears. While it can be crafted without plasteel or advanced components, its precise design and intricate assembly require significant time to produce.</description>
         <descriptionHyperlinks>
-            <RecipeDef>IP_AdvencedProstheticArm</RecipeDef>
+            <RecipeDef>IP_AdvencedCochlearImplant</RecipeDef>
         </descriptionHyperlinks>
         <costList>
-            <Steel>60</Steel>
-            <ComponentIndustrial>6</ComponentIndustrial>
+            <Steel>10</Steel>
+            <ComponentIndustrial>3</ComponentIndustrial>
         </costList>
         <thingSetMakerTags>
             <li>RewardStandardLowFreq</li>
         </thingSetMakerTags>
         <statBases>
-            <Mass>5.0</Mass>
+            <Mass>0.1</Mass>
         </statBases>
         <techHediffsTags>
             <li>Industrial</li>
@@ -70,15 +62,15 @@
     </ThingDef>
 
     <RecipeDef ParentName="SurgeryInstallImplantBase">
-        <defName>IP_AdvencedProstheticArm</defName>
-        <label>Installing Advenced Prosthetic Arm</label>
-        <description>Installs Advenced Prosthetic Arm.</description>
-        <jobString>Installing Advenced Prosthetic Arm.</jobString>
+        <defName>IP_AdvencedCochlearImplant</defName>
+        <label>Installing Advenced Cochlear Implant</label>
+        <description>Installs Advenced Cochlear Implant.</description>
+        <jobString>Installing Advenced Cochlear Implant.</jobString>
         <ingredients>
             <li>
                 <filter>
                     <thingDefs>
-                        <li>IP_AdvencedProstheticArm</li>
+                        <li>IP_AdvencedCochlearImplant</li>
                     </thingDefs>
                 </filter>
                 <count>1</count>
@@ -89,13 +81,13 @@
         </skillRequirements>
         <fixedIngredientFilter>
             <thingDefs>
-                <li>IP_AdvencedProstheticArm</li>
+                <li>IP_AdvencedCochlearImplant</li>
             </thingDefs>
         </fixedIngredientFilter>
         <appliedOnFixedBodyParts>
-            <li>Shoulder</li>
+            <li>Ear</li>
         </appliedOnFixedBodyParts>
-        <addsHediff>IP_AdvencedProstheticArm</addsHediff>
+        <addsHediff>IP_AdvencedCochlearImplant</addsHediff>
     </RecipeDef>
 
 </Defs>

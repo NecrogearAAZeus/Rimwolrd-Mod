@@ -53,7 +53,7 @@
         </descriptionHyperlinks>
         <costList>
             <Steel>30</Steel>
-            <ComponentIndustrial>4</ComponentIndustrial>
+            <ComponentIndustrial>5</ComponentIndustrial>
         </costList>
         <thingSetMakerTags>
             <li>RewardStandardLowFreq</li>

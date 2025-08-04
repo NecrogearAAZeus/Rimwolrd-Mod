@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+    <!-- 1티어 파츠 -->
+
+    <!-- Advenced Prosthesis Leg -->
+
+    <HediffDef ParentName="ImplantHediffBase">
+        <defName>IP_AdvencedProsthesisLeg</defName>
+        <label>Advenced Prosthesis Leg</label>
+        <labelNoun>An Advenced Prosthesis Leg</labelNoun>
+        <!-- 기술의 발전으로 만들어진 보강된 보철물 다리 입니다. 단순한 보철물 턱이나 기존 다리보다는 우수하지만, 생체공학 다리에는 미치지 못합니다. 플라스틸이나 고급 부품 없이도 제작 가능하지만, 정밀한 설계와 조립이 요구되어 제작에는 상당한 시간이 소요됩니다. -->
+        <description>A reinforced prosthetic leg developed through technological advancement. It performs better than a natural leg or basic prosthetic limbs, but still falls short of a true bionic leg. While it can be crafted without plasteel or advanced components, its precise design and complex assembly make it time-consuming to produce.</description>
+        <descriptionHyperlinks>
+            <ThingDef>IP_AdvencedProsthesisLeg</ThingDef>
+        </descriptionHyperlinks>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.15</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+        <spawnThingOnRemoved>IP_AdvencedProsthesisLeg</spawnThingOnRemoved>
+    </HediffDef>
+
+    <ThingDef ParentName="BodyPartProstheticMakeableBase">
+        <defName>IP_AdvencedProsthesisLeg</defName>
+        <label>Advenced Prosthesis Leg</label>
+        <!-- 기술의 발전으로 만들어진 보강된 보철물 다리 입니다. 단순한 보철물 턱이나 기존 다리보다는 우수하지만, 생체공학 다리에는 미치지 못합니다. 플라스틸이나 고급 부품 없이도 제작 가능하지만, 정밀한 설계와 조립이 요구되어 제작에는 상당한 시간이 소요됩니다. -->
+        <description>A reinforced prosthetic leg developed through technological advancement. It performs better than a natural leg or basic prosthetic limbs, but still falls short of a true bionic leg. While it can be crafted without plasteel or advanced components, its precise design and complex assembly make it time-consuming to produce.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>IP_AdvencedProsthesisLeg</RecipeDef>
+        </descriptionHyperlinks>
+        <costList>
+            <Steel>60</Steel>
+            <ComponentIndustrial>6</ComponentIndustrial>
+        </costList>
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        <statBases>
+            <Mass>8.0</Mass>
+        </statBases>
+        <techHediffsTags>
+            <li>Industrial</li>
+        </techHediffsTags>
+        <recipeMaker>
+            <researchPrerequisite>IP_AdvencedProsthetic</researchPrerequisite>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <unfinishedThingDef>UnfinishedHealthItemProsthetic</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>7</Crafting>
+            </skillRequirements>
+            <workAmount>23500</workAmount>
+        </recipeMaker>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>IP_AdvencedProsthesisLeg</defName>
+        <label>Installing Advenced Prosthesis Leg</label>
+        <description>Installs Advenced Prosthesis Leg.</description>
+        <jobString>Installing Advenced Prosthesis Leg.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IP_AdvencedProsthesisLeg</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Medicine>4</Medicine>
+        </skillRequirements>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>IP_AdvencedProsthesisLeg</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Leg</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>IP_AdvencedProsthesisLeg</addsHediff>
+    </RecipeDef>
+
+</Defs>
