@@ -10,7 +10,7 @@
         <defName>IP_AdvencedProsthesisLung</defName>
         <label>Advenced Prosthesis Lung</label>
         <labelNoun>An Advenced Prosthesis Lung</labelNoun>
-        <!-- 기술의 발전으로 실제와 작동하는 보철물 신장 입니다. 일반 신장과 동일한 기능을 하나, 건강상 등의 이유로 제작되곤 합니다. -->
+        <!-- 기술의 발전으로 실제와 동일하게 작동하는 보철물 신장 입니다. 일반 신장과 동일한 기능을 하나, 건강상 등의 이유로 제작되곤 합니다. -->
         <description>A prosthetic kidney developed through technological advancement to replicate natural function. Performs the same as a natural kidney, but is often used due to health or medical necessity.</description>
         <descriptionHyperlinks>
             <ThingDef>IP_AdvencedProsthesisLung</ThingDef>

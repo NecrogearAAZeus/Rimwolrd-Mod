@@ -6,7 +6,7 @@
 
     <!-- Advenced Cochlear Implant -->
 
-    <HediffDef ParentName="ImplantHediffBase">
+    <HediffDef ParentName="AddedBodyPartBase">
         <defName>IP_AdvencedCochlearImplant</defName>
         <label>Advenced Cochlear Implant</label>
         <labelNoun>Advenced Cochlear Implant</labelNoun>
@@ -61,7 +61,7 @@
         </recipeMaker>
     </ThingDef>
 
-    <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
         <defName>IP_AdvencedCochlearImplant</defName>
         <label>Installing Advenced Cochlear Implant</label>
         <description>Installs Advenced Cochlear Implant.</description>

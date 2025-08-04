@@ -6,7 +6,7 @@
 
     <!-- Advenced Prosthesis Spine -->
 
-    <HediffDef ParentName="ImplantHediffBase">
+    <HediffDef ParentName="AddedBodyPartBase">
         <defName>IP_AdvencedProsthesisSpine</defName>
         <label>Advenced Prosthesis Spine</label>
         <labelNoun>An Advenced Prosthesis Spine</labelNoun>
@@ -60,7 +60,7 @@
         </recipeMaker>
     </ThingDef>
 
-    <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
         <defName>IP_AdvencedProsthesisSpine</defName>
         <label>Installing Advenced Prosthesis Spine</label>
         <description>Installs Advenced Prosthesis Spine.</description>
