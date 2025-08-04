@@ -6,6 +6,7 @@
     </ResearchTabDef>
 
     <!-- Advenced Prosthetic -->
+    <!-- 강화 보철물 -->
 
     <ResearchProjectDef>
         <defName>IP_AdvencedProsthetic</defName>
@@ -24,6 +25,7 @@
     </ResearchProjectDef>
 
     <!-- Basic AI Chip -->
+    <!-- 기초 AI칩 -->
 
     <ResearchProjectDef>
         <defName>IP_BasicAI_Chip</defName>
@@ -40,7 +42,8 @@
         <researchViewY>1.50</researchViewY>
     </ResearchProjectDef>
 
-    <!-- Initial Augmentation -->
+    <!-- Initial Augmentation  <<< 바꿔야함 -->
+    <!-- 부분적인 신체 개조 -->
 
     <ResearchProjectDef>
         <defName>IP_InitialAugmentation</defName>
@@ -58,6 +61,7 @@
     </ResearchProjectDef>
 
     <!-- IDC Basic Module -->
+    <!-- IDC 기초 모듈 -->
 
     <ResearchProjectDef>
         <defName>IP_IDC_BasicModule</defName>
@@ -75,6 +79,8 @@
     </ResearchProjectDef>
 
     <!-- Initiation Protocol -->
+    <!-- 시작 규약 (신체 개조를 시작한다는 뜻, 메카 광신도 연구 파츠 -->
+
 
     <ResearchProjectDef>
         <defName>IP_InitiationProtocol</defName>
@@ -92,6 +98,7 @@
     </ResearchProjectDef>
 
     <!-- DaoN Standard Series -->
+    <!-- 다온 표준 시리즈 -->
 
     <ResearchProjectDef>
         <defName>IP_DaoN_StandardSeries</defName>
@@ -109,6 +116,7 @@
     </ResearchProjectDef>
 
     <!-- Sentinel Project -->
+    <!-- 감시병 프로젝트 -->
 
     <ResearchProjectDef>
         <defName>IP_SentinelProject</defName>
@@ -126,6 +134,7 @@
     </ResearchProjectDef>
 
     <!-- Implant Plus -->
+    <!-- 임플란트 플러스 모드를 본격적으로 시작한다는 의미도 있음 -->
 
     <ResearchProjectDef>
         <defName>IP_ImplantPlus</defName>
@@ -147,6 +156,7 @@
     </ResearchProjectDef>
 
     <!-- Advenced AI Chip -->
+    <!-- 개선된 AI 칩 -->
 
     <ResearchProjectDef>
         <defName>IP_AdvencedAI_Chip</defName>
@@ -156,6 +166,7 @@
         <techLevel>Spacer</techLevel>
         <prerequisites>
             <li>IP_ImplantPlus</li>
+            <li>IP_BasicAI_Chip</li>
         </prerequisites>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
         <requiredResearchFacilities>
@@ -167,6 +178,7 @@
     </ResearchProjectDef>
 
     <!-- Full Augmentation -->
+    <!-- 완전한 개조 -->
 
     <ResearchProjectDef>
         <defName>IP_FullAugmentation</defName>
@@ -176,6 +188,7 @@
         <techLevel>Spacer</techLevel>
         <prerequisites>
             <li>IP_ImplantPlus</li>
+            <li>IP_InitialAugmentation</li>
         </prerequisites>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
         <requiredResearchFacilities>
@@ -187,6 +200,7 @@
     </ResearchProjectDef>
 
     <!-- Specialized Organs -->
+    <!-- 전문화 장기들 -->
 
     <ResearchProjectDef>
         <defName>IP_SpecializedOrgans</defName>
@@ -207,6 +221,7 @@
     </ResearchProjectDef>
 
     <!-- IDC Enhanced Module -->
+    <!-- IDC 강화 모듈 -->
 
     <ResearchProjectDef>
         <defName>IP_IDC_AdvModule</defName>
@@ -216,6 +231,7 @@
         <techLevel>Spacer</techLevel>
         <prerequisites>
             <li>IP_ImplantPlus</li>
+            <li>IP_IDC_BasicModule</li>
         </prerequisites>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
         <requiredResearchFacilities>
@@ -227,6 +243,7 @@
     </ResearchProjectDef>
 
     <!-- Elevation Protocol -->
+    <!-- 진화 규약 -->
 
     <ResearchProjectDef>
         <defName>IP_ElevationProtocol</defName>
@@ -236,10 +253,12 @@
         <techLevel>Spacer</techLevel>
         <prerequisites>
             <li>IP_ImplantPlus</li>
+            <li>IP_InitiationProtocol</li>
         </prerequisites>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
         <requiredResearchFacilities>
             <li>MultiAnalyzer</li>
+
         </requiredResearchFacilities>
         <tab>IP_ImplantPlus</tab>
         <researchViewX>5.00</researchViewX>
@@ -247,6 +266,7 @@
     </ResearchProjectDef>
 
     <!-- DaoN Prime Series -->
+    <!-- 다온 원초?시리즈 고급품 느낌 -->
 
     <ResearchProjectDef>
         <defName>IP_DaoN_PrimeSeries</defName>
@@ -256,6 +276,7 @@
         <techLevel>Spacer</techLevel>
         <prerequisites>
             <li>IP_ImplantPlus</li>
+            <li>IP_DaoN_StandardSeries</li>
         </prerequisites>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
         <requiredResearchFacilities>
@@ -267,6 +288,7 @@
     </ResearchProjectDef>
 
     <!-- Predator Project -->
+    <!-- 포식자 프로젝트 -->
 
     <ResearchProjectDef>
         <defName>IP_PredatorProject</defName>
@@ -276,6 +298,7 @@
         <techLevel>Spacer</techLevel>
         <prerequisites>
             <li>IP_ImplantPlus</li>
+            <li>IP_SentinelProject</li>
         </prerequisites>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
         <requiredResearchFacilities>
@@ -287,6 +310,7 @@
     </ResearchProjectDef>
 
     <!-- IDC Master Module -->
+    <!-- IDC 장인 모듈? -->
 
     <ResearchProjectDef>
         <defName>IP_IDC_MasterModule</defName>
@@ -313,6 +337,7 @@
     </ResearchProjectDef>
 
     <!-- Ascension Protocol -->
+    <!-- 승천 규약 -->
 
     <ResearchProjectDef>
         <defName>IP_AscensionProtocol</defName>
@@ -339,6 +364,7 @@
     </ResearchProjectDef>
 
     <!-- DaoN Elite Series -->
+    <!-- 다온 엘리트 시리즈 -->
 
     <ResearchProjectDef>
         <defName>IP_DaoN_EliteSeries</defName>
@@ -365,6 +391,7 @@
     </ResearchProjectDef>
 
     <!-- Juggernaut Project -->
+    <!-- 저거넛 프로젝트 (저것넛은 멈출수 없는 힘 이런듯 군용 관련으로 쓰임) -->
 
     <ResearchProjectDef>
         <defName>IP_JuggernautProject</defName>

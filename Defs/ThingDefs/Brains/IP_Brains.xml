@@ -2,28 +2,14 @@
 
 
 <!-- 할일
+  
+중복 장착 안되게 만들기 
 
-기업 목록 몇개 짜오기
-
-연구 추가하기
-
-제작량 바꾸기 (베이스를 바꿔야함)
-
-연구량 정하기
-
-EMP 상태이상 만들기
-
-연구 티어를 복합분석기와 정밀조립 사이 어딘가로 요구하기
-
- -->
-
-
-<!-- 1티어 파츠 -->
-
-
+-->
 
 <Defs>
 
+    <!-- 1티어 파츠 -->
 
     <!-- Combat Assist AI 01 - CAAI -->
 
@@ -31,7 +17,7 @@ EMP 상태이상 만들기
     <HediffDef ParentName="ImplantHediffBase">
         <defName>IP_CombatAssistAI_01_CAAI</defName>
         <label>Combat Assist AI 01 - CAAI</label>
-        <labelNoun>Combat Assist AI 01 - CAAI</labelNoun>
+        <labelNoun>A Combat Assist AI 01 - CAAI</labelNoun>
         <!-- 과거 제국 군의 전투 보조를 위해 개발된 기초형 AI의 시제품입니다.약간의 전투능력을 향상 시킵니다. 과부화를 방지하기 위해 다른 칩과 함께 사용할수 없습니다. -->
         <description>A prototype combat-assist AI developed by the ancient empire. Provides minor combat support. To prevent neural overload, it cannot be used alongside other AI.</description>
         <descriptionHyperlinks>
@@ -67,7 +53,7 @@ EMP 상태이상 만들기
 
     <ThingDef ParentName="BodyPartProstheticMakeableBase">
         <defName>IP_CombatAssistAI_01_CAAI</defName>
-        <label>Combat Assist AI 01 - CAAI</label>
+        <label>A Combat Assist AI 01 - CAAI</label>
         <!-- 과거 제국의 군인들을 위해 연구,개발된 기초적인 전투 보조 AI의 시제품입니다. 뇌에 과부하가 걸리는 것을 방지하기 위해, 다른 AI와 중복 사용이 불가능합니다.-->
         <description>A prototype of a basic combat-assist AI developed for the soldiers of the ancient empire. To prevent neural overload, it cannot be used alongside other AI.</description>
         <descriptionHyperlinks>
@@ -84,8 +70,7 @@ EMP 상태이상 만들기
             <li>Industrial</li>
         </techHediffsTags>
         <recipeMaker>
-            <!-- 연구 추가하기 -->
-            <!-- <researchPrerequisite>YourResearchDef</researchPrerequisite> -->
+            <researchPrerequisite>IP_BasicAI_Chip</researchPrerequisite>
             <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
             <workSkill>Crafting</workSkill>
             <effectWorking>Smith</effectWorking>
@@ -98,9 +83,6 @@ EMP 상태이상 만들기
                 <Crafting>7</Crafting>
             </skillRequirements>
             <workAmount>20000</workAmount>
-            <skillRequirements>
-                <Medicine>3</Medicine>
-            </skillRequirements>
         </recipeMaker>
     </ThingDef>
 
@@ -119,6 +101,9 @@ EMP 상태이상 만들기
                 <count>1</count>
             </li>
         </ingredients>
+        <skillRequirements>
+            <Medicine>3</Medicine>
+        </skillRequirements>
         <fixedIngredientFilter>
             <thingDefs>
                 <li>IP_CombatAssistAI_01_CAAI</li>
@@ -141,7 +126,7 @@ EMP 상태이상 만들기
     <HediffDef ParentName="ImplantHediffBase">
         <defName>IP_ServantOptimizerAI_01_SOAI</defName>
         <label>Servant Optimizer AI 01 - SOAI</label>
-        <labelNoun>Servant Optimizer AI 01 - SOAI</labelNoun>
+        <labelNoun>A Servant Optimizer AI 01 - SOAI</labelNoun>
         <!-- 과거 제국 노동자들을 위해 개발된 기초적인 AI 입니다. 이 AI는 사용자가 지속적으로 노동을 하게 보조해주지만 생각을 단순화 시킵니다. 다른 AI와 중복 사용이 불가합니다. -->
         <description>A basic AI developed for workers of the ancient empire. This AI assists the user in sustaining continuous labor, but simplifies cognitive functions. To prevent neural overload, it cannot be used alongside other AI.</description>
         <descriptionHyperlinks>
@@ -200,8 +185,7 @@ EMP 상태이상 만들기
             <li>Industrial</li>
         </techHediffsTags>
         <recipeMaker>
-            <!-- 연구 추가하기 -->
-            <!-- <researchPrerequisite>YourResearchDef</researchPrerequisite> -->
+            <researchPrerequisite>IP_BasicAI_Chip</researchPrerequisite>
             <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
             <workSkill>Crafting</workSkill>
             <effectWorking>Smith</effectWorking>
@@ -214,9 +198,6 @@ EMP 상태이상 만들기
                 <Crafting>7</Crafting>
             </skillRequirements>
             <workAmount>20000</workAmount>
-            <skillRequirements>
-                <Medicine>3</Medicine>
-            </skillRequirements>
         </recipeMaker>
     </ThingDef>
 
@@ -235,6 +216,9 @@ EMP 상태이상 만들기
                 <count>1</count>
             </li>
         </ingredients>
+        <skillRequirements>
+            <Medicine>3</Medicine>
+        </skillRequirements>
         <fixedIngredientFilter>
             <thingDefs>
                 <li>IP_ServantOptimizerAI_01_SOAI</li>
@@ -253,7 +237,7 @@ EMP 상태이상 만들기
     <HediffDef ParentName="ImplantHediffBase">
         <defName>IP_WorkerSupportAI_01_WSAI</defName>
         <label>Worker Support AI 01 - WSAI</label>
-        <labelNoun>Worker Support AI 01 - WSAI</labelNoun>
+        <labelNoun>A Worker Support AI 01 - WSAI</labelNoun>
         <!-- 과거 제국 자유민들을 위해 개발된 기초적인 AI입니다.사용자의 작업을 보조해 작업 능률을 향상 시킵니다. 다른 AI와 중복 사용이 불가합니다. -->
         <description>A basic AI developed in the past for Freeholders of the Empire. This AI assists the user's tasks and improves work efficiency. To prevent neural overload, it cannot be used alongside other AI.</description>
         <descriptionHyperlinks>
@@ -297,8 +281,7 @@ EMP 상태이상 만들기
             <li>Industrial</li>
         </techHediffsTags>
         <recipeMaker>
-            <!-- 연구 추가하기 -->
-            <!-- <researchPrerequisite>YourResearchDef</researchPrerequisite> -->
+            <researchPrerequisite>IP_BasicAI_Chip</researchPrerequisite>
             <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
             <workSkill>Crafting</workSkill>
             <effectWorking>Smith</effectWorking>
@@ -311,9 +294,6 @@ EMP 상태이상 만들기
                 <Crafting>7</Crafting>
             </skillRequirements>
             <workAmount>20000</workAmount>
-            <skillRequirements>
-                <Medicine>3</Medicine>
-            </skillRequirements>
         </recipeMaker>
     </ThingDef>
 
@@ -332,6 +312,9 @@ EMP 상태이상 만들기
                 <count>1</count>
             </li>
         </ingredients>
+        <skillRequirements>
+            <Medicine>3</Medicine>
+        </skillRequirements>
         <fixedIngredientFilter>
             <thingDefs>
                 <li>IP_WorkerSupportAI_01_WSAI</li>
@@ -350,7 +333,7 @@ EMP 상태이상 만들기
     <HediffDef ParentName="ImplantHediffBase">
         <defName>IP_ScholarOperatorAI_01_SOAI</defName>
         <label>Scholar Operator AI 01 - SOAI</label>
-        <labelNoun>Scholar Operator AI 01 - SOAI</labelNoun>
+        <labelNoun>A Scholar Operator AI 01 - SOAI</labelNoun>
         <!-- 과거 제국의 전문 인력들을 위해 개발된 기초형 AI입니다. 이 AI는 사용자의 연구 및 의학 관련 능력을 향상시킵니다. 다른 AI와 중복 사용이 불가능합니다. -->
         <description>A basic AI developed for professional personnel of the former Empire. enhances the user's research and medical capabilities. To prevent neural overload, it cannot be used alongside other AI.</description>
         <descriptionHyperlinks>
@@ -401,8 +384,7 @@ EMP 상태이상 만들기
             <li>Industrial</li>
         </techHediffsTags>
         <recipeMaker>
-            <!-- 연구 추가하기 -->
-            <!-- <researchPrerequisite>YourResearchDef</researchPrerequisite> -->
+            <researchPrerequisite>IP_BasicAI_Chip</researchPrerequisite>
             <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
             <workSkill>Crafting</workSkill>
             <effectWorking>Smith</effectWorking>
@@ -415,9 +397,6 @@ EMP 상태이상 만들기
                 <Crafting>7</Crafting>
             </skillRequirements>
             <workAmount>20000</workAmount>
-            <skillRequirements>
-                <Medicine>3</Medicine>
-            </skillRequirements>
         </recipeMaker>
     </ThingDef>
 
@@ -436,6 +415,9 @@ EMP 상태이상 만들기
                 <count>1</count>
             </li>
         </ingredients>
+        <skillRequirements>
+            <Medicine>3</Medicine>
+        </skillRequirements>
         <fixedIngredientFilter>
             <thingDefs>
                 <li>IP_ScholarOperatorAI_01_SOAI</li>
@@ -454,7 +436,7 @@ EMP 상태이상 만들기
     <HediffDef ParentName="ImplantHediffBase">
         <defName>IP_NobleProtocolAI_01_NPAI</defName>
         <label>Noble Protocol AI 01 - NPAI</label>
-        <labelNoun>Noble Protocol AI 01 - NPAI</labelNoun>
+        <labelNoun>A Noble Protocol AI 01 - NPAI</labelNoun>
         <!-- 과거 제국의 귀족들의 사교활동을 보조하기 위해 개발된 기초형 AI입니다.이 AI는 사용자의 사화적 역량을 향상시키고 정신 감응력을 향상시킵니다. 다른 AI와 중복 사용이 불가능합니다. -->
         <description>A basic AI developed to assist the social activities of nobles in the former Empire. This AI enhances the user's social capabilities. To prevent neural overload, it cannot be used alongside other AI.</description>
         <descriptionHyperlinks>
@@ -503,8 +485,7 @@ EMP 상태이상 만들기
             <li>Industrial</li>
         </techHediffsTags>
         <recipeMaker>
-            <!-- 연구 추가하기 -->
-            <!-- <researchPrerequisite>YourResearchDef</researchPrerequisite> -->
+            <researchPrerequisite>IP_BasicAI_Chip</researchPrerequisite>
             <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
             <workSkill>Crafting</workSkill>
             <effectWorking>Smith</effectWorking>
@@ -517,9 +498,6 @@ EMP 상태이상 만들기
                 <Crafting>7</Crafting>
             </skillRequirements>
             <workAmount>20000</workAmount>
-            <skillRequirements>
-                <Medicine>3</Medicine>
-            </skillRequirements>
         </recipeMaker>
     </ThingDef>
 
@@ -538,6 +516,9 @@ EMP 상태이상 만들기
                 <count>1</count>
             </li>
         </ingredients>
+        <skillRequirements>
+            <Medicine>3</Medicine>
+        </skillRequirements>
         <fixedIngredientFilter>
             <thingDefs>
                 <li>IP_NobleProtocolAI_01_NPAI</li>
