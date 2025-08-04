@@ -46,7 +46,7 @@
         <defName>IP_InitialAugmentation</defName>
         <label>Initial Augmentation</label>
         <description>Learn to create basic artificial intelligence systems for combat assistance. This technology allows the development of simple neural AI that can enhance a soldier's combat performance without overwhelming their neural pathways.</description>
-        <baseCost>800</baseCost>
+        <baseCost>600</baseCost>
         <techLevel>Industrial</techLevel>
         <prerequisites>
             <li>IP_AdvencedProsthetic</li>
