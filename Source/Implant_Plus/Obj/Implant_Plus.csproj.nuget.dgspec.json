@@ -38,6 +38,10 @@
         "net472": {
           "targetAlias": "net472",
           "dependencies": {
+            "Lib.Harmony": {
+              "target": "Package",
+              "version": "[2.3.6, )"
+            },
             "Microsoft.NETFramework.ReferenceAssemblies": {
               "suppressParent": "All",
               "target": "Package",

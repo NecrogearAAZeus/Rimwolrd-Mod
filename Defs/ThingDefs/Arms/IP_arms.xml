@@ -232,15 +232,16 @@
     </RecipeDef>
 
     <!-- ORD-02 Phantom Reaper -->
+    <!-- 도축 작업속도랑 식물 수확속도는 올라가자만 양은 떨어진다? -->
 
     <HediffDef ParentName="AddedBodyPartBase">
-        <defName>ORD_02_Phantom_Reaper</defName>
+        <defName>IP_ORD_02_Phantom_Reaper</defName>
         <label>ORD-02 Phantom Reaper</label>
         <labelNoun>ORD-02 Phantom Reaper</labelNoun>
         <!-- Interstellar Development Corps에서 개발한 채굴 특화 보조 팔입니다. 자원이 척박한 환경에서도 효율적으로 자원을 회수할 수 있도록 설계되었습니다. 채굴 속도는 다소 느려지지만, 손실률을 최소화하고 정밀한 추출을 통해 더 많은 자원을 확보할 수 있습니다. -->
         <description>A mining-specialized auxiliary arm developed by the Interstellar Development Corps. Designed for efficient resource extraction even in resource-scarce environments. While it reduces mining speed slightly, it minimizes material loss and enables precise extraction, resulting in greater overall yield.</description>
         <descriptionHyperlinks>
-            <ThingDef>ORD_02_Phantom_Reaper</ThingDef>
+            <ThingDef>IP_ORD_02_Phantom_Reaper</ThingDef>
         </descriptionHyperlinks>
         <addedPartProps>
             <solid>true</solid>
@@ -262,18 +263,9 @@
                 </tools>
             </li>
         </comps>
-        <spawnThingOnRemoved>ORD_02_Phantom_Reaper</spawnThingOnRemoved>
+        <spawnThingOnRemoved>IP_ORD_02_Phantom_Reaper</spawnThingOnRemoved>
         <stages>
             <li>
-                <capMods>
-                    <li>
-                        <capacity>Moving</capacity>
-                        <offset>0.1</offset>
-                    </li>
-                </capMods>
-                <statFactors>
-                    <IncomingDamageFactor>1.05</IncomingDamageFactor>
-                </statFactors>
                 <statOffsets>
                     <MeleeDodgeChance>0.02</MeleeDodgeChance>
                     <GeneralLaborSpeed>-0.3</GeneralLaborSpeed>
@@ -284,12 +276,12 @@
     </HediffDef>
 
     <ThingDef ParentName="IP_AdvencedProsthesisMakeableBase">
-        <defName>ORD_02_Phantom_Reaper</defName>
+        <defName>IP_ORD_02_Phantom_Reaper</defName>
         <label>ORD-02 Phantom Reaper</label>
         <!-- Interstellar Development Corps에서 개발한 채굴 특화 보조 팔입니다. 자원이 척박한 환경에서도 효율적으로 자원을 회수할 수 있도록 설계되었습니다. 채굴 속도는 다소 느려지지만, 손실률을 최소화하고 정밀한 추출을 통해 더 많은 자원을 확보할 수 있습니다. -->
         <description>A mining-specialized auxiliary arm developed by the Interstellar Development Corps. Designed for efficient resource extraction even in resource-scarce environments. While it reduces mining speed slightly, it minimizes material loss and enables precise extraction, resulting in greater overall yield.</description>
         <descriptionHyperlinks>
-            <RecipeDef>ORD_02_Phantom_Reaper</RecipeDef>
+            <RecipeDef>IP_ORD_02_Phantom_Reaper</RecipeDef>
         </descriptionHyperlinks>
         <costList>
             <Steel>60</Steel>
@@ -326,7 +318,7 @@
     </ThingDef>
 
     <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
-        <defName>ORD_02_Phantom_Reaper</defName>
+        <defName>IP_ORD_02_Phantom_Reaper</defName>
         <label>Installing ORD-02 Phantom Reaper</label>
         <description>Installs ORD-02 Phantom Reaper.</description>
         <jobString>Installing ORD-02 Phantom Reaper.</jobString>
@@ -334,7 +326,7 @@
             <li>
                 <filter>
                     <thingDefs>
-                        <li>ORD_02_Phantom_Reaper</li>
+                        <li>IP_ORD_02_Phantom_Reaper</li>
                     </thingDefs>
                 </filter>
                 <count>1</count>
@@ -345,13 +337,13 @@
         </skillRequirements>
         <fixedIngredientFilter>
             <thingDefs>
-                <li>ORD_02_Phantom_Reaper</li>
+                <li>IP_ORD_02_Phantom_Reaper</li>
             </thingDefs>
         </fixedIngredientFilter>
         <appliedOnFixedBodyParts>
             <li>Shoulder</li>
         </appliedOnFixedBodyParts>
-        <addsHediff>ORD_02_Phantom_Reaper</addsHediff>
+        <addsHediff>IP_ORD_02_Phantom_Reaper</addsHediff>
     </RecipeDef>
 
 </Defs>

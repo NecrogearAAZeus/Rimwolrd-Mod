@@ -25,12 +25,12 @@
         <researchViewY>3.00</researchViewY>
     </ResearchProjectDef>
 
-    
+
 
     <!-- Basic AI Chip -->
     <!-- 기초 AI칩 -->
     <!-- 사용자의 특정 분야 능력향상을 위한 보조 인공지능을 연구합니다. 실사용시 끊임없이 사용자에게 조언을 건네 작업에 큰 도움을 줍니다. 부작용으로 약간의 환청이 들릴 수 있습니다.-->
-    
+
 
     <ResearchProjectDef>
         <defName>IP_BasicAI_Chip</defName>
@@ -47,13 +47,13 @@
         <researchViewY>1.50</researchViewY>
     </ResearchProjectDef>
 
-    <!-- Initial Augmentation  <<< 바꿔야함 -->
+    <!-- Minor Augmentation -->
     <!-- 부분적인 신체 개조 -->
     <!-- 사용자의 신체능력 증강을 위한 신채개조 방법을 연구합니다. 1순위는 능력 향상, 2순위가 가용성 3순위가 사용자의 안전입니다.-->
 
     <ResearchProjectDef>
-        <defName>IP_InitialAugmentation</defName>
-        <label>Initial Augmentation</label>
+        <defName>IP_MinorAugmentation</defName>
+        <label>Minor Augmentation</label>
         <description>Learn to create basic artificial intelligence systems for combat assistance. This technology allows the development of simple neural AI that can enhance a soldier's combat performance without overwhelming their neural pathways.</description>
         <baseCost>600</baseCost>
         <techLevel>Industrial</techLevel>
@@ -68,7 +68,7 @@
 
     <!-- IDC Basic Module -->
     <!-- IDC 기초 모듈 -->
-    <!-- IDC(성간 개발 협력 공단)의 표준 규격 보급품입니다. 개척작업에 종사하는 노동자들을 지원하기 위한 다양한 물품들의 설계도가 구비되어있습니다. 주변에서 쉽게 구할 수 있는 재료들로 즉석에서 제작가능하며 개척작업 중 작업자가 흔하게 맞딱드리는 진공, 극저온 극고온의 극한 상황 등의 다양한 상황들에도 작업이 가능할수 있게 해줍니다.--> 
+    <!-- IDC(성간 개발 협력 공단)의 표준 규격 보급품입니다. 개척작업에 종사하는 노동자들을 지원하기 위한 다양한 물품들의 설계도가 구비되어있습니다. 주변에서 쉽게 구할 수 있는 재료들로 즉석에서 제작가능하며 개척작업 중 작업자가 흔하게 맞딱드리는 진공, 극저온 극고온의 극한 상황 등의 다양한 상황들에도 작업이 가능할수 있게 해줍니다.-->
     <!-- 잠자는신께서 이르시되 내가 온 지면의 새끼 낳는 모든 짐승과 아이 가진 모든 인간을 너희에게 주노니 너희의 먹을 거리가 되리라  -->
 
     <ResearchProjectDef>
@@ -89,7 +89,7 @@
     <!-- Initiation Protocol -->
     <!-- 시작 규약 (신체 개조를 시작한다는 뜻, 메카 광신도 연구 파츠 -->
     <!-- 메카노이드 교단의 교리서의 시작부분입니다. 살인기계를 신봉하는 이 광신도 집단은 메카노이드의 아름다움을 찬양하며 그들에게 가까워지는 모든 행위에 순수한 열광을 느낍니다.
-    잠자는신께서 이르시되 내가 온 지면의 새끼 낳는 모든 짐승과 아이 가진 모든 인간을 너희에게 주노니 너희의 먹을 거리가 되리라  --> 
+    잠자는신께서 이르시되 내가 온 지면의 새끼 낳는 모든 짐승과 아이 가진 모든 인간을 너희에게 주노니 너희의 먹을 거리가 되리라  -->
 
 
     <ResearchProjectDef>
@@ -127,7 +127,7 @@
 
     <!-- Sentinel Project -->
     <!-- 감시병 프로젝트 -->
-    <!-- 제국 우주 해병 전략 연구소에서 연구개발된 시제품들입니다. 비겁하게 땅굴에 숨은 적을 탐지해내는 AI모듈부터 시끄럽게 시위하는 시민을 한손으로 찢을 수 있는 괴력의 강화 외골격으로 제국의 안전을 수호하는 군인들을 전폭적으로 지원합니다.  --> 
+    <!-- 제국 우주 해병 전략 연구소에서 연구개발된 시제품들입니다. 비겁하게 땅굴에 숨은 적을 탐지해내는 AI모듈부터 시끄럽게 시위하는 시민을 한손으로 찢을 수 있는 괴력의 강화 외골격으로 제국의 안전을 수호하는 군인들을 전폭적으로 지원합니다.  -->
 
 
     <ResearchProjectDef>
@@ -204,7 +204,7 @@
         <techLevel>Spacer</techLevel>
         <prerequisites>
             <li>IP_ImplantPlus</li>
-            <li>IP_InitialAugmentation</li>
+            <li>IP_MinorAugmentation</li>
         </prerequisites>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
         <requiredResearchFacilities>

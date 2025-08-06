@@ -20,10 +20,20 @@
             <packageId>ludeon.rimworld.anomaly</packageId>
             <displayName>Anomaly</displayName>
         </li>
+        <li>
+            <packageId>brrainz.harmony</packageId>
+            <displayName>Harmony</displayName>
+            <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+        </li>
     </modDependencies>
     <loadAfter>
         <li>ludeon.rimworld.royalty</li>
         <li>ludeon.rimworld.biotech</li>
         <li>ludeon.rimworld.oddssey</li>
+        <li>
+            <packageId>brrainz.harmony</packageId>
+            <displayName>Harmony</displayName>
+            <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+        </li>
     </loadAfter>
 </ModMetaData>

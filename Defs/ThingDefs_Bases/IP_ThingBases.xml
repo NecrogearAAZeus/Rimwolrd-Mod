@@ -38,7 +38,6 @@
 
     <ThingDef Name="IP_AdvencedProsthesisMakeableBase" ParentName="IP_AdvencedProsthesisBase" Abstract="True">
         <recipeMaker>
-            <!-- 여기서 기본 설정만 하고 연구는 각 아이템에서 개별 지정 -->
             <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
             <workSkill>Crafting</workSkill>
             <effectWorking>Smith</effectWorking>

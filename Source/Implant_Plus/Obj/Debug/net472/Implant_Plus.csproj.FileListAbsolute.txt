@@ -7,3 +7,5 @@ E:\games\steamapps\common\RimWorld\Mods\IMPLANT_PLUS\Source\Implant_Plus\obj\Deb
 E:\games\steamapps\common\RimWorld\Mods\IMPLANT_PLUS\Source\Implant_Plus\obj\Debug\net472\Implant_Plus.csproj.CoreCompileInputs.cache
 E:\games\steamapps\common\RimWorld\Mods\IMPLANT_PLUS\Source\Implant_Plus\obj\Debug\net472\Implant_Plus.dll
 E:\games\steamapps\common\RimWorld\Mods\IMPLANT_PLUS\Source\Implant_Plus\obj\Debug\net472\Implant_Plus.pdb
+E:\games\steamapps\common\RimWorld\Mods\IMPLANT_PLUS\Source\Implant_Plus\bin\Debug\net472\0Harmony.dll
+E:\games\steamapps\common\RimWorld\Mods\IMPLANT_PLUS\Source\Implant_Plus\obj\Debug\net472\Implant_Plus.csproj.CopyComplete

@@ -1,12 +1,14 @@
 using Verse;
+using HarmonyLib;
 
 namespace Implant_Plus
 {
-    public class MainMod : Mod
+    public class ImplantPlusMod : Mod
     {
-        public MainMod(ModContentPack content) : base(content)
+        public ImplantPlusMod(ModContentPack content) : base(content)
         {
-            Log.Message("[Implant_Plus] Mod loaded successfully!");
+            var harmony = new Harmony("ImplantPlus.Mod");
+            harmony.PatchAll();
         }
     }
 }
