@@ -5,12 +5,13 @@
         <label>Implant Plus</label>
     </ResearchTabDef>
 
-    <!-- AdvancedProsthetic -->
+    <!-- Advenced Prosthetic -->
     <!-- 강화 보철물 -->
+    <!-- 행성공단에서 노동자들의 신체결손을 직접 보완할 수 있게 하기위한 강화 보철물입니다. 개척중인 환경에서도 쉽게 습득할 수 있는 재료로 간단하게 제작가능합니다.-->
 
     <ResearchProjectDef>
         <defName>IP_AdvencedProsthetic</defName>
-        <label>AdvancedProsthetic</label>
+        <label>Advenced Prosthetic</label>
         <description>Learn to create basic artificial intelligence systems for combat assistance. This technology allows the development of simple neural AI that can enhance a soldier's combat performance without overwhelming their neural pathways.</description>
         <baseCost>1200</baseCost>
         <techLevel>Industrial</techLevel>
@@ -24,8 +25,12 @@
         <researchViewY>3.00</researchViewY>
     </ResearchProjectDef>
 
+    
+
     <!-- Basic AI Chip -->
     <!-- 기초 AI칩 -->
+    <!-- 사용자의 특정 분야 능력향상을 위한 보조 인공지능을 연구합니다. 실사용시 끊임없이 사용자에게 조언을 건네 작업에 큰 도움을 줍니다. 부작용으로 약간의 환청이 들릴 수 있습니다.-->
+    
 
     <ResearchProjectDef>
         <defName>IP_BasicAI_Chip</defName>
@@ -42,12 +47,13 @@
         <researchViewY>1.50</researchViewY>
     </ResearchProjectDef>
 
-    <!-- MinorAugmentation  <<< 바꿔야함 -->
+    <!-- Initial Augmentation  <<< 바꿔야함 -->
     <!-- 부분적인 신체 개조 -->
+    <!-- 사용자의 신체능력 증강을 위한 신채개조 방법을 연구합니다. 1순위는 능력 향상, 2순위가 가용성 3순위가 사용자의 안전입니다.-->
 
     <ResearchProjectDef>
-        <defName>IP_MinorAugmentation</defName>
-        <label>Minor Augmentation</label>
+        <defName>IP_InitialAugmentation</defName>
+        <label>Initial Augmentation</label>
         <description>Learn to create basic artificial intelligence systems for combat assistance. This technology allows the development of simple neural AI that can enhance a soldier's combat performance without overwhelming their neural pathways.</description>
         <baseCost>600</baseCost>
         <techLevel>Industrial</techLevel>
@@ -62,6 +68,8 @@
 
     <!-- IDC Basic Module -->
     <!-- IDC 기초 모듈 -->
+    <!-- IDC(성간 개발 협력 공단)의 표준 규격 보급품입니다. 개척작업에 종사하는 노동자들을 지원하기 위한 다양한 물품들의 설계도가 구비되어있습니다. 주변에서 쉽게 구할 수 있는 재료들로 즉석에서 제작가능하며 개척작업 중 작업자가 흔하게 맞딱드리는 진공, 극저온 극고온의 극한 상황 등의 다양한 상황들에도 작업이 가능할수 있게 해줍니다.--> 
+    <!-- 잠자는신께서 이르시되 내가 온 지면의 새끼 낳는 모든 짐승과 아이 가진 모든 인간을 너희에게 주노니 너희의 먹을 거리가 되리라  -->
 
     <ResearchProjectDef>
         <defName>IP_IDC_BasicModule</defName>
@@ -80,6 +88,8 @@
 
     <!-- Initiation Protocol -->
     <!-- 시작 규약 (신체 개조를 시작한다는 뜻, 메카 광신도 연구 파츠 -->
+    <!-- 메카노이드 교단의 교리서의 시작부분입니다. 살인기계를 신봉하는 이 광신도 집단은 메카노이드의 아름다움을 찬양하며 그들에게 가까워지는 모든 행위에 순수한 열광을 느낍니다.
+    잠자는신께서 이르시되 내가 온 지면의 새끼 낳는 모든 짐승과 아이 가진 모든 인간을 너희에게 주노니 너희의 먹을 거리가 되리라  --> 
 
 
     <ResearchProjectDef>
@@ -99,7 +109,7 @@
 
     <!-- DaoN Standard Series -->
     <!-- 다온 표준 시리즈 -->
-
+    <!-- 번화계의 대표 기업 다온 주식회사의 제품 카탈로그입니다. 번화계 주민들의 삶의 질 향상을 위한 안전하고 검증된 성능의 신체개조 상품들입니다. 값싸지만 성능좋은 보급형, vip를 위한 화려한 하이엔드급까지 다양한 상품들이 준비되어 있습니다.-->
     <ResearchProjectDef>
         <defName>IP_DaoN_StandardSeries</defName>
         <label>DaoN Lite Series</label>
@@ -117,6 +127,8 @@
 
     <!-- Sentinel Project -->
     <!-- 감시병 프로젝트 -->
+    <!-- 제국 우주 해병 전략 연구소에서 연구개발된 시제품들입니다. 비겁하게 땅굴에 숨은 적을 탐지해내는 AI모듈부터 시끄럽게 시위하는 시민을 한손으로 찢을 수 있는 괴력의 강화 외골격으로 제국의 안전을 수호하는 군인들을 전폭적으로 지원합니다.  --> 
+
 
     <ResearchProjectDef>
         <defName>IP_SentinelProject</defName>
@@ -135,6 +147,7 @@
 
     <!-- Implant Plus -->
     <!-- 임플란트 플러스 모드를 본격적으로 시작한다는 의미도 있음 -->
+    <!-- 번화계 네트워크 뒷편에 접촉합니다. 번화계의 기업들과 집단에서 유용한 고급 생체개조 부품들의 설계도를 빼낼 수 있습니다.  겁쟁이들은 위험하지 않냐고 하겠지만은, 그들은 자신들에 비해 낙후된 변방계 원주민들이 자신들의 정보를 '조금' 빼가는 것에 그리 관심이 없습니다. 그들은 이미 가진게 많거든요.-->
 
     <ResearchProjectDef>
         <defName>IP_ImplantPlus</defName>
@@ -155,21 +168,21 @@
         <researchViewY>3.00</researchViewY>
     </ResearchProjectDef>
 
-    <!-- AdvancedAI Chip -->
+    <!-- Advenced AI Chip -->
     <!-- 개선된 AI 칩 -->
+    <!-- 개선된 AI 칩입니다. 사용자의 작업 능력 향상을 꾀하기 위해 정신파동과 작업에 도움이 되는 조언을 작업 시간동안 착용자에게 주기적으로 조사합니다. 환청이 들린다는 악성 후기가 종종 올라오지만 판매량은 거짓말 하지 않죠.-->
+
 
     <ResearchProjectDef>
         <defName>IP_AdvencedAI_Chip</defName>
-        <label>AdvancedAI Chip</label>
+        <label>Advenced AI Chip</label>
         <description>Learn to create basic artificial intelligence systems for combat assistance. This technology allows the development of simple neural AI that can enhance a soldier's combat performance without overwhelming their neural pathways.</description>
         <baseCost>1000</baseCost>
         <techLevel>Spacer</techLevel>
         <prerequisites>
             <li>IP_ImplantPlus</li>
-        </prerequisites>
-        <hiddenPrerequisites>
             <li>IP_BasicAI_Chip</li>
-        </hiddenPrerequisites>
+        </prerequisites>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
         <requiredResearchFacilities>
             <li>MultiAnalyzer</li>
@@ -181,6 +194,7 @@
 
     <!-- Full Augmentation -->
     <!-- 완전한 개조 -->
+    <!-- 의도 : 특정능력 강화 -->
 
     <ResearchProjectDef>
         <defName>IP_FullAugmentation</defName>
@@ -190,10 +204,8 @@
         <techLevel>Spacer</techLevel>
         <prerequisites>
             <li>IP_ImplantPlus</li>
+            <li>IP_InitialAugmentation</li>
         </prerequisites>
-        <hiddenPrerequisites>
-            <li>IP_MinorAugmentation</li>
-        </hiddenPrerequisites>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
         <requiredResearchFacilities>
             <li>MultiAnalyzer</li>
@@ -205,6 +217,7 @@
 
     <!-- Specialized Organs -->
     <!-- 전문화 장기들 -->
+    <!-- 기술적 특이점에 도달한 번화계의 전문화 장기입니다. -->
 
     <ResearchProjectDef>
         <defName>IP_SpecializedOrgans</defName>
@@ -226,6 +239,7 @@
 
     <!-- IDC Enhanced Module -->
     <!-- IDC 강화 모듈 -->
+    <!-- IDC의 노동자 지원 보급품의 강화 모델입니다. 우수한 실적을 낸 노동자들에게 우선 배분되며 그 수는 전체 노동자의 5퍼센트 미만입니다. 사지 멀쩡한 사람은 그 중 1퍼센트정도라네요 -->
 
     <ResearchProjectDef>
         <defName>IP_IDC_AdvModule</defName>
@@ -235,10 +249,8 @@
         <techLevel>Spacer</techLevel>
         <prerequisites>
             <li>IP_ImplantPlus</li>
-        </prerequisites>
-        <hiddenPrerequisites>
             <li>IP_IDC_BasicModule</li>
-        </hiddenPrerequisites>
+        </prerequisites>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
         <requiredResearchFacilities>
             <li>MultiAnalyzer</li>
@@ -250,6 +262,7 @@
 
     <!-- Elevation Protocol -->
     <!-- 진화 규약 -->
+    <!-- Orto of Machina의 경전 중 가장 방대한 내용을 다루는 복음서입니다. 이걸로 머리를 치면 머리가 납작해질정도로 두껍고 무겁습니다.-->
 
     <ResearchProjectDef>
         <defName>IP_ElevationProtocol</defName>
@@ -259,13 +272,12 @@
         <techLevel>Spacer</techLevel>
         <prerequisites>
             <li>IP_ImplantPlus</li>
-        </prerequisites>
-        <hiddenPrerequisites>
             <li>IP_InitiationProtocol</li>
-        </hiddenPrerequisites>
+        </prerequisites>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
         <requiredResearchFacilities>
             <li>MultiAnalyzer</li>
+
         </requiredResearchFacilities>
         <tab>IP_ImplantPlus</tab>
         <researchViewX>5.00</researchViewX>
@@ -274,6 +286,7 @@
 
     <!-- DaoN Prime Series -->
     <!-- 다온 원초?시리즈 고급품 느낌 -->
+    <!-- 다온의 vvip들을 위한 고급품입니다. 번화계의 부자들은 사소한 자극으로는 삶의 보람을 느끼지 못합니다. 더욱 강한 신체개조와 자극을 위해서라면 행성 하나 살 돈 정도는 흔쾌히 지불하겠죠 -->
 
     <ResearchProjectDef>
         <defName>IP_DaoN_PrimeSeries</defName>
@@ -283,10 +296,8 @@
         <techLevel>Spacer</techLevel>
         <prerequisites>
             <li>IP_ImplantPlus</li>
-        </prerequisites>
-        <hiddenPrerequisites>
             <li>IP_DaoN_StandardSeries</li>
-        </hiddenPrerequisites>
+        </prerequisites>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
         <requiredResearchFacilities>
             <li>MultiAnalyzer</li>
@@ -307,10 +318,8 @@
         <techLevel>Spacer</techLevel>
         <prerequisites>
             <li>IP_ImplantPlus</li>
-        </prerequisites>
-        <hiddenPrerequisites>
             <li>IP_SentinelProject</li>
-        </hiddenPrerequisites>
+        </prerequisites>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
         <requiredResearchFacilities>
             <li>MultiAnalyzer</li>
@@ -403,6 +412,7 @@
 
     <!-- Juggernaut Project -->
     <!-- 저거넛 프로젝트 (저것넛은 멈출수 없는 힘 이런듯 군용 관련으로 쓰임) -->
+    <!-- 제국 해병 전략 연구소의 기밀 프로젝트인 저거넛 프로젝트의 설계도입니다. 제국의 한때 찬란했던 시절을 재현하기 위해 인간의 범주를 벗어날정도의 강화신체 부품들을 제공합니다. -->
 
     <ResearchProjectDef>
         <defName>IP_JuggernautProject</defName>
