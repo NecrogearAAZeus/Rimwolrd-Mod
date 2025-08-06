@@ -4,12 +4,12 @@
 
     <!-- 1티어 파츠 -->
 
-    <!-- Advenced Prosthesis Spine -->
+    <!-- AdvancedProsthesis Spine -->
 
     <HediffDef ParentName="AddedBodyPartBase">
         <defName>IP_AdvencedProsthesisSpine</defName>
-        <label>Advenced Prosthesis Spine</label>
-        <labelNoun>An Advenced Prosthesis Spine</labelNoun>
+        <label>AdvancedProsthesis Spine</label>
+        <labelNoun>AdvancedProsthesis Spine</labelNoun>
         <!-- 기술의 발전으로 만들어진 보강된 보철물 척추입니다. 기존의 척추보다 약간 열등하지만 다른 선택지가 없을 경우 사용됩니다.  -->
         <description>A reinforced prosthetic spine developed through technological advancement. Slightly inferior to a natural spine, but used when no better alternatives are available.</description>
         <descriptionHyperlinks>
@@ -22,9 +22,9 @@
         <spawnThingOnRemoved>IP_AdvencedProsthesisSpine</spawnThingOnRemoved>
     </HediffDef>
 
-    <ThingDef ParentName="BodyPartProstheticMakeableBase">
+    <ThingDef ParentName="IP_AdvencedProsthesisMakeableBase">
         <defName>IP_AdvencedProsthesisSpine</defName>
-        <label>Advenced Prosthesis Spine</label>
+        <label>AdvancedProsthesis Spine</label>
         <!-- 기술의 발전으로 만들어진 보강된 보철물 척추입니다. 기존의 척추보다 약간 열등하지만 다른 선택지가 없을 경우 사용됩니다.  -->
         <description>A reinforced prosthetic spine developed through technological advancement. Slightly inferior to a natural spine, but used when no better alternatives are available.</description>
         <descriptionHyperlinks>
@@ -39,6 +39,7 @@
         </thingSetMakerTags>
         <statBases>
             <Mass>2.0</Mass>
+            <MarketValue>300</MarketValue>
         </statBases>
         <techHediffsTags>
             <li>Industrial</li>
@@ -56,15 +57,15 @@
             <skillRequirements>
                 <Crafting>6</Crafting>
             </skillRequirements>
-            <workAmount>22000</workAmount>
+            <workAmount>18000</workAmount>
         </recipeMaker>
     </ThingDef>
 
     <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
         <defName>IP_AdvencedProsthesisSpine</defName>
-        <label>Installing Advenced Prosthesis Spine</label>
-        <description>Installs Advenced Prosthesis Spine.</description>
-        <jobString>Installing Advenced Prosthesis Spine.</jobString>
+        <label>Installing AdvancedProsthesis Spine</label>
+        <description>Installs AdvancedProsthesis Spine.</description>
+        <jobString>Installing AdvancedProsthesis Spine.</jobString>
         <ingredients>
             <li>
                 <filter>

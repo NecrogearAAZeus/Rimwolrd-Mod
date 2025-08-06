@@ -2,11 +2,11 @@
 
     <!-- 디버프 -->
 
-    <!-- Brain Shock(Weak) -->
+    <!-- Brain Shock(Minor) -->
 
     <HediffDef>
-        <defName>BrainShock_Weak</defName>
-        <label>Brain Shock (Weak) </label>
+        <defName>IP_BrainShockMinor</defName>
+        <label>Brain Shock (Minor)</label>
 
         <description>It is the result of electrical feedback from a simple neural device, triggered by electromagnetic pulses. While milder than a typical neural shock, it causes temporary confusion and impaired motor function.</description>
         <hediffClass>HediffWithComps</hediffClass>
@@ -35,6 +35,116 @@
         </stages>
     </HediffDef>
 
+    <!-- Inner Frame Emp Shocked (Minor) -->
+
+    <HediffDef>
+        <defName>IP_InnerFrameEmpShockedMinor</defName>
+        <label>Inner Frame Emp Shocked (Minor)</label>
+        <!-- EMP 충격으로 엑소 스켈레톤의 일부 기능이 일시적으로 마비되어, 조작 능력과 이동 능력이 다소 저하되었습니다. 시스템이 자동 복구 중입니다. -->
+        <description>The Innerframe has suffered a mild EMP shock, temporarily disabling some of its functions. Manipulation and movement are slightly impaired. The system is currently undergoing automatic recovery.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(1, 1, 0)</defaultLabelColor>
+        <maxSeverity>1.0</maxSeverity>
+        <initialSeverity>1.0</initialSeverity>
+        <tendable>false</tendable>
+        <isBad>true</isBad>
+
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>900</disappearsAfterTicks>
+                <showRemainingTime>true</showRemainingTime>
+            </li>
+        </comps>
+
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <setMax>0.7</setMax>
+                    </li>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <setMax>0.7</setMax>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!-- Inner Frame Emp Shocked (Moderate) -->
+
+    <HediffDef>
+        <defName>IP_InnerFrameEmpShockedModerate</defName>
+        <label>Inner Frame Emp Shocked (Moderate) </label>
+        <!-- EMP 충격으로 엑소 스켈레톤의 일부 기능이 일시적으로 마비되어, 조작 능력과 이동 능력이 다소 저하되었습니다. 시스템이 자동 복구 중입니다. -->
+        <description>The Innerframe has suffered a mild EMP shock, temporarily disabling some of its functions. Manipulation and movement are slightly impaired. The system is currently undergoing automatic recovery.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(1, 1, 0)</defaultLabelColor>
+        <maxSeverity>1.0</maxSeverity>
+        <initialSeverity>1.0</initialSeverity>
+        <tendable>false</tendable>
+        <isBad>true</isBad>
+
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>1350</disappearsAfterTicks>
+                <showRemainingTime>true</showRemainingTime>
+            </li>
+        </comps>
+
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <setMax>0.55</setMax>
+                    </li>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <setMax>0.55</setMax>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!-- Inner Frame Emp Shocked (Severe) -->
+
+    <HediffDef>
+        <defName>IP_InnerFrameEmpShockedSevere</defName>
+        <label>Inner Frame Emp Shocked (Severe) </label>
+        <!-- EMP 충격으로 엑소 스켈레톤의 일부 기능이 일시적으로 마비되어, 조작 능력과 이동 능력이 다소 저하되었습니다. 시스템이 자동 복구 중입니다. -->
+        <description>The Innerframe has suffered a mild EMP shock, temporarily disabling some of its functions. Manipulation and movement are slightly impaired. The system is currently undergoing automatic recovery.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(1, 1, 0)</defaultLabelColor>
+        <maxSeverity>1.0</maxSeverity>
+        <initialSeverity>1.0</initialSeverity>
+        <tendable>false</tendable>
+        <isBad>true</isBad>
+
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>1800</disappearsAfterTicks>
+                <showRemainingTime>true</showRemainingTime>
+            </li>
+        </comps>
+
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <setMax>0.40</setMax>
+                    </li>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <setMax>0.40</setMax>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
 
     <!-- 버프  -->
 

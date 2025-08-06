@@ -4,12 +4,12 @@
 
     <!-- 1티어 파츠 -->
 
-    <!-- Advenced Prosthesis Liver -->
+    <!-- AdvancedProsthesis Liver -->
 
     <HediffDef ParentName="ImplantHediffBase">
         <defName>IP_AdvencedProsthesisLiver</defName>
-        <label>Advenced Prosthesis Liver</label>
-        <labelNoun>An Advenced Prosthesis Liver</labelNoun>
+        <label>AdvancedProsthesis Liver</label>
+        <labelNoun>AdvancedProsthesis Liver</labelNoun>
         <!-- 기술의 발전으로 만들어진 보철물 간입니다. 실제 간과 동일하게 작동합니다. 건강상 문제 등으로 교체해야 할 시 사용되곤 합니다. -->
         <description>A prosthetic liver developed through technological advancement. It functions the same as a natural liver and is typically used when replacement is needed due to health issues.</description>
         <descriptionHyperlinks>
@@ -22,9 +22,9 @@
         <spawnThingOnRemoved>IP_AdvencedProsthesisLiver</spawnThingOnRemoved>
     </HediffDef>
 
-    <ThingDef ParentName="BodyPartProstheticMakeableBase">
+    <ThingDef ParentName="IP_AdvencedProsthesisMakeableBase">
         <defName>IP_AdvencedProsthesisLiver</defName>
-        <label>Advenced Prosthesis Liver</label>
+        <label>AdvancedProsthesis Liver</label>
         <!-- 기술의 발전으로 만들어진 보철물 간입니다. 실제 간과 동일하게 작동합니다. 건강상 문제 등으로 교체해야 할 시 사용되곤 합니다. -->
         <description>A prosthetic liver developed through technological advancement. It functions the same as a natural liver and is typically used when replacement is needed due to health issues.</description>
         <descriptionHyperlinks>
@@ -39,6 +39,7 @@
         </thingSetMakerTags>
         <statBases>
             <Mass>1.0</Mass>
+            <MarketValue>270</MarketValue>
         </statBases>
         <techHediffsTags>
             <li>Industrial</li>
@@ -56,15 +57,15 @@
             <skillRequirements>
                 <Crafting>5</Crafting>
             </skillRequirements>
-            <workAmount>20000</workAmount>
+            <workAmount>17500</workAmount>
         </recipeMaker>
     </ThingDef>
 
     <RecipeDef ParentName="SurgeryInstallImplantBase">
         <defName>IP_AdvencedProsthesisLiver</defName>
-        <label>Installing Advenced Prosthesis Liver</label>
-        <description>Installs Advenced Prosthesis Liver.</description>
-        <jobString>Installing Advenced Prosthesis Liver.</jobString>
+        <label>Installing AdvancedProsthesis Liver</label>
+        <description>Installs AdvancedProsthesis Liver.</description>
+        <jobString>Installing AdvancedProsthesis Liver.</jobString>
         <ingredients>
             <li>
                 <filter>

@@ -4,12 +4,12 @@
 
     <!-- 1티어 파츠 -->
 
-    <!-- Advenced Prosthesis Tongue -->
+    <!-- AdvancedProsthesis Tongue -->
 
     <HediffDef ParentName="AddedBodyPartBase">
         <defName>IP_AdvencedProsthesisTongue</defName>
-        <label>Advenced Prosthesis Tongue</label>
-        <labelNoun>An Advenced Prosthesis Tongue</labelNoun>
+        <label>AdvancedProsthesis Tongue</label>
+        <labelNoun>AdvancedProsthesis Tongue</labelNoun>
         <!-- 기술의 발전으로 만들어진 보강된 보철물 혀 입니다. 기존의 혀보다 약간 열등하지만 다른 선택지가 없을 경우 사용됩니다.  -->
         <description>A reinforced prosthetic tongue developed through technological progress. Slightly inferior to both natural tongues, but used when no better options are available.</description>
         <descriptionHyperlinks>
@@ -22,9 +22,9 @@
         <spawnThingOnRemoved>IP_AdvencedProsthesisTongue</spawnThingOnRemoved>
     </HediffDef>
 
-    <ThingDef ParentName="BodyPartProstheticMakeableBase">
+    <ThingDef ParentName="IP_AdvencedProsthesisMakeableBase">
         <defName>IP_AdvencedProsthesisTongue</defName>
-        <label>Advenced Prosthesis Tongue</label>
+        <label>AdvancedProsthesis Tongue</label>
         <!-- 기술의 발전으로 만들어진 보강된 보철물 혀 입니다. 생체공학 혀와 기존의 혀보다 약간 열등하지만 다른 선택지가 없을 경우 사용됩니다.  -->
         <description>A reinforced prosthetic tongue developed through technological progress. Slightly inferior to both natural tongues, but used when no better options are available.</description>
         <descriptionHyperlinks>
@@ -37,6 +37,9 @@
         <thingSetMakerTags>
             <li>RewardStandardLowFreq</li>
         </thingSetMakerTags>
+        <statBases>
+            <MarketValue>180</MarketValue>
+        </statBases>
         <techHediffsTags>
             <li>Industrial</li>
         </techHediffsTags>
@@ -53,15 +56,15 @@
             <skillRequirements>
                 <Crafting>5</Crafting>
             </skillRequirements>
-            <workAmount>15000</workAmount>
+            <workAmount>17500</workAmount>
         </recipeMaker>
     </ThingDef>
 
     <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
         <defName>IP_AdvencedProsthesisTongue</defName>
-        <label>Installing Advenced Prosthesis Tongue</label>
-        <description>Installs Advenced Prosthesis Tongue.</description>
-        <jobString>Installing Advenced Prosthesis Tongue.</jobString>
+        <label>Installing AdvancedProsthesis Tongue</label>
+        <description>Installs AdvancedProsthesis Tongue.</description>
+        <jobString>Installing AdvancedProsthesis Tongue.</jobString>
         <ingredients>
             <li>
                 <filter>

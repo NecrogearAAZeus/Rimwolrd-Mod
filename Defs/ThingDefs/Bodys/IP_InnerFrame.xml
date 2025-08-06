@@ -1,0 +1,309 @@
+<Defs>
+
+    <!-- 1티어 파츠 -->
+
+    <!-- Combat Inner Frame -->
+
+    <HediffDef ParentName="ImplantHediffBase">
+        <defName>IP_CombatInnerFrame</defName>
+        <label>Combat Inner Frame</label>
+        <labelNoun>Combat Inner Frame</labelNoun>
+        <!-- 변방계 병사에게 설치되는 기초적인 전투 외골격입니다. 뼈와 근육을 소폭 보강하며, 약간의 장갑판과 자세 안정화 모듈이 장착되어 있습니다. 다른 외골격과는 중복하여 설치할 수 없습니다. -->
+        <description>A basic combat Inner Frame commonly installed on frontier soldiers. It slightly reinforces bones and muscles, and comes equipped with light armor plating and a posture stabilization module. Cannot be installed alongside other Inner Frames.</description>
+        <descriptionHyperlinks>
+            <ThingDef>IP_CombatInnerFrame</ThingDef>
+        </descriptionHyperlinks>
+        <spawnThingOnRemoved>IP_CombatInnerFrame</spawnThingOnRemoved>
+        <stages>
+            <li>
+                <statOffsets>
+                    <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+                    <ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+                    <ArmorRating_Heat>0.1</ArmorRating_Heat>
+                </statOffsets>
+                <statFactors>
+                    <AimingDelayFactor>0.9</AimingDelayFactor>
+                    <MeleeCooldownFactor>0.9</MeleeCooldownFactor>
+                </statFactors>
+                <capMods>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>0.05</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+        <comps>
+            <li Class="Implant_Plus.HediffCompProperties_EMPReaction" />
+        </comps>
+
+    </HediffDef>
+
+    <ThingDef ParentName="IP_AdvencedProsthesisMakeableBase">
+        <defName>IP_CombatInnerFrame</defName>
+        <label>Combat Inner Frame</label>
+        <!-- 변방계 병사에게 설치되는 기초적인 전투 외골격입니다. 뼈와 근육을 소폭 보강하며, 약간의 장갑판과 자세 안정화 모듈이 장착되어 있습니다. 다른 외골격과는 중복하여 설치할 수 없습니다. -->
+        <description>A basic combat Inner Frame commonly installed on frontier soldiers. It slightly reinforces bones and muscles, and comes equipped with light armor plating and a posture stabilization module. Cannot be installed alongside other Inner Frames.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>IP_CombatInnerFrame</RecipeDef>
+        </descriptionHyperlinks>
+        <costList>
+            <Steel>120</Steel>
+            <ComponentIndustrial>6</ComponentIndustrial>
+        </costList>
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        <statBases>
+            <Mass>5.0</Mass>
+            <MarketValue>420</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Industrial</li>
+        </techHediffsTags>
+        <recipeMaker>
+            <researchPrerequisite>IP_MinorAugmentation</researchPrerequisite>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>8</Crafting>
+            </skillRequirements>
+            <workAmount>18000</workAmount>
+        </recipeMaker>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>IP_CombatInnerFrame</defName>
+        <label>Installing Combat Inner Frame</label>
+        <description>Installs Combat Inner Frame.</description>
+        <jobString>Installing Combat Inner Frame.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IP_CombatInnerFrame</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Medicine>7</Medicine>
+        </skillRequirements>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>IP_CombatInnerFrame</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Body</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>IP_CombatInnerFrame</addsHediff>
+    </RecipeDef>
+
+    <!-- Worker Inner Frame -->
+
+    <HediffDef ParentName="ImplantHediffBase">
+        <defName>IP_WorkerInnerFrame</defName>
+        <label>Worker Inner Frame</label>
+        <labelNoun>Worker Inner Frame</labelNoun>
+        <!-- 많은 작업자에게 사랑받는 보급형 작업 외골격입니다. 정밀한 작업을 지원하며, 근력을 보강해 다양한 노동에 유용합니다. 다른 외골격과는 중복하여 설치할 수 없습니다. -->
+        <description>A widely-used work Inner Frame favored by many laborers. It enhances precision for fine tasks and reinforces physical strength, making it useful for various forms of labor. Cannot be installed alongside other Inner Frames.</description>
+        <descriptionHyperlinks>
+            <ThingDef>IP_WorkerInnerFrame</ThingDef>
+        </descriptionHyperlinks>
+        <spawnThingOnRemoved>IP_WorkerInnerFrame</spawnThingOnRemoved>
+        <stages>
+            <li>
+                <statOffsets>
+                    <GeneralLaborSpeed>0.15</GeneralLaborSpeed>
+                </statOffsets>
+                <capMods>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <offset>0.1</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+        <comps>
+            <li Class="Implant_Plus.HediffCompProperties_EMPReaction" />
+        </comps>
+
+    </HediffDef>
+
+    <ThingDef ParentName="IP_AdvencedProsthesisMakeableBase">
+        <defName>IP_WorkerInnerFrame</defName>
+        <label>Worker Inner Frame</label>
+        <!-- 많은 작업자에게 사랑받는 보급형 작업 외골격입니다. 정밀한 작업을 지원하며, 근력을 보강해 다양한 노동에 유용합니다. 다른 외골격과는 중복하여 설치할 수 없습니다. -->
+        <description>A widely-used work Inner Frame favored by many laborers. It enhances precision for fine tasks and reinforces physical strength, making it useful for various forms of labor. Cannot be installed alongside other Inner Frames.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>IP_CombatInnerFrame</RecipeDef>
+        </descriptionHyperlinks>
+        <costList>
+            <Steel>120</Steel>
+            <ComponentIndustrial>6</ComponentIndustrial>
+        </costList>
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        <statBases>
+            <Mass>5.0</Mass>
+            <MarketValue>420</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Industrial</li>
+        </techHediffsTags>
+        <recipeMaker>
+            <researchPrerequisite>IP_MinorAugmentation</researchPrerequisite>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>8</Crafting>
+            </skillRequirements>
+            <workAmount>18000</workAmount>
+        </recipeMaker>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>IP_WorkerInnerFrame</defName>
+        <label>Installing Worker Inner Frame</label>
+        <description>Installs Worker Inner Frame.</description>
+        <jobString>Installing Worker Inner Frame.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IP_WorkerInnerFrame</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Medicine>7</Medicine>
+        </skillRequirements>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>IP_WorkerInnerFrame</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Body</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>IP_WorkerInnerFrame</addsHediff>
+    </RecipeDef>
+
+    <!-- Standard Inner Frame -->
+
+    <HediffDef ParentName="ImplantHediffBase">
+        <defName>IP_StandardInnerFrame</defName>
+        <label>Standard Inner Frame</label>
+        <labelNoun>Standard Inner Frame</labelNoun>
+        <!-- 다양한 상황에 대응할 수 있도록 설계된 범용 외골격 입니다. 사용자의 전반적인 신체능력을 올려줍니다. 다른 외골격과는 중복하여 설치할 수 없습니다. -->
+        <description>A versatile Inner Frame designed to handle a variety of situations. It enhances the user's overall physical capabilities. Cannot be installed alongside other Inner Frames</description>
+        <descriptionHyperlinks>
+            <ThingDef>IP_WorkerInnerFrame</ThingDef>
+        </descriptionHyperlinks>
+        <spawnThingOnRemoved>IP_WorkerInnerFrame</spawnThingOnRemoved>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <offset>0.1</offset>
+                    </li>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>0.15</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+        <comps>
+            <li Class="Implant_Plus.HediffCompProperties_EMPReaction" />
+        </comps>
+
+    </HediffDef>
+
+    <ThingDef ParentName="IP_AdvencedProsthesisMakeableBase">
+        <defName>IP_StandardInnerFrame</defName>
+        <label>Standard Inner Frame</label>
+        <!-- 다양한 상황에 대응할 수 있도록 설계된 범용 외골격 입니다. 사용자의 전반적인 신체능력을 올려줍니다. 다른 외골격과는 중복하여 설치할 수 없습니다. -->
+        <description>A versatile Inner Frame designed to handle a variety of situations. It enhances the user's overall physical capabilities. Cannot be installed alongside other Inner Frames</description>
+        <descriptionHyperlinks>
+            <RecipeDef>IP_StandardInnerFrame</RecipeDef>
+        </descriptionHyperlinks>
+        <costList>
+            <Steel>120</Steel>
+            <ComponentIndustrial>6</ComponentIndustrial>
+        </costList>
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        <statBases>
+            <Mass>5.0</Mass>
+            <MarketValue>420</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Industrial</li>
+        </techHediffsTags>
+        <recipeMaker>
+            <researchPrerequisite>IP_MinorAugmentation</researchPrerequisite>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>8</Crafting>
+            </skillRequirements>
+            <workAmount>18000</workAmount>
+        </recipeMaker>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>IP_StandardInnerFrame</defName>
+        <label>Installing Standard Inner Frame</label>
+        <description>Installs Standard Inner Frame</description>
+        <jobString>Installing Standard Inner Frame</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IP_StandardInnerFrame</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Medicine>7</Medicine>
+        </skillRequirements>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>IP_StandardInnerFrame</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Body</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>IP_StandardInnerFrame</addsHediff>
+    </RecipeDef>
+
+</Defs>

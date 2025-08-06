@@ -1,0 +1,56 @@
+<Defs>
+
+    <!-- Tier1 -->
+
+    <!-- Advenced Prosthesis Base -->
+    <ThingDef Name="IP_AdvencedProsthesisBase" Abstract="True">
+        <thingClass>ThingWithComps</thingClass>
+        <category>Item</category>
+        <useHitPoints>true</useHitPoints>
+        <healthAffectsPrice>false</healthAffectsPrice>
+        <selectable>true</selectable>
+        <statBases>
+            <MaxHitPoints>50</MaxHitPoints>
+            <Beauty>-4</Beauty>
+            <DeteriorationRate>2</DeteriorationRate>
+            <SellPriceFactor>0.50</SellPriceFactor>
+        </statBases>
+        <altitudeLayer>Item</altitudeLayer>
+        <stackLimit>1</stackLimit>
+        <graphicData>
+            <texPath>Things/Item/Health/HealthItem</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <tradeTags>
+            <li>TechHediff</li>
+        </tradeTags>
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        <comps>
+            <li Class="CompProperties_Forbiddable" />
+        </comps>
+        <pathCost>15</pathCost>
+        <soundInteract>Metal_Drop</soundInteract>
+        <soundDrop>Standard_Drop</soundDrop>
+        <techLevel>Industrial</techLevel>
+    </ThingDef>
+
+    <ThingDef Name="IP_AdvencedProsthesisMakeableBase" ParentName="IP_AdvencedProsthesisBase" Abstract="True">
+        <recipeMaker>
+            <!-- 여기서 기본 설정만 하고 연구는 각 아이템에서 개별 지정 -->
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <unfinishedThingDef>UnfinishedHealthItemProsthetic</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>5</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+    </ThingDef>
+
+</Defs>

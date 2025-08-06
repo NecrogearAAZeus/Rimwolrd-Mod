@@ -4,12 +4,12 @@
 
     <!-- 1티어 파츠 -->
 
-    <!-- Advenced Prosthesis Lung -->
+    <!-- AdvancedProsthesis Lung -->
 
     <HediffDef ParentName="ImplantHediffBase">
         <defName>IP_AdvencedProsthesisLung</defName>
-        <label>Advenced Prosthesis Lung</label>
-        <labelNoun>An Advenced Prosthesis Lung</labelNoun>
+        <label>AdvancedProsthesis Lung</label>
+        <labelNoun>AdvancedProsthesis Lung</labelNoun>
         <!-- 기술의 발전으로 실제와 동일하게 작동하는 보철물 신장 입니다. 일반 신장과 동일한 기능을 하나, 건강상 등의 이유로 제작되곤 합니다. -->
         <description>A prosthetic kidney developed through technological advancement to replicate natural function. Performs the same as a natural kidney, but is often used due to health or medical necessity.</description>
         <descriptionHyperlinks>
@@ -22,9 +22,9 @@
         <spawnThingOnRemoved>IP_AdvencedProsthesisLung</spawnThingOnRemoved>
     </HediffDef>
 
-    <ThingDef ParentName="BodyPartProstheticMakeableBase">
+    <ThingDef ParentName="IP_AdvencedProsthesisMakeableBase">
         <defName>IP_AdvencedProsthesisLung</defName>
-        <label>Advenced Prosthesis Lung</label>
+        <label>AdvancedProsthesis Lung</label>
         <!-- 기술의 발전으로 실제와 작동하는 보철물 신장 입니다. 일반 신장과 동일한 기능을 하나, 건강상 등의 이유로 제작되곤 합니다. -->
         <description>A prosthetic kidney developed through technological advancement to replicate natural function. Performs the same as a natural kidney, but is often used due to health or medical necessity.</description>
         <descriptionHyperlinks>
@@ -39,6 +39,7 @@
         </thingSetMakerTags>
         <statBases>
             <Mass>1.0</Mass>
+            <MarketValue>270</MarketValue>
         </statBases>
         <techHediffsTags>
             <li>Industrial</li>
@@ -56,15 +57,15 @@
             <skillRequirements>
                 <Crafting>7</Crafting>
             </skillRequirements>
-            <workAmount>20000</workAmount>
+            <workAmount>17500</workAmount>
         </recipeMaker>
     </ThingDef>
 
     <RecipeDef ParentName="SurgeryInstallImplantBase">
         <defName>IP_AdvencedProsthesisLung</defName>
-        <label>Installing Advenced Prosthesis Lung</label>
-        <description>Installs Advenced Prosthesis Lung.</description>
-        <jobString>Installing Advenced Prosthesis Lung.</jobString>
+        <label>Installing AdvancedProsthesis Lung</label>
+        <description>Installs AdvancedProsthesis Lung.</description>
+        <jobString>Installing AdvancedProsthesis Lung.</jobString>
         <ingredients>
             <li>
                 <filter>

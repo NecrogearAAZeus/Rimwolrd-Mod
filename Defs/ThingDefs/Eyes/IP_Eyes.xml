@@ -8,8 +8,8 @@
 
     <HediffDef ParentName="AddedBodyPartBase">
         <defName>IP_AdvencedProstheticEye</defName>
-        <label>Advenced Prosthetic Eye</label>
-        <labelNoun>An Advenced Prosthetic Eye</labelNoun>
+        <label>AdvancedProsthetic Eye</label>
+        <labelNoun>AdvancedProsthetic Eye</labelNoun>
         <!-- 기술의 발전으로 만들어진 기초적인 의안입니다. 기존 눈 보다 성능이 우수하지만, 생체공학 팔에는 미치지 못합니다. 플라스틸이나 고급 부품 없이도 제작할 수 있으나, 정밀한 설계와 복잡한 조립 과정으로 인해 제작에는 많은 시간이 소요됩니다.  -->
         <description>A basic prosthetic eye developed through technological advancement. It outperforms a natural eye, but still falls short of bionic standards. Though it can be crafted without plasteel or advanced components, its precise design and intricate assembly make it time-consuming to produce.</description>
         <descriptionHyperlinks>
@@ -43,9 +43,9 @@
         </renderNodeProperties> -->
     </HediffDef>
 
-    <ThingDef ParentName="BodyPartProstheticMakeableBase">
+    <ThingDef ParentName="IP_AdvencedProsthesisMakeableBase">
         <defName>IP_AdvencedProstheticEye</defName>
-        <label>Advenced Prosthetic Eye</label>
+        <label>AdvancedProsthetic Eye</label>
         <!-- 기술의 발전으로 만들어진 기초적인 의안입니다. 기존 눈 보다 성능이 우수하지만, 생체공학 팔에는 미치지 못합니다. 플라스틸이나 고급 부품 없이도 제작할 수 있으나, 정밀한 설계와 복잡한 조립 과정으로 인해 제작에는 많은 시간이 소요됩니다.  -->
         <description>A basic prosthetic eye developed through technological advancement. It outperforms a natural eye, but still falls short of bionic standards. Though it can be crafted without plasteel or advanced components, its precise design and intricate assembly make it time-consuming to produce.</description>
         <descriptionHyperlinks>
@@ -60,6 +60,7 @@
         </thingSetMakerTags>
         <statBases>
             <Mass>0.3</Mass>
+            <MarketValue>420</MarketValue>
         </statBases>
         <techHediffsTags>
             <li>Simple</li>
@@ -77,7 +78,7 @@
             <skillRequirements>
                 <Crafting>7</Crafting>
             </skillRequirements>
-            <workAmount>23500</workAmount>
+            <workAmount>20000</workAmount>
         </recipeMaker>
     </ThingDef>
 

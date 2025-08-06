@@ -4,12 +4,12 @@
 
     <!-- 1티어 파츠 -->
 
-    <!-- Advenced Prosthesis Nose -->
+    <!-- AdvancedProsthesis Nose -->
 
-    <HediffDef ParentName="ImplantHediffBase">
+    <HediffDef ParentName="AddedBodyPartBase">
         <defName>IP_AdvencedProsthesisNose</defName>
-        <label>Advenced Prosthesis Nose</label>
-        <labelNoun>An Advenced Prosthesis Nose</labelNoun>
+        <label>AdvancedProsthesis Nose</label>
+        <labelNoun>AdvancedProsthesis Nose</labelNoun>
         <!-- 기술의 발전으로 만들어진 보철물 코입니다. 후각 시스템이 장착되어 있어 실제 코와 동일하게 작동하지만, 코를 잃은 사람이 아니라면 굳이 이식할 이유는 없습니다. -->
         <description>A prosthetic nose developed through technological advancement. Equipped with an olfactory system, it functions like a real nose, but there's little reason to install it unless the original is missing.</description>
         <descriptionHyperlinks>
@@ -22,9 +22,9 @@
         <spawnThingOnRemoved>IP_AdvencedProsthesisNose</spawnThingOnRemoved>
     </HediffDef>
 
-    <ThingDef ParentName="BodyPartProstheticMakeableBase">
+    <ThingDef ParentName="IP_AdvencedProsthesisMakeableBase">
         <defName>IP_AdvencedProsthesisNose</defName>
-        <label>Advenced Prosthesis Nose</label>
+        <label>AdvancedProsthesis Nose</label>
         <!-- 기술의 발전으로 만들어진 보철물 코입니다. 후각 시스템이 장착되어 있어 실제 코와 동일하게 작동하지만, 코를 잃은 사람이 아니라면 굳이 이식할 이유는 없습니다. -->
         <description>A prosthetic nose developed through technological advancement. Equipped with an olfactory system, it functions like a real nose, but there's little reason to install it unless the original is missing.</description>
         <descriptionHyperlinks>
@@ -38,6 +38,7 @@
             <li>RewardStandardLowFreq</li>
         </thingSetMakerTags>
         <statBases>
+            <MarketValue>200</MarketValue>
         </statBases>
         <techHediffsTags>
             <li>Industrial</li>
@@ -55,15 +56,15 @@
             <skillRequirements>
                 <Crafting>5</Crafting>
             </skillRequirements>
-            <workAmount>20000</workAmount>
+            <workAmount>15000</workAmount>
         </recipeMaker>
     </ThingDef>
 
     <RecipeDef ParentName="SurgeryInstallImplantBase">
         <defName>IP_AdvencedProsthesisNose</defName>
-        <label>Installing Advenced Prosthesis Nose</label>
-        <description>Installs Advenced Prosthesis Nose.</description>
-        <jobString>Installing Advenced Prosthesis Nose.</jobString>
+        <label>Installing AdvancedProsthesis Nose</label>
+        <description>Installs AdvancedProsthesis Nose.</description>
+        <jobString>Installing AdvancedProsthesis Nose.</jobString>
         <ingredients>
             <li>
                 <filter>

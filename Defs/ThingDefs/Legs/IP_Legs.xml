@@ -4,12 +4,12 @@
 
     <!-- 1티어 파츠 -->
 
-    <!-- Advenced Prosthesis Leg -->
+    <!-- AdvancedProsthesis Leg -->
 
     <HediffDef ParentName="AddedBodyPartBase">
         <defName>IP_AdvencedProsthesisLeg</defName>
-        <label>Advenced Prosthesis Leg</label>
-        <labelNoun>An Advenced Prosthesis Leg</labelNoun>
+        <label>AdvancedProsthesis Leg</label>
+        <labelNoun>AdvancedProsthesis Leg</labelNoun>
         <!-- 기술의 발전으로 만들어진 보강된 보철물 다리 입니다. 단순한 보철물 턱이나 기존 다리보다는 우수하지만, 생체공학 다리에는 미치지 못합니다. 플라스틸이나 고급 부품 없이도 제작 가능하지만, 정밀한 설계와 조립이 요구되어 제작에는 상당한 시간이 소요됩니다. -->
         <description>A reinforced prosthetic leg developed through technological advancement. It performs better than a natural leg or basic prosthetic limbs, but still falls short of a true bionic leg. While it can be crafted without plasteel or advanced components, its precise design and complex assembly make it time-consuming to produce.</description>
         <descriptionHyperlinks>
@@ -23,9 +23,9 @@
         <spawnThingOnRemoved>IP_AdvencedProsthesisLeg</spawnThingOnRemoved>
     </HediffDef>
 
-    <ThingDef ParentName="BodyPartProstheticMakeableBase">
+    <ThingDef ParentName="IP_AdvencedProsthesisMakeableBase">
         <defName>IP_AdvencedProsthesisLeg</defName>
-        <label>Advenced Prosthesis Leg</label>
+        <label>AdvancedProsthesis Leg</label>
         <!-- 기술의 발전으로 만들어진 보강된 보철물 다리 입니다. 단순한 보철물 턱이나 기존 다리보다는 우수하지만, 생체공학 다리에는 미치지 못합니다. 플라스틸이나 고급 부품 없이도 제작 가능하지만, 정밀한 설계와 조립이 요구되어 제작에는 상당한 시간이 소요됩니다. -->
         <description>A reinforced prosthetic leg developed through technological advancement. It performs better than a natural leg or basic prosthetic limbs, but still falls short of a true bionic leg. While it can be crafted without plasteel or advanced components, its precise design and complex assembly make it time-consuming to produce.</description>
         <descriptionHyperlinks>
@@ -40,6 +40,7 @@
         </thingSetMakerTags>
         <statBases>
             <Mass>8.0</Mass>
+            <MarketValue>450</MarketValue>
         </statBases>
         <techHediffsTags>
             <li>Industrial</li>
@@ -57,15 +58,15 @@
             <skillRequirements>
                 <Crafting>7</Crafting>
             </skillRequirements>
-            <workAmount>23500</workAmount>
+            <workAmount>20000</workAmount>
         </recipeMaker>
     </ThingDef>
 
     <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
         <defName>IP_AdvencedProsthesisLeg</defName>
-        <label>Installing Advenced Prosthesis Leg</label>
-        <description>Installs Advenced Prosthesis Leg.</description>
-        <jobString>Installing Advenced Prosthesis Leg.</jobString>
+        <label>Installing AdvancedProsthesis Leg</label>
+        <description>Installs AdvancedProsthesis Leg.</description>
+        <jobString>Installing AdvancedProsthesis Leg.</jobString>
         <ingredients>
             <li>
                 <filter>

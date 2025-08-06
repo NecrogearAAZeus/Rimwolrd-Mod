@@ -5,12 +5,12 @@
         <label>Implant Plus</label>
     </ResearchTabDef>
 
-    <!-- Advenced Prosthetic -->
+    <!-- AdvancedProsthetic -->
     <!-- 강화 보철물 -->
 
     <ResearchProjectDef>
         <defName>IP_AdvencedProsthetic</defName>
-        <label>Advenced Prosthetic</label>
+        <label>AdvancedProsthetic</label>
         <description>Learn to create basic artificial intelligence systems for combat assistance. This technology allows the development of simple neural AI that can enhance a soldier's combat performance without overwhelming their neural pathways.</description>
         <baseCost>1200</baseCost>
         <techLevel>Industrial</techLevel>
@@ -42,12 +42,12 @@
         <researchViewY>1.50</researchViewY>
     </ResearchProjectDef>
 
-    <!-- Initial Augmentation  <<< 바꿔야함 -->
+    <!-- MinorAugmentation  <<< 바꿔야함 -->
     <!-- 부분적인 신체 개조 -->
 
     <ResearchProjectDef>
-        <defName>IP_InitialAugmentation</defName>
-        <label>Initial Augmentation</label>
+        <defName>IP_MinorAugmentation</defName>
+        <label>Minor Augmentation</label>
         <description>Learn to create basic artificial intelligence systems for combat assistance. This technology allows the development of simple neural AI that can enhance a soldier's combat performance without overwhelming their neural pathways.</description>
         <baseCost>600</baseCost>
         <techLevel>Industrial</techLevel>
@@ -155,19 +155,21 @@
         <researchViewY>3.00</researchViewY>
     </ResearchProjectDef>
 
-    <!-- Advenced AI Chip -->
+    <!-- AdvancedAI Chip -->
     <!-- 개선된 AI 칩 -->
 
     <ResearchProjectDef>
         <defName>IP_AdvencedAI_Chip</defName>
-        <label>Advenced AI Chip</label>
+        <label>AdvancedAI Chip</label>
         <description>Learn to create basic artificial intelligence systems for combat assistance. This technology allows the development of simple neural AI that can enhance a soldier's combat performance without overwhelming their neural pathways.</description>
         <baseCost>1000</baseCost>
         <techLevel>Spacer</techLevel>
         <prerequisites>
             <li>IP_ImplantPlus</li>
-            <li>IP_BasicAI_Chip</li>
         </prerequisites>
+        <hiddenPrerequisites>
+            <li>IP_BasicAI_Chip</li>
+        </hiddenPrerequisites>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
         <requiredResearchFacilities>
             <li>MultiAnalyzer</li>
@@ -188,8 +190,10 @@
         <techLevel>Spacer</techLevel>
         <prerequisites>
             <li>IP_ImplantPlus</li>
-            <li>IP_InitialAugmentation</li>
         </prerequisites>
+        <hiddenPrerequisites>
+            <li>IP_MinorAugmentation</li>
+        </hiddenPrerequisites>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
         <requiredResearchFacilities>
             <li>MultiAnalyzer</li>
@@ -231,8 +235,10 @@
         <techLevel>Spacer</techLevel>
         <prerequisites>
             <li>IP_ImplantPlus</li>
-            <li>IP_IDC_BasicModule</li>
         </prerequisites>
+        <hiddenPrerequisites>
+            <li>IP_IDC_BasicModule</li>
+        </hiddenPrerequisites>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
         <requiredResearchFacilities>
             <li>MultiAnalyzer</li>
@@ -253,12 +259,13 @@
         <techLevel>Spacer</techLevel>
         <prerequisites>
             <li>IP_ImplantPlus</li>
-            <li>IP_InitiationProtocol</li>
         </prerequisites>
+        <hiddenPrerequisites>
+            <li>IP_InitiationProtocol</li>
+        </hiddenPrerequisites>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
         <requiredResearchFacilities>
             <li>MultiAnalyzer</li>
-
         </requiredResearchFacilities>
         <tab>IP_ImplantPlus</tab>
         <researchViewX>5.00</researchViewX>
@@ -276,8 +283,10 @@
         <techLevel>Spacer</techLevel>
         <prerequisites>
             <li>IP_ImplantPlus</li>
-            <li>IP_DaoN_StandardSeries</li>
         </prerequisites>
+        <hiddenPrerequisites>
+            <li>IP_DaoN_StandardSeries</li>
+        </hiddenPrerequisites>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
         <requiredResearchFacilities>
             <li>MultiAnalyzer</li>
@@ -298,8 +307,10 @@
         <techLevel>Spacer</techLevel>
         <prerequisites>
             <li>IP_ImplantPlus</li>
-            <li>IP_SentinelProject</li>
         </prerequisites>
+        <hiddenPrerequisites>
+            <li>IP_SentinelProject</li>
+        </hiddenPrerequisites>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
         <requiredResearchFacilities>
             <li>MultiAnalyzer</li>

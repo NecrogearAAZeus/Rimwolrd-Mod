@@ -4,12 +4,12 @@
 
     <!-- 1티어 파츠 -->
 
-    <!-- Advenced Prosthetic Arm -->
+    <!-- AdvancedProsthetic Arm -->
 
     <HediffDef ParentName="AddedBodyPartBase">
         <defName>IP_AdvencedProstheticArm</defName>
-        <label>Advenced Prosthetic Arm</label>
-        <labelNoun>An advenced Prosthetic Arm</labelNoun>
+        <label>AdvancedProsthetic Arm</label>
+        <labelNoun>advenced Prosthetic Arm</labelNoun>
         <!-- 기술의 발전으로 만들어진 보강된 보철 팔입니다. 단순한 보철물이나 기존 팔보다는 우수하지만, 생체공학 팔에는 미치지 못합니다. 플라스틸이나 고급 부품 없이도 제작 가능하지만, 정밀한 설계와 조립이 요구되어 제작에는 상당한 시간이 소요됩니다. -->
         <description>A reinforced prosthetic arm, built as a result of technological progress. It surpasses a simple prosthesis and even natural arms in some ways, but still falls short of bionics. Though it requires only steel and components rather than plasteel or advanced parts, its intricate design and assembly demand significant labor.</description>
         <descriptionHyperlinks>
@@ -20,12 +20,28 @@
             <partEfficiency>1.15</partEfficiency>
             <betterThanNatural>true</betterThanNatural>
         </addedPartProps>
+        <comps>
+            <li Class="HediffCompProperties_VerbGiver">
+                <tools>
+                    <li>
+                        <label>fist</label>
+                        <capacities>
+                            <li>Blunt</li>
+                        </capacities>
+                        <power>10</power>                        <!-- 기본 주먹 8.0보다 높음 -->
+                        <cooldownTime>2</cooldownTime>
+                        <linkedBodyPartsGroup>Hands</linkedBodyPartsGroup>
+                        <armorPenetration>0.2</armorPenetration>
+                    </li>
+                </tools>
+            </li>
+        </comps>
         <spawnThingOnRemoved>IP_AdvencedProstheticArm</spawnThingOnRemoved>
     </HediffDef>
 
-    <ThingDef ParentName="BodyPartProstheticMakeableBase">
+    <ThingDef ParentName="IP_AdvencedProsthesisMakeableBase">
         <defName>IP_AdvencedProstheticArm</defName>
-        <label>Advenced Prosthetic Arm</label>
+        <label>AdvancedProsthetic Arm</label>
         <!-- 기술의 발전으로 만들어진 보철 팔입니다. 단순한 보철물이나 자연 팔보다는 우수하지만, 생체공학 팔에는 미치지 못합니다. 플라스틸이나 고급 부품 없이도 제작 가능하지만, 정밀한 설계와 조립이 요구되어 제작에는 상당한 시간이 소요됩니다. -->
         <description>This prosthetic arm is a product of technological advancement. It surpasses a simple prosthesis and even natural arms in some ways, but still falls short of bionics. Though it requires only steel and components rather than plasteel or advanced parts, its intricate design and assembly demand significant labor.</description>
         <descriptionHyperlinks>
@@ -40,6 +56,7 @@
         </thingSetMakerTags>
         <statBases>
             <Mass>5.0</Mass>
+            <MarketValue>440</MarketValue>
         </statBases>
         <techHediffsTags>
             <li>Industrial</li>
@@ -57,15 +74,15 @@
             <skillRequirements>
                 <Crafting>7</Crafting>
             </skillRequirements>
-            <workAmount>23500</workAmount>
+            <workAmount>20000</workAmount>
         </recipeMaker>
     </ThingDef>
 
     <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
         <defName>IP_AdvencedProstheticArm</defName>
-        <label>Installing Advenced Prosthetic Arm</label>
-        <description>Installs Advenced Prosthetic Arm.</description>
-        <jobString>Installing Advenced Prosthetic Arm.</jobString>
+        <label>Installing AdvancedProsthetic Arm</label>
+        <description>Installs AdvancedProsthetic Arm.</description>
+        <jobString>Installing AdvancedProsthetic Arm.</jobString>
         <ingredients>
             <li>
                 <filter>
@@ -88,6 +105,253 @@
             <li>Shoulder</li>
         </appliedOnFixedBodyParts>
         <addsHediff>IP_AdvencedProstheticArm</addsHediff>
+    </RecipeDef>
+
+    <!-- ID-17 MOLE SALVAGE -->
+
+    <HediffDef ParentName="AddedBodyPartBase">
+        <defName>IP_ID17_MOLE_SALVAGE</defName>
+        <label>ID-17 MOLE SALVAGE</label>
+        <labelNoun>ID-17 MOLE SALVAGE</labelNoun>
+        <!-- Interstellar Development Corps에서 개발한 채굴 특화 보조 팔입니다. 자원이 척박한 환경에서도 효율적으로 자원을 회수할 수 있도록 설계되었습니다. 채굴 속도는 다소 느려지지만, 손실률을 최소화하고 정밀한 추출을 통해 더 많은 자원을 확보할 수 있습니다. -->
+        <description>A mining-specialized auxiliary arm developed by the Interstellar Development Corps. Designed for efficient resource extraction even in resource-scarce environments. While it reduces mining speed slightly, it minimizes material loss and enables precise extraction, resulting in greater overall yield.</description>
+        <descriptionHyperlinks>
+            <ThingDef>IP_ID17_MOLE_SALVAGE</ThingDef>
+        </descriptionHyperlinks>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.05</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+        <comps>
+            <li Class="HediffCompProperties_VerbGiver">
+                <tools>
+                    <li>
+                        <label>fist</label>
+                        <capacities>
+                            <li>Blunt</li>
+                        </capacities>
+                        <power>10</power>
+                        <cooldownTime>2</cooldownTime>
+                        <linkedBodyPartsGroup>Hands</linkedBodyPartsGroup>
+                        <armorPenetration>0.2</armorPenetration>
+                    </li>
+                </tools>
+            </li>
+        </comps>
+
+        <spawnThingOnRemoved>IP_ID17_MOLE_SALVAGE</spawnThingOnRemoved>
+        <stages>
+            <li>
+                <statFactors>
+                    <MiningSpeed>0.8</MiningSpeed>
+                    <DeepDrillingSpeed>0.8</DeepDrillingSpeed>
+                </statFactors>
+                <statOffsets>
+                    <MiningYield>0.1</MiningYield>
+                </statOffsets>
+                <capMods>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>-0.08</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <ThingDef ParentName="IP_AdvencedProsthesisMakeableBase">
+        <defName>IP_ID17_MOLE_SALVAGE</defName>
+        <label>ID-17 MOLE SALVAGE</label>
+        <!-- Interstellar Development Corps에서 개발한 채굴 특화 보조 팔입니다. 자원이 척박한 환경에서도 효율적으로 자원을 회수할 수 있도록 설계되었습니다. 채굴 속도는 다소 느려지지만, 손실률을 최소화하고 정밀한 추출을 통해 더 많은 자원을 확보할 수 있습니다. -->
+        <description>A mining-specialized auxiliary arm developed by the Interstellar Development Corps. Designed for efficient resource extraction even in resource-scarce environments. While it reduces mining speed slightly, it minimizes material loss and enables precise extraction, resulting in greater overall yield.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>IP_ID17_MOLE_SALVAGE</RecipeDef>
+        </descriptionHyperlinks>
+        <costList>
+            <Steel>80</Steel>
+            <ComponentIndustrial>10</ComponentIndustrial>
+        </costList>
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        <statBases>
+            <Mass>5.0</Mass>
+            <MarketValue>625</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Industrial</li>
+        </techHediffsTags>
+        <recipeMaker>
+            <researchPrerequisites>
+                <li>IP_AdvencedProsthetic</li>
+                <li>IP_IDC_BasicModule</li>
+            </researchPrerequisites>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <unfinishedThingDef>UnfinishedHealthItemProsthetic</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>7</Crafting>
+            </skillRequirements>
+            <workAmount>23500</workAmount>
+        </recipeMaker>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
+        <defName>IP_ID17_MOLE_SALVAGE</defName>
+        <label>Installing ID-17 MOLE SALVAGE</label>
+        <description>Installs ID-17 MOLE SALVAGE.</description>
+        <jobString>Installing ID-17 MOLE SALVAGE.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IP_ID17_MOLE_SALVAGE</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Medicine>4</Medicine>
+        </skillRequirements>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>IP_ID17_MOLE_SALVAGE</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Shoulder</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>IP_ID17_MOLE_SALVAGE</addsHediff>
+    </RecipeDef>
+
+    <!-- ORD-02 Phantom Reaper -->
+
+    <HediffDef ParentName="AddedBodyPartBase">
+        <defName>ORD_02_Phantom_Reaper</defName>
+        <label>ORD-02 Phantom Reaper</label>
+        <labelNoun>ORD-02 Phantom Reaper</labelNoun>
+        <!-- Interstellar Development Corps에서 개발한 채굴 특화 보조 팔입니다. 자원이 척박한 환경에서도 효율적으로 자원을 회수할 수 있도록 설계되었습니다. 채굴 속도는 다소 느려지지만, 손실률을 최소화하고 정밀한 추출을 통해 더 많은 자원을 확보할 수 있습니다. -->
+        <description>A mining-specialized auxiliary arm developed by the Interstellar Development Corps. Designed for efficient resource extraction even in resource-scarce environments. While it reduces mining speed slightly, it minimizes material loss and enables precise extraction, resulting in greater overall yield.</description>
+        <descriptionHyperlinks>
+            <ThingDef>ORD_02_Phantom_Reaper</ThingDef>
+        </descriptionHyperlinks>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.00</partEfficiency>
+        </addedPartProps>
+        <comps>
+            <li Class="HediffCompProperties_VerbGiver">
+                <tools>
+                    <li>
+                        <label>Reaper Blade</label>
+                        <capacities>
+                            <li>Cut</li>
+                        </capacities>
+                        <power>20</power>
+                        <cooldownTime>1.2</cooldownTime>
+                        <linkedBodyPartsGroup>Hands</linkedBodyPartsGroup>
+                        <armorPenetration>0.25</armorPenetration>
+                    </li>
+                </tools>
+            </li>
+        </comps>
+        <spawnThingOnRemoved>ORD_02_Phantom_Reaper</spawnThingOnRemoved>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>0.1</offset>
+                    </li>
+                </capMods>
+                <statFactors>
+                    <IncomingDamageFactor>1.05</IncomingDamageFactor>
+                </statFactors>
+                <statOffsets>
+                    <MeleeDodgeChance>0.02</MeleeDodgeChance>
+                    <GeneralLaborSpeed>-0.3</GeneralLaborSpeed>
+                    <MoveSpeed>0.2</MoveSpeed>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <ThingDef ParentName="IP_AdvencedProsthesisMakeableBase">
+        <defName>ORD_02_Phantom_Reaper</defName>
+        <label>ORD-02 Phantom Reaper</label>
+        <!-- Interstellar Development Corps에서 개발한 채굴 특화 보조 팔입니다. 자원이 척박한 환경에서도 효율적으로 자원을 회수할 수 있도록 설계되었습니다. 채굴 속도는 다소 느려지지만, 손실률을 최소화하고 정밀한 추출을 통해 더 많은 자원을 확보할 수 있습니다. -->
+        <description>A mining-specialized auxiliary arm developed by the Interstellar Development Corps. Designed for efficient resource extraction even in resource-scarce environments. While it reduces mining speed slightly, it minimizes material loss and enables precise extraction, resulting in greater overall yield.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>ORD_02_Phantom_Reaper</RecipeDef>
+        </descriptionHyperlinks>
+        <costList>
+            <Steel>60</Steel>
+            <ComponentIndustrial>8</ComponentIndustrial>
+        </costList>
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        <statBases>
+            <Mass>2.0</Mass>
+            <MarketValue>575</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Industrial</li>
+        </techHediffsTags>
+        <recipeMaker>
+            <researchPrerequisites>
+                <li>IP_AdvencedProsthetic</li>
+                <li>IP_IDC_BasicModule</li>
+            </researchPrerequisites>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <unfinishedThingDef>UnfinishedHealthItemProsthetic</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>7</Crafting>
+            </skillRequirements>
+            <workAmount>23500</workAmount>
+        </recipeMaker>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
+        <defName>ORD_02_Phantom_Reaper</defName>
+        <label>Installing ORD-02 Phantom Reaper</label>
+        <description>Installs ORD-02 Phantom Reaper.</description>
+        <jobString>Installing ORD-02 Phantom Reaper.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ORD_02_Phantom_Reaper</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Medicine>4</Medicine>
+        </skillRequirements>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>ORD_02_Phantom_Reaper</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Shoulder</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>ORD_02_Phantom_Reaper</addsHediff>
     </RecipeDef>
 
 </Defs>
