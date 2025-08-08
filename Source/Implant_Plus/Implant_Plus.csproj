@@ -5,6 +5,7 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <RootNamespace>Implant_Plus</RootNamespace>
     <PlatformTarget>x64</PlatformTarget>
+    <!-- <DebugType>none</DebugType> -->
   </PropertyGroup>
 
   <ItemGroup>

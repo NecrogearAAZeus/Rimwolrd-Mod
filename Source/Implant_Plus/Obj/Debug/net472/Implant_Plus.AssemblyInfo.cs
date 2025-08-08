@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Implant_Plus")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b503b74418f732a53499f7160362223b739f15b7")]
 [assembly: System.Reflection.AssemblyProductAttribute("Implant_Plus")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Implant_Plus")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

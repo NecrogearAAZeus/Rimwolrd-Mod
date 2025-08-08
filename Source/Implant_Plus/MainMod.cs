@@ -7,8 +7,11 @@ namespace Implant_Plus
     {
         public ImplantPlusMod(ModContentPack content) : base(content)
         {
+            Harmony.DEBUG = true;
+
             var harmony = new Harmony("ImplantPlus.Mod");
             harmony.PatchAll();
         }
     }
 }
+ 
