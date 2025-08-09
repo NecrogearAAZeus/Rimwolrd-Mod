@@ -41,7 +41,7 @@
         </comps>
     </HediffDef>
 
-    <ThingDef ParentName="IP_AdvencedProsthesisMakeableBase">
+    <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
         <defName>IP_CombatAssistAI</defName>
         <label>A Combat Assist AI</label>
         <!-- 과거 제국의 군인들을 위해 연구,개발된 기초적인 전투 보조 AI의 시제품입니다. 뇌에 과부하가 걸리는 것을 방지하기 위해, 다른 AI와 중복 사용이 불가능합니다.-->
@@ -143,7 +143,7 @@
         </comps>
     </HediffDef>
 
-    <ThingDef ParentName="IP_AdvencedProsthesisMakeableBase">
+    <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
         <defName>IP_FieldworkerAssistAI</defName>
         <label>Field worker Assist AI</label>
         <!-- 노동자 계층을 위해 개발된 기초형 AI입니다. 건설, 채굴, 원예, 조련에 필요한 다양한 지식을 주입하여 기술 숙련도를 높이고, 작업 속도를 향상시킵니다. 뇌에 과부하가 걸리는 것을 방지하기 위해, 다른 AI와 중복 사용이 불가능합니다. -->
@@ -240,7 +240,7 @@
         </comps>
     </HediffDef>
 
-    <ThingDef ParentName="IP_AdvencedProsthesisMakeableBase">
+    <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
         <defName>IP_CraftmasterAssistAI</defName>
         <label>Craftmaster Assist AI</label>
         <!-- 정밀한 손작업을 지원하는 보조 AI입니다. 작업자의 조리, 예술, 제작 기술을 분석 및 최적화하여 생산성을 높입니다. 기술을 연마 중인 수습생들이 자주 사용합니다. 뇌에 과부하가 걸리는 것을 방지하기 위해, 다른 AI와 중복 사용이 불가능합니다 -->
@@ -339,7 +339,7 @@
         </comps>
     </HediffDef>
 
-    <ThingDef ParentName="IP_AdvencedProsthesisMakeableBase">
+    <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
         <defName>IP_CognitorAssistAI</defName>
         <label>Cognitor Assist AI</label>
         <!-- 전문 인력을 위해 설계된 연산 보조형 AI입니다. 연구와 의학 분야에서 요구되는 복잡한 사고와 판단을 지원하며, 관련 기술 전반의 숙련도를 향상시킵니다. 뇌에 과부하를 방지하기 위해 다른 AI와 중복 사용할 수 없습니다 -->

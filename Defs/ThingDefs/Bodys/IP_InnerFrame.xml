@@ -17,9 +17,9 @@
         <stages>
             <li>
                 <statOffsets>
-                    <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
-                    <ArmorRating_Blunt>0.1</ArmorRating_Blunt>
-                    <ArmorRating_Heat>0.1</ArmorRating_Heat>
+                    <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+                    <ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+                    <ArmorRating_Heat>0.20</ArmorRating_Heat>
                 </statOffsets>
                 <statFactors>
                     <AimingDelayFactor>0.9</AimingDelayFactor>
@@ -39,7 +39,7 @@
 
     </HediffDef>
 
-    <ThingDef ParentName="IP_AdvencedProsthesisMakeableBase">
+    <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
         <defName>IP_CombatInnerFrame</defName>
         <label>Combat Inner Frame</label>
         <!-- 변방계 병사에게 설치되는 기초적인 전투 외골격입니다. 뼈와 근육을 소폭 보강하며, 약간의 장갑판과 자세 안정화 모듈이 장착되어 있습니다. 다른 외골격과는 중복하여 설치할 수 없습니다. -->
@@ -138,7 +138,7 @@
 
     </HediffDef>
 
-    <ThingDef ParentName="IP_AdvencedProsthesisMakeableBase">
+    <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
         <defName>IP_WorkerInnerFrame</defName>
         <label>Worker Inner Frame</label>
         <!-- 많은 작업자에게 사랑받는 보급형 작업 외골격입니다. 정밀한 작업을 지원하며, 근력을 보강해 다양한 노동에 유용합니다. 다른 외골격과는 중복하여 설치할 수 없습니다. -->
@@ -206,7 +206,7 @@
         <addsHediff>IP_WorkerInnerFrame</addsHediff>
     </RecipeDef>
 
-    <!-- Standard Inner Frame -->
+    <!-- Standard Inner Frame  -->
 
     <HediffDef ParentName="ImplantHediffBase">
         <defName>IP_StandardInnerFrame</defName>
@@ -238,7 +238,7 @@
 
     </HediffDef>
 
-    <ThingDef ParentName="IP_AdvencedProsthesisMakeableBase">
+    <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
         <defName>IP_StandardInnerFrame</defName>
         <label>Standard Inner Frame</label>
         <!-- 다양한 상황에 대응할 수 있도록 설계된 범용 외골격 입니다. 사용자의 전반적인 신체능력을 올려줍니다. 다른 외골격과는 중복하여 설치할 수 없습니다. -->
@@ -298,6 +298,441 @@
         <fixedIngredientFilter>
             <thingDefs>
                 <li>IP_StandardInnerFrame</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Body</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>IP_StandardInnerFrame</addsHediff>
+    </RecipeDef>
+
+    <!-- IDC-23 SURVIVOR  -->
+
+    <HediffDef ParentName="ImplantHediffBase">
+        <defName>IP_IDC_23_SURVIVOR</defName>
+        <label>IDC-23 SURVIVOR</label>
+        <labelNoun>IDC-23 SURVIVOR</labelNoun>
+        <!-- Interstellar Development Corps에서 개발한 이 내장형 생존 프레임은 극한의 식민지 개척 환경에서 생존을 지원하도록 설계되었습니다. 이 프레임은 다양한 환경으로부터 사용자를 보호해 식민지 개척 작업을 안전하고 효율적으로 수행할 수 있도록 돕습니다. 다른 외골격과는 중복하여 설치할 수 없습니다. -->
+        <description>Developed by the Interstellar Development Corps, this internal survival frame is designed to support survival in extreme colonization environments. The frame protects the user from various environmental hazards, enabling them to perform colonization tasks safely and efficiently. Cannot be installed alongside other Inner Frame</description>
+        <descriptionHyperlinks>
+            <ThingDef>IP_IDC_23_SURVIVOR</ThingDef>
+        </descriptionHyperlinks>
+        <spawnThingOnRemoved>IP_IDC_23_SURVIVOR</spawnThingOnRemoved>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <offset>0.1</offset>
+                    </li>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>0.1</offset>
+                    </li>
+                </capMods>
+                <statOffsets>
+                    <ComfyTemperatureMin>-15</ComfyTemperatureMin>
+                    <ComfyTemperatureMax>15</ComfyTemperatureMax>
+                    <PsychicSensitivity>-0.3</PsychicSensitivity>
+                    <ToxicEnvironmentResistance>0.3</ToxicEnvironmentResistance>
+                    <VacuumResistance>0.3</VacuumResistance>
+                </statOffsets>
+            </li>
+        </stages>
+        <comps>
+            <li Class="Implant_Plus.HediffCompProperties_EMPReaction" />
+        </comps>
+
+    </HediffDef>
+
+    <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
+        <defName>IP_IDC_23_SURVIVOR</defName>
+        <label>IDC-23 SURVIVOR</label>
+        <!-- Interstellar Development Corps에서 개발한 이 내장형 생존 프레임은 극한의 식민지 개척 환경에서 생존을 지원하도록 설계되었습니다. 이 프레임은 다양한 환경으로부터 사용자를 보호해 식민지 개척 작업을 안전하고 효율적으로 수행할 수 있도록 돕습니다. 다른 외골격과는 중복하여 설치할 수 없습니다. -->
+        <description>Developed by the Interstellar Development Corps, this internal survival frame is designed to support survival in extreme colonization environments. The frame protects the user from various environmental hazards, enabling them to perform colonization tasks safely and efficiently. Cannot be installed alongside other Inner Frame</description>
+        <descriptionHyperlinks>
+            <RecipeDef>IP_IDC_23_SURVIVOR</RecipeDef>
+        </descriptionHyperlinks>
+        <costList>
+            <Steel>160</Steel>
+            <ComponentIndustrial>8</ComponentIndustrial>
+        </costList>
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        <statBases>
+            <Mass>5.0</Mass>
+            <MarketValue>530</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Industrial</li>
+        </techHediffsTags>
+        <recipeMaker>
+            <researchPrerequisites>
+                <li>IP_MinorAugmentation</li>
+                <li>IP_IDC_BasicModule</li>
+            </researchPrerequisites>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>8</Crafting>
+            </skillRequirements>
+            <workAmount>18000</workAmount>
+        </recipeMaker>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>IP_IDC_23_SURVIVOR</defName>
+        <label>Installing IDC-23 SURVIVOR</label>
+        <description>Installs IDC-23 SURVIVOR</description>
+        <jobString>Installing IDC-23 SURVIVOR</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IP_IDC_23_SURVIVOR</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Medicine>7</Medicine>
+        </skillRequirements>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>IP_IDC_23_SURVIVOR</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Body</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>IP_StandardInnerFrame</addsHediff>
+    </RecipeDef>
+
+    <!-- DAON-31 VAITALBOOST  -->
+
+    <HediffDef ParentName="ImplantHediffBase">
+        <defName>IP_DAON_31_VAITALBOOST</defName>
+        <label>DAON-31 VAITALBOOST</label>
+        <labelNoun>DAON-31 VAITALBOOST</labelNoun>
+        <!-- DAON Technology에서 개발한 의료 보조 내장형 프레임은 사용자의 전반적인 신체 능력을 소폭 강화하고, 외상 및 질병 치료를 지원하여 일상 생활의 편의성을 높여줍니다. 이 프레임은 시민들의 건강을 더욱 향상시키는 데 초점을 맞추어 설계되었습니다. 다른 외골격과는 중복하여 설치할 수 없습니다. -->
+        <description>Developed by DAON Technology, this medical assistance internal frame slightly enhances the user's overall physical abilities and supports the treatment of trauma and diseases, improving everyday convenience. Designed with a focus on enhancing the health of citizens, this frame aims to improve overall well-being. Cannot be installed alongside other Inner Frame.</description>
+        <descriptionHyperlinks>
+            <ThingDef>IP_DAON_31_VAITALBOOST</ThingDef>
+        </descriptionHyperlinks>
+        <spawnThingOnRemoved>IP_DAON_31_VAITALBOOST</spawnThingOnRemoved>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <offset>0.1</offset>
+                    </li>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>0.1</offset>
+                    </li>
+                </capMods>
+                <statOffsets>
+                    <InjuryHealingFactor>0.25</InjuryHealingFactor>
+                    <ImmunityGainSpeed>0.08</ImmunityGainSpeed>
+                </statOffsets>
+            </li>
+        </stages>
+        <comps>
+            <li Class="Implant_Plus.HediffCompProperties_EMPReaction" />
+        </comps>
+
+    </HediffDef>
+
+    <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
+        <defName>IP_DAON_31_VAITALBOOST</defName>
+        <label>DAON-31 VAITALBOOST</label>
+        <!-- DAON Technology에서 개발한 의료 보조 내장형 프레임은 사용자의 전반적인 신체 능력을 소폭 강화하고, 외상 및 질병 치료를 지원하여 일상 생활의 편의성을 높여줍니다. 이 프레임은 시민들의 건강을 더욱 향상시키는 데 초점을 맞추어 설계되었습니다. 다른 외골격과는 중복하여 설치할 수 없습니다. -->
+        <description>Developed by DAON Technology, this medical assistance internal frame slightly enhances the user's overall physical abilities and supports the treatment of trauma and diseases, improving everyday convenience. Designed with a focus on enhancing the health of citizens, this frame aims to improve overall well-being. Cannot be installed alongside other Inner Frame.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>IP_DAON_31_VAITALBOOST</RecipeDef>
+        </descriptionHyperlinks>
+        <costList>
+            <Steel>160</Steel>
+            <ComponentIndustrial>8</ComponentIndustrial>
+        </costList>
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        <statBases>
+            <Mass>5.0</Mass>
+            <MarketValue>530</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Industrial</li>
+        </techHediffsTags>
+        <recipeMaker>
+            <researchPrerequisites>
+                <li>IP_MinorAugmentation</li>
+                <li>IP_DaoN_StandardSeries</li>
+            </researchPrerequisites>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>8</Crafting>
+            </skillRequirements>
+            <workAmount>18000</workAmount>
+        </recipeMaker>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>IP_DAON_31_VAITALBOOST</defName>
+        <label>Installing DAON-31 VAITALBOOST</label>
+        <description>Installs DAON-31 VAITALBOOST</description>
+        <jobString>Installing DAON-31 VAITALBOOST</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IP_DAON_31_VAITALBOOST</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Medicine>7</Medicine>
+        </skillRequirements>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>IP_DAON_31_VAITALBOOST</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Body</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>IP_StandardInnerFrame</addsHediff>
+    </RecipeDef>
+
+    <!-- ORD-25 EVOLUTION -->
+
+    <HediffDef ParentName="ImplantHediffBase">
+        <defName>IP_ORD_25_EVOLUTION</defName>
+        <label>ORD-25 EVOLUTION</label>
+        <labelNoun>ORD-25 EVOLUTION</labelNoun>
+        <!-- Order of the Machina의 규약에 따라 신도들에게 이식되는 내장형 프레임으로, 신경계를 강화하지만 과부하로 정신적 불안정과 피로를 유발합니다. 다른 외골격과는 중복 설치할 수 없습니다. -->
+        <description>Implanted according to the Order of the Machina, this internal frame enhances the nervous system, but causes physical strain, leading to instability and fatigue. Cannot be installed with other Inner Frames.</description>
+        <descriptionHyperlinks>
+            <ThingDef>IP_ORD_25_EVOLUTION</ThingDef>
+        </descriptionHyperlinks>
+        <spawnThingOnRemoved>IP_ORD_25_EVOLUTION</spawnThingOnRemoved>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <offset>0.1</offset>
+                    </li>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>0.1</offset>
+                    </li>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>0.1</offset>
+                    </li>
+                </capMods>
+                <statOffsets>
+                    <RestFallRateFactor>0.1</RestFallRateFactor>
+                    <MentalBreakThreshold>0.05</MentalBreakThreshold>
+                </statOffsets>
+            </li>
+        </stages>
+        <comps>
+            <li Class="Implant_Plus.HediffCompProperties_EMPReaction" />
+        </comps>
+
+    </HediffDef>
+
+    <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
+        <defName>IP_ORD_25_EVOLUTION</defName>
+        <label>ORD-25 EVOLUTION</label>
+        <!-- Order of the Machina의 규약에 따라 신도들에게 이식되는 내장형 프레임으로, 신경계를 강화하지만 과부하로 정신적 불안정과 피로를 유발합니다. 다른 외골격과는 중복 설치할 수 없습니다. -->
+        <description>Implanted according to the Order of the Machina, this internal frame enhances the nervous system, but causes physical strain, leading to instability and fatigue. Cannot be installed with other Inner Frames.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>IP_ORD_25_EVOLUTION</RecipeDef>
+        </descriptionHyperlinks>
+        <costList>
+            <Steel>160</Steel>
+            <ComponentIndustrial>8</ComponentIndustrial>
+        </costList>
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        <statBases>
+            <Mass>5.0</Mass>
+            <MarketValue>530</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Industrial</li>
+        </techHediffsTags>
+        <recipeMaker>
+            <researchPrerequisites>
+                <li>IP_MinorAugmentation</li>
+                <li>IP_InitiationProtocol</li>
+            </researchPrerequisites>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>8</Crafting>
+            </skillRequirements>
+            <workAmount>18000</workAmount>
+        </recipeMaker>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>IP_ORD_25_EVOLUTION</defName>
+        <label>Installing ORD-25 EVOLUTION</label>
+        <description>Installs ORD-25 EVOLUTION</description>
+        <jobString>Installing ORD-25 EVOLUTION</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IP_ORD_25_EVOLUTION</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Medicine>7</Medicine>
+        </skillRequirements>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>IP_ORD_25_EVOLUTION</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Body</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>IP_StandardInnerFrame</addsHediff>
+    </RecipeDef>
+
+    <!-- BASTION-04 SHIELD -->
+
+    <HediffDef ParentName="ImplantHediffBase">
+        <defName>IP_BASTION_04_SHIELD</defName>
+        <label>BASTION-04 SHIELD</label>
+        <labelNoun>BASTION-04 SHIELD</labelNoun>
+        <!-- Imperial Marine Strategic Laboratory의 특수강습부대가 사용하는 표준 프레임입니다. 두꺼운 방탄판과 견고한 프레임으로 구성되어 있어 움직임이 둔화되지만, 적의 총탄을 견디며 안전하게 돌입할 수 있도록 설계되었습니다. -->
+        <description>This is the standard frame used by the Special Assault Unit of the Imperial Marine Strategic Laboratory. Constructed with thick bulletproof plating and a sturdy frame, it slows movement, but is designed to withstand enemy gunfire and allow for a safe breach.</description>
+        <descriptionHyperlinks>
+            <ThingDef>IP_BASTION_04_SHIELD</ThingDef>
+        </descriptionHyperlinks>
+        <spawnThingOnRemoved>IP_BASTION_04_SHIELD</spawnThingOnRemoved>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>-0.15</offset>                        <!-- 100% - 13% = 87% -->
+                    </li>
+                </capMods>
+                <statOffsets>
+                    <ArmorRating_Sharp>0.50</ArmorRating_Sharp>
+                    <ArmorRating_Blunt>0.25</ArmorRating_Blunt>
+                    <ArmorRating_Heat>0.35</ArmorRating_Heat>
+                </statOffsets>
+                <statFactors>
+                    <IncomingDamageFactor>0.80</IncomingDamageFactor>
+                </statFactors>
+            </li>
+        </stages>
+        <comps>
+            <li Class="Implant_Plus.HediffCompProperties_EMPReaction" />
+        </comps>
+
+    </HediffDef>
+
+    <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
+        <defName>IP_BASTION_04_SHIELD</defName>
+        <label>BASTION-04 SHIELD</label>
+        <!-- Imperial Marine Strategic Laboratory의 특수강습부대가 사용하는 표준 프레임입니다. 두꺼운 방탄판과 견고한 프레임으로 구성되어 있어 움직임이 둔화되지만, 적의 총탄을 견디며 안전하게 돌입할 수 있도록 설계되었습니다. -->
+        <description>This is the standard frame used by the Special Assault Unit of the Imperial Marine Strategic Laboratory. Constructed with thick bulletproof plating and a sturdy frame, it slows movement, but is designed to withstand enemy gunfire and allow for a safe breach.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>IP_BASTION_04_SHIELD</RecipeDef>
+        </descriptionHyperlinks>
+        <costList>
+            <Steel>200</Steel>
+            <ComponentIndustrial>8</ComponentIndustrial>
+        </costList>
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        <statBases>
+            <Mass>7.0</Mass>
+            <MarketValue>530</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Industrial</li>
+        </techHediffsTags>
+        <recipeMaker>
+            <researchPrerequisites>
+                <li>IP_MinorAugmentation</li>
+                <li>IP_SentinelProject</li>
+            </researchPrerequisites>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>8</Crafting>
+            </skillRequirements>
+            <workAmount>18000</workAmount>
+        </recipeMaker>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>IP_BASTION_04_SHIELD</defName>
+        <label>Installing BASTION-04 SHIELD</label>
+        <description>Installs BASTION-04 SHIELD</description>
+        <jobString>Installing BASTION-04 SHIELD</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IP_BASTION_04_SHIELD</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Medicine>7</Medicine>
+        </skillRequirements>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>IP_BASTION_04_SHIELD</li>
             </thingDefs>
         </fixedIngredientFilter>
         <appliedOnFixedBodyParts>

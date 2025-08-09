@@ -7,29 +7,29 @@
     <!-- AdvancedProsthesis Leg -->
 
     <HediffDef ParentName="AddedBodyPartBase">
-        <defName>IP_AdvencedProsthesisLeg</defName>
-        <label>AdvancedProsthesis Leg</label>
-        <labelNoun>AdvancedProsthesis Leg</labelNoun>
+        <defName>IP_AdvancedProsthesisLeg</defName>
+        <label>Advanced Prosthesis Leg</label>
+        <labelNoun>Advanced Prosthesis Leg</labelNoun>
         <!-- 기술의 발전으로 만들어진 보강된 보철물 다리 입니다. 단순한 보철물 턱이나 기존 다리보다는 우수하지만, 생체공학 다리에는 미치지 못합니다. 플라스틸이나 고급 부품 없이도 제작 가능하지만, 정밀한 설계와 조립이 요구되어 제작에는 상당한 시간이 소요됩니다. -->
-        <description>A reinforced prosthetic leg developed through technological advancement. It performs better than a natural leg or basic prosthetic limbs, but still falls short of a true bionic leg. While it can be crafted without plasteel or advanced components, its precise design and complex assembly make it time-consuming to produce.</description>
+        <description>A reinforced prosthetic leg developed through technological advancement. It performs better than a natural leg or basic prosthetic limbs, but still falls short of a true bionic leg. While it can be crafted without plasteel or Advanced components, its precise design and complex assembly make it time-consuming to produce.</description>
         <descriptionHyperlinks>
-            <ThingDef>IP_AdvencedProsthesisLeg</ThingDef>
+            <ThingDef>IP_AdvancedProsthesisLeg</ThingDef>
         </descriptionHyperlinks>
         <addedPartProps>
             <solid>true</solid>
             <partEfficiency>1.15</partEfficiency>
             <betterThanNatural>true</betterThanNatural>
         </addedPartProps>
-        <spawnThingOnRemoved>IP_AdvencedProsthesisLeg</spawnThingOnRemoved>
+        <spawnThingOnRemoved>IP_AdvancedProsthesisLeg</spawnThingOnRemoved>
     </HediffDef>
 
-    <ThingDef ParentName="IP_AdvencedProsthesisMakeableBase">
-        <defName>IP_AdvencedProsthesisLeg</defName>
-        <label>AdvancedProsthesis Leg</label>
+    <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
+        <defName>IP_AdvancedProsthesisLeg</defName>
+        <label>Advanced Prosthesis Leg</label>
         <!-- 기술의 발전으로 만들어진 보강된 보철물 다리 입니다. 단순한 보철물 턱이나 기존 다리보다는 우수하지만, 생체공학 다리에는 미치지 못합니다. 플라스틸이나 고급 부품 없이도 제작 가능하지만, 정밀한 설계와 조립이 요구되어 제작에는 상당한 시간이 소요됩니다. -->
-        <description>A reinforced prosthetic leg developed through technological advancement. It performs better than a natural leg or basic prosthetic limbs, but still falls short of a true bionic leg. While it can be crafted without plasteel or advanced components, its precise design and complex assembly make it time-consuming to produce.</description>
+        <description>A reinforced prosthetic leg developed through technological advancement. It performs better than a natural leg or basic prosthetic limbs, but still falls short of a true bionic leg. While it can be crafted without plasteel or Advanced components, its precise design and complex assembly make it time-consuming to produce.</description>
         <descriptionHyperlinks>
-            <RecipeDef>IP_AdvencedProsthesisLeg</RecipeDef>
+            <RecipeDef>IP_AdvancedProsthesisLeg</RecipeDef>
         </descriptionHyperlinks>
         <costList>
             <Steel>60</Steel>
@@ -46,7 +46,7 @@
             <li>Industrial</li>
         </techHediffsTags>
         <recipeMaker>
-            <researchPrerequisite>IP_AdvencedProsthetic</researchPrerequisite>
+            <researchPrerequisite>IP_AdvancedProsthetic</researchPrerequisite>
             <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
             <workSkill>Crafting</workSkill>
             <effectWorking>Smith</effectWorking>
@@ -63,15 +63,15 @@
     </ThingDef>
 
     <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
-        <defName>IP_AdvencedProsthesisLeg</defName>
-        <label>Installing AdvancedProsthesis Leg</label>
-        <description>Installs AdvancedProsthesis Leg.</description>
-        <jobString>Installing AdvancedProsthesis Leg.</jobString>
+        <defName>IP_AdvancedProsthesisLeg</defName>
+        <label>Installing Advanced Prosthesis Leg</label>
+        <description>Installs Advanced Prosthesis Leg.</description>
+        <jobString>Installing Advanced Prosthesis Leg.</jobString>
         <ingredients>
             <li>
                 <filter>
                     <thingDefs>
-                        <li>IP_AdvencedProsthesisLeg</li>
+                        <li>IP_AdvancedProsthesisLeg</li>
                     </thingDefs>
                 </filter>
                 <count>1</count>
@@ -82,13 +82,13 @@
         </skillRequirements>
         <fixedIngredientFilter>
             <thingDefs>
-                <li>IP_AdvencedProsthesisLeg</li>
+                <li>IP_AdvancedProsthesisLeg</li>
             </thingDefs>
         </fixedIngredientFilter>
         <appliedOnFixedBodyParts>
             <li>Leg</li>
         </appliedOnFixedBodyParts>
-        <addsHediff>IP_AdvencedProsthesisLeg</addsHediff>
+        <addsHediff>IP_AdvancedProsthesisLeg</addsHediff>
     </RecipeDef>
 
 </Defs>

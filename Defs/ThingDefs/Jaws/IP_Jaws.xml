@@ -7,29 +7,29 @@
     <!-- AdvancedProsthesis Jaw -->
 
     <HediffDef ParentName="AddedBodyPartBase">
-        <defName>IP_AdvencedProsthesisJaw</defName>
-        <label>AdvancedProsthesis Jaw</label>
-        <labelNoun>AdvancedProsthesis Jaw</labelNoun>
+        <defName>IP_AdvancedProsthesisJaw</defName>
+        <label>Advanced Prosthesis Jaw</label>
+        <labelNoun>Advanced Prosthesis Jaw</labelNoun>
         <!-- 기술의 발전으로 만들어진 보강된 보철물 턱입니다. 단순한 보철물 턱이나 기존 턱보다는 우수하지만, 생체공학 턱에는 미치지 못합니다. 플라스틸이나 고급 부품 없이도 제작 가능하지만, 정밀한 설계와 조립이 요구되어 제작에는 상당한 시간이 소요됩니다. -->
-        <description>A reinforced prosthetic jaw developed through technological progress. It offers better performance than a natural jaw or simple mandibular prosthetics, but still falls short of a true bionic jaw. While it can be crafted without plasteel or advanced components, its precise design and complex assembly make it time-consuming to produce.</description>
+        <description>A reinforced prosthetic jaw developed through technological progress. It offers better performance than a natural jaw or simple mandibular prosthetics, but still falls short of a true bionic jaw. While it can be crafted without plasteel or Advanced components, its precise design and complex assembly make it time-consuming to produce.</description>
         <descriptionHyperlinks>
-            <ThingDef>IP_AdvencedProsthesisJaw</ThingDef>
+            <ThingDef>IP_AdvancedProsthesisJaw</ThingDef>
         </descriptionHyperlinks>
         <addedPartProps>
             <solid>true</solid>
             <partEfficiency>1.15</partEfficiency>
             <betterThanNatural>true</betterThanNatural>
         </addedPartProps>
-        <spawnThingOnRemoved>IP_AdvencedProsthesisJaw</spawnThingOnRemoved>
+        <spawnThingOnRemoved>IP_AdvancedProsthesisJaw</spawnThingOnRemoved>
     </HediffDef>
 
-    <ThingDef ParentName="IP_AdvencedProsthesisMakeableBase">
-        <defName>IP_AdvencedProsthesisJaw</defName>
-        <label>AdvancedProsthesis Jaw</label>
+    <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
+        <defName>IP_AdvancedProsthesisJaw</defName>
+        <label>Advanced Prosthesis Jaw</label>
         <!-- 기술의 발전으로 만들어진 보강된 보철물 턱입니다. 단순한 보철물 턱이나 기존 턱보다는 우수하지만, 생체공학 턱에는 미치지 못합니다. 플라스틸이나 고급 부품 없이도 제작 가능하지만, 정밀한 설계와 조립이 요구되어 제작에는 상당한 시간이 소요됩니다. -->
-        <description>A reinforced prosthetic jaw developed through technological progress. It offers better performance than a natural jaw or simple mandibular prosthetics, but still falls short of a true bionic jaw. While it can be crafted without plasteel or advanced components, its precise design and complex assembly make it time-consuming to produce.</description>
+        <description>A reinforced prosthetic jaw developed through technological progress. It offers better performance than a natural jaw or simple mandibular prosthetics, but still falls short of a true bionic jaw. While it can be crafted without plasteel or Advanced components, its precise design and complex assembly make it time-consuming to produce.</description>
         <descriptionHyperlinks>
-            <RecipeDef>IP_AdvencedProsthesisJaw</RecipeDef>
+            <RecipeDef>IP_AdvancedProsthesisJaw</RecipeDef>
         </descriptionHyperlinks>
         <costList>
             <Steel>20</Steel>
@@ -45,7 +45,7 @@
             <li>Industrial</li>
         </techHediffsTags>
         <recipeMaker>
-            <researchPrerequisite>IP_AdvencedProsthetic</researchPrerequisite>
+            <researchPrerequisite>IP_AdvancedProsthetic</researchPrerequisite>
             <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
             <workSkill>Crafting</workSkill>
             <effectWorking>Smith</effectWorking>
@@ -62,15 +62,15 @@
     </ThingDef>
 
     <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
-        <defName>IP_AdvencedProsthesisJaw</defName>
-        <label>Installing AdvancedProsthesis Jaw</label>
-        <description>Installs AdvancedProsthesis Jaw.</description>
-        <jobString>Installing AdvancedProsthesis Jaw.</jobString>
+        <defName>IP_AdvancedProsthesisJaw</defName>
+        <label>Installing Advanced Prosthesis Jaw</label>
+        <description>Installs Advanced Prosthesis Jaw.</description>
+        <jobString>Installing Advanced Prosthesis Jaw.</jobString>
         <ingredients>
             <li>
                 <filter>
                     <thingDefs>
-                        <li>IP_AdvencedProsthesisJaw</li>
+                        <li>IP_AdvancedProsthesisJaw</li>
                     </thingDefs>
                 </filter>
                 <count>1</count>
@@ -81,13 +81,13 @@
         </skillRequirements>
         <fixedIngredientFilter>
             <thingDefs>
-                <li>IP_AdvencedProsthesisJaw</li>
+                <li>IP_AdvancedProsthesisJaw</li>
             </thingDefs>
         </fixedIngredientFilter>
         <appliedOnFixedBodyParts>
             <li>Jaw</li>
         </appliedOnFixedBodyParts>
-        <addsHediff>IP_AdvencedProsthesisJaw</addsHediff>
+        <addsHediff>IP_AdvancedProsthesisJaw</addsHediff>
     </RecipeDef>
 
 </Defs>

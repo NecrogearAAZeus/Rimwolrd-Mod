@@ -2,54 +2,67 @@
 
     <!-- Tier1 -->
 
-    <!-- Advenced Prosthesis Base -->
-    <ThingDef Name="IP_AdvencedProsthesisBase" Abstract="True">
+    <!-- Advanced Prosthesis Base -->
+
+    <ThingDef Name="IP_AdvancedProsthesisBase" Abstract="True">
         <thingClass>ThingWithComps</thingClass>
+        <techLevel>Industrial</techLevel>
+        <drawerType>MapMeshOnly</drawerType>
+        <thingCategories>
+            <li>BodyPartsProsthetic</li>
+        </thingCategories>
+        <rotatable>false</rotatable>
+        <isTechHediff>true</isTechHediff>
         <category>Item</category>
         <useHitPoints>true</useHitPoints>
-        <healthAffectsPrice>false</healthAffectsPrice>
+        <tickerType>Never</tickerType>
         <selectable>true</selectable>
-        <statBases>
-            <MaxHitPoints>50</MaxHitPoints>
-            <Beauty>-4</Beauty>
-            <DeteriorationRate>2</DeteriorationRate>
-            <SellPriceFactor>0.50</SellPriceFactor>
-        </statBases>
-        <altitudeLayer>Item</altitudeLayer>
-        <stackLimit>1</stackLimit>
+        <allowedArchonexusCount>1</allowedArchonexusCount>
+        <alwaysHaulable>true</alwaysHaulable>
+        <pathCost>14</pathCost>
         <graphicData>
             <texPath>Things/Item/Health/HealthItem</texPath>
             <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.80</drawSize>
+            <color>(154,124,104)</color>
         </graphicData>
+        <statBases>
+            <MaxHitPoints>50</MaxHitPoints>
+            <Beauty>-4</Beauty>
+            <Flammability>0.7</Flammability>
+            <DeteriorationRate>2</DeteriorationRate>
+            <SellPriceFactor>0.70</SellPriceFactor>
+            <WorkToMake>15000</WorkToMake>
+            <Mass>1</Mass>
+        </statBases>
+        <stackLimit>1</stackLimit>
+        <minRewardCount>0.3</minRewardCount>
         <tradeTags>
             <li>TechHediff</li>
         </tradeTags>
-        <thingSetMakerTags>
-            <li>RewardStandardLowFreq</li>
-        </thingSetMakerTags>
-        <comps>
-            <li Class="CompProperties_Forbiddable" />
-        </comps>
-        <pathCost>15</pathCost>
-        <soundInteract>Metal_Drop</soundInteract>
-        <soundDrop>Standard_Drop</soundDrop>
-        <techLevel>Industrial</techLevel>
+        <altitudeLayer>Item</altitudeLayer>
     </ThingDef>
-
-    <ThingDef Name="IP_AdvencedProsthesisMakeableBase" ParentName="IP_AdvencedProsthesisBase" Abstract="True">
+    <ThingDef Name="IP_BodyPartAdvancedProstheticMakeableBase" ParentName="IP_AdvancedProsthesisBase" Abstract="True">
         <recipeMaker>
             <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
             <workSkill>Crafting</workSkill>
             <effectWorking>Smith</effectWorking>
+            <soundWorking>Recipe_Smith</soundWorking>
             <recipeUsers>
                 <li>TableMachining</li>
             </recipeUsers>
-            <soundWorking>Recipe_Smith</soundWorking>
-            <unfinishedThingDef>UnfinishedHealthItemProsthetic</unfinishedThingDef>
             <skillRequirements>
                 <Crafting>5</Crafting>
             </skillRequirements>
+            <unfinishedThingDef>UnfinishedHealthItemProsthetic</unfinishedThingDef>
+            <researchPrerequisite>IP_AdvancedProsthetic</researchPrerequisite>
+            <displayPriority>650</displayPriority>
         </recipeMaker>
     </ThingDef>
-
+    <RecipeDef Name="SurgeryInstallBodyPartProstheticBase" ParentName="SurgeryInstallBodyPartArtificialBase" Abstract="True">
+        <skillRequirements>
+            <Medicine>4</Medicine>
+        </skillRequirements>
+        <workerClass>Recipe_InstallImplant</workerClass>
+    </RecipeDef>
 </Defs>

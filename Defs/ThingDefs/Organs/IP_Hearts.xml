@@ -7,29 +7,29 @@
     <!-- AdvancedProsthesis Heart -->
 
     <HediffDef ParentName="ImplantHediffBase">
-        <defName>IP_AdvencedProsthesisHeart</defName>
-        <label>AdvancedProsthesis Heart</label>
-        <labelNoun>AdvancedProsthesis Heart</labelNoun>
+        <defName>IP_AdvancedProsthesisHeart</defName>
+        <label>Advanced Prosthesis Heart</label>
+        <labelNoun>Advanced Prosthesis Heart</labelNoun>
         <!-- 기술의 발전으로 만들어진 보강된 보철물 심장 입니다. 기존 심장 보다는 우수하지만, 생체공학 심장에는 미치지 못합니다. 플라스틸이나 고급 부품 없이도 제작 가능하지만, 정밀한 설계와 조립이 요구되어 제작에는 상당한 시간이 소요됩니다. -->
         <description>A reinforced prosthetic heart developed through technological advancement. It performs better than a natural heart, but still falls short of a true bionic one. While it can be crafted without plasteel or advanced components, its precise design and complex assembly make it time-consuming to produce.</description>
         <descriptionHyperlinks>
-            <ThingDef>IP_AdvencedProsthesisHeart</ThingDef>
+            <ThingDef>IP_AdvancedProsthesisHeart</ThingDef>
         </descriptionHyperlinks>
         <addedPartProps>
             <solid>true</solid>
             <partEfficiency>1.15</partEfficiency>
             <betterThanNatural>true</betterThanNatural>
         </addedPartProps>
-        <spawnThingOnRemoved>IP_AdvencedProsthesisHeart</spawnThingOnRemoved>
+        <spawnThingOnRemoved>IP_AdvancedProsthesisHeart</spawnThingOnRemoved>
     </HediffDef>
 
-    <ThingDef ParentName="IP_AdvencedProsthesisMakeableBase">
-        <defName>IP_AdvencedProsthesisHeart</defName>
-        <label>AdvancedProsthesis Heart</label>
+    <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
+        <defName>IP_AdvancedProsthesisHeart</defName>
+        <label>Advanced Prosthesis Heart</label>
         <!-- 기술의 발전으로 만들어진 보강된 보철물 심장 입니다. 기존 심장 보다는 우수하지만, 생체공학 심장에는 미치지 못합니다. 플라스틸이나 고급 부품 없이도 제작 가능하지만, 정밀한 설계와 조립이 요구되어 제작에는 상당한 시간이 소요됩니다. -->
         <description>A reinforced prosthetic heart developed through technological advancement. It performs better than a natural heart, but still falls short of a true bionic one. While it can be crafted without plasteel or advanced components, its precise design and complex assembly make it time-consuming to produce.</description>
         <descriptionHyperlinks>
-            <RecipeDef>IP_AdvencedProsthesisHeart</RecipeDef>
+            <RecipeDef>IP_AdvancedProsthesisHeart</RecipeDef>
         </descriptionHyperlinks>
         <costList>
             <Steel>30</Steel>
@@ -45,7 +45,7 @@
             <li>Industrial</li>
         </techHediffsTags>
         <recipeMaker>
-            <researchPrerequisite>IP_AdvencedProsthetic</researchPrerequisite>
+            <researchPrerequisite>IP_AdvancedProsthetic</researchPrerequisite>
             <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
             <workSkill>Crafting</workSkill>
             <effectWorking>Smith</effectWorking>
@@ -62,15 +62,15 @@
     </ThingDef>
 
     <RecipeDef ParentName="SurgeryInstallImplantBase">
-        <defName>IP_AdvencedProsthesisHeart</defName>
-        <label>Installing AdvancedProsthesis Heart</label>
-        <description>Installs AdvancedProsthesis Heart.</description>
-        <jobString>Installing AdvancedProsthesis Heart.</jobString>
+        <defName>IP_AdvancedProsthesisHeart</defName>
+        <label>Installing Advanced Prosthesis Heart</label>
+        <description>Installs Advanced Prosthesis Heart.</description>
+        <jobString>Installing Advanced Prosthesis Heart.</jobString>
         <ingredients>
             <li>
                 <filter>
                     <thingDefs>
-                        <li>IP_AdvencedProsthesisHeart</li>
+                        <li>IP_AdvancedProsthesisHeart</li>
                     </thingDefs>
                 </filter>
                 <count>1</count>
@@ -81,13 +81,13 @@
         </skillRequirements>
         <fixedIngredientFilter>
             <thingDefs>
-                <li>IP_AdvencedProsthesisHeart</li>
+                <li>IP_AdvancedProsthesisHeart</li>
             </thingDefs>
         </fixedIngredientFilter>
         <appliedOnFixedBodyParts>
             <li>Heart</li>
         </appliedOnFixedBodyParts>
-        <addsHediff>IP_AdvencedProsthesisHeart</addsHediff>
+        <addsHediff>IP_AdvancedProsthesisHeart</addsHediff>
     </RecipeDef>
 
 </Defs>

@@ -7,15 +7,15 @@
     <!-- Prosthetic Eye -->
 
     <HediffDef ParentName="AddedBodyPartBase">
-        <defName>IP_AdvencedProstheticEye</defName>
-        <label>AdvancedProsthetic Eye</label>
-        <labelNoun>AdvancedProsthetic Eye</labelNoun>
+        <defName>IP_AdvancedProstheticEye</defName>
+        <label>Advanced Prosthetic Eye</label>
+        <labelNoun>Advanced Prosthetic Eye</labelNoun>
         <!-- 기술의 발전으로 만들어진 기초적인 의안입니다. 기존 눈 보다 성능이 우수하지만, 생체공학 팔에는 미치지 못합니다. 플라스틸이나 고급 부품 없이도 제작할 수 있으나, 정밀한 설계와 복잡한 조립 과정으로 인해 제작에는 많은 시간이 소요됩니다.  -->
-        <description>A basic prosthetic eye developed through technological advancement. It outperforms a natural eye, but still falls short of bionic standards. Though it can be crafted without plasteel or advanced components, its precise design and intricate assembly make it time-consuming to produce.</description>
+        <description>A basic prosthetic eye developed through technological advancement. It outperforms a natural eye, but still falls short of bionic standards. Though it can be crafted without plasteel or Advanced components, its precise design and intricate assembly make it time-consuming to produce.</description>
         <descriptionHyperlinks>
-            <ThingDef>IP_AdvencedProstheticEye</ThingDef>
+            <ThingDef>IP_AdvancedProstheticEye</ThingDef>
         </descriptionHyperlinks>
-        <spawnThingOnRemoved>IP_AdvencedProstheticEye</spawnThingOnRemoved>
+        <spawnThingOnRemoved>IP_AdvancedProstheticEye</spawnThingOnRemoved>
         <addedPartProps>
             <solid>true</solid>
             <partEfficiency>1.15</partEfficiency>
@@ -43,13 +43,13 @@
         </renderNodeProperties> -->
     </HediffDef>
 
-    <ThingDef ParentName="IP_AdvencedProsthesisMakeableBase">
-        <defName>IP_AdvencedProstheticEye</defName>
-        <label>AdvancedProsthetic Eye</label>
+    <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
+        <defName>IP_AdvancedProstheticEye</defName>
+        <label>Advanced Prosthetic Eye</label>
         <!-- 기술의 발전으로 만들어진 기초적인 의안입니다. 기존 눈 보다 성능이 우수하지만, 생체공학 팔에는 미치지 못합니다. 플라스틸이나 고급 부품 없이도 제작할 수 있으나, 정밀한 설계와 복잡한 조립 과정으로 인해 제작에는 많은 시간이 소요됩니다.  -->
-        <description>A basic prosthetic eye developed through technological advancement. It outperforms a natural eye, but still falls short of bionic standards. Though it can be crafted without plasteel or advanced components, its precise design and intricate assembly make it time-consuming to produce.</description>
+        <description>A basic prosthetic eye developed through technological advancement. It outperforms a natural eye, but still falls short of bionic standards. Though it can be crafted without plasteel or Advanced components, its precise design and intricate assembly make it time-consuming to produce.</description>
         <descriptionHyperlinks>
-            <RecipeDef>IP_AdvencedProstheticEye</RecipeDef>
+            <RecipeDef>IP_AdvancedProstheticEye</RecipeDef>
         </descriptionHyperlinks>
         <costList>
             <Steel>30</Steel>
@@ -66,7 +66,7 @@
             <li>Simple</li>
         </techHediffsTags>
         <recipeMaker>
-            <researchPrerequisite>IP_AdvencedProsthetic</researchPrerequisite>
+            <researchPrerequisite>IP_AdvancedProsthetic</researchPrerequisite>
             <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
             <workSkill>Crafting</workSkill>
             <effectWorking>Smith</effectWorking>
@@ -83,15 +83,15 @@
     </ThingDef>
 
     <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
-        <defName>IP_AdvencedProstheticEye</defName>
-        <label>Install Prosthetic Eye</label>
-        <description>Installs ProstheticEye.</description>
-        <jobString>Installing Prosthetic Eye.</jobString>
+        <defName>IP_AdvancedProstheticEye</defName>
+        <label>Install Advanced Prosthetic Eye</label>
+        <description>Installs Advanced ProstheticEye.</description>
+        <jobString>Installing Advanced Prosthetic Eye.</jobString>
         <ingredients>
             <li>
                 <filter>
                     <thingDefs>
-                        <li>IP_AdvencedProstheticEye</li>
+                        <li>IP_AdvancedProstheticEye</li>
                     </thingDefs>
                 </filter>
                 <count>1</count>
@@ -99,12 +99,12 @@
         </ingredients>
         <fixedIngredientFilter>
             <thingDefs>
-                <li>IP_AdvencedProstheticEye</li>
+                <li>IP_AdvancedProstheticEye</li>
             </thingDefs>
         </fixedIngredientFilter>
         <appliedOnFixedBodyParts>
             <li>Eye</li>
         </appliedOnFixedBodyParts>
-        <addsHediff>IP_AdvencedProstheticEye</addsHediff>
+        <addsHediff>IP_AdvancedProstheticEye</addsHediff>
     </RecipeDef>
 </Defs>

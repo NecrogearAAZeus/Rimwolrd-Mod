@@ -7,28 +7,28 @@
     <!-- AdvancedProsthesis Tongue -->
 
     <HediffDef ParentName="AddedBodyPartBase">
-        <defName>IP_AdvencedProsthesisTongue</defName>
-        <label>AdvancedProsthesis Tongue</label>
-        <labelNoun>AdvancedProsthesis Tongue</labelNoun>
+        <defName>IP_advancedProsthesisTongue</defName>
+        <label>Advanced Prosthesis Tongue</label>
+        <labelNoun>Advanced Prosthesis Tongue</labelNoun>
         <!-- 기술의 발전으로 만들어진 보강된 보철물 혀 입니다. 기존의 혀보다 약간 열등하지만 다른 선택지가 없을 경우 사용됩니다.  -->
         <description>A reinforced prosthetic tongue developed through technological progress. Slightly inferior to both natural tongues, but used when no better options are available.</description>
         <descriptionHyperlinks>
-            <ThingDef>IP_AdvencedProsthesisTongue</ThingDef>
+            <ThingDef>IP_advancedProsthesisTongue</ThingDef>
         </descriptionHyperlinks>
         <addedPartProps>
             <solid>true</solid>
             <partEfficiency>0.9</partEfficiency>
         </addedPartProps>
-        <spawnThingOnRemoved>IP_AdvencedProsthesisTongue</spawnThingOnRemoved>
+        <spawnThingOnRemoved>IP_advancedProsthesisTongue</spawnThingOnRemoved>
     </HediffDef>
 
-    <ThingDef ParentName="IP_AdvencedProsthesisMakeableBase">
-        <defName>IP_AdvencedProsthesisTongue</defName>
-        <label>AdvancedProsthesis Tongue</label>
+    <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
+        <defName>IP_advancedProsthesisTongue</defName>
+        <label>Advanced Prosthesis Tongue</label>
         <!-- 기술의 발전으로 만들어진 보강된 보철물 혀 입니다. 생체공학 혀와 기존의 혀보다 약간 열등하지만 다른 선택지가 없을 경우 사용됩니다.  -->
         <description>A reinforced prosthetic tongue developed through technological progress. Slightly inferior to both natural tongues, but used when no better options are available.</description>
         <descriptionHyperlinks>
-            <RecipeDef>IP_AdvencedProsthesisTongue</RecipeDef>
+            <RecipeDef>IP_advancedProsthesisTongue</RecipeDef>
         </descriptionHyperlinks>
         <costList>
             <Steel>10</Steel>
@@ -44,7 +44,7 @@
             <li>Industrial</li>
         </techHediffsTags>
         <recipeMaker>
-            <researchPrerequisite>IP_AdvencedProsthetic</researchPrerequisite>
+            <researchPrerequisite>IP_AdvancedProsthetic</researchPrerequisite>
             <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
             <workSkill>Crafting</workSkill>
             <effectWorking>Smith</effectWorking>
@@ -61,15 +61,15 @@
     </ThingDef>
 
     <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
-        <defName>IP_AdvencedProsthesisTongue</defName>
-        <label>Installing AdvancedProsthesis Tongue</label>
-        <description>Installs AdvancedProsthesis Tongue.</description>
-        <jobString>Installing AdvancedProsthesis Tongue.</jobString>
+        <defName>IP_advancedProsthesisTongue</defName>
+        <label>Installing Advanced Prosthesis Tongue</label>
+        <description>Installs Advanced Prosthesis Tongue.</description>
+        <jobString>Installing Advanced Prosthesis Tongue.</jobString>
         <ingredients>
             <li>
                 <filter>
                     <thingDefs>
-                        <li>IP_AdvencedProsthesisTongue</li>
+                        <li>IP_advancedProsthesisTongue</li>
                     </thingDefs>
                 </filter>
                 <count>1</count>
@@ -80,13 +80,13 @@
         </skillRequirements>
         <fixedIngredientFilter>
             <thingDefs>
-                <li>IP_AdvencedProsthesisTongue</li>
+                <li>IP_advancedProsthesisTongue</li>
             </thingDefs>
         </fixedIngredientFilter>
         <appliedOnFixedBodyParts>
             <li>Tongue</li>
         </appliedOnFixedBodyParts>
-        <addsHediff>IP_AdvencedProsthesisTongue</addsHediff>
+        <addsHediff>IP_advancedProsthesisTongue</addsHediff>
     </RecipeDef>
 
 </Defs>

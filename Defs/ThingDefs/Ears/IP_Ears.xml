@@ -7,29 +7,29 @@
     <!-- AdvancedCochlear Implant -->
 
     <HediffDef ParentName="AddedBodyPartBase">
-        <defName>IP_AdvencedCochlearImplant</defName>
-        <label>AdvancedCochlear Implant</label>
-        <labelNoun>AdvancedCochlear Implant</labelNoun>
+        <defName>IP_AdvancedCochlearImplant</defName>
+        <label>Advanced Cochlear Implant</label>
+        <labelNoun>Advanced Cochlear Implant</labelNoun>
         <!-- 기술의 발전으로 만들어진 보강된 와우입니다. 단순한 보철물이나 기존 와우보다는 우수하지만, 생체공학 팔에는 미치지 못합니다. 플라스틸이나 고급 부품 없이도 제작 가능하지만, 정밀한 설계와 조립이 요구되어 제작에는 상당한 시간이 소요됩니다. -->
-        <description>An advanced cochlear implant developed through technological progress. Superior to simple prosthetics and conventional cochlear devices, though still not on par with true bionic ears. While it can be crafted without plasteel or advanced components, its precise design and intricate assembly require significant time to produce.</description>
+        <description>An Advanced cochlear implant developed through technological progress. Superior to simple prosthetics and conventional cochlear devices, though still not on par with true bionic ears. While it can be crafted without plasteel or Advanced components, its precise design and intricate assembly require significant time to produce.</description>
         <descriptionHyperlinks>
-            <ThingDef>IP_AdvencedCochlearImplant</ThingDef>
+            <ThingDef>IP_AdvancedCochlearImplant</ThingDef>
         </descriptionHyperlinks>
         <addedPartProps>
             <solid>true</solid>
             <partEfficiency>1.15</partEfficiency>
             <betterThanNatural>true</betterThanNatural>
         </addedPartProps>
-        <spawnThingOnRemoved>IP_AdvencedCochlearImplant</spawnThingOnRemoved>
+        <spawnThingOnRemoved>IP_AdvancedCochlearImplant</spawnThingOnRemoved>
     </HediffDef>
 
-    <ThingDef ParentName="IP_AdvencedProsthesisMakeableBase">
-        <defName>IP_AdvencedCochlearImplant</defName>
-        <label>AdvancedCochlear Implant</label>
+    <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
+        <defName>IP_AdvancedCochlearImplant</defName>
+        <label>Advanced Cochlear Implant</label>
         <!-- 기술의 발전으로 만들어진 보강된 와우입니다. 단순한 보철물이나 기존 와우보다는 우수하지만, 생체공학 팔에는 미치지 못합니다. 플라스틸이나 고급 부품 없이도 제작 가능하지만, 정밀한 설계와 조립이 요구되어 제작에는 상당한 시간이 소요됩니다. -->
-        <description>An advanced cochlear implant developed through technological progress. Superior to simple prosthetics and conventional cochlear devices, though still not on par with true bionic ears. While it can be crafted without plasteel or advanced components, its precise design and intricate assembly require significant time to produce.</description>
+        <description>An Advanced cochlear implant developed through technological progress. Superior to simple prosthetics and conventional cochlear devices, though still not on par with true bionic ears. While it can be crafted without plasteel or Advanced components, its precise design and intricate assembly require significant time to produce.</description>
         <descriptionHyperlinks>
-            <RecipeDef>IP_AdvencedCochlearImplant</RecipeDef>
+            <RecipeDef>IP_AdvancedCochlearImplant</RecipeDef>
         </descriptionHyperlinks>
         <costList>
             <Steel>10</Steel>
@@ -46,7 +46,7 @@
             <li>Industrial</li>
         </techHediffsTags>
         <recipeMaker>
-            <researchPrerequisite>IP_AdvencedProsthetic</researchPrerequisite>
+            <researchPrerequisite>IP_AdvancedProsthetic</researchPrerequisite>
             <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
             <workSkill>Crafting</workSkill>
             <effectWorking>Smith</effectWorking>
@@ -63,15 +63,15 @@
     </ThingDef>
 
     <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
-        <defName>IP_AdvencedCochlearImplant</defName>
-        <label>Installing AdvancedCochlear Implant</label>
-        <description>Installs AdvancedCochlear Implant.</description>
-        <jobString>Installing AdvancedCochlear Implant.</jobString>
+        <defName>IP_AdvancedCochlearImplant</defName>
+        <label>Installing Advanced Cochlear Implant</label>
+        <description>Installs Advanced Cochlear Implant.</description>
+        <jobString>Installing Advanced Cochlear Implant.</jobString>
         <ingredients>
             <li>
                 <filter>
                     <thingDefs>
-                        <li>IP_AdvencedCochlearImplant</li>
+                        <li>IP_AdvancedCochlearImplant</li>
                     </thingDefs>
                 </filter>
                 <count>1</count>
@@ -82,13 +82,13 @@
         </skillRequirements>
         <fixedIngredientFilter>
             <thingDefs>
-                <li>IP_AdvencedCochlearImplant</li>
+                <li>IP_AdvancedCochlearImplant</li>
             </thingDefs>
         </fixedIngredientFilter>
         <appliedOnFixedBodyParts>
             <li>Ear</li>
         </appliedOnFixedBodyParts>
-        <addsHediff>IP_AdvencedCochlearImplant</addsHediff>
+        <addsHediff>IP_AdvancedCochlearImplant</addsHediff>
     </RecipeDef>
 
 </Defs>

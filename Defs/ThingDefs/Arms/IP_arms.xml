@@ -7,13 +7,13 @@
     <!-- AdvancedProsthetic Arm -->
 
     <HediffDef ParentName="AddedBodyPartBase">
-        <defName>IP_AdvencedProstheticArm</defName>
-        <label>AdvancedProsthetic Arm</label>
-        <labelNoun>advenced Prosthetic Arm</labelNoun>
+        <defName>IP_AdvancedProstheticArm</defName>
+        <label>Advanced Prosthetic Arm</label>
+        <labelNoun>Advanced Prosthetic Arm</labelNoun>
         <!-- 기술의 발전으로 만들어진 보강된 보철 팔입니다. 단순한 보철물이나 기존 팔보다는 우수하지만, 생체공학 팔에는 미치지 못합니다. 플라스틸이나 고급 부품 없이도 제작 가능하지만, 정밀한 설계와 조립이 요구되어 제작에는 상당한 시간이 소요됩니다. -->
-        <description>A reinforced prosthetic arm, built as a result of technological progress. It surpasses a simple prosthesis and even natural arms in some ways, but still falls short of bionics. Though it requires only steel and components rather than plasteel or advanced parts, its intricate design and assembly demand significant labor.</description>
+        <description>A reinforced prosthetic arm, built as a result of technological progress. It surpasses a simple prosthesis and even natural arms in some ways, but still falls short of bionics. Though it requires only steel and components rather than plasteel or Advanced parts, its intricate design and assembly demand significant labor.</description>
         <descriptionHyperlinks>
-            <ThingDef>IP_AdvencedProstheticArm</ThingDef>
+            <ThingDef>IP_AdvancedProstheticArm</ThingDef>
         </descriptionHyperlinks>
         <addedPartProps>
             <solid>true</solid>
@@ -36,16 +36,16 @@
                 </tools>
             </li>
         </comps>
-        <spawnThingOnRemoved>IP_AdvencedProstheticArm</spawnThingOnRemoved>
+        <spawnThingOnRemoved>IP_AdvancedProstheticArm</spawnThingOnRemoved>
     </HediffDef>
 
-    <ThingDef ParentName="IP_AdvencedProsthesisMakeableBase">
-        <defName>IP_AdvencedProstheticArm</defName>
-        <label>AdvancedProsthetic Arm</label>
+    <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
+        <defName>IP_AdvancedProstheticArm</defName>
+        <label>Advanced Prosthetic Arm</label>
         <!-- 기술의 발전으로 만들어진 보철 팔입니다. 단순한 보철물이나 자연 팔보다는 우수하지만, 생체공학 팔에는 미치지 못합니다. 플라스틸이나 고급 부품 없이도 제작 가능하지만, 정밀한 설계와 조립이 요구되어 제작에는 상당한 시간이 소요됩니다. -->
-        <description>This prosthetic arm is a product of technological advancement. It surpasses a simple prosthesis and even natural arms in some ways, but still falls short of bionics. Though it requires only steel and components rather than plasteel or advanced parts, its intricate design and assembly demand significant labor.</description>
+        <description>This prosthetic arm is a product of technological advancement. It surpasses a simple prosthesis and even natural arms in some ways, but still falls short of bionics. Though it requires only steel and components rather than plasteel or Advanced parts, its intricate design and assembly demand significant labor.</description>
         <descriptionHyperlinks>
-            <RecipeDef>IP_AdvencedProstheticArm</RecipeDef>
+            <RecipeDef>IP_AdvancedProstheticArm</RecipeDef>
         </descriptionHyperlinks>
         <costList>
             <Steel>60</Steel>
@@ -62,7 +62,7 @@
             <li>Industrial</li>
         </techHediffsTags>
         <recipeMaker>
-            <researchPrerequisite>IP_AdvencedProsthetic</researchPrerequisite>
+            <researchPrerequisite>IP_AdvancedProsthetic</researchPrerequisite>
             <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
             <workSkill>Crafting</workSkill>
             <effectWorking>Smith</effectWorking>
@@ -79,15 +79,15 @@
     </ThingDef>
 
     <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
-        <defName>IP_AdvencedProstheticArm</defName>
-        <label>Installing AdvancedProsthetic Arm</label>
-        <description>Installs AdvancedProsthetic Arm.</description>
-        <jobString>Installing AdvancedProsthetic Arm.</jobString>
+        <defName>IP_AdvancedProstheticArm</defName>
+        <label>Installing Advanced Prosthetic Arm</label>
+        <description>Installs Advanced Prosthetic Arm.</description>
+        <jobString>Installing Advanced Prosthetic Arm.</jobString>
         <ingredients>
             <li>
                 <filter>
                     <thingDefs>
-                        <li>IP_AdvencedProstheticArm</li>
+                        <li>IP_AdvancedProstheticArm</li>
                     </thingDefs>
                 </filter>
                 <count>1</count>
@@ -98,29 +98,29 @@
         </skillRequirements>
         <fixedIngredientFilter>
             <thingDefs>
-                <li>IP_AdvencedProstheticArm</li>
+                <li>IP_AdvancedProstheticArm</li>
             </thingDefs>
         </fixedIngredientFilter>
         <appliedOnFixedBodyParts>
             <li>Shoulder</li>
         </appliedOnFixedBodyParts>
-        <addsHediff>IP_AdvencedProstheticArm</addsHediff>
+        <addsHediff>IP_AdvancedProstheticArm</addsHediff>
     </RecipeDef>
 
-    <!-- ID-17 MOLE SALVAGE -->
+    <!-- IDC-17 MOLE SALVAGE -->
 
     <HediffDef ParentName="AddedBodyPartBase">
-        <defName>IP_ID17_MOLE_SALVAGE</defName>
-        <label>ID-17 MOLE SALVAGE</label>
-        <labelNoun>ID-17 MOLE SALVAGE</labelNoun>
+        <defName>IP_IDC17_MOLE_SALVAGE</defName>
+        <label>IDC-17 MOLE SALVAGE</label>
+        <labelNoun>IDC-17 MOLE SALVAGE</labelNoun>
         <!-- Interstellar Development Corps에서 개발한 채굴 특화 보조 팔입니다. 자원이 척박한 환경에서도 효율적으로 자원을 회수할 수 있도록 설계되었습니다. 채굴 속도는 다소 느려지지만, 손실률을 최소화하고 정밀한 추출을 통해 더 많은 자원을 확보할 수 있습니다. -->
         <description>A mining-specialized auxiliary arm developed by the Interstellar Development Corps. Designed for efficient resource extraction even in resource-scarce environments. While it reduces mining speed slightly, it minimizes material loss and enables precise extraction, resulting in greater overall yield.</description>
         <descriptionHyperlinks>
-            <ThingDef>IP_ID17_MOLE_SALVAGE</ThingDef>
+            <ThingDef>IP_IDC17_MOLE_SALVAGE</ThingDef>
         </descriptionHyperlinks>
         <addedPartProps>
             <solid>true</solid>
-            <partEfficiency>1.05</partEfficiency>
+            <partEfficiency>1.1</partEfficiency>
             <betterThanNatural>true</betterThanNatural>
         </addedPartProps>
         <comps>
@@ -140,7 +140,7 @@
             </li>
         </comps>
 
-        <spawnThingOnRemoved>IP_ID17_MOLE_SALVAGE</spawnThingOnRemoved>
+        <spawnThingOnRemoved>IP_IDC17_MOLE_SALVAGE</spawnThingOnRemoved>
         <stages>
             <li>
                 <statFactors>
@@ -150,41 +150,35 @@
                 <statOffsets>
                     <MiningYield>0.1</MiningYield>
                 </statOffsets>
-                <capMods>
-                    <li>
-                        <capacity>Moving</capacity>
-                        <offset>-0.08</offset>
-                    </li>
-                </capMods>
             </li>
         </stages>
     </HediffDef>
 
-    <ThingDef ParentName="IP_AdvencedProsthesisMakeableBase">
-        <defName>IP_ID17_MOLE_SALVAGE</defName>
-        <label>ID-17 MOLE SALVAGE</label>
+    <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
+        <defName>IP_IDC17_MOLE_SALVAGE</defName>
+        <label>IDC-17 MOLE SALVAGE</label>
         <!-- Interstellar Development Corps에서 개발한 채굴 특화 보조 팔입니다. 자원이 척박한 환경에서도 효율적으로 자원을 회수할 수 있도록 설계되었습니다. 채굴 속도는 다소 느려지지만, 손실률을 최소화하고 정밀한 추출을 통해 더 많은 자원을 확보할 수 있습니다. -->
         <description>A mining-specialized auxiliary arm developed by the Interstellar Development Corps. Designed for efficient resource extraction even in resource-scarce environments. While it reduces mining speed slightly, it minimizes material loss and enables precise extraction, resulting in greater overall yield.</description>
         <descriptionHyperlinks>
-            <RecipeDef>IP_ID17_MOLE_SALVAGE</RecipeDef>
+            <RecipeDef>IP_IDC17_MOLE_SALVAGE</RecipeDef>
         </descriptionHyperlinks>
         <costList>
             <Steel>80</Steel>
-            <ComponentIndustrial>10</ComponentIndustrial>
+            <ComponentIndustrial>6</ComponentIndustrial>
         </costList>
         <thingSetMakerTags>
             <li>RewardStandardLowFreq</li>
         </thingSetMakerTags>
         <statBases>
             <Mass>5.0</Mass>
-            <MarketValue>625</MarketValue>
+            <MarketValue>575</MarketValue>
         </statBases>
         <techHediffsTags>
             <li>Industrial</li>
         </techHediffsTags>
         <recipeMaker>
             <researchPrerequisites>
-                <li>IP_AdvencedProsthetic</li>
+                <li>IP_AdvancedProsthetic</li>
                 <li>IP_IDC_BasicModule</li>
             </researchPrerequisites>
             <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
@@ -203,15 +197,15 @@
     </ThingDef>
 
     <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
-        <defName>IP_ID17_MOLE_SALVAGE</defName>
-        <label>Installing ID-17 MOLE SALVAGE</label>
-        <description>Installs ID-17 MOLE SALVAGE.</description>
-        <jobString>Installing ID-17 MOLE SALVAGE.</jobString>
+        <defName>IP_IDC17_MOLE_SALVAGE</defName>
+        <label>Installing IDC-17 MOLE SALVAGE</label>
+        <description>Installs IDC-17 MOLE SALVAGE.</description>
+        <jobString>Installing IDC-17 MOLE SALVAGE.</jobString>
         <ingredients>
             <li>
                 <filter>
                     <thingDefs>
-                        <li>IP_ID17_MOLE_SALVAGE</li>
+                        <li>IP_IDC17_MOLE_SALVAGE</li>
                     </thingDefs>
                 </filter>
                 <count>1</count>
@@ -222,26 +216,255 @@
         </skillRequirements>
         <fixedIngredientFilter>
             <thingDefs>
-                <li>IP_ID17_MOLE_SALVAGE</li>
+                <li>IP_IDC17_MOLE_SALVAGE</li>
             </thingDefs>
         </fixedIngredientFilter>
         <appliedOnFixedBodyParts>
             <li>Shoulder</li>
         </appliedOnFixedBodyParts>
-        <addsHediff>IP_ID17_MOLE_SALVAGE</addsHediff>
+        <addsHediff>IP_IDC17_MOLE_SALVAGE</addsHediff>
     </RecipeDef>
 
-    <!-- ORD-02 Phantom Reaper -->
-    <!-- 도축 작업속도랑 식물 수확속도는 올라가자만 양은 떨어진다? -->
+    <!-- ID-05 AGRI HARVESTER -->
 
     <HediffDef ParentName="AddedBodyPartBase">
-        <defName>IP_ORD_02_Phantom_Reaper</defName>
-        <label>ORD-02 Phantom Reaper</label>
-        <labelNoun>ORD-02 Phantom Reaper</labelNoun>
-        <!-- Interstellar Development Corps에서 개발한 채굴 특화 보조 팔입니다. 자원이 척박한 환경에서도 효율적으로 자원을 회수할 수 있도록 설계되었습니다. 채굴 속도는 다소 느려지지만, 손실률을 최소화하고 정밀한 추출을 통해 더 많은 자원을 확보할 수 있습니다. -->
-        <description>A mining-specialized auxiliary arm developed by the Interstellar Development Corps. Designed for efficient resource extraction even in resource-scarce environments. While it reduces mining speed slightly, it minimizes material loss and enables precise extraction, resulting in greater overall yield.</description>
+        <defName>IP_IDC05_AGRI_HARVESTER</defName>
+        <label>IDC-05 AGRI HARVESTER</label>
+        <labelNoun>IDC-05 AGRI HARVESTER</labelNoun>
+        <!-- Interstellar Development Corps에서 개발한 농업용 임플란트 팔은 농경지가 부족하거나 극한 환경에서의 농업 생산성을 극대화하기 위해 설계되었습니다. 이 팔은 착용자가 보다 정밀하고 효율적인 작업을 할 수 있도록 도와주며, 수확과 재배 과정에서의 손실률을 최소화하는 데 중요한 역할을 합니다. -->
+        <description>The Agricultural Implant Arm developed by the Interstellar Development Corps is designed to maximize agricultural productivity in areas with limited arable land or harsh environments. This arm helps the wearer perform tasks with greater precision and efficiency, playing a crucial role in minimizing loss during the harvesting and cultivation processes.</description>
         <descriptionHyperlinks>
-            <ThingDef>IP_ORD_02_Phantom_Reaper</ThingDef>
+            <ThingDef>IP_IDC05_AGRI_HARVESTER</ThingDef>
+        </descriptionHyperlinks>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.1</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+        <comps>
+            <li Class="HediffCompProperties_VerbGiver">
+                <tools>
+                    <li>
+                        <label>Harvester Blade</label>
+                        <capacities>
+                            <li>Cut</li>
+                        </capacities>
+                        <power>14</power>
+                        <cooldownTime>2</cooldownTime>
+                        <linkedBodyPartsGroup>Hands</linkedBodyPartsGroup>
+                        <armorPenetration>0.2</armorPenetration>
+                    </li>
+                </tools>
+            </li>
+        </comps>
+
+        <spawnThingOnRemoved>IP_IDC05_AGRI_HARVESTER</spawnThingOnRemoved>
+        <stages>
+            <li>
+                <statOffsets>
+                    <PlantHarvestYield>0.15</PlantHarvestYield>
+                    <ButcheryFleshEfficiency>0.15</ButcheryFleshEfficiency>
+                    <AnimalGatherYield>0.1</AnimalGatherYield>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
+        <defName>IP_IDC05_AGRI_HARVESTER</defName>
+        <label>IDC-05 AGRI HARVESTER</label>
+        <!-- Interstellar Development Corps에서 개발한 농업용 임플란트 팔은 농경지가 부족하거나 극한 환경에서의 농업 생산성을 극대화하기 위해 설계되었습니다. 이 팔은 착용자가 보다 정밀하고 효율적인 작업을 할 수 있도록 도와주며, 수확과 재배 과정에서의 손실률을 최소화하는 데 중요한 역할을 합니다. -->
+        <description>The Agricultural Implant Arm developed by the Interstellar Development Corps is designed to maximize agricultural productivity in areas with limited arable land or harsh environments. This arm helps the wearer perform tasks with greater precision and efficiency, playing a crucial role in minimizing loss during the harvesting and cultivation processes.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>IP_IDC05_AGRI_HARVESTER</RecipeDef>
+        </descriptionHyperlinks>
+        <costList>
+            <Steel>80</Steel>
+            <ComponentIndustrial>6</ComponentIndustrial>
+        </costList>
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        <statBases>
+            <Mass>5.0</Mass>
+            <MarketValue>575</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Industrial</li>
+        </techHediffsTags>
+        <recipeMaker>
+            <researchPrerequisites>
+                <li>IP_AdvancedProsthetic</li>
+                <li>IP_IDC_BasicModule</li>
+            </researchPrerequisites>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <unfinishedThingDef>UnfinishedHealthItemProsthetic</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>7</Crafting>
+            </skillRequirements>
+            <workAmount>23500</workAmount>
+        </recipeMaker>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
+        <defName>IP_IDC05_AGRI_HARVESTER</defName>
+        <label>Installing IDC-05 AGRI HARVESTER</label>
+        <description>Installs IDC-05 AGRI HARVESTER.</description>
+        <jobString>Installing IDC-05 AGRI HARVESTER.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IP_IDC05_AGRI_HARVESTER</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Medicine>4</Medicine>
+        </skillRequirements>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>IP_IDC05_AGRI_HARVESTER</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Shoulder</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>IP_IDC05_AGRI_HARVESTER</addsHediff>
+    </RecipeDef>
+
+    <!-- IDC-11 HULK STRUCKTOR -->
+
+    <HediffDef ParentName="AddedBodyPartBase">
+        <defName>IP_IDC11_HULK_STRUCKTOR</defName>
+        <label>IDC-11 HULK STRUCKTOR</label>
+        <labelNoun>IDC-11 HULK STRUCKTOR</labelNoun>
+        <!-- Interstellar Development Corps에서 개발한 건설용 임플란트 팔은 개척지의 급격한 환경 변화에 대응하기 위해 설계되었습니다. 건설작업만을 위해 제작된 이 강화 의수는 개척지의 혹독한 환경들에도 버틸 수 있는 거점을 신속하게 건설할 수 있습니다.  -->
+        <description>The Construction Implant Arm developed by the Interstellar Development Corps is designed to withstand the harsh environmental changes of frontier colonies. Specifically crafted for construction tasks, this enhanced prosthetic arm enables the rapid construction of strongholds capable of enduring even the most extreme conditions.</description>
+        <descriptionHyperlinks>
+            <ThingDef>IP_IDC11_HULK_STRUCKTOR</ThingDef>
+        </descriptionHyperlinks>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.1</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+        <comps>
+            <li Class="HediffCompProperties_VerbGiver">
+                <tools>
+                    <li>
+                        <label>fist</label>
+                        <capacities>
+                            <li>Blunt</li>
+                        </capacities>
+                        <power>10</power>
+                        <cooldownTime>2</cooldownTime>
+                        <linkedBodyPartsGroup>Hands</linkedBodyPartsGroup>
+                        <armorPenetration>0.2</armorPenetration>
+                    </li>
+                </tools>
+            </li>
+        </comps>
+
+        <spawnThingOnRemoved>IP_IDC11_HULK_STRUCKTOR</spawnThingOnRemoved>
+        <stages>
+            <li>
+                <statOffsets>
+                    <ConstructionSpeed>0.3</ConstructionSpeed>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
+        <defName>IP_IDC11_HULK_STRUCKTOR</defName>
+        <label>IDC-11 HULK STRUCKTOR</label>
+        <!-- Interstellar Development Corps에서 개발한 건설용 임플란트 팔은 개척지의 급격한 환경 변화에 대응하기 위해 설계되었습니다. 건설작업만을 위해 제작된 이 강화 의수는 개척지의 혹독한 환경들에도 버틸 수 있는 거점을 신속하게 건설할 수 있습니다.  -->
+        <description>The Construction Implant Arm developed by the Interstellar Development Corps is designed to withstand the harsh environmental changes of frontier colonies. Specifically crafted for construction tasks, this enhanced prosthetic arm enables the rapid construction of strongholds capable of enduring even the most extreme conditions.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>IP_IDC11_HULK_STRUCKTOR</RecipeDef>
+        </descriptionHyperlinks>
+        <costList>
+            <Steel>80</Steel>
+            <ComponentIndustrial>6</ComponentIndustrial>
+        </costList>
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        <statBases>
+            <Mass>5.0</Mass>
+            <MarketValue>575</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Industrial</li>
+        </techHediffsTags>
+        <recipeMaker>
+            <researchPrerequisites>
+                <li>IP_AdvancedProsthetic</li>
+                <li>IP_IDC_BasicModule</li>
+            </researchPrerequisites>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <unfinishedThingDef>UnfinishedHealthItemProsthetic</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>7</Crafting>
+            </skillRequirements>
+            <workAmount>23500</workAmount>
+        </recipeMaker>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
+        <defName>IP_IDC11_HULK_STRUCKTOR</defName>
+        <label>Installing IDC-11 HULK STRUCKTOR</label>
+        <description>Installs IDC-11 HULK STRUCKTOR.</description>
+        <jobString>Installing IDC-11 HULK STRUCKTOR.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IP_IDC11_HULK_STRUCKTOR</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Medicine>4</Medicine>
+        </skillRequirements>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>IP_IDC11_HULK_STRUCKTOR</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Shoulder</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>IP_IDC11_HULK_STRUCKTOR</addsHediff>
+    </RecipeDef>
+
+    <!-- ORD-02 PHANTOM REAPER -->
+
+    <HediffDef ParentName="AddedBodyPartBase">
+        <defName>IP_ORD02_PHANTOM_REAPER</defName>
+        <label>ORD-02 PHANTOM REAPER</label>
+        <labelNoun>ORD-02 PHANTOM REAPER</labelNoun>
+        <!-- Order of the Machina의 열렬한 추종자들에게 하사되는 전투용 팔입니다. 사이더의 팔을 모방해 만든 이 장비는 팔 전체가 날카로운 칼날로 이루어져 있어 일반적인 작업에는 부적합합니다. 경량형 프레임을 사용해 장착자가 좀 더 날렵한 손놀림으로 적을 난도질 할 수 있게 해주지만 피해에 취약해집니다.-->
+        <description>A combat arm bestowed upon the devoted followers of the Order of the Machina. Modeled after the arms of Scythers, this implant replaces the entire arm with a razor-sharp blade, making it unsuitable for most conventional labor. Its lightweight frame allows the wearer to slash enemies with swift, precise strikes, but leaves them more vulnerable to damage. !!!This implant prevents the user from wielding any weapon!!!</description>
+        <descriptionHyperlinks>
+            <ThingDef>IP_ORD02_PHANTOM_REAPER</ThingDef>
         </descriptionHyperlinks>
         <addedPartProps>
             <solid>true</solid>
@@ -256,36 +479,39 @@
                             <li>Cut</li>
                         </capacities>
                         <power>20</power>
-                        <cooldownTime>1.2</cooldownTime>
+                        <cooldownTime>2</cooldownTime>
                         <linkedBodyPartsGroup>Hands</linkedBodyPartsGroup>
-                        <armorPenetration>0.25</armorPenetration>
+                        <armorPenetration>0.3</armorPenetration>
                     </li>
                 </tools>
             </li>
         </comps>
-        <spawnThingOnRemoved>IP_ORD_02_Phantom_Reaper</spawnThingOnRemoved>
+        <spawnThingOnRemoved>IP_ORD02_PHANTOM_REAPER</spawnThingOnRemoved>
         <stages>
             <li>
                 <statOffsets>
-                    <MeleeDodgeChance>0.02</MeleeDodgeChance>
-                    <GeneralLaborSpeed>-0.3</GeneralLaborSpeed>
-                    <MoveSpeed>0.2</MoveSpeed>
+                    <WorkSpeedGlobal>-0.25</WorkSpeedGlobal>
+                    <MoveSpeed>0.25</MoveSpeed>
+                    <MeleeCooldownFactor>-0.15</MeleeCooldownFactor>
                 </statOffsets>
+                <statFactors>
+                    <IncomingDamageFactor>1.05</IncomingDamageFactor>
+                </statFactors>
             </li>
         </stages>
     </HediffDef>
 
-    <ThingDef ParentName="IP_AdvencedProsthesisMakeableBase">
-        <defName>IP_ORD_02_Phantom_Reaper</defName>
-        <label>ORD-02 Phantom Reaper</label>
-        <!-- Interstellar Development Corps에서 개발한 채굴 특화 보조 팔입니다. 자원이 척박한 환경에서도 효율적으로 자원을 회수할 수 있도록 설계되었습니다. 채굴 속도는 다소 느려지지만, 손실률을 최소화하고 정밀한 추출을 통해 더 많은 자원을 확보할 수 있습니다. -->
-        <description>A mining-specialized auxiliary arm developed by the Interstellar Development Corps. Designed for efficient resource extraction even in resource-scarce environments. While it reduces mining speed slightly, it minimizes material loss and enables precise extraction, resulting in greater overall yield.</description>
+    <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
+        <defName>IP_ORD02_PHANTOM_REAPER</defName>
+        <label>ORD-02 PHANTOM REAPER</label>
+        <!-- Order of the Machina의 열렬한 추종자들에게 하사되는 전투용 팔입니다. 사이더의 팔을 모방해 만든 이 장비는 팔 전체가 날카로운 칼날로 이루어져 있어 일반적인 작업에는 부적합합니다. 경량형 프레임을 사용해 장착자가 좀 더 날렵한 손놀림으로 적을 난도질 할 수 있게 해주지만 피해에 취약해집니다.-->
+        <description>A combat arm bestowed upon the devoted followers of the Order of the Machina. Modeled after the arms of Scythers, this implant replaces the entire arm with a razor-sharp blade, making it unsuitable for most conventional labor. Its lightweight frame allows the wearer to slash enemies with swift, precise strikes, but leaves them more vulnerable to damage. !!!This implant prevents the user from wielding any weapon!!!</description>
         <descriptionHyperlinks>
-            <RecipeDef>IP_ORD_02_Phantom_Reaper</RecipeDef>
+            <RecipeDef>IP_ORD02_PHANTOM_REAPER</RecipeDef>
         </descriptionHyperlinks>
         <costList>
-            <Steel>60</Steel>
-            <ComponentIndustrial>8</ComponentIndustrial>
+            <Steel>80</Steel>
+            <ComponentIndustrial>6</ComponentIndustrial>
         </costList>
         <thingSetMakerTags>
             <li>RewardStandardLowFreq</li>
@@ -299,8 +525,8 @@
         </techHediffsTags>
         <recipeMaker>
             <researchPrerequisites>
-                <li>IP_AdvencedProsthetic</li>
-                <li>IP_IDC_BasicModule</li>
+                <li>IP_AdvancedProsthetic</li>
+                <li>IP_InitiationProtocol</li>
             </researchPrerequisites>
             <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
             <workSkill>Crafting</workSkill>
@@ -318,15 +544,15 @@
     </ThingDef>
 
     <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
-        <defName>IP_ORD_02_Phantom_Reaper</defName>
-        <label>Installing ORD-02 Phantom Reaper</label>
-        <description>Installs ORD-02 Phantom Reaper.</description>
-        <jobString>Installing ORD-02 Phantom Reaper.</jobString>
+        <defName>IP_ORD02_PHANTOM_REAPER</defName>
+        <label>Installing ORD-02 PHANTOM REAPER</label>
+        <description>Installs ORD-02 PHANTOM REAPER.</description>
+        <jobString>Installing ORD-02 PHANTOM REAPER.</jobString>
         <ingredients>
             <li>
                 <filter>
                     <thingDefs>
-                        <li>IP_ORD_02_Phantom_Reaper</li>
+                        <li>IP_ORD02_PHANTOM_REAPER</li>
                     </thingDefs>
                 </filter>
                 <count>1</count>
@@ -337,13 +563,246 @@
         </skillRequirements>
         <fixedIngredientFilter>
             <thingDefs>
-                <li>IP_ORD_02_Phantom_Reaper</li>
+                <li>IP_ORD02_PHANTOM_REAPER</li>
             </thingDefs>
         </fixedIngredientFilter>
         <appliedOnFixedBodyParts>
             <li>Shoulder</li>
         </appliedOnFixedBodyParts>
-        <addsHediff>IP_ORD_02_Phantom_Reaper</addsHediff>
+        <addsHediff>IP_ORD02_PHANTOM_REAPER</addsHediff>
+    </RecipeDef>
+
+    <!-- SENTINEL-01 BRUTE -->
+
+    <HediffDef ParentName="AddedBodyPartBase">
+        <defName>IP_SENTINEL01_BRUTE</defName>
+        <label>SENTINEL-01 BRUTE</label>
+        <labelNoun>SENTINEL-01 BRUTE</labelNoun>
+        <!-- Imperial Marine Strategic Laboratory에서 개발한 Sentinel Project의 결과물 중 하나로 폭동진압팀의 표준 장비로 채택되었습니다. 사용자의 완력을 강화해주며 견고한 설계로 근접 전투를 효율적으로 만들어주지만 육중한 무게로 인해 사용자가 둔해집니다. -->
+        <description>One of the outcomes of the Sentinel Project, developed by the Imperial Marine Strategic Laboratory, this arm has been adopted as standard equipment for the riot control team. It enhances the user's strength and, with its sturdy design, makes close combat more efficient, but its heavy weight causes the user to become sluggish.</description>
+        <descriptionHyperlinks>
+            <ThingDef>IP_SENTINEL01_BRUTE</ThingDef>
+        </descriptionHyperlinks>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.1</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+        <comps>
+            <li Class="HediffCompProperties_VerbGiver">
+                <tools>
+                    <li>
+                        <label>Fist</label>
+                        <capacities>
+                            <li>Blunt</li>
+                        </capacities>
+                        <power>18</power>
+                        <cooldownTime>2</cooldownTime>
+                        <linkedBodyPartsGroup>Hands</linkedBodyPartsGroup>
+                        <armorPenetration>0.2</armorPenetration>
+                    </li>
+                </tools>
+            </li>
+        </comps>
+        <spawnThingOnRemoved>IP_SENTINEL01_BRUTE</spawnThingOnRemoved>
+        <stages>
+            <li>
+                <statOffsets>
+                    <MeleeCooldownFactor>1.05</MeleeCooldownFactor>
+                    <MoveSpeed>-0.08</MoveSpeed>
+                </statOffsets>
+                <statFactors>
+                    <IncomingDamageFactor>0.95</IncomingDamageFactor>
+                    <MeleeDamageFactor>1.2</MeleeDamageFactor>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
+        <defName>IP_SENTINEL01_BRUTE</defName>
+        <label>SENTINEL-01 BRUTE</label>
+        <!-- Imperial Marine Strategic Laboratory에서 개발한 Sentinel Project의 결과물 중 하나로 폭동진압팀의 표준 장비로 채택되었습니다. 사용자의 완력을 강화해주며 견고한 설계로 근접 전투를 효율적으로 만들어주지만 육중한 무게로 인해 사용자가 둔해집니다. -->
+        <description>One of the outcomes of the Sentinel Project, developed by the Imperial Marine Strategic Laboratory, this arm has been adopted as standard equipment for the riot control team. It enhances the user's strength and, with its sturdy design, makes close combat more efficient, but its heavy weight causes the user to become sluggish.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>IP_SENTINEL01_BRUTE</RecipeDef>
+        </descriptionHyperlinks>
+        <costList>
+            <Steel>80</Steel>
+            <ComponentIndustrial>6</ComponentIndustrial>
+        </costList>
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        <statBases>
+            <Mass>7.0</Mass>
+            <MarketValue>575</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Industrial</li>
+        </techHediffsTags>
+        <recipeMaker>
+            <researchPrerequisites>
+                <li>IP_AdvancedProsthetic</li>
+                <li>IP_SentinelProject</li>
+            </researchPrerequisites>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <unfinishedThingDef>UnfinishedHealthItemProsthetic</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>7</Crafting>
+            </skillRequirements>
+            <workAmount>23500</workAmount>
+        </recipeMaker>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
+        <defName>IP_SENTINEL01_BRUTE</defName>
+        <label>Installing SENTINEL-01 BRUTE</label>
+        <description>Installs SENTINEL-01 BRUTE.</description>
+        <jobString>Installing SENTINEL-01 BRUTE.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IP_SENTINEL01_BRUTE</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Medicine>4</Medicine>
+        </skillRequirements>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>IP_SENTINEL01_BRUTE</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Shoulder</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>IP_SENTINEL01_BRUTE</addsHediff>
+    </RecipeDef>
+
+    <!-- SENTINEL-02 MARKSMAN -->
+
+    <HediffDef ParentName="AddedBodyPartBase">
+        <defName>IP_SENTINEL02_MARKSMAN</defName>
+        <label>SENTINEL-02 MARKSMAN</label>
+        <labelNoun>SENTINEL-02 MARKSMAN</labelNoun>
+        <!-- Imperial Marine Strategic Laboratory에서 개발한 Sentinel Project의 결과물 이 임플란트는 제국의 병사들의 표준 장비 입니다. 기초적인 사격 제어 시스템이 내장되어 있어 더 신속하고 정확한 사격을 가능하게 합니다. -->
+        <description>One of the outcomes of the Sentinel Project, developed by the Imperial Marine Strategic Laboratory, this implant is the standard equipment for Imperial soldiers. It is equipped with a basic firing control system, enabling faster and more accurate shooting.</description>
+        <descriptionHyperlinks>
+            <ThingDef>IP_SENTINEL02_MARKSMAN</ThingDef>
+        </descriptionHyperlinks>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.1</partEfficiency>
+        </addedPartProps>
+        <comps>
+            <li Class="HediffCompProperties_VerbGiver">
+                <tools>
+                    <li>
+                        <label>Fist</label>
+                        <capacities>
+                            <li>Blunt</li>
+                        </capacities>
+                        <power>10</power>
+                        <cooldownTime>2</cooldownTime>
+                        <linkedBodyPartsGroup>Hands</linkedBodyPartsGroup>
+                        <armorPenetration>0.3</armorPenetration>
+                    </li>
+                </tools>
+            </li>
+        </comps>
+        <spawnThingOnRemoved>IP_SENTINEL02_MARKSMAN</spawnThingOnRemoved>
+        <stages>
+            <li>
+                <statFactors>
+                    <AimingDelayFactor>0.9</AimingDelayFactor>
+                </statFactors>
+                <statOffsets>
+                    <ShootingAccuracyPawn>2</ShootingAccuracyPawn>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
+        <defName>IP_SENTINEL02_MARKSMAN</defName>
+        <label>SENTINEL-02 MARKSMAN</label>
+        <!-- Imperial Marine Strategic Laboratory에서 개발한 Sentinel Project의 결과물 이 임플란트는 제국의 병사들의 표준 장비 입니다. 기초적인 반동 제어 시스템이 내장되어 있어 더 신속한 사격을 가능하게 합니다. -->
+        <description>One of the outcomes of the Sentinel Project, developed by the Imperial Marine Strategic Laboratory, this implant is the standard equipment for Imperial soldiers. It is equipped with a basic recoil control system, enabling faster and more precise firing.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>IP_SENTINEL02_MARKSMAN</RecipeDef>
+        </descriptionHyperlinks>
+        <costList>
+            <Steel>80</Steel>
+            <ComponentIndustrial>6</ComponentIndustrial>
+        </costList>
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        <statBases>
+            <Mass>5.0</Mass>
+            <MarketValue>575</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Industrial</li>
+        </techHediffsTags>
+        <recipeMaker>
+            <researchPrerequisites>
+                <li>IP_AdvancedProsthetic</li>
+                <li>IP_SentinelProject</li>
+            </researchPrerequisites>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <unfinishedThingDef>UnfinishedHealthItemProsthetic</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>7</Crafting>
+            </skillRequirements>
+            <workAmount>23500</workAmount>
+        </recipeMaker>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
+        <defName>IP_SENTINEL02_MARKSMAN</defName>
+        <label>Installing SENTINEL-02 MARKSMAN</label>
+        <description>Installs SENTINEL-02 MARKSMAN.</description>
+        <jobString>Installing SENTINEL-02 MARKSMAN.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IP_SENTINEL02_MARKSMAN</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Medicine>4</Medicine>
+        </skillRequirements>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>IP_SENTINEL02_MARKSMAN</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Shoulder</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>IP_SENTINEL02_MARKSMAN</addsHediff>
     </RecipeDef>
 
 </Defs>

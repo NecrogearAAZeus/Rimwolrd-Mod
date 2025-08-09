@@ -22,7 +22,7 @@
 //             var matchPhantom = pawn.health.hediffSet.hediffs
 //                 .OfType<Hediff_AddedPart>()
 //                 .FirstOrDefault(h =>
-//                     h.def.defName == "IP_ORD_02_Phantom_Reaper" &&
+//                     h.def.defName == "IP_ORD02_PHANTOM_REAPER" &&
 //                     h.Part == realPart);
 
 //             if (matchPhantom != null)

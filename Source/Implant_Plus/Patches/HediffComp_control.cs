@@ -15,13 +15,13 @@ namespace Implant_Plus.Control
         static void Postfix(Pawn pawn, BodyPartRecord part, Pawn billDoer, List<Thing> ingredients, Bill bill)
         {
             //  수술 대상이 Phantom Reaper가 아닐 경우 종료
-            if (!pawn.health.hediffSet.HasHediff(HediffDef.Named("IP_ORD_02_PHANTOM_REAPER")))
+            if (!pawn.health.hediffSet.HasHediff(HediffDef.Named("IP_ORD02_PHANTOM_REAPER")))
             {
                 return;
             }
             var phantomReaper = pawn.health.hediffSet.hediffs
                 .FirstOrDefault(h => 
-                    h.def.defName == "IP_ORD_02_PHANTOM_REAPER" &&
+                    h.def.defName == "IP_ORD02_PHANTOM_REAPER" &&
                     h.Part == part);
             if (phantomReaper == null)
             {
@@ -59,7 +59,7 @@ namespace Implant_Plus.Control
             if (selectedPawns == null || !selectedPawns.Any()) return;
             
             Pawn pawn = selectedPawns.FirstOrDefault();
-            if (pawn?.health?.hediffSet?.HasHediff(DefDatabase<HediffDef>.GetNamed("IP_ORD_02_PHANTOM_REAPER")) != true)
+            if (pawn?.health?.hediffSet?.HasHediff(DefDatabase<HediffDef>.GetNamed("IP_ORD02_PHANTOM_REAPER")) != true)
                 return;
 
             // 클릭한 위치의 셀 확인
@@ -109,7 +109,7 @@ namespace Implant_Plus.Control
         {
             Pawn pawn = __instance.pawn;
             
-            if (pawn.health?.hediffSet?.HasHediff(DefDatabase<HediffDef>.GetNamed("IP_ORD_02_PHANTOM_REAPER")) == true)
+            if (pawn.health?.hediffSet?.HasHediff(DefDatabase<HediffDef>.GetNamed("IP_ORD02_PHANTOM_REAPER")) == true)
             {
                 // 무기를 땅에 떨어뜨림
                 if (!GenPlace.TryPlaceThing(newEq, pawn.Position, pawn.Map, ThingPlaceMode.Near))
