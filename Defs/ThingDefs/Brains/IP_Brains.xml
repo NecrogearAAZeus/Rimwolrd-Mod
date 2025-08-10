@@ -406,4 +406,205 @@
         <addsHediff>IP_CognitorAssistAI</addsHediff>
     </RecipeDef>
 
+    <!-- ORD-41 OVERSEER -->
+
+    <HediffDef ParentName="ImplantHediffBase">
+        <defName>IP_ORD_41_OVERSEER</defName>
+        <label>ORD-41 OVERSEER</label>
+        <labelNoun>ORD-41 OVERSEER</labelNoun>
+        <!-- Order of the Machina의 하급 메카나이터에게 지급되는 AI로, 메카노이드에 대한 숭배와 이해를 깊이 있게 할 수 있도록 설계되었습니다. 이 AI는 메카나이터가 메카노이드 제어를 더욱 정밀하고 효율적으로 수행할 수 있도록 지원합니다. 뇌에 과부하를 방지하기 위해 다른 AI와 중복 설치할 수 없습니다. -->
+        <description>This AI, issued to lower-ranking Mechaniers of the Order of the Machina, is designed to deepen their worship and understanding of Mechanoids. The AI helps the Mechaniers to perform Mechanoid control with greater precision and efficiency. To prevent neural overload, it cannot be used alongside other AI.</description>
+        <descriptionHyperlinks>
+            <ThingDef>IP_ORD_41_OVERSEER</ThingDef>
+        </descriptionHyperlinks>
+        <spawnThingOnRemoved>IP_ORD_41_OVERSEER</spawnThingOnRemoved>
+        <aptitudes>
+            <Crafting>2</Crafting>
+        </aptitudes>
+        <stages>
+            <li>
+                <statOffsets>
+                    <MechBandwidth>4</MechBandwidth>
+                    <MechControlGroups>1</MechControlGroups>
+                    <WorkSpeedGlobalOffsetMech>0.08</WorkSpeedGlobalOffsetMech>
+                </statOffsets>
+            </li>
+        </stages>
+        <comps>
+            <li Class="Implant_Plus.HediffCompProperties_EMPReaction" />
+        </comps>
+    </HediffDef>
+
+    <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
+        <defName>IP_ORD_41_OVERSEER</defName>
+        <label>ORD-41 OVERSEER</label>
+        <!-- Order of the Machina의 하급 메카나이터에게 지급되는 AI로, 메카노이드에 대한 숭배와 이해를 깊이 있게 할 수 있도록 설계되었습니다. 이 AI는 메카나이터가 메카노이드 제어를 더욱 정밀하고 효율적으로 수행할 수 있도록 지원합니다. 뇌에 과부하를 방지하기 위해 다른 AI와 중복 설치할 수 없습니다. -->
+        <description>This AI, issued to lower-ranking Mechaniers of the Order of the Machina, is designed to deepen their worship and understanding of Mechanoids. The AI helps the Mechaniers to perform Mechanoid control with greater precision and efficiency. To prevent neural overload, it cannot be used alongside other AI.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>IP_ORD_41_OVERSEER</RecipeDef>
+        </descriptionHyperlinks>
+        <costList>
+            <Steel>30</Steel>
+            <ComponentIndustrial>2</ComponentIndustrial>
+            <SignalChip>1</SignalChip>
+        </costList>
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        <statBases>
+            <MarketValue>900</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Industrial</li>
+        </techHediffsTags>
+        <recipeMaker>
+            <researchPrerequisites>
+                <li>IP_BasicAI_Chip</li>
+                <li>IP_InitiationProtocol</li>
+                <li>StandardMechtech</li>
+            </researchPrerequisites>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>7</Crafting>
+            </skillRequirements>
+            <workAmount>23500</workAmount>
+        </recipeMaker>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>IP_ORD_41_OVERSEER</defName>
+        <label>Installing ORD-41 OVERSEER</label>
+        <description>Installs ORD-41 OVERSEER.</description>
+        <jobString>Installing ORD-41 OVERSEER.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IP_ORD_41_OVERSEER</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Medicine>3</Medicine>
+        </skillRequirements>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>IP_ORD_41_OVERSEER</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Brain</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>IP_ORD_41_OVERSEER</addsHediff>
+    </RecipeDef>
+
+    <!-- DAON-43 HARMONY -->
+
+    <HediffDef ParentName="ImplantHediffBase">
+        <defName>IP_DAON_43_HARMONY</defName>
+        <label>DAON-43 HARMONY</label>
+        <labelNoun>DAON-43 HARMONY</labelNoun>
+        <!-- DAON Technology에서 개발한 사회화 보조 AI입니다. 사용자의 정신을 안정시고 원활한 사교활동을 돕습니다. 이 임플란트를 이식한 사람은 사교적 다툼 발생률이 50% 감소하며, 서비스직 분야에서 채용될 확률이 17.6% 높은 경향을 보였습니다. 신경 과부하 방지를 위해 다른 AI 임플란트와 동시 설치할 수 없습니다. -->
+        <description>This socialization support AI, developed by DAON Technology, stabilizes the user's mind and facilitates smooth social interactions. Individuals implanted with this AI have shown a 50% decrease in the likelihood of social conflicts and a 17.6% higher chance of being hired in service sectors. To prevent neural overload, it cannot be installed alongside other AI implants.</description>
+        <descriptionHyperlinks>
+            <ThingDef>IP_DAON_43_HARMONY</ThingDef>
+        </descriptionHyperlinks>
+        <spawnThingOnRemoved>IP_DAON_43_HARMONY</spawnThingOnRemoved>
+        <aptitudes>
+            <Social>2</Social>
+        </aptitudes>
+        <stages>
+            <li>
+                <socialFightChanceFactor>0.5</socialFightChanceFactor>
+                <statOffsets>
+                    <SocialImpact>0.1</SocialImpact>
+                    <MentalBreakThreshold>-0.05</MentalBreakThreshold>
+                </statOffsets>
+            </li>
+        </stages>
+        <comps>
+            <li Class="Implant_Plus.HediffCompProperties_EMPReaction" />
+            <li Class="Implant_Plus.AddDisplayHediff_IP_DAON_43_HARMONY" />
+        </comps>
+    </HediffDef>
+
+    <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
+        <defName>IP_DAON_43_HARMONY</defName>
+        <label>DAON-43 HARMONY</label>
+        <!-- DAON Technology에서 개발한 사회화 보조 AI입니다. 사용자의 정신을 안정시고 원활한 사교활동을 돕습니다. 이 임플란트를 이식한 사람은 사교적 다툼 발생률이 50% 감소하며, 서비스직 분야에서 채용될 확률이 17.6% 높은 경향을 보였습니다. 신경 과부하 방지를 위해 다른 AI 임플란트와 동시 설치할 수 없습니다. -->
+        <description>This socialization support AI, developed by DAON Technology, stabilizes the user's mind and facilitates smooth social interactions. Individuals implanted with this AI have shown a 50% decrease in the likelihood of social conflicts and a 17.6% higher chance of being hired in service sectors. To prevent neural overload, it cannot be installed alongside other AI implants.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>IP_DAON_43_HARMONY</RecipeDef>
+        </descriptionHyperlinks>
+        <costList>
+            <Steel>30</Steel>
+            <ComponentIndustrial>5</ComponentIndustrial>
+        </costList>
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        <statBases>
+            <MarketValue>400</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Industrial</li>
+        </techHediffsTags>
+        <recipeMaker>
+            <researchPrerequisites>
+                <li>IP_BasicAI_Chip</li>
+                <li>IP_InitiationProtocol</li>
+                <li>StandardMechtech</li>
+            </researchPrerequisites>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>7</Crafting>
+            </skillRequirements>
+            <workAmount>23500</workAmount>
+        </recipeMaker>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>IP_DAON_43_HARMONY</defName>
+        <label>Installing DAON-43 HARMONY</label>
+        <description>Installs DAON-43 HARMONY.</description>
+        <jobString>Installing DAON-43 HARMONY.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IP_DAON_43_HARMONY</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Medicine>3</Medicine>
+        </skillRequirements>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>IP_DAON_43_HARMONY</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Brain</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>IP_DAON_43_HARMONY</addsHediff>
+    </RecipeDef>
 </Defs>

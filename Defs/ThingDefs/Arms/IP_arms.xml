@@ -504,8 +504,8 @@
     <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
         <defName>IP_ORD02_PHANTOM_REAPER</defName>
         <label>ORD-02 PHANTOM REAPER</label>
-        <!-- Order of the Machina의 열렬한 추종자들에게 하사되는 전투용 팔입니다. 사이더의 팔을 모방해 만든 이 장비는 팔 전체가 날카로운 칼날로 이루어져 있어 일반적인 작업에는 부적합합니다. 경량형 프레임을 사용해 장착자가 좀 더 날렵한 손놀림으로 적을 난도질 할 수 있게 해주지만 피해에 취약해집니다.-->
-        <description>A combat arm bestowed upon the devoted followers of the Order of the Machina. Modeled after the arms of Scythers, this implant replaces the entire arm with a razor-sharp blade, making it unsuitable for most conventional labor. Its lightweight frame allows the wearer to slash enemies with swift, precise strikes, but leaves them more vulnerable to damage. !!!This implant prevents the user from wielding any weapon!!!</description>
+        <!-- Imperial Marine Strategic Laboratory에서 개발한 Sentinel Project의 결과물 중 하나로 폭동진압팀의 표준 장비로 채택되었습니다. 사용자의 완력을 강화해주며 견고한 설계로 근접 전투를 효율적으로 만들어줍니다. -->
+        <description>One of the outcomes of the Sentinel Project, developed by the Imperial Marine Strategic Laboratory, this arm has been adopted as standard equipment for the riot control team. It enhances the user's strength and, with its sturdy design, makes close combat more efficient.</description>
         <descriptionHyperlinks>
             <RecipeDef>IP_ORD02_PHANTOM_REAPER</RecipeDef>
         </descriptionHyperlinks>
@@ -572,16 +572,16 @@
         <addsHediff>IP_ORD02_PHANTOM_REAPER</addsHediff>
     </RecipeDef>
 
-    <!-- SENTINEL-01 BRUTE -->
+    <!-- IMSL-01 SENTINEL BRUTE -->
 
     <HediffDef ParentName="AddedBodyPartBase">
-        <defName>IP_SENTINEL01_BRUTE</defName>
-        <label>SENTINEL-01 BRUTE</label>
-        <labelNoun>SENTINEL-01 BRUTE</labelNoun>
-        <!-- Imperial Marine Strategic Laboratory에서 개발한 Sentinel Project의 결과물 중 하나로 폭동진압팀의 표준 장비로 채택되었습니다. 사용자의 완력을 강화해주며 견고한 설계로 근접 전투를 효율적으로 만들어주지만 육중한 무게로 인해 사용자가 둔해집니다. -->
-        <description>One of the outcomes of the Sentinel Project, developed by the Imperial Marine Strategic Laboratory, this arm has been adopted as standard equipment for the riot control team. It enhances the user's strength and, with its sturdy design, makes close combat more efficient, but its heavy weight causes the user to become sluggish.</description>
+        <defName>IP_IMSL_01_SENTINEL_BRUTE</defName>
+        <label>IMSL-01 SENTINEL BRUTE</label>
+        <labelNoun>IMSL-01 SENTINEL BRUTE</labelNoun>
+        <!-- Imperial Marine Strategic Laboratory에서 개발한 Sentinel Project의 결과물 중 하나로 폭동진압팀의 표준 장비로 채택되었습니다. 사용자의 완력을 강화해주며 견고한 설계로 근접 전투를 효율적으로 만들어줍니다. -->
+        <description>One of the outcomes of the Sentinel Project, developed by the Imperial Marine Strategic Laboratory, this arm has been adopted as standard equipment for the riot control team. It enhances the user's strength and, with its sturdy design, makes close combat more efficient.</description>
         <descriptionHyperlinks>
-            <ThingDef>IP_SENTINEL01_BRUTE</ThingDef>
+            <ThingDef>IP_IMSL_01_SENTINEL_BRUTE</ThingDef>
         </descriptionHyperlinks>
         <addedPartProps>
             <solid>true</solid>
@@ -604,28 +604,27 @@
                 </tools>
             </li>
         </comps>
-        <spawnThingOnRemoved>IP_SENTINEL01_BRUTE</spawnThingOnRemoved>
+        <spawnThingOnRemoved>IP_IMSL_01_SENTINEL_BRUTE</spawnThingOnRemoved>
         <stages>
             <li>
                 <statOffsets>
-                    <MeleeCooldownFactor>1.05</MeleeCooldownFactor>
-                    <MoveSpeed>-0.08</MoveSpeed>
+                    <MeleeCooldownFactor>0.05</MeleeCooldownFactor>
                 </statOffsets>
                 <statFactors>
                     <IncomingDamageFactor>0.95</IncomingDamageFactor>
-                    <MeleeDamageFactor>1.2</MeleeDamageFactor>
+                    <MeleeDamageFactor>1.10</MeleeDamageFactor>
                 </statFactors>
             </li>
         </stages>
     </HediffDef>
 
     <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
-        <defName>IP_SENTINEL01_BRUTE</defName>
-        <label>SENTINEL-01 BRUTE</label>
+        <defName>IP_IMSL_01_SENTINEL_BRUTE</defName>
+        <label>IMSL-01 SENTINEL BRUTE</label>
         <!-- Imperial Marine Strategic Laboratory에서 개발한 Sentinel Project의 결과물 중 하나로 폭동진압팀의 표준 장비로 채택되었습니다. 사용자의 완력을 강화해주며 견고한 설계로 근접 전투를 효율적으로 만들어주지만 육중한 무게로 인해 사용자가 둔해집니다. -->
         <description>One of the outcomes of the Sentinel Project, developed by the Imperial Marine Strategic Laboratory, this arm has been adopted as standard equipment for the riot control team. It enhances the user's strength and, with its sturdy design, makes close combat more efficient, but its heavy weight causes the user to become sluggish.</description>
         <descriptionHyperlinks>
-            <RecipeDef>IP_SENTINEL01_BRUTE</RecipeDef>
+            <RecipeDef>IP_IMSL_01_SENTINEL_BRUTE</RecipeDef>
         </descriptionHyperlinks>
         <costList>
             <Steel>80</Steel>
@@ -662,15 +661,15 @@
     </ThingDef>
 
     <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
-        <defName>IP_SENTINEL01_BRUTE</defName>
-        <label>Installing SENTINEL-01 BRUTE</label>
-        <description>Installs SENTINEL-01 BRUTE.</description>
-        <jobString>Installing SENTINEL-01 BRUTE.</jobString>
+        <defName>IP_IMSL_01_SENTINEL_BRUTE</defName>
+        <label>Installing IMSL-01 SENTINEL BRUTE</label>
+        <description>Installs IMSL-01 SENTINEL BRUTE.</description>
+        <jobString>Installing IMSL-01 SENTINEL BRUTE.</jobString>
         <ingredients>
             <li>
                 <filter>
                     <thingDefs>
-                        <li>IP_SENTINEL01_BRUTE</li>
+                        <li>IP_IMSL_01_SENTINEL_BRUTE</li>
                     </thingDefs>
                 </filter>
                 <count>1</count>
@@ -681,25 +680,25 @@
         </skillRequirements>
         <fixedIngredientFilter>
             <thingDefs>
-                <li>IP_SENTINEL01_BRUTE</li>
+                <li>IP_IMSL_01_SENTINEL_BRUTE</li>
             </thingDefs>
         </fixedIngredientFilter>
         <appliedOnFixedBodyParts>
             <li>Shoulder</li>
         </appliedOnFixedBodyParts>
-        <addsHediff>IP_SENTINEL01_BRUTE</addsHediff>
+        <addsHediff>IP_IMSL_01_SENTINEL_BRUTE</addsHediff>
     </RecipeDef>
 
-    <!-- SENTINEL-02 MARKSMAN -->
+    <!-- IMSL-02 SENTINEL MARKSMAN -->
 
     <HediffDef ParentName="AddedBodyPartBase">
-        <defName>IP_SENTINEL02_MARKSMAN</defName>
-        <label>SENTINEL-02 MARKSMAN</label>
-        <labelNoun>SENTINEL-02 MARKSMAN</labelNoun>
+        <defName>IP_IMSL_02_SENTINEL_MARKSMAN</defName>
+        <label>IMSL-02 SENTINEL MARKSMAN</label>
+        <labelNoun>IMSL-02 SENTINEL MARKSMAN</labelNoun>
         <!-- Imperial Marine Strategic Laboratory에서 개발한 Sentinel Project의 결과물 이 임플란트는 제국의 병사들의 표준 장비 입니다. 기초적인 사격 제어 시스템이 내장되어 있어 더 신속하고 정확한 사격을 가능하게 합니다. -->
         <description>One of the outcomes of the Sentinel Project, developed by the Imperial Marine Strategic Laboratory, this implant is the standard equipment for Imperial soldiers. It is equipped with a basic firing control system, enabling faster and more accurate shooting.</description>
         <descriptionHyperlinks>
-            <ThingDef>IP_SENTINEL02_MARKSMAN</ThingDef>
+            <ThingDef>IP_IMSL_02_SENTINEL_MARKSMAN</ThingDef>
         </descriptionHyperlinks>
         <addedPartProps>
             <solid>true</solid>
@@ -721,7 +720,7 @@
                 </tools>
             </li>
         </comps>
-        <spawnThingOnRemoved>IP_SENTINEL02_MARKSMAN</spawnThingOnRemoved>
+        <spawnThingOnRemoved>IP_IMSL_02_SENTINEL_MARKSMAN</spawnThingOnRemoved>
         <stages>
             <li>
                 <statFactors>
@@ -735,12 +734,12 @@
     </HediffDef>
 
     <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
-        <defName>IP_SENTINEL02_MARKSMAN</defName>
-        <label>SENTINEL-02 MARKSMAN</label>
+        <defName>IP_IMSL_02_SENTINEL_MARKSMAN</defName>
+        <label>IMSL-02 SENTINEL MARKSMAN</label>
         <!-- Imperial Marine Strategic Laboratory에서 개발한 Sentinel Project의 결과물 이 임플란트는 제국의 병사들의 표준 장비 입니다. 기초적인 반동 제어 시스템이 내장되어 있어 더 신속한 사격을 가능하게 합니다. -->
         <description>One of the outcomes of the Sentinel Project, developed by the Imperial Marine Strategic Laboratory, this implant is the standard equipment for Imperial soldiers. It is equipped with a basic recoil control system, enabling faster and more precise firing.</description>
         <descriptionHyperlinks>
-            <RecipeDef>IP_SENTINEL02_MARKSMAN</RecipeDef>
+            <RecipeDef>IP_IMSL_02_SENTINEL_MARKSMAN</RecipeDef>
         </descriptionHyperlinks>
         <costList>
             <Steel>80</Steel>
@@ -777,15 +776,15 @@
     </ThingDef>
 
     <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
-        <defName>IP_SENTINEL02_MARKSMAN</defName>
-        <label>Installing SENTINEL-02 MARKSMAN</label>
-        <description>Installs SENTINEL-02 MARKSMAN.</description>
-        <jobString>Installing SENTINEL-02 MARKSMAN.</jobString>
+        <defName>IP_IMSL_02_SENTINEL_MARKSMAN</defName>
+        <label>Installing IMSL-02 SENTINEL MARKSMAN</label>
+        <description>Installs IMSL-02 SENTINEL MARKSMAN.</description>
+        <jobString>Installing IMSL-02 SENTINEL MARKSMAN.</jobString>
         <ingredients>
             <li>
                 <filter>
                     <thingDefs>
-                        <li>IP_SENTINEL02_MARKSMAN</li>
+                        <li>IP_IMSL_02_SENTINEL_MARKSMAN</li>
                     </thingDefs>
                 </filter>
                 <count>1</count>
@@ -796,13 +795,13 @@
         </skillRequirements>
         <fixedIngredientFilter>
             <thingDefs>
-                <li>IP_SENTINEL02_MARKSMAN</li>
+                <li>IP_IMSL_02_SENTINEL_MARKSMAN</li>
             </thingDefs>
         </fixedIngredientFilter>
         <appliedOnFixedBodyParts>
             <li>Shoulder</li>
         </appliedOnFixedBodyParts>
-        <addsHediff>IP_SENTINEL02_MARKSMAN</addsHediff>
+        <addsHediff>IP_IMSL_02_SENTINEL_MARKSMAN</addsHediff>
     </RecipeDef>
 
 </Defs>

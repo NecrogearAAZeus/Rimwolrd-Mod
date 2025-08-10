@@ -148,5 +148,16 @@
 
     <!-- 버프  -->
 
+    <!-- DAON-43 HARMONY For Displaying Hediff -->
+
+    <HediffDef>
+        <defName>IP_DAON_43_HARMONY_DisplayHediff</defName>
+        <label>HARMONY Module Activated</label>
+        <description>The installed DAON-43 HARMONY AI stabilizes the user's nervous system, reducing the chance of social conflicts by 50%.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.95, 0.76, 0)</defaultLabelColor>
+        <isBad>false</isBad>
+        <everCurableByItem>false</everCurableByItem>
+    </HediffDef>
 
 </Defs>

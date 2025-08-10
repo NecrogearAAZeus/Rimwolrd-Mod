@@ -3,7 +3,8 @@ using RimWorld;
 using System.Linq;
 
 namespace Implant_Plus
-{
+{   
+    // EMP 반응 처리
     public class HediffCompProperties_EMPReaction : HediffCompProperties
     {
         public HediffCompProperties_EMPReaction()
@@ -85,4 +86,44 @@ namespace Implant_Plus
                 .Any(h => brainImplantDefNames.Contains(h.def.defName));
         }
     }
+
+    // 커스텀 HARMONY 전용 Hediff 적용
+
+    public class AddDisplayHediff_IP_DAON_43_HARMONY : HediffCompProperties
+    {
+        public AddDisplayHediff_IP_DAON_43_HARMONY()
+        {
+            compClass = typeof(HediffComp_AddDisplayHARMONY_Hediff);
+        }
+    }
+
+    public class HediffComp_AddDisplayHARMONY_Hediff : HediffComp
+    {
+        public override void CompPostPostAdd(DamageInfo? dinfo)
+        {
+            base.CompPostPostAdd(dinfo);
+            
+            // 표시용 hediff 추가
+            var displayHediff = HediffMaker.MakeHediff(
+                DefDatabase<HediffDef>.GetNamed("IP_DAON_43_HARMONY_DisplayHediff"), 
+                parent.pawn);
+            
+            parent.pawn.health.AddHediff(displayHediff);
+        }
+
+        public override void CompPostPostRemoved()
+        {
+            base.CompPostPostRemoved();
+            
+            // 표시용 hediff 제거
+            var displayHediff = parent.pawn.health.hediffSet.GetFirstHediffOfDef(
+                DefDatabase<HediffDef>.GetNamed("IP_DAON_43_HARMONY_DisplayHediff"));
+            
+            if (displayHediff != null)
+            {
+                parent.pawn.health.RemoveHediff(displayHediff);
+            }
+        }
+    }
+
 }

@@ -634,24 +634,24 @@
         <addsHediff>IP_StandardInnerFrame</addsHediff>
     </RecipeDef>
 
-    <!-- BASTION-04 SHIELD -->
+    <!-- IMSL-17 BASTION SHIELD -->
 
     <HediffDef ParentName="ImplantHediffBase">
-        <defName>IP_BASTION_04_SHIELD</defName>
-        <label>BASTION-04 SHIELD</label>
-        <labelNoun>BASTION-04 SHIELD</labelNoun>
+        <defName>IP_IMSL_17_BASTION_SHIELD</defName>
+        <label>IMSL-17 BASTION SHIELD</label>
+        <labelNoun>IMSL-17 BASTION SHIELD</labelNoun>
         <!-- Imperial Marine Strategic Laboratory의 특수강습부대가 사용하는 표준 프레임입니다. 두꺼운 방탄판과 견고한 프레임으로 구성되어 있어 움직임이 둔화되지만, 적의 총탄을 견디며 안전하게 돌입할 수 있도록 설계되었습니다. -->
         <description>This is the standard frame used by the Special Assault Unit of the Imperial Marine Strategic Laboratory. Constructed with thick bulletproof plating and a sturdy frame, it slows movement, but is designed to withstand enemy gunfire and allow for a safe breach.</description>
         <descriptionHyperlinks>
-            <ThingDef>IP_BASTION_04_SHIELD</ThingDef>
+            <ThingDef>IP_IMSL_17_BASTION_SHIELD</ThingDef>
         </descriptionHyperlinks>
-        <spawnThingOnRemoved>IP_BASTION_04_SHIELD</spawnThingOnRemoved>
+        <spawnThingOnRemoved>IP_IMSL_17_BASTION_SHIELD</spawnThingOnRemoved>
         <stages>
             <li>
                 <capMods>
                     <li>
                         <capacity>Moving</capacity>
-                        <offset>-0.15</offset>                        <!-- 100% - 13% = 87% -->
+                        <offset>-0.25</offset>
                     </li>
                 </capMods>
                 <statOffsets>
@@ -671,12 +671,12 @@
     </HediffDef>
 
     <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
-        <defName>IP_BASTION_04_SHIELD</defName>
-        <label>BASTION-04 SHIELD</label>
+        <defName>IP_IMSL_17_BASTION_SHIELD</defName>
+        <label>IMSL-17 BASTION SHIELD</label>
         <!-- Imperial Marine Strategic Laboratory의 특수강습부대가 사용하는 표준 프레임입니다. 두꺼운 방탄판과 견고한 프레임으로 구성되어 있어 움직임이 둔화되지만, 적의 총탄을 견디며 안전하게 돌입할 수 있도록 설계되었습니다. -->
         <description>This is the standard frame used by the Special Assault Unit of the Imperial Marine Strategic Laboratory. Constructed with thick bulletproof plating and a sturdy frame, it slows movement, but is designed to withstand enemy gunfire and allow for a safe breach.</description>
         <descriptionHyperlinks>
-            <RecipeDef>IP_BASTION_04_SHIELD</RecipeDef>
+            <RecipeDef>IP_IMSL_17_BASTION_SHIELD</RecipeDef>
         </descriptionHyperlinks>
         <costList>
             <Steel>200</Steel>
@@ -713,15 +713,15 @@
     </ThingDef>
 
     <RecipeDef ParentName="SurgeryInstallImplantBase">
-        <defName>IP_BASTION_04_SHIELD</defName>
-        <label>Installing BASTION-04 SHIELD</label>
-        <description>Installs BASTION-04 SHIELD</description>
-        <jobString>Installing BASTION-04 SHIELD</jobString>
+        <defName>IP_IMSL_17_BASTION_SHIELD</defName>
+        <label>Installing IMSL-17 BASTION SHIELD</label>
+        <description>Installs IMSL-17 BASTION SHIELD</description>
+        <jobString>Installing IMSL-17 BASTION SHIELD</jobString>
         <ingredients>
             <li>
                 <filter>
                     <thingDefs>
-                        <li>IP_BASTION_04_SHIELD</li>
+                        <li>IP_IMSL_17_BASTION_SHIELD</li>
                     </thingDefs>
                 </filter>
                 <count>1</count>
@@ -732,7 +732,7 @@
         </skillRequirements>
         <fixedIngredientFilter>
             <thingDefs>
-                <li>IP_BASTION_04_SHIELD</li>
+                <li>IP_IMSL_17_BASTION_SHIELD</li>
             </thingDefs>
         </fixedIngredientFilter>
         <appliedOnFixedBodyParts>
