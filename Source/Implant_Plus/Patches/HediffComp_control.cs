@@ -129,4 +129,17 @@ namespace Implant_Plus.Control
             return true;
         }
     }
+
+   [HarmonyPatch(typeof(Pawn_GeneTracker), "get_AffectedByDarkness")]
+    public class DarkVisionPatch
+    {
+        static bool Postfix(bool result, Pawn_GeneTracker __instance)
+        {
+            if (__instance.pawn.health?.hediffSet?.HasHediff(DefDatabase<HediffDef>.GetNamed("IP_ICD_23_NIGHTOWL")) == true)
+            {
+                return false;
+            }
+            return result;
+        }
+    }
 }

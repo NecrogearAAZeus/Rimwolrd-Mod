@@ -504,8 +504,8 @@
     <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
         <defName>IP_ORD02_PHANTOM_REAPER</defName>
         <label>ORD-02 PHANTOM REAPER</label>
-        <!-- Imperial Marine Strategic Laboratory에서 개발한 Sentinel Project의 결과물 중 하나로 폭동진압팀의 표준 장비로 채택되었습니다. 사용자의 완력을 강화해주며 견고한 설계로 근접 전투를 효율적으로 만들어줍니다. -->
-        <description>One of the outcomes of the Sentinel Project, developed by the Imperial Marine Strategic Laboratory, this arm has been adopted as standard equipment for the riot control team. It enhances the user's strength and, with its sturdy design, makes close combat more efficient.</description>
+        <!-- Order of the Machina의 열렬한 추종자들에게 하사되는 전투용 팔입니다. 사이더의 팔을 모방해 만든 이 장비는 팔 전체가 날카로운 칼날로 이루어져 있어 일반적인 작업에는 부적합합니다. 경량형 프레임을 사용해 장착자가 좀 더 날렵한 손놀림으로 적을 난도질 할 수 있게 해주지만 피해에 취약해집니다.-->
+        <description>A combat arm bestowed upon the devoted followers of the Order of the Machina. Modeled after the arms of Scythers, this implant replaces the entire arm with a razor-sharp blade, making it unsuitable for most conventional labor. Its lightweight frame allows the wearer to slash enemies with swift, precise strikes, but leaves them more vulnerable to damage. !!!This implant prevents the user from wielding any weapon!!!</description>
         <descriptionHyperlinks>
             <RecipeDef>IP_ORD02_PHANTOM_REAPER</RecipeDef>
         </descriptionHyperlinks>
@@ -724,10 +724,10 @@
         <stages>
             <li>
                 <statFactors>
-                    <AimingDelayFactor>0.9</AimingDelayFactor>
+                    <AimingDelayFactor>0.85</AimingDelayFactor>
                 </statFactors>
                 <statOffsets>
-                    <ShootingAccuracyPawn>2</ShootingAccuracyPawn>
+                    <ShootingAccuracyPawn>1.5</ShootingAccuracyPawn>
                 </statOffsets>
             </li>
         </stages>
