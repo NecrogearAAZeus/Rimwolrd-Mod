@@ -8,8 +8,8 @@
         <defName>IP_CombatInnerFrame</defName>
         <label>Combat Inner Frame</label>
         <labelNoun>Combat Inner Frame</labelNoun>
-        <!-- 변방계 병사에게 설치되는 기초적인 전투 외골격입니다. 뼈와 근육을 소폭 보강하며, 약간의 장갑판과 자세 안정화 모듈이 장착되어 있습니다. 다른 외골격과는 중복하여 설치할 수 없습니다. -->
-        <description>A basic combat Inner Frame commonly installed on frontier soldiers. It slightly reinforces bones and muscles, and comes equipped with light armor plating and a posture stabilization module. Cannot be installed alongside other Inner Frames.</description>
+        <!-- 변방계 병사에게 설치되는 기초적인 전투 외골격입니다. 뼈와 근육을 소폭 보강하며, 약간의 장갑판과 자세 안정화 모듈이 장착되어 있습니다. 최대 소지 중량을 15KG 상승시키며, 다른 내장형 프레임과 중복하여 설치할 수 없습니다. -->
+        <description>A basic combat Inner Frame commonly installed on frontier soldiers. It slightly reinforces bones and muscles, and comes equipped with light armor plating and a posture stabilization module. It increases the maximum carry weight by 15KG and cannot be installed simultaneously with other Inner Frame.s.</description>
         <descriptionHyperlinks>
             <ThingDef>IP_CombatInnerFrame</ThingDef>
         </descriptionHyperlinks>
@@ -42,8 +42,8 @@
     <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
         <defName>IP_CombatInnerFrame</defName>
         <label>Combat Inner Frame</label>
-        <!-- 변방계 병사에게 설치되는 기초적인 전투 외골격입니다. 뼈와 근육을 소폭 보강하며, 약간의 장갑판과 자세 안정화 모듈이 장착되어 있습니다. 다른 외골격과는 중복하여 설치할 수 없습니다. -->
-        <description>A basic combat Inner Frame commonly installed on frontier soldiers. It slightly reinforces bones and muscles, and comes equipped with light armor plating and a posture stabilization module. Cannot be installed alongside other Inner Frames.</description>
+        <!-- 변방계 병사에게 설치되는 기초적인 전투 외골격입니다. 뼈와 근육을 소폭 보강하며, 약간의 장갑판과 자세 안정화 모듈이 장착되어 있습니다. 최대 소지 중량을 15KG 상승시키며, 다른 내장형 프레임과 중복하여 설치할 수 없습니다. -->
+        <description>A basic combat Inner Frame commonly installed on frontier soldiers. It slightly reinforces bones and muscles, and comes equipped with light armor plating and a posture stabilization module. It increases the maximum carry weight by 15KG and cannot be installed simultaneously with other Inner Frame.s.</description>
         <descriptionHyperlinks>
             <RecipeDef>IP_CombatInnerFrame</RecipeDef>
         </descriptionHyperlinks>
@@ -113,8 +113,8 @@
         <defName>IP_WorkerInnerFrame</defName>
         <label>Worker Inner Frame</label>
         <labelNoun>Worker Inner Frame</labelNoun>
-        <!-- 많은 작업자에게 사랑받는 보급형 작업 외골격입니다. 정밀한 작업을 지원하며, 근력을 보강해 다양한 노동에 유용합니다. 다른 외골격과는 중복하여 설치할 수 없습니다. -->
-        <description>A widely-used work Inner Frame favored by many laborers. It enhances precision for fine tasks and reinforces physical strength, making it useful for various forms of labor. Cannot be installed alongside other Inner Frames.</description>
+        <!-- 많은 작업자에게 사랑받는 보급형 작업 외골격입니다. 정밀한 작업을 지원하며, 근력을 보강해 다양한 노동에 유용합니다. 최대 소지 중량을 15KG 상승시키며, 다른 내장형 프레임과 중복하여 설치할 수 없습니다. -->
+        <description>A widely-used work Inner Frame favored by many laborers. It enhances precision for fine tasks and reinforces physical strength, making it useful for various forms of labor. It increases the maximum carry weight by 15KG and cannot be installed simultaneously with other Inner Frame.s.</description>
         <descriptionHyperlinks>
             <ThingDef>IP_WorkerInnerFrame</ThingDef>
         </descriptionHyperlinks>
@@ -141,8 +141,8 @@
     <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
         <defName>IP_WorkerInnerFrame</defName>
         <label>Worker Inner Frame</label>
-        <!-- 많은 작업자에게 사랑받는 보급형 작업 외골격입니다. 정밀한 작업을 지원하며, 근력을 보강해 다양한 노동에 유용합니다. 다른 외골격과는 중복하여 설치할 수 없습니다. -->
-        <description>A widely-used work Inner Frame favored by many laborers. It enhances precision for fine tasks and reinforces physical strength, making it useful for various forms of labor. Cannot be installed alongside other Inner Frames.</description>
+        <!-- 많은 작업자에게 사랑받는 보급형 작업 외골격입니다. 정밀한 작업을 지원하며, 근력을 보강해 다양한 노동에 유용합니다. 최대 소지 중량을 15KG 상승시키며, 다른 내장형 프레임과 중복하여 설치할 수 없습니다. -->
+        <description>A widely-used work Inner Frame favored by many laborers. It enhances precision for fine tasks and reinforces physical strength, making it useful for various forms of labor. It increases the maximum carry weight by 15KG and cannot be installed simultaneously with other Inner Frame.s.</description>
         <descriptionHyperlinks>
             <RecipeDef>IP_CombatInnerFrame</RecipeDef>
         </descriptionHyperlinks>
@@ -212,8 +212,8 @@
         <defName>IP_StandardInnerFrame</defName>
         <label>Standard Inner Frame</label>
         <labelNoun>Standard Inner Frame</labelNoun>
-        <!-- 다양한 상황에 대응할 수 있도록 설계된 범용 외골격 입니다. 사용자의 전반적인 신체능력을 올려줍니다. 다른 외골격과는 중복하여 설치할 수 없습니다. -->
-        <description>A versatile Inner Frame designed to handle a variety of situations. It enhances the user's overall physical capabilities. Cannot be installed alongside other Inner Frames</description>
+        <!-- 다양한 상황에 대응할 수 있도록 설계된 범용 외골격 입니다. 사용자의 전반적인 신체능력을 올려줍니다. 최대 소지 중량을 15KG 상승시키며, 다른 내장형 프레임과 중복하여 설치할 수 없습니다. -->
+        <description>A versatile Inner Frame designed to handle a variety of situations. It enhances the user's overall physical capabilities. It increases the maximum carry weight by 15KG and cannot be installed simultaneously with other Inner Frame.s</description>
         <descriptionHyperlinks>
             <ThingDef>IP_WorkerInnerFrame</ThingDef>
         </descriptionHyperlinks>
@@ -241,8 +241,8 @@
     <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
         <defName>IP_StandardInnerFrame</defName>
         <label>Standard Inner Frame</label>
-        <!-- 다양한 상황에 대응할 수 있도록 설계된 범용 외골격 입니다. 사용자의 전반적인 신체능력을 올려줍니다. 다른 외골격과는 중복하여 설치할 수 없습니다. -->
-        <description>A versatile Inner Frame designed to handle a variety of situations. It enhances the user's overall physical capabilities. Cannot be installed alongside other Inner Frames</description>
+        <!-- 다양한 상황에 대응할 수 있도록 설계된 범용 외골격 입니다. 사용자의 전반적인 신체능력을 올려줍니다. 최대 소지 중량을 15KG 상승시키며, 다른 내장형 프레임과 중복하여 설치할 수 없습니다. -->
+        <description>A versatile Inner Frame designed to handle a variety of situations. It enhances the user's overall physical capabilities. It increases the maximum carry weight by 15KG and cannot be installed simultaneously with other Inner Frame.s</description>
         <descriptionHyperlinks>
             <RecipeDef>IP_StandardInnerFrame</RecipeDef>
         </descriptionHyperlinks>
@@ -312,8 +312,8 @@
         <defName>IP_IDC_23_SURVIVOR</defName>
         <label>IDC-23 SURVIVOR</label>
         <labelNoun>IDC-23 SURVIVOR</labelNoun>
-        <!-- Interstellar Development Corps에서 개발한 이 내장형 생존 프레임은 극한의 식민지 개척 환경에서 생존을 지원하도록 설계되었습니다. 이 프레임은 다양한 환경으로부터 사용자를 보호해 식민지 개척 작업을 안전하고 효율적으로 수행할 수 있도록 돕습니다. 다른 외골격과는 중복하여 설치할 수 없습니다. -->
-        <description>Developed by the Interstellar Development Corps, this internal survival frame is designed to support survival in extreme colonization environments. The frame protects the user from various environmental hazards, enabling them to perform colonization tasks safely and efficiently. Cannot be installed alongside other Inner Frame</description>
+        <!-- Interstellar Development Corps에서 개발한 이 내장형 생존 프레임은 극한의 식민지 개척 환경에서 생존을 지원하도록 설계되었습니다. 이 프레임은 다양한 환경으로부터 사용자를 보호해 식민지 개척 작업을 안전하고 효율적으로 수행할 수 있도록 돕습니다. 최대 소지 중량을 15KG 상승시키며, 다른 내장형 프레임과 중복하여 설치할 수 없습니다. -->
+        <description>Developed by the Interstellar Development Corps, this internal survival frame is designed to support survival in extreme colonization environments. The frame protects the user from various environmental hazards, enabling them to perform colonization tasks safely and efficiently. It increases the maximum carry weight by 15KG and cannot be installed simultaneously with other Inner Frame.</description>
         <descriptionHyperlinks>
             <ThingDef>IP_IDC_23_SURVIVOR</ThingDef>
         </descriptionHyperlinks>
@@ -348,8 +348,8 @@
     <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
         <defName>IP_IDC_23_SURVIVOR</defName>
         <label>IDC-23 SURVIVOR</label>
-        <!-- Interstellar Development Corps에서 개발한 이 내장형 생존 프레임은 극한의 식민지 개척 환경에서 생존을 지원하도록 설계되었습니다. 이 프레임은 다양한 환경으로부터 사용자를 보호해 식민지 개척 작업을 안전하고 효율적으로 수행할 수 있도록 돕습니다. 다른 외골격과는 중복하여 설치할 수 없습니다. -->
-        <description>Developed by the Interstellar Development Corps, this internal survival frame is designed to support survival in extreme colonization environments. The frame protects the user from various environmental hazards, enabling them to perform colonization tasks safely and efficiently. Cannot be installed alongside other Inner Frame</description>
+        <!-- Interstellar Development Corps에서 개발한 이 내장형 생존 프레임은 극한의 식민지 개척 환경에서 생존을 지원하도록 설계되었습니다. 이 프레임은 다양한 환경으로부터 사용자를 보호해 식민지 개척 작업을 안전하고 효율적으로 수행할 수 있도록 돕습니다. 최대 소지 중량을 15KG 상승시키며, 다른 내장형 프레임과 중복하여 설치할 수 없습니다. -->
+        <description>Developed by the Interstellar Development Corps, this internal survival frame is designed to support survival in extreme colonization environments. The frame protects the user from various environmental hazards, enabling them to perform colonization tasks safely and efficiently. It increases the maximum carry weight by 15KG and cannot be installed simultaneously with other Inner Frame.</description>
         <descriptionHyperlinks>
             <RecipeDef>IP_IDC_23_SURVIVOR</RecipeDef>
         </descriptionHyperlinks>
@@ -422,8 +422,8 @@
         <defName>IP_DAON_31_VAITALBOOST</defName>
         <label>DAON-31 VAITALBOOST</label>
         <labelNoun>DAON-31 VAITALBOOST</labelNoun>
-        <!-- DAON Technology에서 개발한 의료 보조 내장형 프레임은 사용자의 전반적인 신체 능력을 소폭 강화하고, 외상 및 질병 치료를 지원하여 일상 생활의 편의성을 높여줍니다. 이 프레임은 시민들의 건강을 더욱 향상시키는 데 초점을 맞추어 설계되었습니다. 다른 외골격과는 중복하여 설치할 수 없습니다. -->
-        <description>Developed by DAON Technology, this medical assistance internal frame slightly enhances the user's overall physical abilities and supports the treatment of trauma and diseases, improving everyday convenience. Designed with a focus on enhancing the health of citizens, this frame aims to improve overall well-being. Cannot be installed alongside other Inner Frame.</description>
+        <!-- DAON Technology에서 개발한 의료 보조 내장형 프레임은 사용자의 전반적인 신체 능력을 소폭 강화하고, 외상 및 질병 치료를 지원하여 일상 생활의 편의성을 높여줍니다. 이 프레임은 시민들의 건강을 더욱 향상시키는 데 초점을 맞추어 설계되었습니다. 최대 소지 중량을 15KG 상승시키며, 다른 내장형 프레임과 중복하여 설치할 수 없습니다. -->
+        <description>Developed by DAON Technology, this medical assistance internal frame slightly enhances the user's overall physical abilities and supports the treatment of trauma and diseases, improving everyday convenience. Designed with a focus on enhancing the health of citizens, this frame aims to improve overall well-being. It increases the maximum carry weight by 15KG and cannot be installed simultaneously with other Inner Frame..</description>
         <descriptionHyperlinks>
             <ThingDef>IP_DAON_31_VAITALBOOST</ThingDef>
         </descriptionHyperlinks>
@@ -455,8 +455,8 @@
     <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
         <defName>IP_DAON_31_VAITALBOOST</defName>
         <label>DAON-31 VAITALBOOST</label>
-        <!-- DAON Technology에서 개발한 의료 보조 내장형 프레임은 사용자의 전반적인 신체 능력을 소폭 강화하고, 외상 및 질병 치료를 지원하여 일상 생활의 편의성을 높여줍니다. 이 프레임은 시민들의 건강을 더욱 향상시키는 데 초점을 맞추어 설계되었습니다. 다른 외골격과는 중복하여 설치할 수 없습니다. -->
-        <description>Developed by DAON Technology, this medical assistance internal frame slightly enhances the user's overall physical abilities and supports the treatment of trauma and diseases, improving everyday convenience. Designed with a focus on enhancing the health of citizens, this frame aims to improve overall well-being. Cannot be installed alongside other Inner Frame.</description>
+        <!-- DAON Technology에서 개발한 의료 보조 내장형 프레임은 사용자의 전반적인 신체 능력을 소폭 강화하고, 외상 및 질병 치료를 지원하여 일상 생활의 편의성을 높여줍니다. 이 프레임은 시민들의 건강을 더욱 향상시키는 데 초점을 맞추어 설계되었습니다. 최대 소지 중량을 15KG 상승시키며, 다른 내장형 프레임과 중복하여 설치할 수 없습니다. -->
+        <description>Developed by DAON Technology, this medical assistance internal frame slightly enhances the user's overall physical abilities and supports the treatment of trauma and diseases, improving everyday convenience. Designed with a focus on enhancing the health of citizens, this frame aims to improve overall well-being. It increases the maximum carry weight by 15KG and cannot be installed simultaneously with other Inner Frame..</description>
         <descriptionHyperlinks>
             <RecipeDef>IP_DAON_31_VAITALBOOST</RecipeDef>
         </descriptionHyperlinks>
@@ -529,7 +529,7 @@
         <defName>IP_ORD_25_EVOLUTION</defName>
         <label>ORD-25 EVOLUTION</label>
         <labelNoun>ORD-25 EVOLUTION</labelNoun>
-        <!-- Order of the Machina의 규약에 따라 신도들에게 이식되는 내장형 프레임으로, 신경계를 강화하지만 과부하로 정신적 불안정과 피로를 유발합니다. 다른 외골격과는 중복 설치할 수 없습니다. -->
+        <!-- Order of the Machina의 규약에 따라 신도들에게 이식되는 내장형 프레임으로, 신경계를 강화하지만 과부하로 정신적 불안정과 피로를 유발합니다. 다른 내장형 프레임과 중복 설치할 수 없습니다. -->
         <description>Implanted according to the Order of the Machina, this internal frame enhances the nervous system, but causes physical strain, leading to instability and fatigue. Cannot be installed with other Inner Frames.</description>
         <descriptionHyperlinks>
             <ThingDef>IP_ORD_25_EVOLUTION</ThingDef>
@@ -566,7 +566,7 @@
     <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
         <defName>IP_ORD_25_EVOLUTION</defName>
         <label>ORD-25 EVOLUTION</label>
-        <!-- Order of the Machina의 규약에 따라 신도들에게 이식되는 내장형 프레임으로, 신경계를 강화하지만 과부하로 정신적 불안정과 피로를 유발합니다. 다른 외골격과는 중복 설치할 수 없습니다. -->
+        <!-- Order of the Machina의 규약에 따라 신도들에게 이식되는 내장형 프레임으로, 신경계를 강화하지만 과부하로 정신적 불안정과 피로를 유발합니다. 다른 내장형 프레임과 중복 설치할 수 없습니다. -->
         <description>Implanted according to the Order of the Machina, this internal frame enhances the nervous system, but causes physical strain, leading to instability and fatigue. Cannot be installed with other Inner Frames.</description>
         <descriptionHyperlinks>
             <RecipeDef>IP_ORD_25_EVOLUTION</RecipeDef>
@@ -661,6 +661,7 @@
                 </statOffsets>
                 <statFactors>
                     <IncomingDamageFactor>0.80</IncomingDamageFactor>
+                    <StaggerDurationFactor>0.75</StaggerDurationFactor>
                 </statFactors>
             </li>
         </stages>

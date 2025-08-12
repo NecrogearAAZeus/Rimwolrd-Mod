@@ -114,8 +114,8 @@
         <defName>IP_ICD_23_NIGHTOWL</defName>
         <label>ICD-23 NIGHTOWL</label>
         <labelNoun>ICD-23 NIGHTOWL</labelNoun>
-        <!-- DAON Technology에서 개발한 작업용 안구입니다. DAON사의 주력 제품으로, 다양한 직군에서 활용됩니다. 여러 종류의 확대 및 축소 시스템이 탑재되어, 정밀 작업부터 일상적인 작업까지 폭넓은 지원을 제공합니다. 이를 통해 다양한 작업 환경에 최적화된 성능을 발휘합니다. -->
-        <description>Developed by DAON Technology, this work eye is a flagship product of DAON and is used across a wide range of industries. Equipped with various zoom and magnification systems, it provides comprehensive support, from precision tasks to everyday work. This enables it to deliver optimal performance in a variety of work environments.</description>
+        <!-- Interstellar Development Corps에서 개발한 작업용 안구로, 식민지 개척시 극한의 상황을 가정하고 제작된 안구입니다. 이 안구는 광원이 없는 환경에서도 효율적으로 작업할 수 있도록 도와줍니다. -->
+        <description>Developed by Interstellar Development Corps, this work eye is designed for extreme conditions that may be encountered during colonial development. It helps the user to work efficiently even in environments without any light sources.</description>
         <descriptionHyperlinks>
             <ThingDef>IP_ICD_23_NIGHTOWL</ThingDef>
         </descriptionHyperlinks>
@@ -150,8 +150,8 @@
     <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
         <defName>IP_ICD_23_NIGHTOWL</defName>
         <label>ICD-23 NIGHTOWL</label>
-        <!-- DAON Technology에서 개발한 작업용 안구입니다. DAON사의 주력 제품으로, 다양한 직군에서 활용됩니다. 여러 종류의 확대 및 축소 시스템이 탑재되어, 정밀 작업부터 일상적인 작업까지 폭넓은 지원을 제공합니다. 이를 통해 다양한 작업 환경에 최적화된 성능을 발휘합니다. -->
-        <description>Developed by DAON Technology, this work eye is a flagship product of DAON and is used across a wide range of industries. Equipped with various zoom and magnification systems, it provides comprehensive support, from precision tasks to everyday work. This enables it to deliver optimal performance in a variety of work environments.</description>
+        <!-- Interstellar Development Corps에서 개발한 작업용 안구로, 식민지 개척시 극한의 상황을 가정하고 제작된 안구입니다. 이 안구는 광원이 없는 환경에서도 효율적으로 작업할 수 있도록 도와줍니다. -->
+        <description>Developed by Interstellar Development Corps, this work eye is designed for extreme conditions that may be encountered during colonial development. It helps the user to work efficiently even in environments without any light sources.</description>
         <descriptionHyperlinks>
             <RecipeDef>IP_ICD_23_NIGHTOWL</RecipeDef>
         </descriptionHyperlinks>
@@ -332,19 +332,19 @@
     <!-- IMSL-23 SENTINEL WATCHER -->
 
     <HediffDef ParentName="AddedBodyPartBase">
-        <defName>IP_DAON_23_WATCHER</defName>
+        <defName>IP_IMSL_23_WATCHER</defName>
         <label>IMSL-23 SENTINEL WATCHER</label>
         <labelNoun>IMSL-23 SENTINEL WATCHER</labelNoun>
-        <!-- Imperial Marine Strategic Laboratory에서 개발한 전투용 안구입니다. 병사들의 사격 능력을 향상시키기 위해 설계된 이 안구는, 내장된 조준 시스템을 통해 사용자의 명중률을 크게 개선합니다. -->
-        <description>Developed by the Imperial Marine Strategic Laboratory, this combat eye is designed to enhance soldiers' shooting abilities. Equipped with an integrated aiming system, it significantly improves the user's accuracy.</description>
+        <!-- Imperial Marine Strategic Laboratory에서 진행한 Sentinel Project의 전투용 안구입니다. 병사들의 사격 능력을 향상시키기 위해 설계된 이 안구는, 내장된 조준 시스템을 통해 사용자의 명중률을 크게 개선합니다. -->
+        <description>Developed by the Imperial Marine Strategic Laboratory, this combat eye is part of the Sentinel Project. Designed to enhance soldiers' shooting abilities, it significantly improves the user's accuracy through its built-in aiming system.</description>
         <descriptionHyperlinks>
-            <ThingDef>IP_DAON_23_WATCHER</ThingDef>
+            <ThingDef>IP_IMSL_23_WATCHER</ThingDef>
         </descriptionHyperlinks>
-        <spawnThingOnRemoved>IP_DAON_23_WATCHER</spawnThingOnRemoved>
+        <spawnThingOnRemoved>IP_IMSL_23_WATCHER</spawnThingOnRemoved>
         <stages>
             <li>
                 <statOffsets>
-                    <ShootingAccuracyPawn>3</ShootingAccuracyPawn>
+                    <ShootingAccuracyPawn>2</ShootingAccuracyPawn>
                 </statOffsets>
             </li>
         </stages>
@@ -376,12 +376,12 @@
     </HediffDef>
 
     <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
-        <defName>IP_DAON_23_WATCHER</defName>
+        <defName>IP_IMSL_23_WATCHER</defName>
         <label>IMSL-23 SENTINEL WATCHER</label>
-        <!-- Imperial Marine Strategic Laboratory에서 개발한 전투용 안구입니다. 병사들의 사격 능력을 향상시키기 위해 설계된 이 안구는, 내장된 조준 시스템을 통해 사용자의 명중률을 크게 개선합니다. -->
-        <description>Developed by the Imperial Marine Strategic Laboratory, this combat eye is designed to enhance soldiers' shooting abilities. Equipped with an integrated aiming system, it significantly improves the user's accuracy.</description>
+        <!-- Imperial Marine Strategic Laboratory에서 진행한 Sentinel Project의 전투용 안구입니다. 병사들의 사격 능력을 향상시키기 위해 설계된 이 안구는, 내장된 조준 시스템을 통해 사용자의 명중률을 크게 개선합니다. -->
+        <description>Developed by the Imperial Marine Strategic Laboratory, this combat eye is part of the Sentinel Project. Designed to enhance soldiers' shooting abilities, it significantly improves the user's accuracy through its built-in aiming system.</description>
         <descriptionHyperlinks>
-            <RecipeDef>IP_DAON_23_WATCHER</RecipeDef>
+            <RecipeDef>IP_IMSL_23_WATCHER</RecipeDef>
         </descriptionHyperlinks>
         <costList>
             <Steel>30</Steel>
@@ -418,7 +418,7 @@
     </ThingDef>
 
     <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
-        <defName>IP_DAON_23_WATCHER</defName>
+        <defName>IP_IMSL_23_WATCHER</defName>
         <label>Install IMSL-23 SENTINEL WATCHER</label>
         <description>Installs Advanced ProstheticEye.</description>
         <jobString>Installing IMSL-23 SENTINEL WATCHER.</jobString>
@@ -426,7 +426,7 @@
             <li>
                 <filter>
                     <thingDefs>
-                        <li>IP_DAON_23_WATCHER</li>
+                        <li>IP_IMSL_23_WATCHER</li>
                     </thingDefs>
                 </filter>
                 <count>1</count>
@@ -434,13 +434,13 @@
         </ingredients>
         <fixedIngredientFilter>
             <thingDefs>
-                <li>IP_DAON_23_WATCHER</li>
+                <li>IP_IMSL_23_WATCHER</li>
             </thingDefs>
         </fixedIngredientFilter>
         <appliedOnFixedBodyParts>
             <li>Eye</li>
         </appliedOnFixedBodyParts>
-        <addsHediff>IP_DAON_23_WATCHER</addsHediff>
+        <addsHediff>IP_IMSL_23_WATCHER</addsHediff>
     </RecipeDef>
 
 </Defs>
