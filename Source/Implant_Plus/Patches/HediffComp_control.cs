@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Reflection;
+using Verse.AI;
 using UnityEngine;
 using Verse;
 using RimWorld;
@@ -238,6 +240,85 @@ namespace Implant_Plus.Control
                     }
                 }
             }
+        }
+    }
+
+    // 험지 무시 패시 내역
+   [HarmonyPatch]
+    public class TerrainIgnoreLegs_Patch
+    {
+        static MethodInfo TargetMethod()
+        {
+            return typeof(Pawn_PathFollower).GetMethod("CostToMoveIntoCell", 
+                BindingFlags.NonPublic | BindingFlags.Static,
+                null,
+                new Type[] { typeof(Pawn), typeof(IntVec3) },
+                null);
+        }
+
+        static void Postfix(ref float __result, Pawn pawn, IntVec3 c)
+        {
+            // 원래 기본 비용 계산
+            float originalBaseCost;
+            if (pawn.Position.x == c.x || pawn.Position.z == c.z)
+            {
+                originalBaseCost = pawn.TicksPerMoveCardinal;
+            }
+            else
+            {
+                originalBaseCost = pawn.TicksPerMoveDiagonal;
+            }
+            
+            // 현재 추가된 pathCost 계산
+            float currentPathCost = __result - originalBaseCost;
+            
+            // 티어별 다리 확인
+            var tier1TerrainLegs_30 = new HashSet<string>
+            {
+                "IP_IMSL_23_SENTINEL_PATHFINDER",
+                // 추가할 티어1 다리들...
+            };
+            
+            var tier2TerrainLegs_50 = new HashSet<string>
+            {
+                "",
+                // 추가할 티어2 다리들...
+            };
+            
+            var unstableLegs_120 = new HashSet<string>
+            {
+                "",
+                // 추가할 불안정한 다리들...
+            };
+
+            int tier1Count = 0;
+            int tier2Count = 0;
+            int unstableLegsCount = 0;
+            
+            foreach (var hediff in pawn.health.hediffSet.hediffs)
+            {
+                if (tier1TerrainLegs_30.Contains(hediff.def.defName))
+                {
+                    tier1Count++;
+                }
+                else if (tier2TerrainLegs_50.Contains(hediff.def.defName))
+                {
+                    tier2Count++;
+                }                
+                else if (unstableLegs_120.Contains(hediff.def.defName))
+                {
+                    unstableLegsCount++;
+                }
+            }
+            
+            // pathCost 배율 계산
+            float pathCostMultiplier = 1f;
+            pathCostMultiplier -= tier1Count * 0.3f;  // 30% 감소
+            pathCostMultiplier -= tier2Count * 0.5f;  // 50% 감소
+            pathCostMultiplier += unstableLegsCount * 0.2f; // 20% 증가
+            // 조정된 결과 계산
+            float adjustedPathCost = currentPathCost * pathCostMultiplier;
+            __result = originalBaseCost + adjustedPathCost;
         }
     }
 }
