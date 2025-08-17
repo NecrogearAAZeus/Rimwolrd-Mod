@@ -92,13 +92,13 @@
     </RecipeDef>
 
     <!-- IDC-2A LOADER GOLIATH -->
-
+    <!-- 다른 파츠보다 무거움, 부위 효율 105%, 최소 적응온도 -3도, 최대 적응온도 +3도(추운걸 잘 견디고 더운걸 더 잘견딤), 정신감응력 -5%(정신파동과 초능력의 영향이 적어짐), 독성 환경 저항 5%(유독성 낙진 등 저항), 진공저항 5%, 최대 적재량 +10KG -->
     <HediffDef ParentName="AddedBodyPartBase">
         <defName>IP_IDC_2A_LOADER_GOLIATH</defName>
         <label>IDC-2A LOADER GOLIATH</label>
         <labelNoun>IDC-2A LOADER GOLIATH</labelNoun>
-        <!-- Interstellar Development Corps에서 개발한 다목적 다리로, 혹독한 환경에서 사용자를 보호하며 중량을 효율적으로 운반할 수 있도록 설계되었습니다. 이 장비를 장착하면, 성인의 경우 각 다리당 평균 10KG의 적재량 증가가 가능하며, 총 22KG까지 운반 능력을 향상시킬 수 있습니다. -->
-        <description>Developed by Interstellar Development Corps, this multifunctional leg is designed to protect the user in harsh environments while enabling efficient cargo transportation. When equipped, each leg increases the cargo capacity by an average of 10KG, allowing for a total increase of up to 22KG in carrying capacity.</description>
+        <!-- 인터스텔라 개발 공사(Interstellar Development Corps)에서 개발한 다목적 다리로, 혹독한 환경에서도 사용자를 보호하며 무거운 짐을 효율적으로 운반할 수 있도록 설계되었습니다. 효율적인 운반 능력은 식민지 개발에서 중요히 여겨집니다. -->
+        <description>These are versatile legs developed by Interstellar Development Corps, designed to protect the user in harsh environments while efficiently carrying heavy loads. Their efficient carrying capacity is considered crucial for colony development.</description>
         <descriptionHyperlinks>
             <ThingDef>IP_IDC_2A_LOADER_GOLIATH</ThingDef>
         </descriptionHyperlinks>
@@ -116,6 +116,7 @@
                     <PsychicSensitivity>-0.05</PsychicSensitivity>
                     <ToxicEnvironmentResistance>0.05</ToxicEnvironmentResistance>
                     <VacuumResistance>0.05</VacuumResistance>
+                    <VEF_MassCarryCapacity>10</VEF_MassCarryCapacity>
                 </statOffsets>
             </li>
         </stages>
@@ -124,8 +125,8 @@
     <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
         <defName>IP_IDC_2A_LOADER_GOLIATH</defName>
         <label>IDC-2A LOADER GOLIATH</label>
-        <!-- Interstellar Development Corps에서 개발한 다목적 다리로, 혹독한 환경에서 사용자를 보호하며 중량을 효율적으로 운반할 수 있도록 설계되었습니다. 이 장비를 장착하면, 각 다리당 평균 10KG의 적재량 증가가 가능하며, 총 22KG까지 운반 능력을 향상시킬 수 있습니다. -->
-        <description>Developed by Interstellar Development Corps, this multifunctional leg is designed to protect the user in harsh environments while enabling efficient cargo transportation. When equipped, each leg increases the cargo capacity by an average of 10KG, allowing for a total increase of up to 22KG in carrying capacity.</description>
+        <!-- 인터스텔라 개발 공사(Interstellar Development Corps)에서 개발한 다목적 다리로, 혹독한 환경에서도 사용자를 보호하며 무거운 짐을 효율적으로 운반할 수 있도록 설계되었습니다. 효율적인 운반 능력은 식민지 개발에서 중요히 여겨집니다. -->
+        <description>These are versatile legs developed by Interstellar Development Corps, designed to protect the user in harsh environments while efficiently carrying heavy loads. Their efficient carrying capacity is considered crucial for colony development.</description>
         <descriptionHyperlinks>
             <RecipeDef>IP_IDC_2A_LOADER_GOLIATH</RecipeDef>
         </descriptionHyperlinks>
@@ -194,8 +195,7 @@
 
 
     <!-- ORD-F1 EX-RAPTOR -->
-
-
+    <!-- 부위 효율 115%, 다른 파츠보다 가벼움, 기본 이동속도 0.2증가(방탄이 -0.2), 받는 피해 103%, 비틀거림 계수 110%(데미지 받았을때 더 오래 느려짐) -->
     <HediffDef ParentName="AddedBodyPartBase">
         <defName>IP_ORD_F1_EX_RAPTOR</defName>
         <label>ORD-F1 EX-RAPTOR</label>
@@ -227,8 +227,8 @@
     <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
         <defName>IP_ORD_F1_EX_RAPTOR</defName>
         <label>ORD-F1 EX-RAPTOR</label>
-        <!-- Interstellar Development Corps에서 개발한 다목적 다리로, 혹독한 환경에서 사용자를 보호하며 중량을 효율적으로 운반할 수 있도록 설계되었습니다. 이 장비를 장착하면, 각 다리당 평균 10KG의 적재량 증가가 가능하며, 총 22KG까지 운반 능력을 향상시킬 수 있습니다. -->
-        <description>Developed by Interstellar Development Corps, this multifunctional leg is designed to protect the user in harsh environments while enabling efficient cargo transportation. When equipped, each leg increases the cargo capacity by an average of 10KG, allowing for a total increase of up to 22KG in carrying capacity.</description>
+        <!-- Order of the Machina에서 개발한 시험용 다리로, 메카노이드들이 사용하는 효율적인 다리를 목표로 개발된 시제품입니다. 인간의 다리 형상을 벗어나, 그들이 열등하게 여긴 동물에서 영감을 얻어 설계되었습니다. 경량형 프레임을 사용해 빠른 이동속도를 자랑하지만, 공격을 받으면 자세가 무너지며 피해에 취약해집니다. -->
+        <description>Developed by the Order of the Machina, this prototype leg is designed with the goal of creating an efficient leg for Mechanoids. It deviates from the human leg form and is inspired by the animals they once considered inferior. Using a lightweight frame, it boasts high mobility, but when attacked, the user's posture becomes unstable and it is vulnerable to damage.</description>
         <descriptionHyperlinks>
             <RecipeDef>IP_ORD_F1_EX_RAPTOR</RecipeDef>
         </descriptionHyperlinks>
@@ -240,7 +240,7 @@
             <li>RewardStandardLowFreq</li>
         </thingSetMakerTags>
         <statBases>
-            <Mass>5.0</Mass>
+            <Mass>4.0</Mass>
             <MarketValue>530</MarketValue>
         </statBases>
         <techHediffsTags>
@@ -296,24 +296,23 @@
     </RecipeDef>
 
 
-    <!-- IMSL-22 SENTINEL RHINO -->
-
-
+    <!-- IMSL SENTINEL RHINO -->
+    <!-- 약간 무거운 파츠, 효율 105%, 사격 대기시간 -10%, 비틀거림 계수 80%(데미지 받았을때 조금 느려짐), 받는 피해 95% -->
     <HediffDef ParentName="AddedBodyPartBase">
-        <defName>IP_IMSL_22_SENTINEL_RHINO</defName>
-        <label>IMSL-22 SENTINEL RHINO</label>
-        <labelNoun>IMSL-22 SENTINEL RHINO</labelNoun>
+        <defName>IP_IMSL_SENTINEL_RHINO</defName>
+        <label>IMSL SENTINEL RHINO</label>
+        <labelNoun>IMSL SENTINEL RHINO</labelNoun>
         <!-- Imperial Marine Strategic Laboratory에서 진행한 Sentinel Project의 전투용 다리입니다. 견고하고 균형잡힌 프레임이 몸의 제어를 효율적으로 만들어주어 전투 능력이 향상되지만, 다소 무거운 무게로 인해 다른 다리보다 기동성이 저하됩니다. -->
-        <description>This combat leg, developed as part of the Sentinel Project by the Imperial Marine Strategic Laboratory, features a sturdy and balanced frame that enhances body control and improves combat effectiveness. However, its relatively heavy weight reduces mobility compared to other legs. </description>
+        <description>This combat leg, developed as part of the Sentinel Project by the Imperial Marine Strategic Laboratory, features a sturdy and balanced frame that enhances body control and improves combat effectiveness. However, its relatively heavy weight reduces mobility compared to other legs.</description>
         <descriptionHyperlinks>
-            <ThingDef>IP_IMSL_22_SENTINEL_RHINO</ThingDef>
+            <ThingDef>IP_IMSL_SENTINEL_RHINO</ThingDef>
         </descriptionHyperlinks>
         <addedPartProps>
             <solid>true</solid>
             <partEfficiency>1.05</partEfficiency>
             <betterThanNatural>true</betterThanNatural>
         </addedPartProps>
-        <spawnThingOnRemoved>IP_IMSL_22_SENTINEL_RHINO</spawnThingOnRemoved>
+        <spawnThingOnRemoved>IP_IMSL_SENTINEL_RHINO</spawnThingOnRemoved>
         <stages>
             <li>
                 <statOffsets>
@@ -328,12 +327,12 @@
     </HediffDef>
 
     <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
-        <defName>IP_IMSL_22_SENTINEL_RHINO</defName>
-        <label>IMSL-22 SENTINEL RHINO</label>
+        <defName>IP_IMSL_SENTINEL_RHINO</defName>
+        <label>IMSL SENTINEL RHINO</label>
         <!-- Imperial Marine Strategic Laboratory에서 진행한 Sentinel Project의 전투용 다리입니다. 견고하고 균형잡힌 프레임이 몸의 제어를 효율적으로 만들어주어 전투 능력이 향상되지만, 다소 무거운 무게로 인해 다른 다리보다 기동성이 저하됩니다. -->
-        <description>This combat leg, developed as part of the Sentinel Project by the Imperial Marine Strategic Laboratory, features a sturdy and balanced frame that enhances body control and improves combat effectiveness. However, its relatively heavy weight reduces mobility compared to other legs. </description>
+        <description>This combat leg, developed as part of the Sentinel Project by the Imperial Marine Strategic Laboratory, features a sturdy and balanced frame that enhances body control and improves combat effectiveness. However, its relatively heavy weight reduces mobility compared to other legs.</description>
         <descriptionHyperlinks>
-            <RecipeDef>IP_IMSL_22_SENTINEL_RHINO</RecipeDef>
+            <RecipeDef>IP_IMSL_SENTINEL_RHINO</RecipeDef>
         </descriptionHyperlinks>
         <costList>
             <Steel>80</Steel>
@@ -370,15 +369,15 @@
     </ThingDef>
 
     <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
-        <defName>IP_IMSL_22_SENTINEL_RHINO</defName>
-        <label>Installing IMSL-22 SENTINEL RHINO</label>
-        <description>Installs IMSL-22 SENTINEL RHINO.</description>
-        <jobString>Installing IMSL-22 SENTINEL RHINO.</jobString>
+        <defName>IP_IMSL_SENTINEL_RHINO</defName>
+        <label>Installing IMSL SENTINEL RHINO</label>
+        <description>Installs IMSL SENTINEL RHINO.</description>
+        <jobString>Installing IMSL SENTINEL RHINO.</jobString>
         <ingredients>
             <li>
                 <filter>
                     <thingDefs>
-                        <li>IP_IMSL_22_SENTINEL_RHINO</li>
+                        <li>IP_IMSL_SENTINEL_RHINO</li>
                     </thingDefs>
                 </filter>
                 <count>1</count>
@@ -389,117 +388,13 @@
         </skillRequirements>
         <fixedIngredientFilter>
             <thingDefs>
-                <li>IP_IMSL_22_SENTINEL_RHINO</li>
+                <li>IP_IMSL_SENTINEL_RHINO</li>
             </thingDefs>
         </fixedIngredientFilter>
         <appliedOnFixedBodyParts>
             <li>Leg</li>
         </appliedOnFixedBodyParts>
-        <addsHediff>IP_IMSL_22_SENTINEL_RHINO</addsHediff>
-    </RecipeDef>
-
-
-    <!-- IMSL-23 SENTINEL PATHFINDER -->
-    <!-- 여기부터 작업 -->
-
-
-    <HediffDef ParentName="AddedBodyPartBase">
-        <defName>IP_IMSL_23_SENTINEL_PATHFINDER</defName>
-        <label>IMSL-23 SENTINEL PATHFINDER</label>
-        <labelNoun>IMSL-23 SENTINEL PATHFINDER</labelNoun>
-        <!-- Imperial Marine Strategic Laboratory에서 진행한 Sentinel Project의 전투용 다리입니다. 견고하고 균형잡힌 프레임이 몸의 제어를 효율적으로 만들어주어 전투 능력이 향상되지만, 다소 무거운 무게로 인해 다른 다리보다 기동성이 저하됩니다. -->
-        <description>This combat leg, developed as part of the Sentinel Project by the Imperial Marine Strategic Laboratory, features a sturdy and balanced frame that enhances body control and improves combat effectiveness. However, its relatively heavy weight reduces mobility compared to other legs. </description>
-        <descriptionHyperlinks>
-            <ThingDef>IP_IMSL_23_SENTINEL_PATHFINDER</ThingDef>
-        </descriptionHyperlinks>
-        <addedPartProps>
-            <solid>true</solid>
-            <partEfficiency>1.05</partEfficiency>
-            <betterThanNatural>true</betterThanNatural>
-        </addedPartProps>
-        <spawnThingOnRemoved>IP_IMSL_23_SENTINEL_PATHFINDER</spawnThingOnRemoved>
-        <stages>
-            <li>
-                <statOffsets>
-                    <RangedWeapon_Cooldown>0.9</RangedWeapon_Cooldown>
-                </statOffsets>
-                <statFactors>
-                    <StaggerDurationFactor>0.8</StaggerDurationFactor>
-                    <IncomingDamageFactor>0.95</IncomingDamageFactor>
-                </statFactors>
-            </li>
-        </stages>
-    </HediffDef>
-
-    <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
-        <defName>IP_IMSL_23_SENTINEL_PATHFINDER</defName>
-        <label>IMSL-23 SENTINEL PATHFINDER</label>
-        <!-- Imperial Marine Strategic Laboratory에서 진행한 Sentinel Project의 전투용 다리입니다. 견고하고 균형잡힌 프레임이 몸의 제어를 효율적으로 만들어주어 전투 능력이 향상되지만, 다소 무거운 무게로 인해 다른 다리보다 기동성이 저하됩니다. -->
-        <description>This combat leg, developed as part of the Sentinel Project by the Imperial Marine Strategic Laboratory, features a sturdy and balanced frame that enhances body control and improves combat effectiveness. However, its relatively heavy weight reduces mobility compared to other legs. </description>
-        <descriptionHyperlinks>
-            <RecipeDef>IP_IMSL_23_SENTINEL_PATHFINDER</RecipeDef>
-        </descriptionHyperlinks>
-        <costList>
-            <Steel>80</Steel>
-            <ComponentIndustrial>8</ComponentIndustrial>
-        </costList>
-        <thingSetMakerTags>
-            <li>RewardStandardLowFreq</li>
-        </thingSetMakerTags>
-        <statBases>
-            <Mass>8.0</Mass>
-            <MarketValue>530</MarketValue>
-        </statBases>
-        <techHediffsTags>
-            <li>Industrial</li>
-        </techHediffsTags>
-        <recipeMaker>
-            <researchPrerequisites>
-                <li>IP_AdvancedProsthetic</li>
-                <li>IP_SentinelProject</li>
-            </researchPrerequisites>
-            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
-            <workSkill>Crafting</workSkill>
-            <effectWorking>Smith</effectWorking>
-            <recipeUsers>
-                <li>TableMachining</li>
-            </recipeUsers>
-            <soundWorking>Recipe_Smith</soundWorking>
-            <unfinishedThingDef>UnfinishedHealthItemProsthetic</unfinishedThingDef>
-            <skillRequirements>
-                <Crafting>7</Crafting>
-            </skillRequirements>
-            <workAmount>23500</workAmount>
-        </recipeMaker>
-    </ThingDef>
-
-    <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
-        <defName>IP_IMSL_23_SENTINEL_PATHFINDER</defName>
-        <label>Installing IMSL-23 SENTINEL PATHFINDER</label>
-        <description>Installs IMSL-23 SENTINEL PATHFINDER.</description>
-        <jobString>Installing IMSL-23 SENTINEL PATHFINDER.</jobString>
-        <ingredients>
-            <li>
-                <filter>
-                    <thingDefs>
-                        <li>IP_IMSL_23_SENTINEL_PATHFINDER</li>
-                    </thingDefs>
-                </filter>
-                <count>1</count>
-            </li>
-        </ingredients>
-        <skillRequirements>
-            <Medicine>5</Medicine>
-        </skillRequirements>
-        <fixedIngredientFilter>
-            <thingDefs>
-                <li>IP_IMSL_23_SENTINEL_PATHFINDER</li>
-            </thingDefs>
-        </fixedIngredientFilter>
-        <appliedOnFixedBodyParts>
-            <li>Leg</li>
-        </appliedOnFixedBodyParts>
-        <addsHediff>IP_IMSL_23_SENTINEL_PATHFINDER</addsHediff>
+        <addsHediff>IP_IMSL_SENTINEL_RHINO</addsHediff>
     </RecipeDef>
 
 </Defs>

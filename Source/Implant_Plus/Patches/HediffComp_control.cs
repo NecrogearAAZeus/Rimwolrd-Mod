@@ -9,6 +9,8 @@ using Verse;
 using RimWorld;
 using HarmonyLib;
 
+
+
 namespace Implant_Plus.Control
 {
     // 임플란트 설치 시 무기 드롭
@@ -140,7 +142,8 @@ namespace Implant_Plus.Control
     {
         static bool Postfix(bool result, Pawn_GeneTracker __instance)
         {
-            if (__instance.pawn.health?.hediffSet?.HasHediff(DefDatabase<HediffDef>.GetNamed("IP_ICD_23_NIGHTOWL")) == true)
+            float darkSightValue = __instance.pawn.GetStatValue(DefDatabase<StatDef>.GetNamed("IP_DarkSight"));
+            if (darkSightValue >= 1f)
             {
                 return false;
             }
@@ -154,7 +157,8 @@ namespace Implant_Plus.Control
     {
         static ThoughtState Postfix(ThoughtState result, Pawn p)
         {
-            if (p.health?.hediffSet?.HasHediff(DefDatabase<HediffDef>.GetNamed("IP_ICD_23_NIGHTOWL")) == true)
+            float darkSightValue = p.GetStatValue(DefDatabase<StatDef>.GetNamed("IP_DarkSight"));
+            if (darkSightValue >= 1f)
             {
                 return ThoughtState.Inactive;
             }
@@ -162,163 +166,117 @@ namespace Implant_Plus.Control
         }
     }
 
-    // Pawn의 장비 총무게 제어
-    [HarmonyPatch(typeof(MassUtility), "Capacity")]
-    public class ImplantCapacityBonus_Patch
+    [HarmonyPatch(typeof(StatWorker), "GetValueUnfinalized")]
+    public class FoodPoisonChanceStatPatch
     {
-        static void Postfix(ref float __result, Pawn p, StringBuilder explanation = null)
+        static void Postfix(StatRequest req, ref float __result, StatWorker __instance)
         {
-            if (!MassUtility.CanEverCarryAnything(p))
-                return;
-
-            // 다리 임플란트 목록 + 10KG
-            var legImplantList = new HashSet<string>
+            // FoodPoisonChance 스탯이고 폰이 있을 때만 적용
+            // StatWorker.stat 대신 StatDef 직접 비교
+            if (__instance.GetType() == typeof(StatWorker) && 
+                req.HasThing && req.Thing is Pawn pawn)
             {
-                "IP_IDC_2A_LOADER_GOLIATH",
-                // 추후 추가할 다리 임플란트들
-            };
-
-            // 내장형 프레임 목록 + 15KG
-            var innerFrameList = new HashSet<string>
-            {
-                "IP_CombatInnerFrame",
-                "IP_WorkerInnerFrame",
-                "IP_StandardInnerFrame",
-                "IP_IDC_23_SURVIVOR",
-                "IP_DAON_31_VAITALBOOST",
-                "IP_ORD_25_EVOLUTION",
-                "IP_IMSL_17_BASTION_SHIELD",
-                // 추후 추가할 내장형 프레임들
-            };
-
-            int legImplantCount_5KG = 0;
-            int innerFrameCount_15KG = 0;
-
-            // 임플란트 개수 확인
-            foreach (var hediff in p.health.hediffSet.hediffs)
-            {
-                if (legImplantList.Contains(hediff.def.defName))
+                // Reflection으로 stat 필드 접근
+                var statField = typeof(StatWorker).GetField("stat", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+                StatDef currentStat = (StatDef)statField.GetValue(__instance);
+                
+                if (currentStat == StatDefOf.FoodPoisonChance)
                 {
-                    legImplantCount_5KG++;
-                }
-                else if (innerFrameList.Contains(hediff.def.defName))
-                {
-                    innerFrameCount_15KG++;
-                }
-            }
-
-            // 보정치 계산
-            float bonusWeight = 0f;
-            bonusWeight += legImplantCount_5KG * 10f;      // 다리당 10kg
-            bonusWeight += innerFrameCount_15KG * 15f;      // 프레임당 15kg
-
-            // 새로운 공식: (기본무게 + 보정치) * 신체크기
-            float baseWeight = 35f + bonusWeight;
-            __result = baseWeight * p.BodySize;
-
-            // 설명 추가
-            if (explanation != null)
-            {
-                if (explanation.Length > 0)
-                {
-                    explanation.AppendLine();
-                }
-
-                explanation.Append($"  - {p.LabelShortCap}: {baseWeight.ToStringMassOffset()} x {p.BodySize:F1} = {__result.ToStringMassOffset()}");
-
-                if (bonusWeight > 0f)
-                {
-                    explanation.AppendLine();
-                    if (legImplantCount_5KG > 0)
-                    {
-                        explanation.Append($"    • Leg Implants: +{(legImplantCount_5KG * 10f).ToStringMassOffset()}");
-                        explanation.AppendLine();
-                    }
-                    if (innerFrameCount_15KG > 0)
-                    {
-                        explanation.Append($"    • Inner Frames: +{(innerFrameCount_15KG * 15f).ToStringMassOffset()}");
-                    }
+                    float IP_CookingPosionChanceFactor = pawn.GetStatValue(DefDatabase<StatDef>.GetNamed("IP_CookingPoisonChanceFactor"));
+                    __result *= IP_CookingPosionChanceFactor;
                 }
             }
         }
     }
 
-    // 험지 무시 패시 내역
-   [HarmonyPatch]
-    public class TerrainIgnoreLegs_Patch
+    // 아드레날린 부스트 트리거 시스템
+    [HarmonyPatch(typeof(Thing), "TakeDamage")]
+    public class AdrenalineBoostTriggerPatch
     {
-        static MethodInfo TargetMethod()
-        {
-            return typeof(Pawn_PathFollower).GetMethod("CostToMoveIntoCell", 
-                BindingFlags.NonPublic | BindingFlags.Static,
-                null,
-                new Type[] { typeof(Pawn), typeof(IntVec3) },
-                null);
-        }
+        // 쿨다운 관리용 딕셔너리 (폰 ID -> 마지막 트리거 시간)
+        public static Dictionary<int, int> lastTriggerTicks = new Dictionary<int, int>(); // private에서 public으로 변경
+        private static readonly int stalker_COOLDOWN_TICKS = 120; // 2초 (60틱 = 1초)
 
-        static void Postfix(ref float __result, Pawn pawn, IntVec3 c)
+        static void Postfix(DamageInfo dinfo, Thing __instance)
         {
-            // 원래 기본 비용 계산
-            float originalBaseCost;
-            if (pawn.Position.x == c.x || pawn.Position.z == c.z)
+            // 데미지를 받은 대상이 메카노이드가 아니고, 실제로 데미지를 입었는지 확인
+            if (__instance is Pawn victim && 
+                !victim.RaceProps.IsMechanoid && 
+                dinfo.Amount > 0)
             {
-                originalBaseCost = pawn.TicksPerMoveCardinal;
+                // 공격자가 있고, 폰인지 확인
+                if (dinfo.Instigator is Pawn attacker)
+                {
+                    // IP_IMSL_SENTINEL_STALKER 임플란트가 있는지 확인
+                    if (attacker.health?.hediffSet?.HasHediff(DefDatabase<HediffDef>.GetNamed("IP_IMSL_SENTINEL_STALKER")) == true)
+                    {
+                        // 쿨다운 체크
+                        int stalker_CurrentTick = Find.TickManager.TicksGame;
+                        int attackerId = attacker.thingIDNumber;
+                        
+                        if (!lastTriggerTicks.ContainsKey(attackerId) || 
+                            stalker_CurrentTick - lastTriggerTicks[attackerId] >= stalker_COOLDOWN_TICKS)
+                        {
+                            // 아드레날린 부스트 적용
+                            ApplyAdrenalineBoost(attacker);
+                            
+                            // 쿨다운 갱신
+                            lastTriggerTicks[attackerId] = stalker_CurrentTick;
+                        }
+                    }
+                }
+            }
+        }
+        
+        private static void ApplyAdrenalineBoost(Pawn pawn)
+        {
+            // 기존 아드레날린 부스트가 있는지 확인
+            Hediff stalker_existingBoost = pawn.health.hediffSet.GetFirstHediffOfDef(DefDatabase<HediffDef>.GetNamed("IP_Adrenaline_Boost"));
+            
+            if (stalker_existingBoost != null)
+            {
+                // 기존 헤디프의 지속시간만 초기화
+                HediffComp_Disappears disappearComp = stalker_existingBoost.TryGetComp<HediffComp_Disappears>();
+                if (disappearComp != null)
+                {
+                    // 지속시간을 처음 상태로 리셋 - IntRange 직접 처리
+                    HediffCompProperties_Disappears props = (HediffCompProperties_Disappears)disappearComp.props;
+                    int ticksToSet;
+                    
+                    // disappearsAfterTicks가 IntRange인지 확인하고 처리
+                    var disappearTicks = props.disappearsAfterTicks;
+                    if (disappearTicks != null)
+                    {
+                        // IntRange에서 평균값 사용 (float를 int로 변환)
+                        ticksToSet = (int)disappearTicks.Average;
+                    }
+                    else
+                    {
+                        // 기본값 설정 (예: 10초)
+                        ticksToSet = 600;
+                    }
+                    
+                    disappearComp.ticksToDisappear = ticksToSet;
+                }
             }
             else
             {
-                originalBaseCost = pawn.TicksPerMoveDiagonal;
+                // 기존 헤디프가 없으면 새로 생성
+                Hediff stalker_ResetBoost = HediffMaker.MakeHediff(DefDatabase<HediffDef>.GetNamed("IP_Adrenaline_Boost"), pawn);
+                pawn.health.AddHediff(stalker_ResetBoost);
             }
             
-            // 현재 추가된 pathCost 계산
-            float currentPathCost = __result - originalBaseCost;
-            
-            // 티어별 다리 확인
-            var tier1TerrainLegs_30 = new HashSet<string>
-            {
-                "IP_IMSL_23_SENTINEL_PATHFINDER",
-                // 추가할 티어1 다리들...
-            };
-            
-            var tier2TerrainLegs_50 = new HashSet<string>
-            {
-                "",
-                // 추가할 티어2 다리들...
-            };
-            
-            var unstableLegs_120 = new HashSet<string>
-            {
-                "",
-                // 추가할 불안정한 다리들...
-            };
+        }
+    }
 
-            int tier1Count = 0;
-            int tier2Count = 0;
-            int unstableLegsCount = 0;
-            
-            foreach (var hediff in pawn.health.hediffSet.hediffs)
-            {
-                if (tier1TerrainLegs_30.Contains(hediff.def.defName))
-                {
-                    tier1Count++;
-                }
-                else if (tier2TerrainLegs_50.Contains(hediff.def.defName))
-                {
-                    tier2Count++;
-                }                
-                else if (unstableLegs_120.Contains(hediff.def.defName))
-                {
-                    unstableLegsCount++;
-                }
-            }
-            
-            // pathCost 배율 계산
-            float pathCostMultiplier = 1f;
-            pathCostMultiplier -= tier1Count * 0.3f;  // 30% 감소
-            pathCostMultiplier -= tier2Count * 0.5f;  // 50% 감소
-            pathCostMultiplier += unstableLegsCount * 0.2f; // 20% 증가
-            // 조정된 결과 계산
-            float adjustedPathCost = currentPathCost * pathCostMultiplier;
-            __result = originalBaseCost + adjustedPathCost;
+    // 게임 종료 시 쿨다운 딕셔너리 정리
+    [HarmonyPatch(typeof(Game), "DeinitAndRemoveMap")]
+    public class AdrenalineBoostCleanupPatch
+    {
+        static void Postfix()
+        {
+            // 딕셔너리 정리하여 메모리 누수 방지
+            AdrenalineBoostTriggerPatch.lastTriggerTicks?.Clear();
         }
     }
 }
