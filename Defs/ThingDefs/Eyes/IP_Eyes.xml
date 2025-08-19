@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+    <!-- 1티어 파츠 -->
+
+    <!-- Prosthetic Eye -->
+
+    <HediffDef ParentName="AddedBodyPartBase">
+        <defName>IP_AdvancedProstheticEye</defName>
+        <label>Advanced Prosthetic Eye</label>
+        <labelNoun>Advanced Prosthetic Eye</labelNoun>
+        <!-- 기술의 발전으로 만들어진 기초적인 의안입니다. 기존 눈 보다 성능이 우수하지만, 생체공학 팔에는 미치지 못합니다. 플라스틸이나 고급 부품 없이도 제작할 수 있으나, 정밀한 설계와 복잡한 조립 과정으로 인해 제작에는 많은 시간이 소요됩니다.  -->
+        <description>A basic prosthetic eye developed through technological advancement. It outperforms a natural eye, but still falls short of bionic standards. Though it can be crafted without plasteel or Advanced components, its precise design and intricate assembly make it time-consuming to produce.</description>
+        <descriptionHyperlinks>
+            <ThingDef>IP_AdvancedProstheticEye</ThingDef>
+        </descriptionHyperlinks>
+        <spawnThingOnRemoved>IP_AdvancedProstheticEye</spawnThingOnRemoved>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.15</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+
+        <!-- 부착시 이미지 표시 -->
+
+        <!-- <renderNodeProperties>
+            <li Class="PawnRenderNodeProperties_Eye">
+                <workerClass>PawnRenderNodeWorker_HediffEye</workerClass>
+                <texPath>Things/Pawn/Wounds/BionicEye</texPath>
+                <parentTagDef>Head</parentTagDef>
+                <drawSize>0.15</drawSize>
+                <drawData>
+                    <defaultData>
+                        <layer>56</layer>
+                        <offset>(0, 0, -0.25)</offset>
+                    </defaultData>
+                    <dataWest>
+                        <flip>true</flip>
+                    </dataWest>
+                </drawData>
+            </li>
+        </renderNodeProperties> -->
+    </HediffDef>
+
+    <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
+        <defName>IP_AdvancedProstheticEye</defName>
+        <label>Advanced Prosthetic Eye</label>
+        <!-- 기술의 발전으로 만들어진 기초적인 의안입니다. 기존 눈 보다 성능이 우수하지만, 생체공학 팔에는 미치지 못합니다. 플라스틸이나 고급 부품 없이도 제작할 수 있으나, 정밀한 설계와 복잡한 조립 과정으로 인해 제작에는 많은 시간이 소요됩니다.  -->
+        <description>A basic prosthetic eye developed through technological advancement. It outperforms a natural eye, but still falls short of bionic standards. Though it can be crafted without plasteel or Advanced components, its precise design and intricate assembly make it time-consuming to produce.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>IP_AdvancedProstheticEye</RecipeDef>
+        </descriptionHyperlinks>
+        <costList>
+            <Steel>30</Steel>
+            <ComponentIndustrial>5</ComponentIndustrial>
+        </costList>
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        <statBases>
+            <Mass>0.3</Mass>
+            <MarketValue>420</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Simple</li>
+        </techHediffsTags>
+        <recipeMaker>
+            <researchPrerequisite>IP_AdvancedProsthetic</researchPrerequisite>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <unfinishedThingDef>UnfinishedHealthItemProsthetic</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>7</Crafting>
+            </skillRequirements>
+            <workAmount>20000</workAmount>
+        </recipeMaker>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
+        <defName>IP_AdvancedProstheticEye</defName>
+        <label>Install Advanced Prosthetic Eye</label>
+        <description>Installs Advanced ProstheticEye.</description>
+        <jobString>Installing Advanced Prosthetic Eye.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IP_AdvancedProstheticEye</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>IP_AdvancedProstheticEye</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Eye</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>IP_AdvancedProstheticEye</addsHediff>
+    </RecipeDef>
+
+    <!-- ICD-23 NIGHTOWL -->
+
+    <HediffDef ParentName="AddedBodyPartBase">
+        <defName>IP_ICD_23_NIGHTOWL</defName>
+        <label>ICD-23 NIGHTOWL</label>
+        <labelNoun>ICD-23 NIGHTOWL</labelNoun>
+        <!-- DAON Technology에서 개발한 작업용 안구입니다. DAON사의 주력 제품으로, 다양한 직군에서 활용됩니다. 여러 종류의 확대 및 축소 시스템이 탑재되어, 정밀 작업부터 일상적인 작업까지 폭넓은 지원을 제공합니다. 이를 통해 다양한 작업 환경에 최적화된 성능을 발휘합니다. -->
+        <description>Developed by DAON Technology, this work eye is a flagship product of DAON and is used across a wide range of industries. Equipped with various zoom and magnification systems, it provides comprehensive support, from precision tasks to everyday work. This enables it to deliver optimal performance in a variety of work environments.</description>
+        <descriptionHyperlinks>
+            <ThingDef>IP_ICD_23_NIGHTOWL</ThingDef>
+        </descriptionHyperlinks>
+        <spawnThingOnRemoved>IP_ICD_23_NIGHTOWL</spawnThingOnRemoved>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.15</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+
+        <!-- 부착시 이미지 표시 -->
+
+        <!-- <renderNodeProperties>
+            <li Class="PawnRenderNodeProperties_Eye">
+                <workerClass>PawnRenderNodeWorker_HediffEye</workerClass>
+                <texPath>Things/Pawn/Wounds/BionicEye</texPath>
+                <parentTagDef>Head</parentTagDef>
+                <drawSize>0.15</drawSize>
+                <drawData>
+                    <defaultData>
+                        <layer>56</layer>
+                        <offset>(0, 0, -0.25)</offset>
+                    </defaultData>
+                    <dataWest>
+                        <flip>true</flip>
+                    </dataWest>
+                </drawData>
+            </li>
+        </renderNodeProperties> -->
+    </HediffDef>
+
+    <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
+        <defName>IP_ICD_23_NIGHTOWL</defName>
+        <label>ICD-23 NIGHTOWL</label>
+        <!-- DAON Technology에서 개발한 작업용 안구입니다. DAON사의 주력 제품으로, 다양한 직군에서 활용됩니다. 여러 종류의 확대 및 축소 시스템이 탑재되어, 정밀 작업부터 일상적인 작업까지 폭넓은 지원을 제공합니다. 이를 통해 다양한 작업 환경에 최적화된 성능을 발휘합니다. -->
+        <description>Developed by DAON Technology, this work eye is a flagship product of DAON and is used across a wide range of industries. Equipped with various zoom and magnification systems, it provides comprehensive support, from precision tasks to everyday work. This enables it to deliver optimal performance in a variety of work environments.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>IP_ICD_23_NIGHTOWL</RecipeDef>
+        </descriptionHyperlinks>
+        <costList>
+            <Steel>30</Steel>
+            <ComponentIndustrial>5</ComponentIndustrial>
+        </costList>
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        <statBases>
+            <Mass>0.3</Mass>
+            <MarketValue>420</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Simple</li>
+        </techHediffsTags>
+        <recipeMaker>
+            <researchPrerequisites>
+                <li>IP_AdvancedProsthetic</li>
+                <li>IP_IDC_BasicModule</li>
+            </researchPrerequisites>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <unfinishedThingDef>UnfinishedHealthItemProsthetic</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>7</Crafting>
+            </skillRequirements>
+            <workAmount>20000</workAmount>
+        </recipeMaker>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
+        <defName>IP_ICD_23_NIGHTOWL</defName>
+        <label>Install ICD-23 NIGHTOWL</label>
+        <description>Installs Advanced ProstheticEye.</description>
+        <jobString>Installing ICD-23 NIGHTOWL.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IP_ICD_23_NIGHTOWL</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>IP_ICD_23_NIGHTOWL</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Eye</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>IP_ICD_23_NIGHTOWL</addsHediff>
+    </RecipeDef>
+
+    <!-- DAON-20 VISIONX -->
+
+    <HediffDef ParentName="AddedBodyPartBase">
+        <defName>IP_DAON_20_VISIONX</defName>
+        <label>DAON-20 VISIONX</label>
+        <labelNoun>DAON-20 VISIONX</labelNoun>
+        <!-- DAON Technology에서 개발한 작업용 안구입니다. DAON사의 주력 제품으로, 다양한 직군에서 활용됩니다. 여러 종류의 확대 및 축소 시스템이 탑재되어, 정밀 작업부터 일상적인 작업까지 폭넓은 지원을 제공합니다. 이를 통해 다양한 작업 환경에 최적화된 성능을 발휘합니다. -->
+        <description>Developed by DAON Technology, this work eye is a flagship product of DAON and is used across a wide range of industries. Equipped with various zoom and magnification systems, it provides comprehensive support, from precision tasks to everyday work. This enables it to deliver optimal performance in a variety of work environments.</description>
+        <descriptionHyperlinks>
+            <ThingDef>IP_DAON_20_VISIONX</ThingDef>
+        </descriptionHyperlinks>
+        <spawnThingOnRemoved>IP_DAON_20_VISIONX</spawnThingOnRemoved>
+        <stages>
+            <li>
+                <statOffsets>
+                    <GeneralLaborSpeed>0.1</GeneralLaborSpeed>
+                </statOffsets>
+            </li>
+        </stages>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.10</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+
+        <!-- 부착시 이미지 표시 -->
+
+        <!-- <renderNodeProperties>
+            <li Class="PawnRenderNodeProperties_Eye">
+                <workerClass>PawnRenderNodeWorker_HediffEye</workerClass>
+                <texPath>Things/Pawn/Wounds/BionicEye</texPath>
+                <parentTagDef>Head</parentTagDef>
+                <drawSize>0.15</drawSize>
+                <drawData>
+                    <defaultData>
+                        <layer>56</layer>
+                        <offset>(0, 0, -0.25)</offset>
+                    </defaultData>
+                    <dataWest>
+                        <flip>true</flip>
+                    </dataWest>
+                </drawData>
+            </li>
+        </renderNodeProperties> -->
+    </HediffDef>
+
+    <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
+        <defName>IP_DAON_20_VISIONX</defName>
+        <label>DAON-20 VISIONX</label>
+        <!-- DAON Technology에서 개발한 작업용 안구입니다. DAON사의 주력 제품으로, 다양한 직군에서 활용됩니다. 여러 종류의 확대 및 축소 시스템이 탑재되어, 정밀 작업부터 일상적인 작업까지 폭넓은 지원을 제공합니다. 이를 통해 다양한 작업 환경에 최적화된 성능을 발휘합니다. -->
+        <description>Developed by DAON Technology, this work eye is a flagship product of DAON and is used across a wide range of industries. Equipped with various zoom and magnification systems, it provides comprehensive support, from precision tasks to everyday work. This enables it to deliver optimal performance in a variety of work environments.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>IP_DAON_20_VISIONX</RecipeDef>
+        </descriptionHyperlinks>
+        <costList>
+            <Steel>30</Steel>
+            <ComponentIndustrial>5</ComponentIndustrial>
+        </costList>
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        <statBases>
+            <Mass>0.3</Mass>
+            <MarketValue>420</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Simple</li>
+        </techHediffsTags>
+        <recipeMaker>
+            <researchPrerequisites>
+                <li>IP_AdvancedProsthetic</li>
+                <li>IP_DaoN_StandardSeries</li>
+            </researchPrerequisites>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <unfinishedThingDef>UnfinishedHealthItemProsthetic</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>7</Crafting>
+            </skillRequirements>
+            <workAmount>20000</workAmount>
+        </recipeMaker>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
+        <defName>IP_DAON_20_VISIONX</defName>
+        <label>Install DAON-20 VISIONX</label>
+        <description>Installs Advanced ProstheticEye.</description>
+        <jobString>Installing DAON-20 VISIONX.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IP_DAON_20_VISIONX</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>IP_DAON_20_VISIONX</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Eye</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>IP_DAON_20_VISIONX</addsHediff>
+    </RecipeDef>
+
+    <!-- IMSL-23 SENTINEL WATCHER -->
+
+    <HediffDef ParentName="AddedBodyPartBase">
+        <defName>IP_DAON_23_WATCHER</defName>
+        <label>IMSL-23 SENTINEL WATCHER</label>
+        <labelNoun>IMSL-23 SENTINEL WATCHER</labelNoun>
+        <!-- Imperial Marine Strategic Laboratory에서 개발한 전투용 안구입니다. 병사들의 사격 능력을 향상시키기 위해 설계된 이 안구는, 내장된 조준 시스템을 통해 사용자의 명중률을 크게 개선합니다. -->
+        <description>Developed by the Imperial Marine Strategic Laboratory, this combat eye is designed to enhance soldiers' shooting abilities. Equipped with an integrated aiming system, it significantly improves the user's accuracy.</description>
+        <descriptionHyperlinks>
+            <ThingDef>IP_DAON_23_WATCHER</ThingDef>
+        </descriptionHyperlinks>
+        <spawnThingOnRemoved>IP_DAON_23_WATCHER</spawnThingOnRemoved>
+        <stages>
+            <li>
+                <statOffsets>
+                    <ShootingAccuracyPawn>3</ShootingAccuracyPawn>
+                </statOffsets>
+            </li>
+        </stages>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.10</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+
+        <!-- 부착시 이미지 표시 -->
+
+        <!-- <renderNodeProperties>
+            <li Class="PawnRenderNodeProperties_Eye">
+                <workerClass>PawnRenderNodeWorker_HediffEye</workerClass>
+                <texPath>Things/Pawn/Wounds/BionicEye</texPath>
+                <parentTagDef>Head</parentTagDef>
+                <drawSize>0.15</drawSize>
+                <drawData>
+                    <defaultData>
+                        <layer>56</layer>
+                        <offset>(0, 0, -0.25)</offset>
+                    </defaultData>
+                    <dataWest>
+                        <flip>true</flip>
+                    </dataWest>
+                </drawData>
+            </li>
+        </renderNodeProperties> -->
+    </HediffDef>
+
+    <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
+        <defName>IP_DAON_23_WATCHER</defName>
+        <label>IMSL-23 SENTINEL WATCHER</label>
+        <!-- Imperial Marine Strategic Laboratory에서 개발한 전투용 안구입니다. 병사들의 사격 능력을 향상시키기 위해 설계된 이 안구는, 내장된 조준 시스템을 통해 사용자의 명중률을 크게 개선합니다. -->
+        <description>Developed by the Imperial Marine Strategic Laboratory, this combat eye is designed to enhance soldiers' shooting abilities. Equipped with an integrated aiming system, it significantly improves the user's accuracy.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>IP_DAON_23_WATCHER</RecipeDef>
+        </descriptionHyperlinks>
+        <costList>
+            <Steel>30</Steel>
+            <ComponentIndustrial>5</ComponentIndustrial>
+        </costList>
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        <statBases>
+            <Mass>0.3</Mass>
+            <MarketValue>420</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Simple</li>
+        </techHediffsTags>
+        <recipeMaker>
+            <researchPrerequisites>
+                <li>IP_AdvancedProsthetic</li>
+                <li>IP_SentinelProject</li>
+            </researchPrerequisites>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <unfinishedThingDef>UnfinishedHealthItemProsthetic</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>7</Crafting>
+            </skillRequirements>
+            <workAmount>20000</workAmount>
+        </recipeMaker>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
+        <defName>IP_DAON_23_WATCHER</defName>
+        <label>Install IMSL-23 SENTINEL WATCHER</label>
+        <description>Installs Advanced ProstheticEye.</description>
+        <jobString>Installing IMSL-23 SENTINEL WATCHER.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IP_DAON_23_WATCHER</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>IP_DAON_23_WATCHER</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Eye</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>IP_DAON_23_WATCHER</addsHediff>
+    </RecipeDef>
+
+</Defs>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+    <!-- 1티어 파츠 -->
+
+    <!-- AdvancedProsthesis Spine -->
+
+    <HediffDef ParentName="AddedBodyPartBase">
+        <defName>IP_AdvancedProsthesisSpine</defName>
+        <label>Advanced Prosthesis Spine</label>
+        <labelNoun>Advanced Prosthesis Spine</labelNoun>
+        <!-- 기술의 발전으로 만들어진 보강된 보철물 척추입니다. 기존의 척추보다 약간 열등하지만 다른 선택지가 없을 경우 사용됩니다.  -->
+        <description>A reinforced prosthetic spine developed through technological advancement. Slightly inferior to a natural spine, but used when no better alternatives are available.</description>
+        <descriptionHyperlinks>
+            <ThingDef>IP_AdvancedProsthesisSpine</ThingDef>
+        </descriptionHyperlinks>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>0.9</partEfficiency>
+        </addedPartProps>
+        <spawnThingOnRemoved>IP_AdvancedProsthesisSpine</spawnThingOnRemoved>
+    </HediffDef>
+
+    <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
+        <defName>IP_AdvancedProsthesisSpine</defName>
+        <label>Advanced Prosthesis Spine</label>
+        <!-- 기술의 발전으로 만들어진 보강된 보철물 척추입니다. 기존의 척추보다 약간 열등하지만 다른 선택지가 없을 경우 사용됩니다.  -->
+        <description>A reinforced prosthetic spine developed through technological advancement. Slightly inferior to a natural spine, but used when no better alternatives are available.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>IP_AdvancedProsthesisSpine</RecipeDef>
+        </descriptionHyperlinks>
+        <costList>
+            <Steel>25</Steel>
+            <ComponentIndustrial>3</ComponentIndustrial>
+        </costList>
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        <statBases>
+            <Mass>2.0</Mass>
+            <MarketValue>300</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Industrial</li>
+        </techHediffsTags>
+        <recipeMaker>
+            <researchPrerequisite>IP_AdvancedProsthetic</researchPrerequisite>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <unfinishedThingDef>UnfinishedHealthItemProsthetic</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>6</Crafting>
+            </skillRequirements>
+            <workAmount>18000</workAmount>
+        </recipeMaker>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
+        <defName>IP_AdvancedProsthesisSpine</defName>
+        <label>Installing Advanced Prosthesis Spine</label>
+        <description>Installs Advanced Prosthesis Spine.</description>
+        <jobString>Installing Advanced Prosthesis Spine.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IP_AdvancedProsthesisSpine</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Medicine>3</Medicine>
+        </skillRequirements>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>IP_AdvancedProsthesisSpine</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Spine</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>IP_AdvancedProsthesisSpine</addsHediff>
+    </RecipeDef>
+
+</Defs>

@@ -1,0 +1,119 @@
+<Defs>
+
+    <!-- Techprint : IDC MasterModule -->
+
+    <ThingDef ParentName="ResourceBase">
+        <defName>IP_IDC_MasterModuleTech</defName>
+        <label>Techprint : IDC MasterModule</label>
+        <description>A rare techprint containing advanced design schematics for the Juggernaut Project.</description>
+        <thingClass>ThingWithComps</thingClass>
+        <category>Item</category>
+        <techLevel>Spacer</techLevel>
+        <comps>
+            <li Class="CompProperties_Techprint">
+                <project>IP_IDC_MasterModule</project>
+            </li>
+        </comps>
+        <thingSetMakerTags>
+            <li>RewardStandardMidFreq</li>
+            <li>OrbitalTraderStock</li>
+            <li>TraderGeneralStock</li>
+        </thingSetMakerTags>
+        <tradeTags>
+            <li>ExoticMisc</li>
+            <li>TechHediff</li>
+        </tradeTags>
+        <statBases>
+            <MarketValue>1200</MarketValue>
+            <Mass>0.2</Mass>
+        </statBases>
+    </ThingDef>
+
+    <!-- Techprint : Ascension Protocol -->
+
+    <ThingDef ParentName="ResourceBase">
+        <defName>IP_IDC_AscensionProtocolTech</defName>
+        <label>Techprint : Ascension Protocol</label>
+        <description>A rare techprint containing advanced design schematics for the Juggernaut Project.</description>
+        <thingClass>ThingWithComps</thingClass>
+        <category>Item</category>
+        <techLevel>Spacer</techLevel>
+        <comps>
+            <li Class="CompProperties_Techprint">
+                <project>IP_AscensionProtocol</project>
+            </li>
+        </comps>
+        <thingSetMakerTags>
+            <li>RewardStandardMidFreq</li>
+            <li>OrbitalTraderStock</li>
+            <li>TraderGeneralStock</li>
+        </thingSetMakerTags>
+        <tradeTags>
+            <li>ExoticMisc</li>
+            <li>TechHediff</li>
+        </tradeTags>
+        <statBases>
+            <MarketValue>1200</MarketValue>
+            <Mass>0.2</Mass>
+        </statBases>
+    </ThingDef>
+
+    <!-- Techprint : DaoN Elite Series -->
+
+    <ThingDef ParentName="ResourceBase">
+        <defName>IP_IDC_DaoN_EliteSeriesTech</defName>
+        <label>Techprint : DaoN Elite Series</label>
+        <description>A rare techprint containing advanced design schematics for the Juggernaut Project.</description>
+        <thingClass>ThingWithComps</thingClass>
+        <category>Item</category>
+        <techLevel>Spacer</techLevel>
+        <comps>
+            <li Class="CompProperties_Techprint">
+                <project>IP_DaoN_EliteSeries</project>
+            </li>
+        </comps>
+        <thingSetMakerTags>
+            <li>RewardStandardMidFreq</li>
+            <li>OrbitalTraderStock</li>
+            <li>TraderGeneralStock</li>
+        </thingSetMakerTags>
+        <tradeTags>
+            <li>ExoticMisc</li>
+            <li>TechHediff</li>
+        </tradeTags>
+        <statBases>
+            <MarketValue>1200</MarketValue>
+            <Mass>0.2</Mass>
+        </statBases>
+    </ThingDef>
+
+    <!-- Techprint : Juggernaut Project -->
+
+    <ThingDef ParentName="ResourceBase">
+        <defName>IP_JuggernautProjectTech</defName>
+        <label>Techprint : Juggernaut Project</label>
+        <description>A rare techprint containing advanced design schematics for the Juggernaut Project.</description>
+        <thingClass>ThingWithComps</thingClass>
+        <category>Item</category>
+        <techLevel>Spacer</techLevel>
+        <comps>
+            <li Class="CompProperties_Techprint">
+                <project>IP_JuggernautProject</project>
+            </li>
+        </comps>
+        <thingSetMakerTags>
+            <li>RewardStandardMidFreq</li>
+            <li>OrbitalTraderStock</li>
+            <li>TraderGeneralStock</li>
+        </thingSetMakerTags>
+        <tradeTags>
+            <li>ExoticMisc</li>
+            <li>TechHediff</li>
+        </tradeTags>
+        <statBases>
+            <MarketValue>1200</MarketValue>
+            <Mass>0.2</Mass>
+        </statBases>
+    </ThingDef>
+
+</Defs>

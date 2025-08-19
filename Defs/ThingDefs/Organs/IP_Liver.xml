@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+    <!-- 1티어 파츠 -->
+
+    <!-- AdvancedProsthesis Liver -->
+
+    <HediffDef ParentName="ImplantHediffBase">
+        <defName>IP_AdvancedProsthesisLiver</defName>
+        <label>Advanced Prosthesis Liver</label>
+        <labelNoun>Advanced Prosthesis Liver</labelNoun>
+        <!-- 기술의 발전으로 만들어진 보철물 간입니다. 실제 간과 동일하게 작동합니다. 건강상 문제 등으로 교체해야 할 시 사용되곤 합니다. -->
+        <description>A prosthetic liver developed through technological advancement. It functions the same as a natural liver and is typically used when replacement is needed due to health issues.</description>
+        <descriptionHyperlinks>
+            <ThingDef>IP_AdvancedProsthesisLiver</ThingDef>
+        </descriptionHyperlinks>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.0</partEfficiency>
+        </addedPartProps>
+        <spawnThingOnRemoved>IP_AdvancedProsthesisLiver</spawnThingOnRemoved>
+    </HediffDef>
+
+    <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
+        <defName>IP_AdvancedProsthesisLiver</defName>
+        <label>Advanced Prosthesis Liver</label>
+        <!-- 기술의 발전으로 만들어진 보철물 간입니다. 실제 간과 동일하게 작동합니다. 건강상 문제 등으로 교체해야 할 시 사용되곤 합니다. -->
+        <description>A prosthetic liver developed through technological advancement. It functions the same as a natural liver and is typically used when replacement is needed due to health issues.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>IP_AdvancedProsthesisLiver</RecipeDef>
+        </descriptionHyperlinks>
+        <costList>
+            <Steel>20</Steel>
+            <ComponentIndustrial>3</ComponentIndustrial>
+        </costList>
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        <statBases>
+            <Mass>1.0</Mass>
+            <MarketValue>270</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Industrial</li>
+        </techHediffsTags>
+        <recipeMaker>
+            <researchPrerequisite>IP_AdvancedProsthetic</researchPrerequisite>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <unfinishedThingDef>UnfinishedHealthItemProsthetic</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>5</Crafting>
+            </skillRequirements>
+            <workAmount>17500</workAmount>
+        </recipeMaker>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>IP_AdvancedProsthesisLiver</defName>
+        <label>Installing Advanced Prosthesis Liver</label>
+        <description>Installs Advanced Prosthesis Liver.</description>
+        <jobString>Installing Advanced Prosthesis Liver.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IP_AdvancedProsthesisLiver</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Medicine>3</Medicine>
+        </skillRequirements>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>IP_AdvancedProsthesisLiver</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Liver</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>IP_AdvancedProsthesisLiver</addsHediff>
+    </RecipeDef>
+
+</Defs>

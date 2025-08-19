@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+    <!-- 1티어 파츠 -->
+
+    <!-- AdvancedProsthesis Lung -->
+
+    <HediffDef ParentName="ImplantHediffBase">
+        <defName>IP_AdvancedProsthesisLung</defName>
+        <label>Advanced Prosthesis Lung</label>
+        <labelNoun>Advanced Prosthesis Lung</labelNoun>
+        <!-- 기술의 발전으로 실제와 동일하게 작동하는 보철물 신장 입니다. 일반 신장과 동일한 기능을 하나, 건강상 등의 이유로 제작되곤 합니다. -->
+        <description>A prosthetic kidney developed through technological advancement to replicate natural function. Performs the same as a natural kidney, but is often used due to health or medical necessity.</description>
+        <descriptionHyperlinks>
+            <ThingDef>IP_AdvancedProsthesisLung</ThingDef>
+        </descriptionHyperlinks>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.0</partEfficiency>
+        </addedPartProps>
+        <spawnThingOnRemoved>IP_AdvancedProsthesisLung</spawnThingOnRemoved>
+    </HediffDef>
+
+    <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
+        <defName>IP_AdvancedProsthesisLung</defName>
+        <label>Advanced Prosthesis Lung</label>
+        <!-- 기술의 발전으로 실제와 작동하는 보철물 신장 입니다. 일반 신장과 동일한 기능을 하나, 건강상 등의 이유로 제작되곤 합니다. -->
+        <description>A prosthetic kidney developed through technological advancement to replicate natural function. Performs the same as a natural kidney, but is often used due to health or medical necessity.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>IP_AdvancedProsthesisLung</RecipeDef>
+        </descriptionHyperlinks>
+        <costList>
+            <Steel>30</Steel>
+            <ComponentIndustrial>3</ComponentIndustrial>
+        </costList>
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        <statBases>
+            <Mass>1.0</Mass>
+            <MarketValue>270</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Industrial</li>
+        </techHediffsTags>
+        <recipeMaker>
+            <researchPrerequisite>IP_AdvancedProsthetic</researchPrerequisite>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <unfinishedThingDef>UnfinishedHealthItemProsthetic</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>7</Crafting>
+            </skillRequirements>
+            <workAmount>17500</workAmount>
+        </recipeMaker>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>IP_AdvancedProsthesisLung</defName>
+        <label>Installing Advanced Prosthesis Lung</label>
+        <description>Installs Advanced Prosthesis Lung.</description>
+        <jobString>Installing Advanced Prosthesis Lung.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IP_AdvancedProsthesisLung</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Medicine>4</Medicine>
+        </skillRequirements>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>IP_AdvancedProsthesisLung</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Lung</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>IP_AdvancedProsthesisLung</addsHediff>
+    </RecipeDef>
+
+</Defs>

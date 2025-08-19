@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+    <name>IMPLANT PLUS</name>
+    <author>BAMBI0220</author>
+    <packageId>BAMBI0220.implantplus</packageId>
+    <description>This mod allows you to enhance your colonists' bodies in more diverse  and strategic ways. It adds not only standard performance-boosting implants, but also new ones with unique abilities that offer additional options in combat, productivity, and survival.</description>
+    <supportedVersions>
+        <li>1.6</li>
+    </supportedVersions>
+    <modDependencies>
+        <li>
+            <packageId>ludeon.rimworld.royalty</packageId>
+            <displayName>Royalty</displayName>
+        </li>
+        <li>
+            <packageId>ludeon.rimworld.biotech</packageId>
+            <displayName>Biotech</displayName>
+        </li>
+        <li>
+            <packageId>ludeon.rimworld.anomaly</packageId>
+            <displayName>Anomaly</displayName>
+        </li>
+        <li>
+            <packageId>brrainz.harmony</packageId>
+            <displayName>Harmony</displayName>
+            <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+        </li>
+    </modDependencies>
+    <loadAfter>
+        <li>ludeon.rimworld.royalty</li>
+        <li>ludeon.rimworld.biotech</li>
+        <li>ludeon.rimworld.oddssey</li>
+        <li>
+            <packageId>brrainz.harmony</packageId>
+            <displayName>Harmony</displayName>
+            <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+        </li>
+    </loadAfter>
+</ModMetaData>

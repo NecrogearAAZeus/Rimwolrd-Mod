@@ -1,0 +1,5 @@
+E:\games\steamapps\common\RimWorld\Mods\IMPLANT_PLUS\Source\Implant_Plus\obj\Debug\net6.0\Implant_Plus.csproj.AssemblyReference.cache
+E:\games\steamapps\common\RimWorld\Mods\IMPLANT_PLUS\Source\Implant_Plus\obj\Debug\net6.0\Implant_Plus.GeneratedMSBuildEditorConfig.editorconfig
+E:\games\steamapps\common\RimWorld\Mods\IMPLANT_PLUS\Source\Implant_Plus\obj\Debug\net6.0\Implant_Plus.AssemblyInfoInputs.cache
+E:\games\steamapps\common\RimWorld\Mods\IMPLANT_PLUS\Source\Implant_Plus\obj\Debug\net6.0\Implant_Plus.AssemblyInfo.cs
+E:\games\steamapps\common\RimWorld\Mods\IMPLANT_PLUS\Source\Implant_Plus\obj\Debug\net6.0\Implant_Plus.csproj.CoreCompileInputs.cache

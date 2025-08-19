@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+    <!-- 1티어 파츠 -->
+
+    <!-- AdvancedProsthesis Nose -->
+
+    <HediffDef ParentName="AddedBodyPartBase">
+        <defName>IP_AdvancedProsthesisNose</defName>
+        <label>Advanced Prosthesis Nose</label>
+        <labelNoun>Advanced Prosthesis Nose</labelNoun>
+        <!-- 기술의 발전으로 만들어진 보철물 코입니다. 후각 시스템이 장착되어 있어 실제 코와 동일하게 작동하지만, 코를 잃은 사람이 아니라면 굳이 이식할 이유는 없습니다. -->
+        <description>A prosthetic nose developed through technological advancement. Equipped with an olfactory system, it functions like a real nose, but there's little reason to install it unless the original is missing.</description>
+        <descriptionHyperlinks>
+            <ThingDef>IP_AdvancedProsthesisNose</ThingDef>
+        </descriptionHyperlinks>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.0</partEfficiency>
+        </addedPartProps>
+        <spawnThingOnRemoved>IP_AdvancedProsthesisNose</spawnThingOnRemoved>
+    </HediffDef>
+
+    <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
+        <defName>IP_AdvancedProsthesisNose</defName>
+        <label>Advanced Prosthesis Nose</label>
+        <!-- 기술의 발전으로 만들어진 보철물 코입니다. 후각 시스템이 장착되어 있어 실제 코와 동일하게 작동하지만, 코를 잃은 사람이 아니라면 굳이 이식할 이유는 없습니다. -->
+        <description>A prosthetic nose developed through technological advancement. Equipped with an olfactory system, it functions like a real nose, but there's little reason to install it unless the original is missing.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>IP_AdvancedProsthesisNose</RecipeDef>
+        </descriptionHyperlinks>
+        <costList>
+            <Steel>20</Steel>
+            <ComponentIndustrial>3</ComponentIndustrial>
+        </costList>
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        <statBases>
+            <MarketValue>200</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Industrial</li>
+        </techHediffsTags>
+        <recipeMaker>
+            <researchPrerequisite>IP_AdvancedProsthetic</researchPrerequisite>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <unfinishedThingDef>UnfinishedHealthItemProsthetic</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>5</Crafting>
+            </skillRequirements>
+            <workAmount>15000</workAmount>
+        </recipeMaker>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>IP_AdvancedProsthesisNose</defName>
+        <label>Installing Advanced Prosthesis Nose</label>
+        <description>Installs Advanced Prosthesis Nose.</description>
+        <jobString>Installing Advanced Prosthesis Nose.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IP_AdvancedProsthesisNose</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Medicine>3</Medicine>
+        </skillRequirements>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>IP_AdvancedProsthesisNose</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Heart</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>IP_AdvancedProsthesisNose</addsHediff>
+    </RecipeDef>
+
+</Defs>

@@ -1,0 +1,814 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!-- 할일
+  
+중복 장착 안되게 만들기 
+
+-->
+
+<Defs>
+
+    <!-- 1티어 파츠 -->
+
+    <!-- Combat Assist AI -->
+
+
+    <HediffDef ParentName="ImplantHediffBase">
+        <defName>IP_CombatAssistAI</defName>
+        <label>Combat Assist AI</label>
+        <labelNoun>Combat Assist AI</labelNoun>
+        <!-- 과거 제국 군의 전투 보조를 위해 개발된 기초형 AI의 시제품입니다.약간의 전투능력을 향상 시킵니다. 과부화를 방지하기 위해 다른 칩과 함께 사용할수 없습니다. -->
+        <description>A prototype combat-assist AI developed by the ancient empire. Provides minor combat support. To prevent neural overload, it cannot be used alongside other AI.</description>
+        <descriptionHyperlinks>
+            <ThingDef>IP_CombatAssistAI</ThingDef>
+        </descriptionHyperlinks>
+        <spawnThingOnRemoved>IP_CombatAssistAI</spawnThingOnRemoved>
+        <aptitudes>
+            <Shooting>2</Shooting>
+            <Melee>2</Melee>
+        </aptitudes>
+        <stages>
+            <li>
+                <statOffsets>
+                    <ShootingAccuracyPawn>3</ShootingAccuracyPawn>
+                    <MeleeHitChance>3</MeleeHitChance>
+                </statOffsets>
+            </li>
+        </stages>
+        <comps>
+            <li Class="Implant_Plus.HediffCompProperties_EMPReaction" />
+        </comps>
+    </HediffDef>
+
+    <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
+        <defName>IP_CombatAssistAI</defName>
+        <label>A Combat Assist AI</label>
+        <!-- 과거 제국의 군인들을 위해 연구,개발된 기초적인 전투 보조 AI의 시제품입니다. 과부하가 걸리는 것을 방지하기 위해, 다른 AI와 중복 사용이 불가능합니다.-->
+        <description>A prototype of a basic combat-assist AI developed for the soldiers of the ancient empire. To prevent neural overload, it cannot be used alongside other AI.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>IP_CombatAssistAI</RecipeDef>
+        </descriptionHyperlinks>
+        <costList>
+            <Steel>30</Steel>
+            <ComponentIndustrial>4</ComponentIndustrial>
+        </costList>
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        <statBases>
+            <MarketValue>350</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Industrial</li>
+        </techHediffsTags>
+        <recipeMaker>
+            <researchPrerequisite>IP_BasicAI_Chip</researchPrerequisite>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>7</Crafting>
+            </skillRequirements>
+            <workAmount>20000</workAmount>
+        </recipeMaker>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>IP_CombatAssistAI</defName>
+        <label>Installing Combat Assist AI</label>
+        <description>Installs Combat Assist AI.</description>
+        <jobString>Installing Combat Assist AI.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IP_CombatAssistAI</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Medicine>3</Medicine>
+        </skillRequirements>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>IP_CombatAssistAI</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Brain</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>IP_CombatAssistAI</addsHediff>
+        <!-- 이게 아마 같이 안되게 하는것 같음 아마 커스텀 함수같음 -->
+        <!-- <incompatibleWithHediffTags>
+			<li>AuxiliaryAI_Worker</li>
+			<li>AuxiliaryAI_Combat</li>
+		</incompatibleWithHediffTags> -->
+    </RecipeDef>
+
+    <!-- Field worker Assist AI -->
+
+    <HediffDef ParentName="ImplantHediffBase">
+        <defName>IP_FieldworkerAssistAI</defName>
+        <label>Field worker Assist AI</label>
+        <labelNoun>Field worker Assist AI</labelNoun>
+        <!-- 노동자 계층을 위해 개발된 기초형 AI입니다. 건설, 채굴, 원예, 조련에 필요한 다양한 지식을 주입하여 기술 숙련도를 높이고, 작업 속도를 향상시킵니다. 과부하가 걸리는 것을 방지하기 위해, 다른 AI와 중복 사용이 불가능합니다. -->
+        <description>A basic AI developed for the working class. It enhances skill proficiency and increases work speed by injecting a wide range of knowledge required for construction, mining, planting, and animal handling. To prevent cognitive overload, it cannot be used alongside other AI systems.</description>
+        <descriptionHyperlinks>
+            <ThingDef>IP_FieldworkerAssistAI</ThingDef>
+        </descriptionHyperlinks>
+        <spawnThingOnRemoved>IP_FieldworkerAssistAI</spawnThingOnRemoved>
+        <aptitudes>
+            <Construction>2</Construction>
+            <Mining>2</Mining>
+            <Plants>2</Plants>
+            <Animals>2</Animals>
+        </aptitudes>
+        <stages>
+            <li>
+                <statOffsets>
+                    <GeneralLaborSpeed>0.15</GeneralLaborSpeed>
+                </statOffsets>
+            </li>
+        </stages>
+        <comps>
+            <li Class="Implant_Plus.HediffCompProperties_EMPReaction" />
+        </comps>
+    </HediffDef>
+
+    <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
+        <defName>IP_FieldworkerAssistAI</defName>
+        <label>Field worker Assist AI</label>
+        <!-- 노동자 계층을 위해 개발된 기초형 AI입니다. 건설, 채굴, 원예, 조련에 필요한 다양한 지식을 주입하여 기술 숙련도를 높이고, 작업 속도를 향상시킵니다. 과부하가 걸리는 것을 방지하기 위해, 다른 AI와 중복 사용이 불가능합니다. -->
+        <description>A basic AI developed for the working class. It enhances skill proficiency and increases work speed by injecting a wide range of knowledge required for construction, mining, planting, and animal handling. To prevent cognitive overload, it cannot be used alongside other AI systems.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>IP_FieldworkerAssistAI</RecipeDef>
+        </descriptionHyperlinks>
+        <costList>
+            <Steel>30</Steel>
+            <ComponentIndustrial>4</ComponentIndustrial>
+        </costList>
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        <statBases>
+            <MarketValue>350</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Industrial</li>
+        </techHediffsTags>
+        <recipeMaker>
+            <researchPrerequisite>IP_BasicAI_Chip</researchPrerequisite>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>7</Crafting>
+            </skillRequirements>
+            <workAmount>20000</workAmount>
+        </recipeMaker>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>IP_FieldworkerAssistAI</defName>
+        <label>Installing Field worker Assist AI</label>
+        <description>Installs Field worker Assist AI.</description>
+        <jobString>Installing Field worker Assist AI.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IP_FieldworkerAssistAI</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Medicine>3</Medicine>
+        </skillRequirements>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>IP_FieldworkerAssistAI</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Brain</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>IP_FieldworkerAssistAI</addsHediff>
+    </RecipeDef>
+
+
+    <!-- Craftmaster Assist AI -->
+
+    <HediffDef ParentName="ImplantHediffBase">
+        <defName>IP_CraftmasterAssistAI</defName>
+        <label>Craftmaster Assist AI</label>
+        <labelNoun>Craftmaster Assist AI</labelNoun>
+        <!-- 정밀한 손작업을 지원하는 보조 AI입니다. 작업자의 조리, 예술, 제작 기술을 분석 및 최적화하여 생산성을 높입니다. 기술을 연마 중인 수습생들이 자주 사용합니다. 과부하가 걸리는 것을 방지하기 위해, 다른 AI와 중복 사용이 불가능합니다 -->
+        <description>A support AI designed to assist with precise manual tasks. It analyzes and optimizes the user's cooking, artistic, and crafting skills to boost productivity. Commonly used by apprentices honing their skills. To prevent cognitive overload, it cannot be used alongside other AI systems.</description>
+        <descriptionHyperlinks>
+            <ThingDef>IP_CraftmasterAssistAI</ThingDef>
+        </descriptionHyperlinks>
+        <spawnThingOnRemoved>IP_CraftmasterAssistAI</spawnThingOnRemoved>
+        <aptitudes>
+            <Cooking>2</Cooking>
+            <Crafting>2</Crafting>
+            <Artistic>2</Artistic>
+        </aptitudes>
+        <stages>
+            <li>
+                <statOffsets>
+                    <GeneralLaborSpeed>0.15</GeneralLaborSpeed>
+                </statOffsets>
+            </li>
+        </stages>
+        <comps>
+            <li Class="Implant_Plus.HediffCompProperties_EMPReaction" />
+        </comps>
+    </HediffDef>
+
+    <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
+        <defName>IP_CraftmasterAssistAI</defName>
+        <label>Craftmaster Assist AI</label>
+        <!-- 정밀한 손작업을 지원하는 보조 AI입니다. 작업자의 조리, 예술, 제작 기술을 분석 및 최적화하여 생산성을 높입니다. 기술을 연마 중인 수습생들이 자주 사용합니다. 과부하가 걸리는 것을 방지하기 위해, 다른 AI와 중복 사용이 불가능합니다 -->
+        <description>A support AI designed to assist with precise manual tasks. It analyzes and optimizes the user's cooking, artistic, and crafting skills to boost productivity. Commonly used by apprentices honing their skills. To prevent cognitive overload, it cannot be used alongside other AI systems.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>IP_CraftmasterAssistAI</RecipeDef>
+        </descriptionHyperlinks>
+        <costList>
+            <Steel>30</Steel>
+            <ComponentIndustrial>4</ComponentIndustrial>
+        </costList>
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        <statBases>
+            <MarketValue>350</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Industrial</li>
+        </techHediffsTags>
+        <recipeMaker>
+            <researchPrerequisite>IP_BasicAI_Chip</researchPrerequisite>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>7</Crafting>
+            </skillRequirements>
+            <workAmount>20000</workAmount>
+        </recipeMaker>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>IP_CraftmasterAssistAI</defName>
+        <label>Installing Craftmaster Assist AI</label>
+        <description>Installs Craftmaster Assist AI.</description>
+        <jobString>Installing Craftmaster Assist AI.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IP_CraftmasterAssistAI</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Medicine>3</Medicine>
+        </skillRequirements>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>IP_CraftmasterAssistAI</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Brain</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>IP_CraftmasterAssistAI</addsHediff>
+    </RecipeDef>
+
+
+    <!-- Cognitor Assist AI -->
+
+
+    <HediffDef ParentName="ImplantHediffBase">
+        <defName>IP_CognitorAssistAI</defName>
+        <label>Cognitor Assist AI</label>
+        <labelNoun>Cognitor Assist AI</labelNoun>
+        <!-- 전문 인력을 위해 설계된 연산 보조형 AI입니다. 연구와 의학 분야에서 요구되는 복잡한 사고와 판단을 지원하며, 관련 기술 전반의 숙련도를 향상시킵니다. 과부하를 방지하기 위해 다른 AI와 중복 사용할 수 없습니다 -->
+        <description>A computational support AI designed for specialized personnel. It assists with the complex reasoning and decision-making required in research and medicine, enhancing overall proficiency in related fields. To prevent neural overload, it cannot be used alongside other AI.</description>
+        <descriptionHyperlinks>
+            <ThingDef>IP_CognitorAssistAI</ThingDef>
+        </descriptionHyperlinks>
+        <spawnThingOnRemoved>IP_CognitorAssistAI</spawnThingOnRemoved>
+        <aptitudes>
+            <Medicine>2</Medicine>
+            <Intellectual>2</Intellectual>
+        </aptitudes>
+        <stages>
+            <li>
+                <statOffsets>
+                    <MedicalTendQuality>0.1</MedicalTendQuality>
+                    <MedicalSurgerySuccessChance>0.1</MedicalSurgerySuccessChance>
+                    <ResearchSpeed>0.15</ResearchSpeed>
+                </statOffsets>
+            </li>
+        </stages>
+        <comps>
+            <li Class="Implant_Plus.HediffCompProperties_EMPReaction" />
+        </comps>
+    </HediffDef>
+
+    <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
+        <defName>IP_CognitorAssistAI</defName>
+        <label>Cognitor Assist AI</label>
+        <!-- 전문 인력을 위해 설계된 연산 보조형 AI입니다. 연구와 의학 분야에서 요구되는 복잡한 사고와 판단을 지원하며, 관련 기술 전반의 숙련도를 향상시킵니다. 과부하를 방지하기 위해 다른 AI와 중복 사용할 수 없습니다 -->
+        <description>A computational support AI designed for specialized personnel. It assists with the complex reasoning and decision-making required in research and medicine, enhancing overall proficiency in related fields. To prevent neural overload, it cannot be used alongside other AI.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>IP_CognitorAssistAI</RecipeDef>
+        </descriptionHyperlinks>
+        <costList>
+            <Steel>30</Steel>
+            <ComponentIndustrial>4</ComponentIndustrial>
+        </costList>
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        <statBases>
+            <MarketValue>350</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Industrial</li>
+        </techHediffsTags>
+        <recipeMaker>
+            <researchPrerequisite>IP_BasicAI_Chip</researchPrerequisite>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>7</Crafting>
+            </skillRequirements>
+            <workAmount>20000</workAmount>
+        </recipeMaker>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>IP_CognitorAssistAI</defName>
+        <label>Installing Cognitor Assist AI</label>
+        <description>Installs Cognitor Assist AI.</description>
+        <jobString>Installing Cognitor Assist AI.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IP_CognitorAssistAI</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Medicine>3</Medicine>
+        </skillRequirements>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>IP_CognitorAssistAI</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Brain</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>IP_CognitorAssistAI</addsHediff>
+    </RecipeDef>
+
+    <!-- ORD-41 OVERSEER -->
+
+    <HediffDef ParentName="ImplantHediffBase">
+        <defName>IP_ORD_41_OVERSEER</defName>
+        <label>ORD-41 OVERSEER</label>
+        <labelNoun>ORD-41 OVERSEER</labelNoun>
+        <!-- Order of the Machina의 하급 메카나이터에게 지급되는 AI로, 메카노이드에 대한 숭배와 이해를 깊이 있게 할 수 있도록 설계되었습니다. 이 AI는 메카나이터가 메카노이드 제어를 더욱 정밀하고 효율적으로 수행할 수 있도록 지원합니다. 과부하를 방지하기 위해 다른 AI와 중복 설치할 수 없습니다. -->
+        <description>This AI, issued to lower-ranking Mechaniers of the Order of the Machina, is designed to deepen their worship and understanding of Mechanoids. The AI helps the Mechaniers to perform Mechanoid control with greater precision and efficiency. To prevent neural overload, it cannot be used alongside other AI.</description>
+        <descriptionHyperlinks>
+            <ThingDef>IP_ORD_41_OVERSEER</ThingDef>
+        </descriptionHyperlinks>
+        <spawnThingOnRemoved>IP_ORD_41_OVERSEER</spawnThingOnRemoved>
+        <aptitudes>
+            <Crafting>2</Crafting>
+        </aptitudes>
+        <stages>
+            <li>
+                <statOffsets>
+                    <MechBandwidth>4</MechBandwidth>
+                    <MechControlGroups>1</MechControlGroups>
+                    <WorkSpeedGlobalOffsetMech>0.08</WorkSpeedGlobalOffsetMech>
+                </statOffsets>
+            </li>
+        </stages>
+        <comps>
+            <li Class="Implant_Plus.HediffCompProperties_EMPReaction" />
+        </comps>
+    </HediffDef>
+
+    <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
+        <defName>IP_ORD_41_OVERSEER</defName>
+        <label>ORD-41 OVERSEER</label>
+        <!-- Order of the Machina의 하급 메카나이터에게 지급되는 AI로, 메카노이드에 대한 숭배와 이해를 깊이 있게 할 수 있도록 설계되었습니다. 이 AI는 메카나이터가 메카노이드 제어를 더욱 정밀하고 효율적으로 수행할 수 있도록 지원합니다. 과부하를 방지하기 위해 다른 AI와 중복 설치할 수 없습니다. -->
+        <description>This AI, issued to lower-ranking Mechaniers of the Order of the Machina, is designed to deepen their worship and understanding of Mechanoids. The AI helps the Mechaniers to perform Mechanoid control with greater precision and efficiency. To prevent neural overload, it cannot be used alongside other AI.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>IP_ORD_41_OVERSEER</RecipeDef>
+        </descriptionHyperlinks>
+        <costList>
+            <Steel>30</Steel>
+            <ComponentIndustrial>2</ComponentIndustrial>
+            <SignalChip>1</SignalChip>
+        </costList>
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        <statBases>
+            <MarketValue>900</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Industrial</li>
+        </techHediffsTags>
+        <recipeMaker>
+            <researchPrerequisites>
+                <li>IP_BasicAI_Chip</li>
+                <li>IP_InitiationProtocol</li>
+                <li>StandardMechtech</li>
+            </researchPrerequisites>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>7</Crafting>
+            </skillRequirements>
+            <workAmount>23500</workAmount>
+        </recipeMaker>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>IP_ORD_41_OVERSEER</defName>
+        <label>Installing ORD-41 OVERSEER</label>
+        <description>Installs ORD-41 OVERSEER.</description>
+        <jobString>Installing ORD-41 OVERSEER.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IP_ORD_41_OVERSEER</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Medicine>3</Medicine>
+        </skillRequirements>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>IP_ORD_41_OVERSEER</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Brain</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>IP_ORD_41_OVERSEER</addsHediff>
+    </RecipeDef>
+
+    <!-- DAON-43 HARMONY -->
+
+    <HediffDef ParentName="ImplantHediffBase">
+        <defName>IP_DAON_43_HARMONY</defName>
+        <label>DAON-43 HARMONY</label>
+        <labelNoun>DAON-43 HARMONY</labelNoun>
+        <!-- DAON Technology에서 개발한 사회화 보조 AI입니다. 사용자의 정신을 안정시고 원활한 사교활동을 돕습니다. 이 임플란트를 이식한 사람은 사교적 다툼 발생률이 50% 감소하며, 서비스직 분야에서 채용될 확률이 17.6% 높은 경향을 보였습니다. 과부하 방지를 위해 다른 AI 임플란트와 동시 설치할 수 없습니다. -->
+        <description>This socialization support AI, developed by DAON Technology, stabilizes the user's mind and facilitates smooth social interactions. Individuals implanted with this AI have shown a 50% decrease in the likelihood of social conflicts and a 17.6% higher chance of being hired in service sectors. To prevent overload, it cannot be installed alongside other AI implants.</description>
+        <descriptionHyperlinks>
+            <ThingDef>IP_DAON_43_HARMONY</ThingDef>
+        </descriptionHyperlinks>
+        <spawnThingOnRemoved>IP_DAON_43_HARMONY</spawnThingOnRemoved>
+        <aptitudes>
+            <Social>2</Social>
+        </aptitudes>
+        <stages>
+            <li>
+                <socialFightChanceFactor>0.5</socialFightChanceFactor>
+                <statOffsets>
+                    <SocialImpact>0.1</SocialImpact>
+                    <MentalBreakThreshold>-0.05</MentalBreakThreshold>
+                </statOffsets>
+            </li>
+        </stages>
+        <comps>
+            <li Class="Implant_Plus.HediffCompProperties_EMPReaction" />
+            <li Class="Implant_Plus.AddDisplayHediff_IP_DAON_43_HARMONY" />
+        </comps>
+    </HediffDef>
+
+    <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
+        <defName>IP_DAON_43_HARMONY</defName>
+        <label>DAON-43 HARMONY</label>
+        <!-- DAON Technology에서 개발한 사회화 보조 AI입니다. 사용자의 정신을 안정시고 원활한 사교활동을 돕습니다. 이 임플란트를 이식한 사람은 사교적 다툼 발생률이 50% 감소하며, 서비스직 분야에서 채용될 확률이 17.6% 높은 경향을 보였습니다. 과부하 방지를 위해 다른 AI 임플란트와 동시 설치할 수 없습니다. -->
+        <description>This socialization support AI, developed by DAON Technology, stabilizes the user's mind and facilitates smooth social interactions. Individuals implanted with this AI have shown a 50% decrease in the likelihood of social conflicts and a 17.6% higher chance of being hired in service sectors. To prevent overload, it cannot be installed alongside other AI implants.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>IP_DAON_43_HARMONY</RecipeDef>
+        </descriptionHyperlinks>
+        <costList>
+            <Steel>30</Steel>
+            <ComponentIndustrial>5</ComponentIndustrial>
+        </costList>
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        <statBases>
+            <MarketValue>400</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Industrial</li>
+        </techHediffsTags>
+        <recipeMaker>
+            <researchPrerequisites>
+                <li>IP_BasicAI_Chip</li>
+                <li>IP_DaoN_StandardSeries</li>
+            </researchPrerequisites>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>7</Crafting>
+            </skillRequirements>
+            <workAmount>23500</workAmount>
+        </recipeMaker>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>IP_DAON_43_HARMONY</defName>
+        <label>Installing DAON-43 HARMONY</label>
+        <description>Installs DAON-43 HARMONY.</description>
+        <jobString>Installing DAON-43 HARMONY.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IP_DAON_43_HARMONY</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Medicine>3</Medicine>
+        </skillRequirements>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>IP_DAON_43_HARMONY</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Brain</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>IP_DAON_43_HARMONY</addsHediff>
+    </RecipeDef>
+
+    <!-- DAON-44 APPRENTICE -->
+
+    <HediffDef ParentName="ImplantHediffBase">
+        <defName>IP_DAON_44_APPRENTICE</defName>
+        <label>DAON-44 APPRENTICE</label>
+        <labelNoun>DAON-44 APPRENTICE</labelNoun>
+        <!-- DAON Technology에서 개발한 연산 보조 AI입니다. 변화게 인턴들이 애용하는 제품으로 사용자의 의식을 또렷하게 하고 뇌의 연산을 보조해 사용자의 피로감을 줄여주며, 학습 속도를 증폭시킵니다. 과부하 방지를 위해 다른 AI 임플란트와 동시 설치할 수 없습니다. -->
+        <description>Developed by DAON Technology, this computational assistance AI is a product commonly used by interns in the change sector. It helps to enhance the user's consciousness, assists with brain computations, reduces fatigue, and amplifies the learning speed. To prevent neural overload, it cannot be installed alongside other AI implants.</description>
+        <descriptionHyperlinks>
+            <ThingDef>IP_DAON_44_APPRENTICE</ThingDef>
+        </descriptionHyperlinks>
+        <spawnThingOnRemoved>IP_DAON_44_APPRENTICE</spawnThingOnRemoved>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>0.05</offset>
+                    </li>
+                </capMods>
+                <statOffsets>
+                    <GlobalLearningFactor>0.1</GlobalLearningFactor>
+                </statOffsets>
+                <statFactors>
+                    <RestFallRateFactor>0.85</RestFallRateFactor>
+                </statFactors>
+            </li>
+        </stages>
+        <comps>
+            <li Class="Implant_Plus.HediffCompProperties_EMPReaction" />
+        </comps>
+    </HediffDef>
+
+    <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
+        <defName>IP_DAON_44_APPRENTICE</defName>
+        <label>DAON-44 APPRENTICE</label>
+        <!-- DAON Technology에서 개발한 연산 보조 AI입니다. 변화게 인턴들이 애용하는 제품으로 사용자의 의식을 또렷하게 하고 뇌의 연산을 보조해 사용자의 피로감을 줄여주며, 학습 속도를 증폭시킵니다. 과부하 방지를 위해 다른 AI 임플란트와 동시 설치할 수 없습니다. -->
+        <description>Developed by DAON Technology, this computational assistance AI is a product commonly used by interns in the change sector. It helps to enhance the user's consciousness, assists with brain computations, reduces fatigue, and amplifies the learning speed. To prevent neural overload, it cannot be installed alongside other AI implants.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>IP_DAON_44_APPRENTICE</RecipeDef>
+        </descriptionHyperlinks>
+        <costList>
+            <Steel>30</Steel>
+            <ComponentIndustrial>5</ComponentIndustrial>
+        </costList>
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        <statBases>
+            <MarketValue>400</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Industrial</li>
+        </techHediffsTags>
+        <recipeMaker>
+            <researchPrerequisites>
+                <li>IP_BasicAI_Chip</li>
+                <li>IP_DaoN_StandardSeries</li>
+            </researchPrerequisites>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>7</Crafting>
+            </skillRequirements>
+            <workAmount>23500</workAmount>
+        </recipeMaker>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>IP_DAON_44_APPRENTICE</defName>
+        <label>Installing DAON-44 APPRENTICE</label>
+        <description>Installs DAON-44 APPRENTICE.</description>
+        <jobString>Installing DAON-44 APPRENTICE.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IP_DAON_44_APPRENTICE</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Medicine>3</Medicine>
+        </skillRequirements>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>IP_DAON_44_APPRENTICE</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Brain</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>IP_DAON_44_APPRENTICE</addsHediff>
+    </RecipeDef>
+
+    <!-- IMSL-41 SENTINEL OFFICER -->
+
+    <HediffDef ParentName="ImplantHediffBase">
+        <defName>IP_IMSL_41_SENTINEL_OFFICER</defName>
+        <label>IMSL-41 SENTINEL OFFICER</label>
+        <labelNoun>IMSL-41 SENTINEL OFFICER</labelNoun>
+        <!-- Imperial Marine Strategic Laboratory에서 사관생도에게 이식되는 AI입니다. 사용자의 전투 능력을 향상시키고, 차후 작위를 부여받아 초능력을 얻게 될 경우를 대비하여 정신감응력과 사교성을 증대시킵니다. 이 AI는 사관생도의 전투 준비를 강화하고, 미래의 지도자로서 초능력을 발휘할 기반을 마련해줍니다. 과부하 방지를 위해 다른 AI 임플란트와 동시 설치할 수 없습니다. -->
+        <description>Developed by the Imperial Marine Strategic Laboratory, this AI is implanted into military cadets to enhance their combat abilities and prepare them for future ascension to higher ranks, where they may gain psychic powers. The AI increases psychic sensitivity and social skills, strengthening the cadet’s readiness for combat and laying the foundation for them to harness psychic abilities as future leaders. To prevent neural overload, it cannot be installed alongside other AI implants.</description>
+        <descriptionHyperlinks>
+            <ThingDef>IP_IMSL_41_SENTINEL_OFFICER</ThingDef>
+        </descriptionHyperlinks>
+        <spawnThingOnRemoved>IP_IMSL_41_SENTINEL_OFFICER</spawnThingOnRemoved>
+        <aptitudes>
+            <Shooting>1</Shooting>
+            <Melee>1</Melee>
+            <Social>1</Social>
+        </aptitudes>
+        <stages>
+            <li>
+                <statOffsets>
+                    <PsychicSensitivity>0.12</PsychicSensitivity>
+                    <PsychicEntropyMax>10</PsychicEntropyMax>
+                    <PsychicEntropyRecoveryRate>0.05</PsychicEntropyRecoveryRate>
+                </statOffsets>
+            </li>
+        </stages>
+        <comps>
+            <li Class="Implant_Plus.HediffCompProperties_EMPReaction" />
+        </comps>
+    </HediffDef>
+
+    <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
+        <defName>IP_IMSL_41_SENTINEL_OFFICER</defName>
+        <label>IMSL-41 SENTINEL OFFICER</label>
+        <!-- Imperial Marine Strategic Laboratory에서 사관생도에게 이식되는 AI입니다. 사용자의 전투 능력을 향상시키고, 차후 작위를 부여받아 초능력을 얻게 될 경우를 대비하여 정신감응력과 사교성을 증대시킵니다. 이 AI는 사관생도의 전투 준비를 강화하고, 미래의 지도자로서 초능력을 발휘할 기반을 마련해줍니다. 과부하 방지를 위해 다른 AI 임플란트와 동시 설치할 수 없습니다. -->
+        <description>Developed by the Imperial Marine Strategic Laboratory, this AI is implanted into military cadets to enhance their combat abilities and prepare them for future ascension to higher ranks, where they may gain psychic powers. The AI increases psychic sensitivity and social skills, strengthening the cadet’s readiness for combat and laying the foundation for them to harness psychic abilities as future leaders. To prevent neural overload, it cannot be installed alongside other AI implants.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>IP_IMSL_41_SENTINEL_OFFICER</RecipeDef>
+        </descriptionHyperlinks>
+        <costList>
+            <Steel>30</Steel>
+            <ComponentIndustrial>5</ComponentIndustrial>
+        </costList>
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        <statBases>
+            <MarketValue>400</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Industrial</li>
+        </techHediffsTags>
+        <recipeMaker>
+            <researchPrerequisites>
+                <li>IP_BasicAI_Chip</li>
+                <li>IP_SentinelProject</li>
+            </researchPrerequisites>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>7</Crafting>
+            </skillRequirements>
+            <workAmount>23500</workAmount>
+        </recipeMaker>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>IP_IMSL_41_SENTINEL_OFFICER</defName>
+        <label>Installing IMSL-41 SENTINEL OFFICER</label>
+        <description>Installs IMSL-41 SENTINEL OFFICER.</description>
+        <jobString>Installing IMSL-41 SENTINEL OFFICER.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IP_IMSL_41_SENTINEL_OFFICER</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Medicine>3</Medicine>
+        </skillRequirements>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>IP_IMSL_41_SENTINEL_OFFICER</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Brain</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>IP_IMSL_41_SENTINEL_OFFICER</addsHediff>
+    </RecipeDef>
+
+</Defs>

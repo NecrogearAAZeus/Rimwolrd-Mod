@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+    <!-- 1티어 파츠 -->
+
+    <!-- AdvancedProsthesis Stomach -->
+
+    <HediffDef ParentName="ImplantHediffBase">
+        <defName>IP_AdvancedProsthesisStomach</defName>
+        <label>Advanced Prosthesis Stomach</label>
+        <labelNoun>Advanced Prosthesis Stomach</labelNoun>
+        <!-- 기술의 발전으로 만들어진 보강된 보철물 위 입니다. 기존 위 보다는 우수하지만, 생체공학 위에는 미치지 못합니다. 플라스틸이나 고급 부품 없이도 제작 가능하지만, 정밀한 설계와 조립이 요구되어 제작에는 상당한 시간이 소요됩니다. -->
+        <description>A reinforced prosthetic stomach developed through technological advancement. It offers better performance than a natural stomach, but still falls short of a true bionic version. While it can be crafted without plasteel or advanced components, its precise design and complex assembly make it time-consuming to produce.</description>
+        <descriptionHyperlinks>
+            <ThingDef>IP_AdvancedProsthesisStomach</ThingDef>
+        </descriptionHyperlinks>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.15</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+        <spawnThingOnRemoved>IP_AdvancedProsthesisStomach</spawnThingOnRemoved>
+    </HediffDef>
+
+    <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
+        <defName>IP_AdvancedProsthesisStomach</defName>
+        <label>Advanced Prosthesis Stomach</label>
+        <!-- 기술의 발전으로 만들어진 보강된 보철물 다리 입니다. 단순한 보철물 턱이나 기존 다리보다는 우수하지만, 생체공학 다리에는 미치지 못합니다. 플라스틸이나 고급 부품 없이도 제작 가능하지만, 정밀한 설계와 조립이 요구되어 제작에는 상당한 시간이 소요됩니다. -->
+        <description>A reinforced prosthetic stomach developed through technological advancement. It offers better performance than a natural stomach, but still falls short of a true bionic version. While it can be crafted without plasteel or advanced components, its precise design and complex assembly make it time-consuming to produce.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>IP_AdvancedProsthesisStomach</RecipeDef>
+        </descriptionHyperlinks>
+        <costList>
+            <Steel>20</Steel>
+            <ComponentIndustrial>5</ComponentIndustrial>
+        </costList>
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        <statBases>
+            <Mass>2.0</Mass>
+            <MarketValue>380</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Industrial</li>
+        </techHediffsTags>
+        <recipeMaker>
+            <researchPrerequisite>IP_AdvancedProsthetic</researchPrerequisite>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <unfinishedThingDef>UnfinishedHealthItemProsthetic</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>7</Crafting>
+            </skillRequirements>
+            <workAmount>20000</workAmount>
+        </recipeMaker>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>IP_AdvancedProsthesisStomach</defName>
+        <label>Installing Advanced Prosthesis Stomach</label>
+        <description>Installs Advanced Prosthesis Stomach.</description>
+        <jobString>Installing Advanced Prosthesis Stomach.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IP_AdvancedProsthesisStomach</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Medicine>4</Medicine>
+        </skillRequirements>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>IP_AdvancedProsthesisStomach</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Stomach</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>IP_AdvancedProsthesisStomach</addsHediff>
+    </RecipeDef>
+
+</Defs>
