@@ -63,7 +63,13 @@ namespace Implant_Plus
             {
                 "IP_CombatInnerFrame",
                 "IP_StandardInnerFrame",
-                "IP_WorkerInnerFrame"
+                "IP_WorkerInnerFrame",
+                "IP_IDC_23_SURVIVOR",
+                "IP_DAON_31_VAITALBOOST",
+                "IP_ORD_25_EVOLUTION",
+                "IP_IMSL_BASTION_SHIELD",
+
+
                 // 추후 1티어 다른 엑소 스켈레톤 추가
             };
             
@@ -79,50 +85,16 @@ namespace Implant_Plus
                 "IP_FieldworkerAssistAI",
                 "IP_CraftmasterAssistAI",
                 "IP_CognitorAssistAI",
+                "IP_ORD_41_OVERSEER",
+                "IP_DAON_43_HARMONY",
+                "IP_DAON_44_APPRENTICE",
+                "IP_IMSL_SENTINEL_OFFICER",
+
                 // 다른 뇌 임플란트들 추가
             };
             
             return Pawn.health.hediffSet.hediffs
                 .Any(h => brainImplantDefNames.Contains(h.def.defName));
-        }
-    }
-
-    // 커스텀 HARMONY 전용 Hediff 적용
-
-    public class AddDisplayHediff_IP_DAON_43_HARMONY : HediffCompProperties
-    {
-        public AddDisplayHediff_IP_DAON_43_HARMONY()
-        {
-            compClass = typeof(HediffComp_AddDisplayHARMONY_Hediff);
-        }
-    }
-
-    public class HediffComp_AddDisplayHARMONY_Hediff : HediffComp
-    {
-        public override void CompPostPostAdd(DamageInfo? dinfo)
-        {
-            base.CompPostPostAdd(dinfo);
-            
-            // 표시용 hediff 추가
-            var displayHediff = HediffMaker.MakeHediff(
-                DefDatabase<HediffDef>.GetNamed("IP_DAON_43_HARMONY_DisplayHediff"), 
-                parent.pawn);
-            
-            parent.pawn.health.AddHediff(displayHediff);
-        }
-
-        public override void CompPostPostRemoved()
-        {
-            base.CompPostPostRemoved();
-            
-            // 표시용 hediff 제거
-            var displayHediff = parent.pawn.health.hediffSet.GetFirstHediffOfDef(
-                DefDatabase<HediffDef>.GetNamed("IP_DAON_43_HARMONY_DisplayHediff"));
-            
-            if (displayHediff != null)
-            {
-                parent.pawn.health.RemoveHediff(displayHediff);
-            }
         }
     }
 

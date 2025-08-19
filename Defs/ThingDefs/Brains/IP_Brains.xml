@@ -12,8 +12,7 @@
     <!-- 1티어 파츠 -->
 
     <!-- Combat Assist AI -->
-
-
+    <!-- 사격스킬, 근접전투 스킬 2씩 상승, 근접 명중확률 3%증가, 사격 명중률 3%증가 -->
     <HediffDef ParentName="ImplantHediffBase">
         <defName>IP_CombatAssistAI</defName>
         <label>Combat Assist AI</label>
@@ -114,7 +113,7 @@
     </RecipeDef>
 
     <!-- Field worker Assist AI -->
-
+    <!-- 건설, 채굴, 원예, 조련 2씩 증가, 일반 작업속도(연구 등 일부 작업 포함 안됨)15%증가 -->
     <HediffDef ParentName="ImplantHediffBase">
         <defName>IP_FieldworkerAssistAI</defName>
         <label>Field worker Assist AI</label>
@@ -212,7 +211,7 @@
 
 
     <!-- Craftmaster Assist AI -->
-
+    <!-- 요리, 제작, 예술 2증가, 일반 작업속도(연구 등 일부 제외) 15%증가 -->
     <HediffDef ParentName="ImplantHediffBase">
         <defName>IP_CraftmasterAssistAI</defName>
         <label>Craftmaster Assist AI</label>
@@ -309,8 +308,7 @@
 
 
     <!-- Cognitor Assist AI -->
-
-
+    <!-- 의료, 연구 2 증가, 치료품질 110%, 수술확률 110%, 연구속도 15%증가 -->
     <HediffDef ParentName="ImplantHediffBase">
         <defName>IP_CognitorAssistAI</defName>
         <label>Cognitor Assist AI</label>
@@ -407,7 +405,7 @@
     </RecipeDef>
 
     <!-- ORD-41 OVERSEER -->
-
+    <!-- 매카노이드 대역폭(메카노이드 조종수 증가)+4, 메카노이드 제어 그룹(부대지정 비슷한 느낌)+1, 메카노이드 작업속도 0.08 -->
     <HediffDef ParentName="ImplantHediffBase">
         <defName>IP_ORD_41_OVERSEER</defName>
         <label>ORD-41 OVERSEER</label>
@@ -508,13 +506,13 @@
     </RecipeDef>
 
     <!-- DAON-43 HARMONY -->
-
+    <!-- 사교다툼 계수 50%(덜싸움), 외교적 영향력 10%증가(사교, 연설 등 다양한 사교활동에 이점), 정신이상 임계치 5%감소(덜미침) -->
     <HediffDef ParentName="ImplantHediffBase">
         <defName>IP_DAON_43_HARMONY</defName>
         <label>DAON-43 HARMONY</label>
         <labelNoun>DAON-43 HARMONY</labelNoun>
-        <!-- DAON Technology에서 개발한 사회화 보조 AI입니다. 사용자의 정신을 안정시고 원활한 사교활동을 돕습니다. 이 임플란트를 이식한 사람은 사교적 다툼 발생률이 50% 감소하며, 서비스직 분야에서 채용될 확률이 17.6% 높은 경향을 보였습니다. 과부하 방지를 위해 다른 AI 임플란트와 동시 설치할 수 없습니다. -->
-        <description>This socialization support AI, developed by DAON Technology, stabilizes the user's mind and facilitates smooth social interactions. Individuals implanted with this AI have shown a 50% decrease in the likelihood of social conflicts and a 17.6% higher chance of being hired in service sectors. To prevent overload, it cannot be installed alongside other AI implants.</description>
+        <!-- DAON Technology에서 개발한 사회화 보조 AI입니다. 사용자의 정신을 안정시고 원활한 사교활동을 돕습니다. 이 임플란트를 이식한 사람은 서비스직 분야에서 채용될 확률이 17.6% 높은 경향을 보였습니다. 과부하 방지를 위해 다른 AI 임플란트와 동시 설치할 수 없습니다. -->
+        <description>Developed by DAON Technology, this socialization-assist AI stabilizes the user's mind and facilitates smoother social interactions. Individuals implanted with this device have shown a 17.6% higher likelihood of being hired in service-related fields. To prevent overload, it cannot be installed alongside other AI implants.</description>
         <descriptionHyperlinks>
             <ThingDef>IP_DAON_43_HARMONY</ThingDef>
         </descriptionHyperlinks>
@@ -529,19 +527,21 @@
                     <SocialImpact>0.1</SocialImpact>
                     <MentalBreakThreshold>-0.05</MentalBreakThreshold>
                 </statOffsets>
+                <statFactors>
+                    <IP_SocialFightChanceFactor>0.5</IP_SocialFightChanceFactor>
+                </statFactors>
             </li>
         </stages>
         <comps>
             <li Class="Implant_Plus.HediffCompProperties_EMPReaction" />
-            <li Class="Implant_Plus.AddDisplayHediff_IP_DAON_43_HARMONY" />
         </comps>
     </HediffDef>
 
     <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
         <defName>IP_DAON_43_HARMONY</defName>
         <label>DAON-43 HARMONY</label>
-        <!-- DAON Technology에서 개발한 사회화 보조 AI입니다. 사용자의 정신을 안정시고 원활한 사교활동을 돕습니다. 이 임플란트를 이식한 사람은 사교적 다툼 발생률이 50% 감소하며, 서비스직 분야에서 채용될 확률이 17.6% 높은 경향을 보였습니다. 과부하 방지를 위해 다른 AI 임플란트와 동시 설치할 수 없습니다. -->
-        <description>This socialization support AI, developed by DAON Technology, stabilizes the user's mind and facilitates smooth social interactions. Individuals implanted with this AI have shown a 50% decrease in the likelihood of social conflicts and a 17.6% higher chance of being hired in service sectors. To prevent overload, it cannot be installed alongside other AI implants.</description>
+        <!-- DAON Technology에서 개발한 사회화 보조 AI입니다. 사용자의 정신을 안정시고 원활한 사교활동을 돕습니다. 이 임플란트를 이식한 사람은 서비스직 분야에서 채용될 확률이 17.6% 높은 경향을 보였습니다. 과부하 방지를 위해 다른 AI 임플란트와 동시 설치할 수 없습니다. -->
+        <description>Developed by DAON Technology, this socialization-assist AI stabilizes the user's mind and facilitates smoother social interactions. Individuals implanted with this device have shown a 17.6% higher likelihood of being hired in service-related fields. To prevent overload, it cannot be installed alongside other AI implants.</description>
         <descriptionHyperlinks>
             <RecipeDef>IP_DAON_43_HARMONY</RecipeDef>
         </descriptionHyperlinks>
@@ -608,7 +608,7 @@
     </RecipeDef>
 
     <!-- DAON-44 APPRENTICE -->
-
+    <!-- 의식 5%증가, 학습속도 110%, 피로도 85% -->
     <HediffDef ParentName="ImplantHediffBase">
         <defName>IP_DAON_44_APPRENTICE</defName>
         <label>DAON-44 APPRENTICE</label>
@@ -710,18 +710,18 @@
         <addsHediff>IP_DAON_44_APPRENTICE</addsHediff>
     </RecipeDef>
 
-    <!-- IMSL-41 SENTINEL OFFICER -->
-
+    <!-- IMSL SENTINEL OFFICER -->
+    <!-- 사격, 근접 전투, 사교 1씩 증가, 정신민감도(초능력을더 잘 쓸 수 있음)+12%, 신경열 한계치 10증가(마나통 증가와 비슷), 신경열 회복속도 0.05 증가 (마나재생 증가) -->
     <HediffDef ParentName="ImplantHediffBase">
-        <defName>IP_IMSL_41_SENTINEL_OFFICER</defName>
-        <label>IMSL-41 SENTINEL OFFICER</label>
-        <labelNoun>IMSL-41 SENTINEL OFFICER</labelNoun>
+        <defName>IP_IMSL_SENTINEL_OFFICER</defName>
+        <label>IMSL SENTINEL OFFICER</label>
+        <labelNoun>IMSL SENTINEL OFFICER</labelNoun>
         <!-- Imperial Marine Strategic Laboratory에서 사관생도에게 이식되는 AI입니다. 사용자의 전투 능력을 향상시키고, 차후 작위를 부여받아 초능력을 얻게 될 경우를 대비하여 정신감응력과 사교성을 증대시킵니다. 이 AI는 사관생도의 전투 준비를 강화하고, 미래의 지도자로서 초능력을 발휘할 기반을 마련해줍니다. 과부하 방지를 위해 다른 AI 임플란트와 동시 설치할 수 없습니다. -->
         <description>Developed by the Imperial Marine Strategic Laboratory, this AI is implanted into military cadets to enhance their combat abilities and prepare them for future ascension to higher ranks, where they may gain psychic powers. The AI increases psychic sensitivity and social skills, strengthening the cadet’s readiness for combat and laying the foundation for them to harness psychic abilities as future leaders. To prevent neural overload, it cannot be installed alongside other AI implants.</description>
         <descriptionHyperlinks>
-            <ThingDef>IP_IMSL_41_SENTINEL_OFFICER</ThingDef>
+            <ThingDef>IP_IMSL_SENTINEL_OFFICER</ThingDef>
         </descriptionHyperlinks>
-        <spawnThingOnRemoved>IP_IMSL_41_SENTINEL_OFFICER</spawnThingOnRemoved>
+        <spawnThingOnRemoved>IP_IMSL_SENTINEL_OFFICER</spawnThingOnRemoved>
         <aptitudes>
             <Shooting>1</Shooting>
             <Melee>1</Melee>
@@ -742,12 +742,12 @@
     </HediffDef>
 
     <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
-        <defName>IP_IMSL_41_SENTINEL_OFFICER</defName>
-        <label>IMSL-41 SENTINEL OFFICER</label>
+        <defName>IP_IMSL_SENTINEL_OFFICER</defName>
+        <label>IMSL SENTINEL OFFICER</label>
         <!-- Imperial Marine Strategic Laboratory에서 사관생도에게 이식되는 AI입니다. 사용자의 전투 능력을 향상시키고, 차후 작위를 부여받아 초능력을 얻게 될 경우를 대비하여 정신감응력과 사교성을 증대시킵니다. 이 AI는 사관생도의 전투 준비를 강화하고, 미래의 지도자로서 초능력을 발휘할 기반을 마련해줍니다. 과부하 방지를 위해 다른 AI 임플란트와 동시 설치할 수 없습니다. -->
         <description>Developed by the Imperial Marine Strategic Laboratory, this AI is implanted into military cadets to enhance their combat abilities and prepare them for future ascension to higher ranks, where they may gain psychic powers. The AI increases psychic sensitivity and social skills, strengthening the cadet’s readiness for combat and laying the foundation for them to harness psychic abilities as future leaders. To prevent neural overload, it cannot be installed alongside other AI implants.</description>
         <descriptionHyperlinks>
-            <RecipeDef>IP_IMSL_41_SENTINEL_OFFICER</RecipeDef>
+            <RecipeDef>IP_IMSL_SENTINEL_OFFICER</RecipeDef>
         </descriptionHyperlinks>
         <costList>
             <Steel>30</Steel>
@@ -783,15 +783,15 @@
     </ThingDef>
 
     <RecipeDef ParentName="SurgeryInstallImplantBase">
-        <defName>IP_IMSL_41_SENTINEL_OFFICER</defName>
-        <label>Installing IMSL-41 SENTINEL OFFICER</label>
-        <description>Installs IMSL-41 SENTINEL OFFICER.</description>
-        <jobString>Installing IMSL-41 SENTINEL OFFICER.</jobString>
+        <defName>IP_IMSL_SENTINEL_OFFICER</defName>
+        <label>Installing IMSL SENTINEL OFFICER</label>
+        <description>Installs IMSL SENTINEL OFFICER.</description>
+        <jobString>Installing IMSL SENTINEL OFFICER.</jobString>
         <ingredients>
             <li>
                 <filter>
                     <thingDefs>
-                        <li>IP_IMSL_41_SENTINEL_OFFICER</li>
+                        <li>IP_IMSL_SENTINEL_OFFICER</li>
                     </thingDefs>
                 </filter>
                 <count>1</count>
@@ -802,13 +802,13 @@
         </skillRequirements>
         <fixedIngredientFilter>
             <thingDefs>
-                <li>IP_IMSL_41_SENTINEL_OFFICER</li>
+                <li>IP_IMSL_SENTINEL_OFFICER</li>
             </thingDefs>
         </fixedIngredientFilter>
         <appliedOnFixedBodyParts>
             <li>Brain</li>
         </appliedOnFixedBodyParts>
-        <addsHediff>IP_IMSL_41_SENTINEL_OFFICER</addsHediff>
+        <addsHediff>IP_IMSL_SENTINEL_OFFICER</addsHediff>
     </RecipeDef>
 
 </Defs>

@@ -89,4 +89,286 @@
         <addsHediff>IP_AdvancedProsthesisNose</addsHediff>
     </RecipeDef>
 
+    <!-- IDC-31 VEINHOUND -->
+    <!-- 심층 채굴 속도 20%증가 -->
+    <HediffDef ParentName="AddedBodyPartBase">
+        <defName>IP_IDC_31_VEINHOUND</defName>
+        <label>IDC-31 VEINHOUND</label>
+        <labelNoun>IDC-31 VEINHOUND</labelNoun>
+        <!-- Interstellar Development Corps에서 개발한 심층 채굴 보조용 인공 후각 장치입니다. 광물이 방출하는 미세한 휘발성 입자와 화학적 신호를 감지하여, 사용자가 매장된 광맥을 더 빠르고 정밀하게 탐지하고 채굴할 수 있도록 돕습니다. -->
+        <description>An artificial olfactory device developed by the Interstellar Development Corps for deep-mining support. It detects trace volatile particles and chemical signals released by minerals, enabling the user to locate and extract buried ore veins more quickly and accurately.</description>
+        <descriptionHyperlinks>
+            <ThingDef>IP_IDC_31_VEINHOUND</ThingDef>
+        </descriptionHyperlinks>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.0</partEfficiency>
+        </addedPartProps>
+        <spawnThingOnRemoved>IP_IDC_31_VEINHOUND</spawnThingOnRemoved>
+        <stages>
+            <li>
+                <statOffsets>
+                    <DeepDrillingSpeed>0.2</DeepDrillingSpeed>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
+        <defName>IP_IDC_31_VEINHOUND</defName>
+        <label>IDC-31 VEINHOUND</label>
+        <!-- Interstellar Development Corps에서 개발한 심층 채굴 보조용 인공 후각 장치입니다. 광물이 방출하는 미세한 휘발성 입자와 화학적 신호를 감지하여, 사용자가 매장된 광맥을 더 빠르고 정밀하게 탐지하고 채굴할 수 있도록 돕습니다. -->
+        <description>An artificial olfactory device developed by the Interstellar Development Corps for deep-mining support. It detects trace volatile particles and chemical signals released by minerals, enabling the user to locate and extract buried ore veins more quickly and accurately.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>IP_IDC_31_VEINHOUND</RecipeDef>
+        </descriptionHyperlinks>
+        <costList>
+            <Steel>30</Steel>
+            <ComponentIndustrial>4</ComponentIndustrial>
+        </costList>
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        <statBases>
+            <MarketValue>200</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Industrial</li>
+        </techHediffsTags>
+        <recipeMaker>
+            <researchPrerequisites>
+                <li>IP_AdvancedProsthetic</li>
+                <li>IP_IDC_BasicModule</li>
+            </researchPrerequisites>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <unfinishedThingDef>UnfinishedHealthItemProsthetic</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>5</Crafting>
+            </skillRequirements>
+            <workAmount>17500</workAmount>
+        </recipeMaker>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>IP_IDC_31_VEINHOUND</defName>
+        <label>Installing IDC-31 VEINHOUND</label>
+        <description>Installs IDC-31 VEINHOUND.</description>
+        <jobString>Installing IDC-31 VEINHOUND.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IP_IDC_31_VEINHOUND</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Medicine>3</Medicine>
+        </skillRequirements>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>IP_IDC_31_VEINHOUND</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Heart</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>IP_IDC_31_VEINHOUND</addsHediff>
+    </RecipeDef>
+
+    <!-- DAON-28 CHEF FRESHPRO -->
+    <!-- 조리시 식중독 확률계수 10%(요리시 요리가 식중독에 오염될 확률 감소), 요리속도 80%(느리게 조리) -->
+    <HediffDef ParentName="AddedBodyPartBase">
+        <defName>IP_DAON_28_CHEF_FRESHPRO</defName>
+        <label>DAON-28 CHEF FRESHPRO</label>
+        <labelNoun>DAON-28 CHEF FRESHPRO</labelNoun>
+        <!-- DAON사에서 만들어진 조리 보조용 코입니다. 조리 과정에서 문제가 있는 재료들을 후각으로 감지하고 제거할 수 있도록 도와 조리시간은 길어지지만 음식 조리시 음식이 오염될 확률을 낮춰줍니다.-->
+        <description>A prosthetic nose developed through technological advancement. Equipped with an olfactory system, it functions like a real nose, but there's little reason to install it unless the original is missing.</description>
+        <descriptionHyperlinks>
+            <ThingDef>IP_DAON_28_CHEF_FRESHPRO</ThingDef>
+        </descriptionHyperlinks>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.0</partEfficiency>
+        </addedPartProps>
+        <spawnThingOnRemoved>IP_DAON_28_CHEF_FRESHPRO</spawnThingOnRemoved>
+        <stages>
+            <li>
+                <statFactors>
+                    <IP_CookingPoisonChanceFactor>0.1</IP_CookingPoisonChanceFactor>
+                    <CookSpeed>0.8</CookSpeed>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
+        <defName>IP_DAON_28_CHEF_FRESHPRO</defName>
+        <label>DAON-28 CHEF FRESHPRO</label>
+        <!-- DAON사에서 제작한 조리 보조용 인공 코입니다. 예민한 후각으로 문제 있는 재료를 감지·제거하여 조리 시간은 다소 늘어나지만, 완성 음식의 식중독 발생 확률을 크게 낮춥니다. 특히 고급 호텔 셰프들이 즐겨 사용하는 장비로, 위생과 품질을 위해 속도를 기꺼이 희생합니다. -->
+        <description>An artificial nose developed by DAON for culinary assistance. Its highly sensitive sense of smell detects and removes problematic ingredients, slightly increasing cooking time but greatly reducing the risk of food poisoning in the finished dish. Favored by high-end hotel chefs who willingly sacrifice speed in pursuit of hygiene and quality.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>IP_DAON_28_CHEF_FRESHPRO</RecipeDef>
+        </descriptionHyperlinks>
+        <costList>
+            <Steel>30</Steel>
+            <ComponentIndustrial>4</ComponentIndustrial>
+        </costList>
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        <statBases>
+            <MarketValue>200</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Industrial</li>
+        </techHediffsTags>
+        <recipeMaker>
+            <researchPrerequisites>
+                <li>IP_AdvancedProsthetic</li>
+                <li>IP_IDC_BasicModule</li>
+            </researchPrerequisites>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <unfinishedThingDef>UnfinishedHealthItemProsthetic</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>5</Crafting>
+            </skillRequirements>
+            <workAmount>17500</workAmount>
+        </recipeMaker>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>IP_DAON_28_CHEF_FRESHPRO</defName>
+        <label>Installing DAON-28 CHEF FRESHPRO</label>
+        <description>Installs DAON-28 CHEF FRESHPRO.</description>
+        <jobString>Installing DAON-28 CHEF FRESHPRO.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IP_DAON_28_CHEF_FRESHPRO</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Medicine>3</Medicine>
+        </skillRequirements>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>IP_DAON_28_CHEF_FRESHPRO</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Heart</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>IP_DAON_28_CHEF_FRESHPRO</addsHediff>
+    </RecipeDef>
+
+
+    <!-- IMSL SENTINEL STALKER -->
+    <!-- 생명체를 공격시(메카노이드 제외) 15초동안 Adrenaline Boost버프를 걸음. 10%이동 증가, 10%의식 증가. -->
+    <HediffDef ParentName="AddedBodyPartBase">
+        <defName>IP_IMSL_SENTINEL_STALKER</defName>
+        <label>IMSL SENTINEL STALKER</label>
+        <labelNoun>IMSL SENTINEL STALKER</labelNoun>
+        <!-- Imperial Marine Strategic Laboratory에서 진행한 Sentinel Project의 전투 보조용 인공 코입니다. 전투 중 부상당한 생명체에서 방출되는 특유의 ‘화학 신호’를 감지하여, 착용자가 적에게 피해를 입힐 때 즉각적인 아드레날린 분비를 유도합니다. 이로 인해 착용자는 짧은 시간 동안 더욱 빠르고 강하게 움직일 수 있습니다. -->
+        <description>A combat-assist artificial nose developed under the Sentinel Project by the Imperial Marine Strategic Laboratory. It detects the unique “chemical signals” released by injured living beings during combat, triggering an immediate adrenaline surge when the wearer inflicts damage on an enemy. This allows the wearer to move faster and strike harder for a short duration.</description>
+        <descriptionHyperlinks>
+            <ThingDef>IP_IMSL_SENTINEL_STALKER</ThingDef>
+            <HediffDef>IP_Adrenaline_Boost</HediffDef>
+        </descriptionHyperlinks>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.0</partEfficiency>
+        </addedPartProps>
+        <spawnThingOnRemoved>IP_IMSL_SENTINEL_STALKER</spawnThingOnRemoved>
+
+    </HediffDef>
+
+    <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
+        <defName>IP_IMSL_SENTINEL_STALKER</defName>
+        <label>IMSL SENTINEL STALKER</label>
+        <!-- Imperial Marine Strategic Laboratory에서 진행한 Sentinel Project의 전투 보조용 인공 코입니다. 전투 중 부상당한 생명체에서 방출되는 특유의 ‘화학 신호’를 감지하여, 착용자가 적에게 피해를 입힐 때 즉각적인 아드레날린 분비를 유도합니다. 이로 인해 착용자는 짧은 시간 동안 더욱 빠르고 강하게 움직일 수 있습니다. -->
+        <description>A combat-assist artificial nose developed under the Sentinel Project by the Imperial Marine Strategic Laboratory. It detects the unique “chemical signals” released by injured living beings during combat, triggering an immediate adrenaline surge when the wearer inflicts damage on an enemy. This allows the wearer to move faster and strike harder for a short duration.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>IP_IMSL_SENTINEL_STALKER</RecipeDef>
+        </descriptionHyperlinks>
+        <costList>
+            <Steel>30</Steel>
+            <ComponentIndustrial>4</ComponentIndustrial>
+        </costList>
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        <statBases>
+            <MarketValue>200</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Industrial</li>
+        </techHediffsTags>
+        <recipeMaker>
+            <researchPrerequisites>
+                <li>IP_AdvancedProsthetic</li>
+                <li>IP_SentinelProject</li>
+            </researchPrerequisites>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <unfinishedThingDef>UnfinishedHealthItemProsthetic</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>5</Crafting>
+            </skillRequirements>
+            <workAmount>17500</workAmount>
+        </recipeMaker>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>IP_IMSL_SENTINEL_STALKER</defName>
+        <label>Installing IMSL SENTINEL STALKER</label>
+        <description>Installs IMSL SENTINEL STALKER.</description>
+        <jobString>Installing IMSL SENTINEL STALKER.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IP_IMSL_SENTINEL_STALKER</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Medicine>3</Medicine>
+        </skillRequirements>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>IP_IMSL_SENTINEL_STALKER</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Heart</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>IP_IMSL_SENTINEL_STALKER</addsHediff>
+    </RecipeDef>
+
 </Defs>

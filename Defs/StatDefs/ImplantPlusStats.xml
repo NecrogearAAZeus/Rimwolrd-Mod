@@ -1,0 +1,56 @@
+<Defs>
+
+    <!-- Dark sight -->
+
+    <StatDef>
+        <defName>IP_DarkSight</defName>
+        <label>Dark sight</label>
+        <description>Represents the ability to see in darkness. Higher values reduce the negative effects caused by darkness.</description>
+        <category>BasicsPawn</category>
+        <defaultBaseValue>0</defaultBaseValue>
+        <minValue>0</minValue>
+        <maxValue>1</maxValue>
+        <toStringStyle>PercentZero</toStringStyle>
+        <scenarioRandomizable>false</scenarioRandomizable>
+        <displayPriorityInCategory>1000</displayPriorityInCategory>
+        <showOnMechanoids>false</showOnMechanoids>
+        <showOnAnimals>false</showOnAnimals>
+    </StatDef>
+
+    <!-- Cooking poison chance factor -->
+
+    <StatDef>
+        <defName>IP_CookingPoisonChanceFactor</defName>
+        <label>Cooking poison chance factor</label>
+        <description>A factor multiplied by the chance of food poisoning in cooked meals.</description>
+        <category>BasicsPawn</category>
+        <defaultBaseValue>1</defaultBaseValue>
+        <minValue>0</minValue>
+        <maxValue>1</maxValue>
+        <toStringStyle>PercentZero</toStringStyle>
+        <scenarioRandomizable>false</scenarioRandomizable>
+        <hideAtValue>1</hideAtValue>
+        <displayPriorityInCategory>1001</displayPriorityInCategory>
+        <showOnMechanoids>false</showOnMechanoids>
+        <showOnAnimals>false</showOnAnimals>
+    </StatDef>
+
+    <!-- Social fight chance factor -->
+
+    <StatDef>
+        <defName>IP_SocialFightChanceFactor</defName>
+        <label>Social fight chance factor</label>
+        <description>Determines how much more or less likely a pawn is to start a social fight during conversations or disputes.</description>
+        <category>BasicsPawn</category>
+        <defaultBaseValue>1</defaultBaseValue>
+        <minValue>0</minValue>
+        <maxValue>1</maxValue>
+        <toStringStyle>PercentZero</toStringStyle>
+        <scenarioRandomizable>false</scenarioRandomizable>
+        <hideAtValue>1</hideAtValue>
+        <displayPriorityInCategory>1002</displayPriorityInCategory>
+        <showOnMechanoids>false</showOnMechanoids>
+        <showOnAnimals>false</showOnAnimals>
+    </StatDef>
+
+</Defs>

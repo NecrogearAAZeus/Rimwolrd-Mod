@@ -3,14 +3,13 @@
     <!-- 1티어 파츠 -->
 
     <!-- Combat Inner Frame -->
-
+    <!-- 날카로움 방어 35%, 둔탁함 방어 15%, 열기 방어 20%, 총 적재량 +10KG, 조준 지연시간 -10%, 근접 공격 쿨타임 90%, 이동 +5% -->
     <HediffDef ParentName="ImplantHediffBase">
         <defName>IP_CombatInnerFrame</defName>
         <label>Combat Inner Frame</label>
         <labelNoun>Combat Inner Frame</labelNoun>
-        <!-- 변방계 병사에게 설치되는 기초적인 전투 외골격입니다. 뼈와 근육을 소폭 보강하며, 약간의 장갑판과 자세 안정화 모듈이 장착되어 있습니다. 다른 외골격과는 중복하여 설치할 수 없습니다. -->
-        <!-- 제국 해군 연구소(Imperial Marine Strategic Laboratory)에서 연구개발된 기초적인 전투 외골격입니다. 성실하게 직무를 수행한 병사들에게 하사되는 이 외골격은 병사의 뼈와 근육을 소폭 보강해주며, 약간의 장갑판과 자세 안정화 모듈로 기존보다 효율적인 전투경험을 만들어줍니다.-->
-        <description>A basic combat Inner Frame commonly installed on frontier soldiers. It slightly reinforces bones and muscles, and comes equipped with light armor plating and a posture stabilization module. Cannot be installed alongside other Inner Frames.</description>
+        <!-- 변방계 병사에게 설치되는 기초적인 전투 내장형 프레임입니다. 뼈와 근육을 소폭 보강하며, 약간의 장갑판과 자세 안정화 모듈이 장착되어 있습니다. 다른 내장형 프레임과 중복하여 설치할 수 없습니다. -->
+        <description>A basic combat Inner Frame commonly installed on frontier soldiers. It slightly reinforces bones and muscles, and comes equipped with light armor plating and a posture stabilization module. Cannot be installed simultaneously with other Inner Frame.</description>
         <descriptionHyperlinks>
             <ThingDef>IP_CombatInnerFrame</ThingDef>
         </descriptionHyperlinks>
@@ -18,9 +17,10 @@
         <stages>
             <li>
                 <statOffsets>
-                    <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+                    <ArmorRating_Sharp>0.35</ArmorRating_Sharp>
                     <ArmorRating_Blunt>0.15</ArmorRating_Blunt>
                     <ArmorRating_Heat>0.20</ArmorRating_Heat>
+                    <VEF_MassCarryCapacity>10</VEF_MassCarryCapacity>
                 </statOffsets>
                 <statFactors>
                     <AimingDelayFactor>0.9</AimingDelayFactor>
@@ -43,9 +43,8 @@
     <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
         <defName>IP_CombatInnerFrame</defName>
         <label>Combat Inner Frame</label>
-        <!-- 변방계 병사에게 설치되는 기초적인 전투 외골격입니다. 뼈와 근육을 소폭 보강하며, 약간의 장갑판과 자세 안정화 모듈이 장착되어 있습니다. 다른 외골격과는 중복하여 설치할 수 없습니다. -->
-        <!-- 제국 해군 연구소(Imperial Marine Strategic Laboratory)에서 연구개발된 기초적인 전투 외골격입니다. 성실하게 직무를 수행한 병사들에게 하사되는 이 외골격은 병사의 뼈와 근육을 소폭 보강해주며, 약간의 장갑판과 자세 안정화 모듈로 기존보다 효율적인 전투경험을 만들어줍니다.-->
-        <description>A basic combat Inner Frame commonly installed on frontier soldiers. It slightly reinforces bones and muscles, and comes equipped with light armor plating and a posture stabilization module. Cannot be installed alongside other Inner Frames.</description>
+        <!-- 변방계 병사에게 설치되는 기초적인 전투 내장형 프레임입니다. 뼈와 근육을 소폭 보강하며, 약간의 장갑판과 자세 안정화 모듈이 장착되어 있습니다. 다른 내장형 프레임과 중복하여 설치할 수 없습니다. -->
+        <description>A basic combat Inner Frame commonly installed on frontier soldiers. It slightly reinforces bones and muscles, and comes equipped with light armor plating and a posture stabilization module. Cannot be installed simultaneously with other Inner Frame.</description>
         <descriptionHyperlinks>
             <RecipeDef>IP_CombatInnerFrame</RecipeDef>
         </descriptionHyperlinks>
@@ -110,22 +109,23 @@
     </RecipeDef>
 
     <!-- Worker Inner Frame -->
-
+    <!-- 일반 작업속도 115%(연구 및 몇개는 제외된 작업속도 증가), 총 적재량 +20KG, 조작 +10% -->
     <HediffDef ParentName="ImplantHediffBase">
         <defName>IP_WorkerInnerFrame</defName>
         <label>Worker Inner Frame</label>
         <labelNoun>Worker Inner Frame</labelNoun>
-        <!-- 많은 작업자에게 사랑받는 보급형 작업 외골격입니다. 정밀한 작업을 지원하며, 근력을 보강해 다양한 노동에 유용합니다. 다른 외골격과는 중복하여 설치할 수 없습니다. -->
-        <!-- IDC에서 작업자들에게 보급해주는 기초형 작업 외골격입니다. 작업자의 신경과 기초 근력을 보조해주어 세밀한 정밀 작업부터 단순 노동까지 폭넓게 개척 작업자를 지원해줍니다.-->
-        <description>A widely-used work Inner Frame favored by many laborers. It enhances precision for fine tasks and reinforces physical strength, making it useful for various forms of labor. Cannot be installed alongside other Inner Frames.</description>
+        <!-- 많은 작업자에게 사랑받는 보급형 작업 내장형 프레임입니다. 정밀한 작업을 지원하며, 근력을 보강해 다양한 노동에 유용합니다. 다른 내장형 프레임과 중복하여 설치할 수 없습니다. -->
+        <description>A widely-used work Inner Frame favored by many laborers. It enhances precision for fine tasks and reinforces physical strength, making it useful for various forms of labor. Cannot be installed simultaneously with other Inner Frame.</description>
         <descriptionHyperlinks>
             <ThingDef>IP_WorkerInnerFrame</ThingDef>
         </descriptionHyperlinks>
         <spawnThingOnRemoved>IP_WorkerInnerFrame</spawnThingOnRemoved>
         <stages>
             <li>
+
                 <statOffsets>
                     <GeneralLaborSpeed>0.15</GeneralLaborSpeed>
+                    <VEF_MassCarryCapacity>20</VEF_MassCarryCapacity>
                 </statOffsets>
                 <capMods>
                     <li>
@@ -144,9 +144,8 @@
     <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
         <defName>IP_WorkerInnerFrame</defName>
         <label>Worker Inner Frame</label>
-        <!-- 많은 작업자에게 사랑받는 보급형 작업 외골격입니다. 정밀한 작업을 지원하며, 근력을 보강해 다양한 노동에 유용합니다. 다른 외골격과는 중복하여 설치할 수 없습니다. -->
-         <!-- IDC에서 작업자들에게 보급해주는 기초형 작업 외골격입니다. 작업자의 신경과 기초 근력을 보조해주어 세밀한 정밀 작업부터 단순 노동까지 폭넓게 개척 작업자를 지원해줍니다.-->
-        <description>A widely-used work Inner Frame favored by many laborers. It enhances precision for fine tasks and reinforces physical strength, making it useful for various forms of labor. Cannot be installed alongside other Inner Frames.</description>
+        <!-- 많은 작업자에게 사랑받는 보급형 작업 내장형 프레임입니다. 정밀한 작업을 지원하며, 근력을 보강해 다양한 노동에 유용합니다. 다른 내장형 프레임과 중복하여 설치할 수 없습니다. -->
+        <description>A widely-used work Inner Frame favored by many laborers. It enhances precision for fine tasks and reinforces physical strength, making it useful for various forms of labor. Cannot be installed simultaneously with other Inner Frame.</description>
         <descriptionHyperlinks>
             <RecipeDef>IP_CombatInnerFrame</RecipeDef>
         </descriptionHyperlinks>
@@ -211,20 +210,22 @@
     </RecipeDef>
 
     <!-- Standard Inner Frame  -->
-
+    <!-- 조작 +10%증가, 이동 +15% 증가, 총 적재량 15KG 증가 -->
     <HediffDef ParentName="ImplantHediffBase">
         <defName>IP_StandardInnerFrame</defName>
         <label>Standard Inner Frame</label>
         <labelNoun>Standard Inner Frame</labelNoun>
-        <!-- 다양한 상황에 대응할 수 있도록 설계된 범용 외골격 입니다. 사용자의 전반적인 신체능력을 올려줍니다. 다른 외골격과는 중복하여 설치할 수 없습니다. -->
-        <!-- 다온에서 발매된 범용 외골격 장비입니다. 사용자의 전반적인 신체능력을 보조하며, 일반인도 운동선수에 버금가는 신체 활동 퍼포먼스를 보여줍니다. -->
-        <description>A versatile Inner Frame designed to handle a variety of situations. It enhances the user's overall physical capabilities. Cannot be installed alongside other Inner Frames</description>
+        <!-- 다양한 상황에 대응할 수 있도록 설계된 범용 내장형 프레임 입니다. 사용자의 전반적인 신체능력을 올려줍니다. 다른 내장형 프레임과 중복하여 설치할 수 없습니다. -->
+        <description>A versatile Inner Frame designed to handle a variety of situations. It enhances the user's overall physical capabilities. Cannot be installed simultaneously with other Inner Frame.</description>
         <descriptionHyperlinks>
             <ThingDef>IP_WorkerInnerFrame</ThingDef>
         </descriptionHyperlinks>
         <spawnThingOnRemoved>IP_WorkerInnerFrame</spawnThingOnRemoved>
         <stages>
             <li>
+                <statOffsets>
+                    <VEF_MassCarryCapacity>15</VEF_MassCarryCapacity>
+                </statOffsets>
                 <capMods>
                     <li>
                         <capacity>Manipulation</capacity>
@@ -246,9 +247,8 @@
     <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
         <defName>IP_StandardInnerFrame</defName>
         <label>Standard Inner Frame</label>
-        <!-- 다양한 상황에 대응할 수 있도록 설계된 범용 외골격 입니다. 사용자의 전반적인 신체능력을 올려줍니다. 다른 외골격과는 중복하여 설치할 수 없습니다. -->
-        <!-- 다온에서 발매된 범용 외골격 장비입니다. 사용자의 전반적인 신체능력을 보조하며, 일반인도 운동선수에 버금가는 신체 활동 퍼포먼스를 보여줍니다. -->
-        <description>A versatile Inner Frame designed to handle a variety of situations. It enhances the user's overall physical capabilities. Cannot be installed alongside other Inner Frames</description>
+        <!-- 다양한 상황에 대응할 수 있도록 설계된 범용 내장형 프레임 입니다. 사용자의 전반적인 신체능력을 올려줍니다. 다른 내장형 프레임과 중복하여 설치할 수 없습니다. -->
+        <description>A versatile Inner Frame designed to handle a variety of situations. It enhances the user's overall physical capabilities. Cannot be installed simultaneously with other Inner Frame.</description>
         <descriptionHyperlinks>
             <RecipeDef>IP_StandardInnerFrame</RecipeDef>
         </descriptionHyperlinks>
@@ -313,14 +313,13 @@
     </RecipeDef>
 
     <!-- IDC-23 SURVIVOR  -->
-
+    <!-- 조작 10%증가, 이동속도 10%증가, 최소 적응온도 -15도(추운곳에서 잘견딤), 최대 적응온도 +15도(더운곳에서 잘견딤), 정신감응력-30%, 독성 환경저항 +30%, 진공저항 +30%, 총 적재량 +10KG -->
     <HediffDef ParentName="ImplantHediffBase">
         <defName>IP_IDC_23_SURVIVOR</defName>
         <label>IDC-23 SURVIVOR</label>
         <labelNoun>IDC-23 SURVIVOR</labelNoun>
-        <!-- Interstellar Development Corps에서 개발한 이 내장형 생존 프레임은 극한의 식민지 개척 환경에서 생존을 지원하도록 설계되었습니다. 이 프레임은 다양한 환경으로부터 사용자를 보호해 식민지 개척 작업을 안전하고 효율적으로 수행할 수 있도록 돕습니다. 다른 외골격과는 중복하여 설치할 수 없습니다. -->
-        <!-- IDC(Interstellar Development Corps)에서 핵심 개발 인력을 위해 개발한 이 내장형 생존 프레임은 식민지 개척 중 맞딱드릴 수 있는 극한의 생태환경에도 사용자 신체를 보호해줍니다.-->
-        <description>Developed by the Interstellar Development Corps, this internal survival frame is designed to support survival in extreme colonization environments. The frame protects the user from various environmental hazards, enabling them to perform colonization tasks safely and efficiently. Cannot be installed alongside other Inner Frame</description>
+        <!-- Interstellar Development Corps에서 개발한 이 내장형 생존 프레임은 극한의 식민지 개척 환경에서 생존을 지원하도록 설계되었습니다. 이 프레임은 다양한 환경으로부터 사용자를 보호해 식민지 개척 작업을 안전하고 효율적으로 수행할 수 있도록 돕습니다. 다른 내장형 프레임과 중복하여 설치할 수 없습니다. -->
+        <description>Developed by the Interstellar Development Corps, this internal survival frame is designed to support survival in extreme colonization environments. The frame protects the user from various environmental hazards, enabling them to perform colonization tasks safely and efficiently. Cannot be installed simultaneously with other Inner Frame.</description>
         <descriptionHyperlinks>
             <ThingDef>IP_IDC_23_SURVIVOR</ThingDef>
         </descriptionHyperlinks>
@@ -343,6 +342,7 @@
                     <PsychicSensitivity>-0.3</PsychicSensitivity>
                     <ToxicEnvironmentResistance>0.3</ToxicEnvironmentResistance>
                     <VacuumResistance>0.3</VacuumResistance>
+                    <VEF_MassCarryCapacity>10</VEF_MassCarryCapacity>
                 </statOffsets>
             </li>
         </stages>
@@ -355,9 +355,8 @@
     <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
         <defName>IP_IDC_23_SURVIVOR</defName>
         <label>IDC-23 SURVIVOR</label>
-        <!-- Interstellar Development Corps에서 개발한 이 내장형 생존 프레임은 극한의 식민지 개척 환경에서 생존을 지원하도록 설계되었습니다. 이 프레임은 다양한 환경으로부터 사용자를 보호해 식민지 개척 작업을 안전하고 효율적으로 수행할 수 있도록 돕습니다. 다른 외골격과는 중복하여 설치할 수 없습니다. -->
-        <!-- IDC(Interstellar Development Corps)에서 핵심 개발 인력을 위해 개발한 이 내장형 생존 프레임은 식민지 개척 중 맞딱드릴 수 있는 극한의 생태환경에도 사용자 신체를 보호해줍니다.-->
-        <description>Developed by the Interstellar Development Corps, this internal survival frame is designed to support survival in extreme colonization environments. The frame protects the user from various environmental hazards, enabling them to perform colonization tasks safely and efficiently. Cannot be installed alongside other Inner Frame</description>
+        <!-- Interstellar Development Corps에서 개발한 이 내장형 생존 프레임은 극한의 식민지 개척 환경에서 생존을 지원하도록 설계되었습니다. 이 프레임은 다양한 환경으로부터 사용자를 보호해 식민지 개척 작업을 안전하고 효율적으로 수행할 수 있도록 돕습니다. 다른 내장형 프레임과 중복하여 설치할 수 없습니다. -->
+        <description>Developed by the Interstellar Development Corps, this internal survival frame is designed to support survival in extreme colonization environments. The frame protects the user from various environmental hazards, enabling them to perform colonization tasks safely and efficiently. Cannot be installed simultaneously with other Inner Frame.</description>
         <descriptionHyperlinks>
             <RecipeDef>IP_IDC_23_SURVIVOR</RecipeDef>
         </descriptionHyperlinks>
@@ -425,14 +424,13 @@
     </RecipeDef>
 
     <!-- DAON-31 VAITALBOOST  -->
-
+    <!-- 조작 +10%, 이동 +10%, 부상 회복속도 +25%, 항체 생성속도 +0.08%, 최대 적재량 +15KG -->
     <HediffDef ParentName="ImplantHediffBase">
         <defName>IP_DAON_31_VAITALBOOST</defName>
         <label>DAON-31 VAITALBOOST</label>
         <labelNoun>DAON-31 VAITALBOOST</labelNoun>
-        <!-- DAON Technology에서 개발한 의료 보조 내장형 프레임은 사용자의 전반적인 신체 능력을 소폭 강화하고, 외상 및 질병 치료를 지원하여 일상 생활의 편의성을 높여줍니다. 이 프레임은 시민들의 건강을 더욱 향상시키는 데 초점을 맞추어 설계되었습니다. 다른 외골격과는 중복하여 설치할 수 없습니다. -->
-        <!-- 다온(Daon Technology)에서 개발한 이 의료 보조 내장형 프레임은 사용자의 신경에 관여해 알코올 중독에 시달리는 의사가 아주 정밀한 수술작업에도 손을 떨지않고 메스를 들 수 있게 해줍니다. 블랙박스또한 탑재되어 19-2지구의 의료사고 발생율을 획기적으로 줄이는데 성공하였습니다. -->
-        <description>Developed by DAON Technology, this medical assistance internal frame slightly enhances the user's overall physical abilities and supports the treatment of trauma and diseases, improving everyday convenience. Designed with a focus on enhancing the health of citizens, this frame aims to improve overall well-being. Cannot be installed alongside other Inner Frame.</description>
+        <!-- DAON Technology에서 개발한 의료 보조 내장형 프레임은 사용자의 전반적인 신체 능력을 소폭 강화하고, 외상 및 질병 치료를 지원하여 일상 생활의 편의성을 높여줍니다. 이 프레임은 시민들의 건강을 더욱 향상시키는 데 초점을 맞추어 설계되었습니다. 다른 내장형 프레임과 중복하여 설치할 수 없습니다. -->
+        <description>Developed by DAON Technology, this medical assistance internal frame slightly enhances the user's overall physical abilities and supports the treatment of trauma and diseases, improving everyday convenience. Designed with a focus on enhancing the health of citizens, this frame aims to improve overall well-being. Cannot be installed simultaneously with other Inner Frame.</description>
         <descriptionHyperlinks>
             <ThingDef>IP_DAON_31_VAITALBOOST</ThingDef>
         </descriptionHyperlinks>
@@ -452,6 +450,7 @@
                 <statOffsets>
                     <InjuryHealingFactor>0.25</InjuryHealingFactor>
                     <ImmunityGainSpeed>0.08</ImmunityGainSpeed>
+                    <VEF_MassCarryCapacity>15</VEF_MassCarryCapacity>
                 </statOffsets>
             </li>
         </stages>
@@ -464,9 +463,8 @@
     <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
         <defName>IP_DAON_31_VAITALBOOST</defName>
         <label>DAON-31 VAITALBOOST</label>
-        <!-- DAON Technology에서 개발한 의료 보조 내장형 프레임은 사용자의 전반적인 신체 능력을 소폭 강화하고, 외상 및 질병 치료를 지원하여 일상 생활의 편의성을 높여줍니다. 이 프레임은 시민들의 건강을 더욱 향상시키는 데 초점을 맞추어 설계되었습니다. 다른 외골격과는 중복하여 설치할 수 없습니다. -->
-        <!-- 다온(Daon Technology)에서 개발한 이 의료 보조 내장형 프레임은 사용자의 신경에 관여해 알코올 중독에 시달리는 의사가 아주 정밀한 수술작업에도 손을 떨지않고 메스를 들 수 있게 해줍니다. 19-2지구의 의료사고 발생율을 획기적으로 줄이는데 성공하였습니다. -->
-        <description>Developed by DAON Technology, this medical assistance internal frame slightly enhances the user's overall physical abilities and supports the treatment of trauma and diseases, improving everyday convenience. Designed with a focus on enhancing the health of citizens, this frame aims to improve overall well-being. Cannot be installed alongside other Inner Frame.</description>
+        <!-- DAON Technology에서 개발한 의료 보조 내장형 프레임은 사용자의 전반적인 신체 능력을 소폭 강화하고, 외상 및 질병 치료를 지원하여 일상 생활의 편의성을 높여줍니다. 이 프레임은 시민들의 건강을 더욱 향상시키는 데 초점을 맞추어 설계되었습니다. 다른 내장형 프레임과 중복하여 설치할 수 없습니다. -->
+        <description>Developed by DAON Technology, this medical assistance internal frame slightly enhances the user's overall physical abilities and supports the treatment of trauma and diseases, improving everyday convenience. Designed with a focus on enhancing the health of citizens, this frame aims to improve overall well-being. Cannot be installed simultaneously with other Inner Frame.</description>
         <descriptionHyperlinks>
             <RecipeDef>IP_DAON_31_VAITALBOOST</RecipeDef>
         </descriptionHyperlinks>
@@ -534,13 +532,12 @@
     </RecipeDef>
 
     <!-- ORD-25 EVOLUTION -->
-
+    <!-- 조작 10%증가, 이동 10%증가, 의식 10%증가(의식은 각종 스텟을 다 올려줌) 피로도 110%, 정신이상 최소치 5%증가, 최대 적재량 +15KG -->
     <HediffDef ParentName="ImplantHediffBase">
         <defName>IP_ORD_25_EVOLUTION</defName>
         <label>ORD-25 EVOLUTION</label>
         <labelNoun>ORD-25 EVOLUTION</labelNoun>
-        <!-- Order of the Machina의 규약에 따라 신도들에게 이식되는 내장형 프레임으로, 신경계를 강화하지만 과부하로 정신적 불안정과 피로를 유발합니다. 다른 외골격과는 중복 설치할 수 없습니다. -->
-        <!-- Order of the Machina의 입교하여 본격적으로 합일을 시작하는 신도들에게 지급되는 내장형 프레임입니다. 신경계를 무리할 정도로 강화해 각종 기괴한 개조에도 신체를 움직일 수는 있게 해줍니다. 이 과정에서 뇌에 가해지는 끔찍한 부담과 피로감은 이 광신도들에게 그저 고행의 한 단계일뿐입니다. -->
+        <!-- Order of the Machina의 규약에 따라 신도들에게 이식되는 내장형 프레임으로, 신경계를 강화하지만 과부하로 정신적 불안정과 피로를 유발합니다. 다른 내장형 프레임과 중복 설치할 수 없습니다. -->
         <description>Implanted according to the Order of the Machina, this internal frame enhances the nervous system, but causes physical strain, leading to instability and fatigue. Cannot be installed with other Inner Frames.</description>
         <descriptionHyperlinks>
             <ThingDef>IP_ORD_25_EVOLUTION</ThingDef>
@@ -565,6 +562,7 @@
                 <statOffsets>
                     <RestFallRateFactor>0.1</RestFallRateFactor>
                     <MentalBreakThreshold>0.05</MentalBreakThreshold>
+                    <VEF_MassCarryCapacity>15</VEF_MassCarryCapacity>
                 </statOffsets>
             </li>
         </stages>
@@ -577,8 +575,7 @@
     <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
         <defName>IP_ORD_25_EVOLUTION</defName>
         <label>ORD-25 EVOLUTION</label>
-        <!-- Order of the Machina의 규약에 따라 신도들에게 이식되는 내장형 프레임으로, 신경계를 강화하지만 과부하로 정신적 불안정과 피로를 유발합니다. 다른 외골격과는 중복 설치할 수 없습니다. -->
-        <!-- Order of the Machina의 입교하여 본격적으로 합일을 시작하는 신도들에게 지급되는 내장형 프레임입니다. 신경계를 무리할 정도로 강화해 각종 기괴한 개조에도 신체를 움직일 수는 있게 해줍니다. 이 과정에서 뇌에 가해지는 끔찍한 부담과 피로감은 이 광신도들에게 그저 고행의 한 단계일뿐입니다. -->
+        <!-- Order of the Machina의 규약에 따라 신도들에게 이식되는 내장형 프레임으로, 신경계를 강화하지만 과부하로 정신적 불안정과 피로를 유발합니다. 다른 내장형 프레임과 중복 설치할 수 없습니다. -->
         <description>Implanted according to the Order of the Machina, this internal frame enhances the nervous system, but causes physical strain, leading to instability and fatigue. Cannot be installed with other Inner Frames.</description>
         <descriptionHyperlinks>
             <RecipeDef>IP_ORD_25_EVOLUTION</RecipeDef>
@@ -646,19 +643,18 @@
         <addsHediff>IP_StandardInnerFrame</addsHediff>
     </RecipeDef>
 
-    <!-- IMSL-17 BASTION SHIELD -->
-
+    <!-- IMSL BASTION SHIELD -->
+    <!-- 이동 -25%, 날카로움 방어 50%, 둔탁함 방어 25%, 열기방어 35%, 받는피해량 80%, 비틀거림 계수(데미지 받았을때 느려지는 계수)75% -->
     <HediffDef ParentName="ImplantHediffBase">
-        <defName>IP_IMSL_17_BASTION_SHIELD</defName>
-        <label>IMSL-17 BASTION SHIELD</label>
-        <labelNoun>IMSL-17 BASTION SHIELD</labelNoun>
-        <!-- Imperial Marine Strategic Laboratory의 특수강습부대가 사용하는 표준 프레임입니다. 두꺼운 방탄판과 견고한 프레임으로 구성되어 있어 움직임이 둔화되지만, 적의 총탄을 견디며 안전하게 돌입할 수 있도록 설계되었습니다. -->
-        <!-- 제국군 해병 전략 연구소(Imperial Marine Strategic Laboratory)의 기동파괴부대에서 사용하는 표준 외골격 프레임입니다. 프레임자체가 아주 무겁고 단단한 강철로 구성되어있어 느려지지만 적의 총탄의 견디며 안전하게 작전구역으로 돌입할 수 있습니다.  -->
-        <description>This is the standard frame used by the Special Assault Unit of the Imperial Marine Strategic Laboratory. Constructed with thick bulletproof plating and a sturdy frame, it slows movement, but is designed to withstand enemy gunfire and allow for a safe breach.</description>
+        <defName>IP_IMSL_BASTION_SHIELD</defName>
+        <label>IMSL BASTION SHIELD</label>
+        <labelNoun>IMSL BASTION SHIELD</labelNoun>
+        <!-- Imperial Marine Strategic Laboratory의 특수강습부대가 사용하는 표준 프레임입니다. 두꺼운 방탄판과 견고한 프레임으로 구성되어 있어 움직임이 둔화되지만, 적의 총탄을 견디며 안전하게 돌입할 수 있도록 설계되었습니다. 다른 내장형 프레임과 중복 설치할 수 없습니다. -->
+        <description>This is the standard frame used by the Special Assault Unit of the Imperial Marine Strategic Laboratory. Constructed with thick bulletproof plating and a sturdy frame, it slows movement, but is designed to withstand enemy gunfire and allow for a safe breach. Cannot be installed simultaneously with other Inner Frame.</description>
         <descriptionHyperlinks>
-            <ThingDef>IP_IMSL_17_BASTION_SHIELD</ThingDef>
+            <ThingDef>IP_IMSL_BASTION_SHIELD</ThingDef>
         </descriptionHyperlinks>
-        <spawnThingOnRemoved>IP_IMSL_17_BASTION_SHIELD</spawnThingOnRemoved>
+        <spawnThingOnRemoved>IP_IMSL_BASTION_SHIELD</spawnThingOnRemoved>
         <stages>
             <li>
                 <capMods>
@@ -674,6 +670,7 @@
                 </statOffsets>
                 <statFactors>
                     <IncomingDamageFactor>0.80</IncomingDamageFactor>
+                    <StaggerDurationFactor>0.75</StaggerDurationFactor>
                 </statFactors>
             </li>
         </stages>
@@ -684,13 +681,12 @@
     </HediffDef>
 
     <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
-        <defName>IP_IMSL_17_BASTION_SHIELD</defName>
-        <label>IMSL-17 BASTION SHIELD</label>
-        <!-- Imperial Marine Strategic Laboratory의 특수강습부대가 사용하는 표준 프레임입니다. 두꺼운 방탄판과 견고한 프레임으로 구성되어 있어 움직임이 둔화되지만, 적의 총탄을 견디며 안전하게 돌입할 수 있도록 설계되었습니다. -->
-        <!-- 제국군 해병 전략 연구소(Imperial Marine Strategic Laboratory)의 기동파괴부대에서 사용하는 표준 외골격 프레임입니다. 프레임자체가 아주 무겁고 단단한 강철로 구성되어있어 느려지지만 적의 총탄의 견디며 안전하게 작전구역으로 돌입할 수 있습니다.  -->
-        <description>This is the standard frame used by the Special Assault Unit of the Imperial Marine Strategic Laboratory. Constructed with thick bulletproof plating and a sturdy frame, it slows movement, but is designed to withstand enemy gunfire and allow for a safe breach.</description>
+        <defName>IP_IMSL_BASTION_SHIELD</defName>
+        <label>IMSL BASTION SHIELD</label>
+        <!-- Imperial Marine Strategic Laboratory의 특수강습부대가 사용하는 표준 프레임입니다. 두꺼운 방탄판과 견고한 프레임으로 구성되어 있어 움직임이 둔화되지만, 적의 총탄을 견디며 안전하게 돌입할 수 있도록 설계되었습니다. 다른 내장형 프레임과 중복 설치할 수 없습니다. -->
+        <description>This is the standard frame used by the Special Assault Unit of the Imperial Marine Strategic Laboratory. Constructed with thick bulletproof plating and a sturdy frame, it slows movement, but is designed to withstand enemy gunfire and allow for a safe breach. Cannot be installed simultaneously with other Inner Frame.</description>
         <descriptionHyperlinks>
-            <RecipeDef>IP_IMSL_17_BASTION_SHIELD</RecipeDef>
+            <RecipeDef>IP_IMSL_BASTION_SHIELD</RecipeDef>
         </descriptionHyperlinks>
         <costList>
             <Steel>200</Steel>
@@ -700,7 +696,7 @@
             <li>RewardStandardLowFreq</li>
         </thingSetMakerTags>
         <statBases>
-            <Mass>7.0</Mass>
+            <Mass>9.0</Mass>
             <MarketValue>530</MarketValue>
         </statBases>
         <techHediffsTags>
@@ -727,15 +723,15 @@
     </ThingDef>
 
     <RecipeDef ParentName="SurgeryInstallImplantBase">
-        <defName>IP_IMSL_17_BASTION_SHIELD</defName>
-        <label>Installing IMSL-17 BASTION SHIELD</label>
-        <description>Installs IMSL-17 BASTION SHIELD</description>
-        <jobString>Installing IMSL-17 BASTION SHIELD</jobString>
+        <defName>IP_IMSL_BASTION_SHIELD</defName>
+        <label>Installing IMSL BASTION SHIELD</label>
+        <description>Installs IMSL BASTION SHIELD</description>
+        <jobString>Installing IMSL BASTION SHIELD</jobString>
         <ingredients>
             <li>
                 <filter>
                     <thingDefs>
-                        <li>IP_IMSL_17_BASTION_SHIELD</li>
+                        <li>IP_IMSL_BASTION_SHIELD</li>
                     </thingDefs>
                 </filter>
                 <count>1</count>
@@ -746,7 +742,7 @@
         </skillRequirements>
         <fixedIngredientFilter>
             <thingDefs>
-                <li>IP_IMSL_17_BASTION_SHIELD</li>
+                <li>IP_IMSL_BASTION_SHIELD</li>
             </thingDefs>
         </fixedIngredientFilter>
         <appliedOnFixedBodyParts>

@@ -5,7 +5,7 @@
     <!-- 1티어 파츠 -->
 
     <!-- AdvancedProsthetic Arm -->
-
+    <!-- 부위 효율 115% -->
     <HediffDef ParentName="AddedBodyPartBase">
         <defName>IP_AdvancedProstheticArm</defName>
         <label>Advanced Prosthetic Arm</label>
@@ -108,7 +108,7 @@
     </RecipeDef>
 
     <!-- IDC-17 MOLE SALVAGE -->
-
+    <!-- 부위 효율 110%. 채굴량 110%, 채굴속도, 심층채굴 속도 -15% -->
     <HediffDef ParentName="AddedBodyPartBase">
         <defName>IP_IDC17_MOLE_SALVAGE</defName>
         <label>IDC-17 MOLE SALVAGE</label>
@@ -143,12 +143,13 @@
         <spawnThingOnRemoved>IP_IDC17_MOLE_SALVAGE</spawnThingOnRemoved>
         <stages>
             <li>
-                <statFactors>
-                    <MiningSpeed>0.8</MiningSpeed>
-                    <DeepDrillingSpeed>0.8</DeepDrillingSpeed>
-                </statFactors>
+                <!-- <statFactors>
+
+                </statFactors> -->
                 <statOffsets>
                     <MiningYield>0.1</MiningYield>
+                    <MiningSpeed>-0.15</MiningSpeed>
+                    <DeepDrillingSpeed>-0.15</DeepDrillingSpeed>
                 </statOffsets>
             </li>
         </stages>
@@ -225,7 +226,8 @@
         <addsHediff>IP_IDC17_MOLE_SALVAGE</addsHediff>
     </RecipeDef>
 
-    <!-- ID-05 AGRI HARVESTER -->
+    <!-- IDC-05 AGRI HARVESTER -->
+    <!-- 부위 효율 110%, 식물 수확량 115%, 도축효율 (고기와 가죽)115%, 동물 채집량 증가 10% -->
 
     <HediffDef ParentName="AddedBodyPartBase">
         <defName>IP_IDC05_AGRI_HARVESTER</defName>
@@ -342,6 +344,7 @@
     </RecipeDef>
 
     <!-- IDC-11 HULK STRUCKTOR -->
+    <!-- 부위 효율 110%, 건설 속도 130% -->
 
     <HediffDef ParentName="AddedBodyPartBase">
         <defName>IP_IDC11_HULK_STRUCKTOR</defName>
@@ -456,7 +459,7 @@
     </RecipeDef>
 
     <!-- ORD-02 PHANTOM REAPER -->
-
+    <!-- 받는 피해 103%, 다른 팔보다 월등히 가벼움, 작업속도 -25%, 기본 이동속도 0.25증가(방탄장비가 0.2느려짐), 근접 공격 쿨타임 -15% -->
     <HediffDef ParentName="AddedBodyPartBase">
         <defName>IP_ORD02_PHANTOM_REAPER</defName>
         <label>ORD-02 PHANTOM REAPER</label>
@@ -495,7 +498,7 @@
                     <MeleeCooldownFactor>-0.15</MeleeCooldownFactor>
                 </statOffsets>
                 <statFactors>
-                    <IncomingDamageFactor>1.05</IncomingDamageFactor>
+                    <IncomingDamageFactor>1.03</IncomingDamageFactor>
                 </statFactors>
             </li>
         </stages>
@@ -572,16 +575,16 @@
         <addsHediff>IP_ORD02_PHANTOM_REAPER</addsHediff>
     </RecipeDef>
 
-    <!-- IMSL-01 SENTINEL BRUTE -->
-
+    <!-- IMSL SENTINEL BRUTE -->
+    <!-- 다른 파츠보다 무거움, 부위 효율 110%, 근접 공격력 다른 팔보다 높음, 근접 공격 쿨타임 105%, 받는 데미지 95%, 근접 공격력 110% -->
     <HediffDef ParentName="AddedBodyPartBase">
-        <defName>IP_IMSL_01_SENTINEL_BRUTE</defName>
-        <label>IMSL-01 SENTINEL BRUTE</label>
-        <labelNoun>IMSL-01 SENTINEL BRUTE</labelNoun>
-        <!-- Imperial Marine Strategic Laboratory에서 개발한 Sentinel Project의 결과물 중 하나로 폭동진압팀의 표준 장비로 채택되었습니다. 사용자의 완력을 강화해주며 견고한 설계로 근접 전투를 효율적으로 만들어줍니다. -->
+        <defName>IP_IMSL_SENTINEL_BRUTE</defName>
+        <label>IMSL SENTINEL BRUTE</label>
+        <labelNoun>IMSL SENTINEL BRUTE</labelNoun>
+        <!-- Imperial Marine Strategic Laboratory에서 진행한 Sentinel Project의 결과물 중 하나로 폭동진압팀의 표준 장비로 채택되었습니다. 사용자의 완력을 강화해주며 견고한 설계로 근접 전투를 효율적으로 만들어줍니다. -->
         <description>One of the outcomes of the Sentinel Project, developed by the Imperial Marine Strategic Laboratory, this arm has been adopted as standard equipment for the riot control team. It enhances the user's strength and, with its sturdy design, makes close combat more efficient.</description>
         <descriptionHyperlinks>
-            <ThingDef>IP_IMSL_01_SENTINEL_BRUTE</ThingDef>
+            <ThingDef>IP_IMSL_SENTINEL_BRUTE</ThingDef>
         </descriptionHyperlinks>
         <addedPartProps>
             <solid>true</solid>
@@ -604,7 +607,7 @@
                 </tools>
             </li>
         </comps>
-        <spawnThingOnRemoved>IP_IMSL_01_SENTINEL_BRUTE</spawnThingOnRemoved>
+        <spawnThingOnRemoved>IP_IMSL_SENTINEL_BRUTE</spawnThingOnRemoved>
         <stages>
             <li>
                 <statOffsets>
@@ -619,12 +622,12 @@
     </HediffDef>
 
     <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
-        <defName>IP_IMSL_01_SENTINEL_BRUTE</defName>
-        <label>IMSL-01 SENTINEL BRUTE</label>
-        <!-- Imperial Marine Strategic Laboratory에서 개발한 Sentinel Project의 결과물 중 하나로 폭동진압팀의 표준 장비로 채택되었습니다. 사용자의 완력을 강화해주며 견고한 설계로 근접 전투를 효율적으로 만들어주지만 육중한 무게로 인해 사용자가 둔해집니다. -->
+        <defName>IP_IMSL_SENTINEL_BRUTE</defName>
+        <label>IMSL SENTINEL BRUTE</label>
+        <!-- Imperial Marine Strategic Laboratory에서 진행한 Sentinel Project의 결과물 중 하나로 폭동진압팀의 표준 장비로 채택되었습니다. 사용자의 완력을 강화해주며 견고한 설계로 근접 전투를 효율적으로 만들어주지만 육중한 무게로 인해 사용자가 둔해집니다. -->
         <description>One of the outcomes of the Sentinel Project, developed by the Imperial Marine Strategic Laboratory, this arm has been adopted as standard equipment for the riot control team. It enhances the user's strength and, with its sturdy design, makes close combat more efficient, but its heavy weight causes the user to become sluggish.</description>
         <descriptionHyperlinks>
-            <RecipeDef>IP_IMSL_01_SENTINEL_BRUTE</RecipeDef>
+            <RecipeDef>IP_IMSL_SENTINEL_BRUTE</RecipeDef>
         </descriptionHyperlinks>
         <costList>
             <Steel>80</Steel>
@@ -661,15 +664,15 @@
     </ThingDef>
 
     <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
-        <defName>IP_IMSL_01_SENTINEL_BRUTE</defName>
-        <label>Installing IMSL-01 SENTINEL BRUTE</label>
-        <description>Installs IMSL-01 SENTINEL BRUTE.</description>
-        <jobString>Installing IMSL-01 SENTINEL BRUTE.</jobString>
+        <defName>IP_IMSL_SENTINEL_BRUTE</defName>
+        <label>Installing IMSL SENTINEL BRUTE</label>
+        <description>Installs IMSL SENTINEL BRUTE.</description>
+        <jobString>Installing IMSL SENTINEL BRUTE.</jobString>
         <ingredients>
             <li>
                 <filter>
                     <thingDefs>
-                        <li>IP_IMSL_01_SENTINEL_BRUTE</li>
+                        <li>IP_IMSL_SENTINEL_BRUTE</li>
                     </thingDefs>
                 </filter>
                 <count>1</count>
@@ -680,25 +683,25 @@
         </skillRequirements>
         <fixedIngredientFilter>
             <thingDefs>
-                <li>IP_IMSL_01_SENTINEL_BRUTE</li>
+                <li>IP_IMSL_SENTINEL_BRUTE</li>
             </thingDefs>
         </fixedIngredientFilter>
         <appliedOnFixedBodyParts>
             <li>Shoulder</li>
         </appliedOnFixedBodyParts>
-        <addsHediff>IP_IMSL_01_SENTINEL_BRUTE</addsHediff>
+        <addsHediff>IP_IMSL_SENTINEL_BRUTE</addsHediff>
     </RecipeDef>
 
-    <!-- IMSL-02 SENTINEL MARKSMAN -->
-
+    <!-- IMSL SENTINEL MARKSMAN -->
+    <!-- 부위 효율 110%, 조준 지연시간 -10%, 사격 정확도 1.5% 상승 -->
     <HediffDef ParentName="AddedBodyPartBase">
-        <defName>IP_IMSL_02_SENTINEL_MARKSMAN</defName>
-        <label>IMSL-02 SENTINEL MARKSMAN</label>
-        <labelNoun>IMSL-02 SENTINEL MARKSMAN</labelNoun>
-        <!-- Imperial Marine Strategic Laboratory에서 개발한 Sentinel Project의 결과물 이 임플란트는 제국의 병사들의 표준 장비 입니다. 기초적인 사격 제어 시스템이 내장되어 있어 더 신속하고 정확한 사격을 가능하게 합니다. -->
+        <defName>IP_IMSL_SENTINEL_MARKSMAN</defName>
+        <label>IMSL SENTINEL MARKSMAN</label>
+        <labelNoun>IMSL SENTINEL MARKSMAN</labelNoun>
+        <!-- Imperial Marine Strategic Laboratory에서 진행한 Sentinel Project의 결과물 이 임플란트는 제국의 병사들의 표준 장비 입니다. 기초적인 사격 제어 시스템이 내장되어 있어 더 신속하고 정확한 사격을 가능하게 합니다. -->
         <description>One of the outcomes of the Sentinel Project, developed by the Imperial Marine Strategic Laboratory, this implant is the standard equipment for Imperial soldiers. It is equipped with a basic firing control system, enabling faster and more accurate shooting.</description>
         <descriptionHyperlinks>
-            <ThingDef>IP_IMSL_02_SENTINEL_MARKSMAN</ThingDef>
+            <ThingDef>IP_IMSL_SENTINEL_MARKSMAN</ThingDef>
         </descriptionHyperlinks>
         <addedPartProps>
             <solid>true</solid>
@@ -720,11 +723,11 @@
                 </tools>
             </li>
         </comps>
-        <spawnThingOnRemoved>IP_IMSL_02_SENTINEL_MARKSMAN</spawnThingOnRemoved>
+        <spawnThingOnRemoved>IP_IMSL_SENTINEL_MARKSMAN</spawnThingOnRemoved>
         <stages>
             <li>
                 <statFactors>
-                    <AimingDelayFactor>0.85</AimingDelayFactor>
+                    <AimingDelayFactor>0.9</AimingDelayFactor>
                 </statFactors>
                 <statOffsets>
                     <ShootingAccuracyPawn>1.5</ShootingAccuracyPawn>
@@ -734,12 +737,12 @@
     </HediffDef>
 
     <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
-        <defName>IP_IMSL_02_SENTINEL_MARKSMAN</defName>
-        <label>IMSL-02 SENTINEL MARKSMAN</label>
-        <!-- Imperial Marine Strategic Laboratory에서 개발한 Sentinel Project의 결과물 이 임플란트는 제국의 병사들의 표준 장비 입니다. 기초적인 반동 제어 시스템이 내장되어 있어 더 신속한 사격을 가능하게 합니다. -->
+        <defName>IP_IMSL_SENTINEL_MARKSMAN</defName>
+        <label>IMSL SENTINEL MARKSMAN</label>
+        <!-- Imperial Marine Strategic Laboratory에서 진행한 Sentinel Project의 결과물 이 임플란트는 제국의 병사들의 표준 장비 입니다. 기초적인 반동 제어 시스템이 내장되어 있어 더 신속한 사격을 가능하게 합니다. -->
         <description>One of the outcomes of the Sentinel Project, developed by the Imperial Marine Strategic Laboratory, this implant is the standard equipment for Imperial soldiers. It is equipped with a basic recoil control system, enabling faster and more precise firing.</description>
         <descriptionHyperlinks>
-            <RecipeDef>IP_IMSL_02_SENTINEL_MARKSMAN</RecipeDef>
+            <RecipeDef>IP_IMSL_SENTINEL_MARKSMAN</RecipeDef>
         </descriptionHyperlinks>
         <costList>
             <Steel>80</Steel>
@@ -776,15 +779,15 @@
     </ThingDef>
 
     <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
-        <defName>IP_IMSL_02_SENTINEL_MARKSMAN</defName>
-        <label>Installing IMSL-02 SENTINEL MARKSMAN</label>
-        <description>Installs IMSL-02 SENTINEL MARKSMAN.</description>
-        <jobString>Installing IMSL-02 SENTINEL MARKSMAN.</jobString>
+        <defName>IP_IMSL_SENTINEL_MARKSMAN</defName>
+        <label>Installing IMSL SENTINEL MARKSMAN</label>
+        <description>Installs IMSL SENTINEL MARKSMAN.</description>
+        <jobString>Installing IMSL SENTINEL MARKSMAN.</jobString>
         <ingredients>
             <li>
                 <filter>
                     <thingDefs>
-                        <li>IP_IMSL_02_SENTINEL_MARKSMAN</li>
+                        <li>IP_IMSL_SENTINEL_MARKSMAN</li>
                     </thingDefs>
                 </filter>
                 <count>1</count>
@@ -795,13 +798,13 @@
         </skillRequirements>
         <fixedIngredientFilter>
             <thingDefs>
-                <li>IP_IMSL_02_SENTINEL_MARKSMAN</li>
+                <li>IP_IMSL_SENTINEL_MARKSMAN</li>
             </thingDefs>
         </fixedIngredientFilter>
         <appliedOnFixedBodyParts>
             <li>Shoulder</li>
         </appliedOnFixedBodyParts>
-        <addsHediff>IP_IMSL_02_SENTINEL_MARKSMAN</addsHediff>
+        <addsHediff>IP_IMSL_SENTINEL_MARKSMAN</addsHediff>
     </RecipeDef>
 
 </Defs>

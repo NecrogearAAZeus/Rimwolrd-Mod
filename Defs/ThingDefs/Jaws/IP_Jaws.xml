@@ -90,4 +90,102 @@
         <addsHediff>IP_AdvancedProsthesisJaw</addsHediff>
     </RecipeDef>
 
+
+    <!-- DAON-0S DELIGHT GRACE -->
+    <!-- 사회 영향력 10%증가, 거래시 가격 이점 5%(더 비싸게 팔고 더 싸게 삼) -->
+    <HediffDef ParentName="AddedBodyPartBase">
+        <defName>IP_DAON_0S_DELIGHT_GRACE</defName>
+        <label>DAON-0S DELIGHT GRACE</label>
+        <labelNoun>DAON-0S DELIGHT GRACE</labelNoun>
+        <!-- DAON사가 개발한 사교 보조용 턱 임플란트로, 착용자의 발음을 세련되고 듣기 좋게 조율하며 목소리에 따뜻한 울림을 더해줍니다. 또한 미묘한 표정 근육을 보정하여 자연스럽고 호감 가는 표정을 연출하도록 설계되었습니다. 이 턱을 이식한 그룹은 이식하지 않은 그룹보다 매력을 34.8% 더 느꼈다는 연구 결과가 있습니다. -->
+        <description>Developed by DAON, this social-assist jaw implant refines the wearer’s pronunciation to sound polished and pleasant, while adding a warm resonance to their voice. It also adjusts subtle facial muscles to create natural, likable expressions. According to research, groups with this implant were perceived as 34.8% more attractive compared to those without it.</description>
+        <descriptionHyperlinks>
+            <ThingDef>IP_DAON_0S_DELIGHT_GRACE</ThingDef>
+        </descriptionHyperlinks>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.1</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+        <spawnThingOnRemoved>IP_DAON_0S_DELIGHT_GRACE</spawnThingOnRemoved>
+        <stages>
+            <li>
+                <statOffsets>
+                    <SocialImpact>0.1</SocialImpact>
+                </statOffsets>
+                <statFactors>
+                    <TradePriceImprovement>0.05</TradePriceImprovement>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
+        <defName>IP_DAON_0S_DELIGHT_GRACE</defName>
+        <label>DAON-0S DELIGHT GRACE</label>
+        <!-- DAON사가 개발한 사교 보조용 턱 임플란트로, 착용자의 발음을 세련되고 듣기 좋게 조율하며 목소리에 따뜻한 울림을 더해줍니다. 또한 미묘한 표정 근육을 보정하여 자연스럽고 호감 가는 표정을 연출하도록 설계되었습니다. 이 턱을 이식한 그룹은 이식하지 않은 그룹보다 매력을 34.8% 더 느꼈다는 연구 결과가 있습니다. -->
+        <description>Developed by DAON, this social-assist jaw implant refines the wearer’s pronunciation to sound polished and pleasant, while adding a warm resonance to their voice. It also adjusts subtle facial muscles to create natural, likable expressions. According to research, groups with this implant were perceived as 34.8% more attractive compared to those without it.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>IP_DAON_0S_DELIGHT_GRACE</RecipeDef>
+        </descriptionHyperlinks>
+        <costList>
+            <Steel>30</Steel>
+            <ComponentIndustrial>6</ComponentIndustrial>
+        </costList>
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        <statBases>
+            <MarketValue>430</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Industrial</li>
+        </techHediffsTags>
+        <recipeMaker>
+            <researchPrerequisite>IP_AdvancedProsthetic</researchPrerequisite>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <unfinishedThingDef>UnfinishedHealthItemProsthetic</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>7</Crafting>
+            </skillRequirements>
+            <workAmount>23500</workAmount>
+        </recipeMaker>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
+        <defName>IP_DAON_0S_DELIGHT_GRACE</defName>
+        <label>Installing DAON-0S DELIGHT GRACE</label>
+        <description>Installs DAON-0S DELIGHT GRACE.</description>
+        <jobString>Installing DAON-0S DELIGHT GRACE.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IP_DAON_0S_DELIGHT_GRACE</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Medicine>4</Medicine>
+        </skillRequirements>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>IP_DAON_0S_DELIGHT_GRACE</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Jaw</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>IP_DAON_0S_DELIGHT_GRACE</addsHediff>
+    </RecipeDef>
+
+
 </Defs>
