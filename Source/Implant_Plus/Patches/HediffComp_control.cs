@@ -13,43 +13,123 @@ using HarmonyLib;
 
 namespace Implant_Plus.Control
 {
-    // 임플란트 설치 시 무기 드롭
+
     [HarmonyPatch(typeof(Recipe_InstallImplant), "ApplyOnPawn")]
-    public static class DropWeaponOnImplant_Patch
+    public static class ImplantInstall_Patch  // 특정 임플란트가 착용될때 반응
     {
         static void Postfix(Pawn pawn, BodyPartRecord part, Pawn billDoer, List<Thing> ingredients, Bill bill)
         {
-            //  수술 대상이 Phantom Reaper가 아닐 경우 종료
-            if (!pawn.health.hediffSet.HasHediff(HediffDef.Named("IP_ORD02_PHANTOM_REAPER")))
+            // Phantom Reaper 로직 (무기 드롭)
+            if (pawn.health.hediffSet.HasHediff(HediffDef.Named("IP_ORD_02_PHANTOM_REAPER")))
             {
-                return;
-            }
-            var phantomReaper = pawn.health.hediffSet.hediffs
-                .FirstOrDefault(h =>
-                    h.def.defName == "IP_ORD02_PHANTOM_REAPER" &&
-                    h.Part == part);
-            if (phantomReaper == null)
-            {
-                return;
-            }
-            if (pawn.equipment?.Primary != null)
-            {
-                if (pawn.MapHeld == null || !pawn.Spawned)
+                var phantomReaper = pawn.health.hediffSet.hediffs
+                    .FirstOrDefault(h =>
+                        h.def.defName == "IP_ORD_02_PHANTOM_REAPER" &&
+                        h.Part == part);
+                if (phantomReaper != null)
                 {
-                    return;
+                    if (pawn.equipment?.Primary != null)
+                    {
+                        if (pawn.MapHeld != null && pawn.Spawned)
+                        {
+                            ThingWithComps weapon = pawn.equipment.Primary;
+                            // 장비에서 강제로 제거
+                            pawn.equipment.Remove(weapon);
+                            // 현재 위치에 떨군다
+                            bool placed = GenPlace.TryPlaceThing(
+                                weapon,
+                                pawn.Position,
+                                pawn.Map,
+                                ThingPlaceMode.Near);
+                            if (placed)
+                            {
+                                weapon.SetForbidden(true, warnOnFail: false);
+                            }
+                        }
+                    }
                 }
-                ThingWithComps weapon = pawn.equipment.Primary;
-                // 장비에서 강제로 제거
-                pawn.equipment.Remove(weapon);
-                // 현재 위치에 떨군다
-                bool placed = GenPlace.TryPlaceThing(
-                    weapon,
-                    pawn.Position,
-                    pawn.Map,
-                    ThingPlaceMode.Near);
-                if (placed)
+            }
+
+            
+            // Codex Shield 로직 (자동 장비 착용)
+            if (pawn.health.hediffSet.HasHediff(HediffDef.Named("IP_ORD_03_CODEX_SHIELD")))
+            {
+                var codexShield = pawn.health.hediffSet.hediffs
+                    .FirstOrDefault(h =>
+                        h.def.defName == "IP_ORD_03_CODEX_SHIELD" &&
+                        h.Part == part);
+                        
+                if (codexShield != null)
                 {
-                    weapon.SetForbidden(true, warnOnFail: false);
+                    // IP_ORD_03_CODEX_SHIELD_BUBBLE 자동 착용
+                    ThingDef bubbleDef = DefDatabase<ThingDef>.GetNamed("IP_ORD_03_CODEX_SHIELD_BUBBLE");
+                    if (bubbleDef != null && pawn.apparel != null)
+                    {
+                        // ThingDef를 인수로 사용
+                        if (pawn.apparel.CanWearWithoutDroppingAnything(bubbleDef))
+                        {
+                            Thing bubble = ThingMaker.MakeThing(bubbleDef);
+                            if (bubble is Apparel bubbleApparel)
+                            {
+                                pawn.apparel.Wear(bubbleApparel, false);
+                                pawn.apparel.Lock(bubbleApparel);
+                            }
+                        }
+                        else
+                        {
+                            // 착용할 수 없는 경우 처리 (필요시)
+                            // 아무것도 하지 않거나 로그 출력 등
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    // 임플란트 제거시 실행
+
+    [HarmonyPatch(typeof(Pawn_HealthTracker), "RemoveHediff")]
+    public static class Patch_RemoveHediff_Debug
+    {
+        [HarmonyPrefix]
+        public static void Prefix(Pawn_HealthTracker __instance, Hediff hediff)
+        {
+            Log.Message($"[PREFIX] RemoveHediff called: {hediff.def.defName}");
+        }
+        
+        [HarmonyPostfix]
+        public static void Postfix(Pawn_HealthTracker __instance, Hediff hediff)
+        {
+            Log.Message($"[POSTFIX] RemoveHediff called: {hediff.def.defName}");
+            
+            if (hediff.def.defName == "IP_ORD_03_CODEX_SHIELD")
+            {
+                Log.Message("Found ORD_03_CODEX_SHIELD removal!");
+                Pawn pawn = hediff.pawn;
+                RemoveBubbleApparel(pawn);
+            }
+        }
+        
+        private static void RemoveBubbleApparel(Pawn pawn)
+        {
+            Log.Message("RemoveBubbleApparel called");
+            if (pawn.apparel != null)
+            {
+                Apparel bubbleToRemove = pawn.apparel.WornApparel.FirstOrDefault(x => 
+                    x.def.defName == "IP_ORD_03_CODEX_SHIELD_BUBBLE");
+                
+                if (bubbleToRemove != null)
+                {
+                    Log.Message("Bubble found, removing...");
+                    pawn.apparel.Unlock(bubbleToRemove);
+                    pawn.apparel.Remove(bubbleToRemove);
+                    bubbleToRemove.Destroy();
+                    Log.Message("Bubble removed successfully");
+                }
+                else
+                {
+                    Log.Message("No bubble found to remove");
                 }
             }
         }
@@ -64,7 +144,7 @@ namespace Implant_Plus.Control
             if (selectedPawns == null || !selectedPawns.Any()) return;
 
             Pawn pawn = selectedPawns.FirstOrDefault();
-            if (pawn?.health?.hediffSet?.HasHediff(DefDatabase<HediffDef>.GetNamed("IP_ORD02_PHANTOM_REAPER")) != true)
+            if (pawn?.health?.hediffSet?.HasHediff(DefDatabase<HediffDef>.GetNamed("IP_ORD_02_PHANTOM_REAPER")) != true)
                 return;
 
             // 클릭한 위치의 셀 확인
@@ -114,7 +194,7 @@ namespace Implant_Plus.Control
         {
             Pawn pawn = __instance.pawn;
 
-            if (pawn.health?.hediffSet?.HasHediff(DefDatabase<HediffDef>.GetNamed("IP_ORD02_PHANTOM_REAPER")) == true)
+            if (pawn.health?.hediffSet?.HasHediff(DefDatabase<HediffDef>.GetNamed("IP_ORD_02_PHANTOM_REAPER")) == true)
             {
                 // 무기를 땅에 떨어뜨림
                 if (!GenPlace.TryPlaceThing(newEq, pawn.Position, pawn.Map, ThingPlaceMode.Near))
@@ -134,7 +214,6 @@ namespace Implant_Plus.Control
             return true;
         }
     }
-
 
     // 어둠에서 작업, 이동시 패널티 제거 
     [HarmonyPatch(typeof(Pawn_GeneTracker), "get_AffectedByDarkness")]
