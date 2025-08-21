@@ -49,7 +49,6 @@ namespace Implant_Plus.Control
                     }
                 }
             }
-
             
             // Codex Shield 로직 (자동 장비 착용)
             if (pawn.health.hediffSet.HasHediff(HediffDef.Named("IP_ORD_03_CODEX_SHIELD")))
@@ -85,52 +84,79 @@ namespace Implant_Plus.Control
             }
         }
     }
+    
+    // 수술로 특정 부위가 제거되었을 떄 호출
 
-
-    // 임플란트 제거시 실행
-
-    [HarmonyPatch(typeof(Pawn_HealthTracker), "RemoveHediff")]
-    public static class Patch_RemoveHediff_Debug
+    [HarmonyPatch(typeof(Recipe_RemoveBodyPart), "ApplyOnPawn")]
+    public static class Patch_RemoveBodyPart
     {
-        [HarmonyPrefix]
-        public static void Prefix(Pawn_HealthTracker __instance, Hediff hediff)
-        {
-            Log.Message($"[PREFIX] RemoveHediff called: {hediff.def.defName}");
-        }
-        
         [HarmonyPostfix]
-        public static void Postfix(Pawn_HealthTracker __instance, Hediff hediff)
+        public static void Postfix(Pawn pawn, BodyPartRecord part)
         {
-            Log.Message($"[POSTFIX] RemoveHediff called: {hediff.def.defName}");
+            // IP_ORD_03_CODEX_SHIELD가 더 이상 없는지 확인
+            bool hasAnyCodexShield = pawn.health.hediffSet.HasHediff(HediffDef.Named("IP_ORD_03_CODEX_SHIELD"));
             
-            if (hediff.def.defName == "IP_ORD_03_CODEX_SHIELD")
+            if (!hasAnyCodexShield)
             {
-                Log.Message("Found ORD_03_CODEX_SHIELD removal!");
-                Pawn pawn = hediff.pawn;
-                RemoveBubbleApparel(pawn);
+                if (pawn.apparel != null)
+                {
+                    Apparel bubbleToRemove = pawn.apparel.WornApparel.FirstOrDefault(x => 
+                        x.def.defName == "IP_ORD_03_CODEX_SHIELD_BUBBLE");
+                    
+                    if (bubbleToRemove != null)
+                    {
+                        // 쉴드 제거
+                        bubbleToRemove.Destroy();
+                    }
+                }
             }
         }
-        
-        private static void RemoveBubbleApparel(Pawn pawn)
+    }
+
+    // 특정 임플란트 중복착용 금지 로직
+
+    [HarmonyPatch(typeof(Recipe_Surgery), "AvailableOnNow")]
+    public static class Patch_PreventDuplicateInstall
+    {
+        [HarmonyPostfix]
+        public static void Postfix(Recipe_Surgery __instance, Thing thing, BodyPartRecord part, ref bool __result)
         {
-            Log.Message("RemoveBubbleApparel called");
-            if (pawn.apparel != null)
+            // 이미 false라면 더 확인할 필요 없음
+            if (!__result) return;
+            
+            // Recipe_InstallImplant인지 확인
+            if (__instance is Recipe_InstallImplant installRecipe)
             {
-                Apparel bubbleToRemove = pawn.apparel.WornApparel.FirstOrDefault(x => 
-                    x.def.defName == "IP_ORD_03_CODEX_SHIELD_BUBBLE");
-                
-                if (bubbleToRemove != null)
+                // IP_ORD_03_CODEX_SHIELD 설치 레시피인지 확인
+                if (installRecipe.recipe.addsHediff?.defName == "IP_ORD_03_CODEX_SHIELD")
                 {
-                    Log.Message("Bubble found, removing...");
-                    pawn.apparel.Unlock(bubbleToRemove);
-                    pawn.apparel.Remove(bubbleToRemove);
-                    bubbleToRemove.Destroy();
-                    Log.Message("Bubble removed successfully");
+                    Pawn pawn = thing as Pawn;
+                    if (pawn != null)
+                    {
+                        // 이미 IP_ORD_03_CODEX_SHIELD를 가지고 있다면 설치 불가
+                        bool hasCodexShield = pawn.health.hediffSet.HasHediff(HediffDef.Named("IP_ORD_03_CODEX_SHIELD"));
+                        if (hasCodexShield)
+                        {
+                            __result = false; // 수술 메뉴에서 숨김
+                        }
+                    }
                 }
-                else
-                {
-                    Log.Message("No bubble found to remove");
-                }
+            }
+        }
+    }
+
+    // 바닥에 특정 아이템이 떨어졌을 시 삭제
+
+    [HarmonyPatch(typeof(Thing), "SpawnSetup")]
+    public static class Patch_PreventSpawn
+    {
+        [HarmonyPostfix]
+        public static void Postfix(Thing __instance, Map map, bool respawningAfterLoad)
+        {
+            if (__instance.def.defName == "IP_ORD_03_CODEX_SHIELD_BUBBLE" && !respawningAfterLoad)
+            {
+                // 바닥에 스폰되면 즉시 삭제
+                __instance.Destroy();
             }
         }
     }
@@ -183,6 +209,7 @@ namespace Implant_Plus.Control
                     break; // 한 번만 처리
                 }
             }
+            
         }
     }
 
