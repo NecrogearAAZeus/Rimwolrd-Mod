@@ -6,7 +6,7 @@
 
     <!-- AdvancedProsthesis Liver -->
 
-    <HediffDef ParentName="ImplantHediffBase">
+    <HediffDef ParentName="AddedBodyPartBase">
         <defName>IP_AdvancedProsthesisLiver</defName>
         <label>Advanced Prosthesis Liver</label>
         <labelNoun>Advanced Prosthesis Liver</labelNoun>
@@ -61,10 +61,10 @@
         </recipeMaker>
     </ThingDef>
 
-    <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
         <defName>IP_AdvancedProsthesisLiver</defName>
         <label>Installing Advanced Prosthesis Liver</label>
-        <description>Installs Advanced Prosthesis Liver.</description>
+        <description>Installs Advanced Prosthesis Liver</description>
         <jobString>Installing Advanced Prosthesis Liver.</jobString>
         <ingredients>
             <li>

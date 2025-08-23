@@ -85,7 +85,7 @@
     <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
         <defName>IP_AdvancedProstheticEye</defName>
         <label>Install Advanced Prosthetic Eye</label>
-        <description>Installs Advanced ProstheticEye.</description>
+        <description>Installs Advanced ProstheticEye</description>
         <jobString>Installing Advanced Prosthetic Eye.</jobString>
         <ingredients>
             <li>
@@ -199,7 +199,7 @@
     <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
         <defName>IP_ICD_23_NIGHTOWL</defName>
         <label>Install ICD-23 NIGHTOWL</label>
-        <description>Installs Advanced ProstheticEye.</description>
+        <description>Installs Advanced ProstheticEye</description>
         <jobString>Installing ICD-23 NIGHTOWL.</jobString>
         <ingredients>
             <li>
@@ -313,7 +313,7 @@
     <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
         <defName>IP_DAON_20_VISIONX</defName>
         <label>Install DAON-20 VISIONX</label>
-        <description>Installs Advanced ProstheticEye.</description>
+        <description>Installs Advanced ProstheticEye</description>
         <jobString>Installing DAON-20 VISIONX.</jobString>
         <ingredients>
             <li>
@@ -430,7 +430,7 @@
     <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
         <defName>IP_IMSL_SENTINEL_SCOUT</defName>
         <label>Install IMSL SENTINEL SCOUT</label>
-        <description>Installs Advanced ProstheticEye.</description>
+        <description>Installs Advanced ProstheticEye</description>
         <jobString>Installing IMSL SENTINEL SCOUT.</jobString>
         <ingredients>
             <li>

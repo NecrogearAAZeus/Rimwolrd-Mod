@@ -64,7 +64,7 @@
     <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
         <defName>IP_AdvancedProsthesisSpine</defName>
         <label>Installing Advanced Prosthesis Spine</label>
-        <description>Installs Advanced Prosthesis Spine.</description>
+        <description>Installs Advanced Prosthesis Spine</description>
         <jobString>Installing Advanced Prosthesis Spine.</jobString>
         <ingredients>
             <li>

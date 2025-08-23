@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <!-- IP_ProstheticShield // 의수 쉴드전용 레이어  -->
+    <ApparelLayerDef>
+        <defName>IP_ProstheticShieldLayer</defName>
+        <label>Prosthetic shield</label>
+        <drawOrder>100</drawOrder>
+    </ApparelLayerDef>
+
+</Defs>

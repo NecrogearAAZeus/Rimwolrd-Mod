@@ -14,8 +14,10 @@ using HarmonyLib;
 namespace Implant_Plus.Control
 {
 
+    // 1. 임플란트 설치 시 반응 패치
+    
     [HarmonyPatch(typeof(Recipe_InstallImplant), "ApplyOnPawn")]
-    public static class ImplantInstall_Patch  // 특정 임플란트가 착용될때 반응
+    public static class ImplantInstall_Patch
     {
         static void Postfix(Pawn pawn, BodyPartRecord part, Pawn billDoer, List<Thing> ingredients, Bill bill)
         {
@@ -33,14 +35,8 @@ namespace Implant_Plus.Control
                         if (pawn.MapHeld != null && pawn.Spawned)
                         {
                             ThingWithComps weapon = pawn.equipment.Primary;
-                            // 장비에서 강제로 제거
                             pawn.equipment.Remove(weapon);
-                            // 현재 위치에 떨군다
-                            bool placed = GenPlace.TryPlaceThing(
-                                weapon,
-                                pawn.Position,
-                                pawn.Map,
-                                ThingPlaceMode.Near);
+                            bool placed = GenPlace.TryPlaceThing(weapon, pawn.Position, pawn.Map, ThingPlaceMode.Near);
                             if (placed)
                             {
                                 weapon.SetForbidden(true, warnOnFail: false);
@@ -60,11 +56,9 @@ namespace Implant_Plus.Control
                         
                 if (codexShield != null)
                 {
-                    // IP_ORD_03_CODEX_SHIELD_BUBBLE 자동 착용
                     ThingDef bubbleDef = DefDatabase<ThingDef>.GetNamed("IP_ORD_03_CODEX_SHIELD_BUBBLE");
                     if (bubbleDef != null && pawn.apparel != null)
                     {
-                        // ThingDef를 인수로 사용
                         if (pawn.apparel.CanWearWithoutDroppingAnything(bubbleDef))
                         {
                             Thing bubble = ThingMaker.MakeThing(bubbleDef);
@@ -74,26 +68,20 @@ namespace Implant_Plus.Control
                                 pawn.apparel.Lock(bubbleApparel);
                             }
                         }
-                        else
-                        {
-                            // 착용할 수 없는 경우 처리 (필요시)
-                            // 아무것도 하지 않거나 로그 출력 등
-                        }
                     }
                 }
             }
         }
     }
-    
-    // 수술로 특정 부위가 제거되었을 떄 호출
 
+    // 2. 신체 부위 제거 시 반응 패치
+    
     [HarmonyPatch(typeof(Recipe_RemoveBodyPart), "ApplyOnPawn")]
     public static class Patch_RemoveBodyPart
     {
         [HarmonyPostfix]
         public static void Postfix(Pawn pawn, BodyPartRecord part)
         {
-            // IP_ORD_03_CODEX_SHIELD가 더 이상 없는지 확인
             bool hasAnyCodexShield = pawn.health.hediffSet.HasHediff(HediffDef.Named("IP_ORD_03_CODEX_SHIELD"));
             
             if (!hasAnyCodexShield)
@@ -105,7 +93,6 @@ namespace Implant_Plus.Control
                     
                     if (bubbleToRemove != null)
                     {
-                        // 쉴드 제거
                         bubbleToRemove.Destroy();
                     }
                 }
@@ -113,7 +100,7 @@ namespace Implant_Plus.Control
         }
     }
 
-    // 특정 임플란트 중복착용 금지 로직
+    // 3. 중복 설치 방지 패치
 
     [HarmonyPatch(typeof(Recipe_Surgery), "AvailableOnNow")]
     public static class Patch_PreventDuplicateInstall
@@ -121,25 +108,50 @@ namespace Implant_Plus.Control
         [HarmonyPostfix]
         public static void Postfix(Recipe_Surgery __instance, Thing thing, BodyPartRecord part, ref bool __result)
         {
-            // 이미 false라면 더 확인할 필요 없음
             if (!__result) return;
             
-            // Recipe_InstallImplant인지 확인
-            if (__instance is Recipe_InstallImplant installRecipe)
+            if (__instance is Recipe_InstallImplant)
             {
-                // IP_ORD_03_CODEX_SHIELD 설치 레시피인지 확인
-                if (installRecipe.recipe.addsHediff?.defName == "IP_ORD_03_CODEX_SHIELD")
+                CheckCodexShield(__instance, thing, ref __result);
+                CheckInnerFrame(__instance, thing, ref __result);
+                CheckTier1Brain(__instance, thing, ref __result);
+            }
+        }
+        
+        private static void CheckCodexShield(Recipe_Surgery recipe, Thing thing, ref bool result)
+        {
+            if (recipe.recipe.addsHediff?.defName == "IP_ORD_03_CODEX_SHIELD")
+            {
+                Pawn pawn = thing as Pawn;
+                if (pawn?.health?.hediffSet?.HasHediff(HediffDef.Named("IP_ORD_03_CODEX_SHIELD")) == true)
                 {
-                    Pawn pawn = thing as Pawn;
-                    if (pawn != null)
-                    {
-                        // 이미 IP_ORD_03_CODEX_SHIELD를 가지고 있다면 설치 불가
-                        bool hasCodexShield = pawn.health.hediffSet.HasHediff(HediffDef.Named("IP_ORD_03_CODEX_SHIELD"));
-                        if (hasCodexShield)
-                        {
-                            __result = false; // 수술 메뉴에서 숨김
-                        }
-                    }
+                    result = false;
+                }
+            }
+        }
+        
+        private static void CheckInnerFrame(Recipe_Surgery recipe, Thing thing, ref bool result)
+        {
+            string newFrameDefName = recipe.recipe.addsHediff?.defName;
+            if (!string.IsNullOrEmpty(newFrameDefName) && InnerFrameManager.IsInnerFrame(newFrameDefName))
+            {
+                Pawn pawn = thing as Pawn;
+                if (pawn?.health?.hediffSet?.hediffs?.Any(h => InnerFrameManager.IsInnerFrame(h.def.defName)) == true)
+                {
+                    result = false;
+                }
+            }
+        }
+
+        private static void CheckTier1Brain(Recipe_Surgery recipe, Thing thing, ref bool result)
+        {
+            string tier1BrainImplantList = recipe.recipe.addsHediff?.defName;
+            if (!string.IsNullOrEmpty(tier1BrainImplantList) && BrainImplantManager.IsTier1BrainImplant(tier1BrainImplantList))
+            {
+                Pawn pawn = thing as Pawn;
+                if (pawn?.health?.hediffSet?.hediffs?.Any(h => BrainImplantManager.IsTier1BrainImplant(h.def.defName)) == true)
+                {
+                    result = false;
                 }
             }
         }

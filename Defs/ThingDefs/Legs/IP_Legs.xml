@@ -65,7 +65,7 @@
     <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
         <defName>IP_AdvancedProsthesisLeg</defName>
         <label>Installing Advanced Prosthesis Leg</label>
-        <description>Installs Advanced Prosthesis Leg.</description>
+        <description>Installs Advanced Prosthesis Leg</description>
         <jobString>Installing Advanced Prosthesis Leg.</jobString>
         <ingredients>
             <li>
@@ -167,7 +167,7 @@
     <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
         <defName>IP_IDC_2A_LOADER_GOLIATH</defName>
         <label>Installing IDC-2A LOADER GOLIATH</label>
-        <description>Installs IDC-2A LOADER GOLIATH.</description>
+        <description>Installs IDC-2A LOADER GOLIATH</description>
         <jobString>Installing IDC-2A LOADER GOLIATH.</jobString>
         <ingredients>
             <li>
@@ -215,11 +215,9 @@
             <li>
                 <statOffsets>
                     <MoveSpeed>0.2</MoveSpeed>
-                </statOffsets>
-                <statFactors>
                     <IncomingDamageFactor>1.03</IncomingDamageFactor>
                     <StaggerDurationFactor>1.1</StaggerDurationFactor>
-                </statFactors>
+                </statOffsets>
             </li>
         </stages>
     </HediffDef>
@@ -269,7 +267,7 @@
     <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
         <defName>IP_ORD_F1_EX_RAPTOR</defName>
         <label>Installing ORD-F1 EX-RAPTOR</label>
-        <description>Installs ORD-F1 EX-RAPTOR.</description>
+        <description>Installs ORD-F1 EX-RAPTOR</description>
         <jobString>Installing ORD-F1 EX-RAPTOR.</jobString>
         <ingredients>
             <li>
@@ -316,10 +314,10 @@
         <stages>
             <li>
                 <statOffsets>
-                    <RangedWeapon_Cooldown>0.9</RangedWeapon_Cooldown>
+                    <RangedWeapon_Cooldown>-0.1</RangedWeapon_Cooldown>
+                    <StaggerDurationFactor>0.8</StaggerDurationFactor>
                 </statOffsets>
                 <statFactors>
-                    <StaggerDurationFactor>0.8</StaggerDurationFactor>
                     <IncomingDamageFactor>0.95</IncomingDamageFactor>
                 </statFactors>
             </li>
@@ -371,7 +369,7 @@
     <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
         <defName>IP_IMSL_SENTINEL_RHINO</defName>
         <label>Installing IMSL SENTINEL RHINO</label>
-        <description>Installs IMSL SENTINEL RHINO.</description>
+        <description>Installs IMSL SENTINEL RHINO</description>
         <jobString>Installing IMSL SENTINEL RHINO.</jobString>
         <ingredients>
             <li>

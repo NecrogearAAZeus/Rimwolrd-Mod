@@ -6,7 +6,7 @@
 
     <!-- AdvancedProsthesis Stomach -->
 
-    <HediffDef ParentName="ImplantHediffBase">
+    <HediffDef ParentName="AddedBodyPartBase">
         <defName>IP_AdvancedProsthesisStomach</defName>
         <label>Advanced Prosthesis Stomach</label>
         <labelNoun>Advanced Prosthesis Stomach</labelNoun>
@@ -58,14 +58,14 @@
             <skillRequirements>
                 <Crafting>7</Crafting>
             </skillRequirements>
-            <workAmount>20000</workAmount>
+            <workAmount>17500</workAmount>
         </recipeMaker>
     </ThingDef>
 
-    <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
         <defName>IP_AdvancedProsthesisStomach</defName>
         <label>Installing Advanced Prosthesis Stomach</label>
-        <description>Installs Advanced Prosthesis Stomach.</description>
+        <description>Installs Advanced Prosthesis Stomach</description>
         <jobString>Installing Advanced Prosthesis Stomach.</jobString>
         <ingredients>
             <li>
@@ -89,6 +89,103 @@
             <li>Stomach</li>
         </appliedOnFixedBodyParts>
         <addsHediff>IP_AdvancedProsthesisStomach</addsHediff>
+    </RecipeDef>
+
+    <!-- IDC-S7 SILO RATION -->
+
+    <HediffDef ParentName="AddedBodyPartBase">
+        <defName>IP_IDC_S7_SILO_RATION</defName>
+        <label>IDC-S7 SILO RATION</label>
+        <labelNoun>IDC-S7 SILO RATION</labelNoun>
+        <!-- Interstellar Development Corps가 제작한 생존형 인공 위입니다. 한번에 대량의 열량을 저장하도록 설계되었습니다. 통합된 열량 저장 모듈이 극한 환경에서도 안정적인 에너지 공급을 보장합니다. -->
+        <description>A survival-grade artificial stomach developed by the Interstellar Development Corps. Designed to store large amounts of calories in a single meal, its integrated calorie storage module ensures a stable energy supply even in extreme environments.</description>
+        <descriptionHyperlinks>
+            <ThingDef>IP_IDC_S7_SILO_RATION</ThingDef>
+        </descriptionHyperlinks>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.1</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+        <spawnThingOnRemoved>IP_IDC_S7_SILO_RATION</spawnThingOnRemoved>
+        <stages>
+            <li>
+                <statFactors>
+                    <VEF_FoodCapacityMultiplier>2</VEF_FoodCapacityMultiplier>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
+        <defName>IP_IDC_S7_SILO_RATION</defName>
+        <label>IDC-S7 SILO RATION</label>
+        <!-- Interstellar Development Corps가 제작한 생존형 인공 위입니다. 한번에 대량의 열량을 흡수,저장하도록 설계되었으며, 통합된 열량 저장 모듈이 극한 환경에서도 안정적인 에너지 공급을 보장합니다. -->
+        <description>A survival-grade artificial stomach developed by the Interstellar Development Corps. Designed to absorb and store large amounts of calories in a single meal, its integrated calorie storage module ensures a stable energy supply even in extreme environments.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>IP_IDC_S7_SILO_RATION</RecipeDef>
+        </descriptionHyperlinks>
+        <costList>
+            <Steel>40</Steel>
+            <ComponentIndustrial>6</ComponentIndustrial>
+        </costList>
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        <statBases>
+            <Mass>2.0</Mass>
+            <MarketValue>430</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Industrial</li>
+        </techHediffsTags>
+        <recipeMaker>
+            <researchPrerequisites>
+                <li>IP_AdvancedProsthetic</li>
+                <li>IP_IDC_BasicModule</li>
+            </researchPrerequisites>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <unfinishedThingDef>UnfinishedHealthItemProsthetic</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>7</Crafting>
+            </skillRequirements>
+            <workAmount>20000</workAmount>
+        </recipeMaker>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
+        <defName>IP_IDC_S7_SILO_RATION</defName>
+        <label>Installing IDC-S7 SILO RATION</label>
+        <description>Installs IDC-S7 SILO RATION</description>
+        <jobString>Installing IDC-S7 SILO RATION.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IP_IDC_S7_SILO_RATION</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Medicine>4</Medicine>
+        </skillRequirements>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>IP_IDC_S7_SILO_RATION</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Stomach</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>IP_IDC_S7_SILO_RATION</addsHediff>
     </RecipeDef>
 
 </Defs>

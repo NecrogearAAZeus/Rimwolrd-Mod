@@ -64,7 +64,7 @@
     <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
         <defName>IP_AdvancedProsthesisJaw</defName>
         <label>Installing Advanced Prosthesis Jaw</label>
-        <description>Installs Advanced Prosthesis Jaw.</description>
+        <description>Installs Advanced Prosthesis Jaw</description>
         <jobString>Installing Advanced Prosthesis Jaw.</jobString>
         <ingredients>
             <li>
@@ -161,7 +161,7 @@
     <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
         <defName>IP_DAON_0S_DELIGHT_GRACE</defName>
         <label>Installing DAON-0S DELIGHT GRACE</label>
-        <description>Installs DAON-0S DELIGHT GRACE.</description>
+        <description>Installs DAON-0S DELIGHT GRACE</description>
         <jobString>Installing DAON-0S DELIGHT GRACE.</jobString>
         <ingredients>
             <li>

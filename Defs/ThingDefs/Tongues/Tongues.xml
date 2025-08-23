@@ -63,7 +63,7 @@
     <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
         <defName>IP_advancedProsthesisTongue</defName>
         <label>Installing Advanced Prosthesis Tongue</label>
-        <description>Installs Advanced Prosthesis Tongue.</description>
+        <description>Installs Advanced Prosthesis Tongue</description>
         <jobString>Installing Advanced Prosthesis Tongue.</jobString>
         <ingredients>
             <li>

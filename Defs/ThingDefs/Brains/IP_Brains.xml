@@ -1,19 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-
-<!-- 할일
-  
-중복 장착 안되게 만들기 
-
--->
-
 <Defs>
 
     <!-- 1티어 파츠 -->
 
     <!-- Combat Assist AI -->
     <!-- 사격스킬, 근접전투 스킬 2씩 상승, 근접 명중확률 3%증가, 사격 명중률 3%증가 -->
-    <HediffDef ParentName="ImplantHediffBase">
+    <HediffDef ParentName="AddedBodyPartBase">
         <defName>IP_CombatAssistAI</defName>
         <label>Combat Assist AI</label>
         <labelNoun>Combat Assist AI</labelNoun>
@@ -78,10 +71,10 @@
         </recipeMaker>
     </ThingDef>
 
-    <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
         <defName>IP_CombatAssistAI</defName>
         <label>Installing Combat Assist AI</label>
-        <description>Installs Combat Assist AI.</description>
+        <description>Installs Combat Assist AI</description>
         <jobString>Installing Combat Assist AI.</jobString>
         <ingredients>
             <li>
@@ -105,16 +98,22 @@
             <li>Brain</li>
         </appliedOnFixedBodyParts>
         <addsHediff>IP_CombatAssistAI</addsHediff>
-        <!-- 이게 아마 같이 안되게 하는것 같음 아마 커스텀 함수같음 -->
-        <!-- <incompatibleWithHediffTags>
-			<li>AuxiliaryAI_Worker</li>
-			<li>AuxiliaryAI_Combat</li>
-		</incompatibleWithHediffTags> -->
+    </RecipeDef>
+
+    <RecipeDef ParentName="SurgeryRemoveImplantBase">
+        <defName>IP_Remove_CombatAssistAI</defName>
+        <label>Remove Combat Assist AI</label>
+        <description>Remove Combat Assist AI</description>
+        <descriptionHyperlinks>
+            <ThingDef>IP_CombatAssistAI</ThingDef>
+        </descriptionHyperlinks>
+        <jobString>Removing Combat Assist AI.</jobString>
+        <removesHediff>IP_CombatAssistAI</removesHediff>
     </RecipeDef>
 
     <!-- Field worker Assist AI -->
     <!-- 건설, 채굴, 원예, 조련 2씩 증가, 일반 작업속도(연구 등 일부 작업 포함 안됨)15%증가 -->
-    <HediffDef ParentName="ImplantHediffBase">
+    <HediffDef ParentName="AddedBodyPartBase">
         <defName>IP_FieldworkerAssistAI</defName>
         <label>Field worker Assist AI</label>
         <labelNoun>Field worker Assist AI</labelNoun>
@@ -180,10 +179,10 @@
         </recipeMaker>
     </ThingDef>
 
-    <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
         <defName>IP_FieldworkerAssistAI</defName>
         <label>Installing Field worker Assist AI</label>
-        <description>Installs Field worker Assist AI.</description>
+        <description>Installs Field worker Assist AI</description>
         <jobString>Installing Field worker Assist AI.</jobString>
         <ingredients>
             <li>
@@ -209,10 +208,21 @@
         <addsHediff>IP_FieldworkerAssistAI</addsHediff>
     </RecipeDef>
 
+    <RecipeDef ParentName="SurgeryRemoveImplantBase">
+        <defName>IP_Remove_FieldworkerAssistAI</defName>
+        <label>Remove Field worker Assist AI</label>
+        <description>Remove Field worker Assist AI</description>
+        <descriptionHyperlinks>
+            <ThingDef>IP_FieldworkerAssistAI</ThingDef>
+        </descriptionHyperlinks>
+        <jobString>Removing Field worker Assist AI.</jobString>
+        <removesHediff>IP_FieldworkerAssistAI</removesHediff>
+    </RecipeDef>
+
 
     <!-- Craftmaster Assist AI -->
     <!-- 요리, 제작, 예술 2증가, 일반 작업속도(연구 등 일부 제외) 15%증가 -->
-    <HediffDef ParentName="ImplantHediffBase">
+    <HediffDef ParentName="AddedBodyPartBase">
         <defName>IP_CraftmasterAssistAI</defName>
         <label>Craftmaster Assist AI</label>
         <labelNoun>Craftmaster Assist AI</labelNoun>
@@ -277,10 +287,10 @@
         </recipeMaker>
     </ThingDef>
 
-    <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
         <defName>IP_CraftmasterAssistAI</defName>
         <label>Installing Craftmaster Assist AI</label>
-        <description>Installs Craftmaster Assist AI.</description>
+        <description>Installs Craftmaster Assist AI</description>
         <jobString>Installing Craftmaster Assist AI.</jobString>
         <ingredients>
             <li>
@@ -306,10 +316,21 @@
         <addsHediff>IP_CraftmasterAssistAI</addsHediff>
     </RecipeDef>
 
+    <RecipeDef ParentName="SurgeryRemoveImplantBase">
+        <defName>IP_Remove_CraftmasterAssistAI</defName>
+        <label>Remove Craftmaster Assist AI</label>
+        <description>Remove Craftmaster Assist AI</description>
+        <descriptionHyperlinks>
+            <ThingDef>IP_CraftmasterAssistAI</ThingDef>
+        </descriptionHyperlinks>
+        <jobString>Removing Craftmaster Assist AI.</jobString>
+        <removesHediff>IP_CraftmasterAssistAI</removesHediff>
+    </RecipeDef>
+
 
     <!-- Cognitor Assist AI -->
     <!-- 의료, 연구 2 증가, 치료품질 110%, 수술확률 110%, 연구속도 15%증가 -->
-    <HediffDef ParentName="ImplantHediffBase">
+    <HediffDef ParentName="AddedBodyPartBase">
         <defName>IP_CognitorAssistAI</defName>
         <label>Cognitor Assist AI</label>
         <labelNoun>Cognitor Assist AI</labelNoun>
@@ -375,10 +396,10 @@
         </recipeMaker>
     </ThingDef>
 
-    <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
         <defName>IP_CognitorAssistAI</defName>
         <label>Installing Cognitor Assist AI</label>
-        <description>Installs Cognitor Assist AI.</description>
+        <description>Installs Cognitor Assist AI</description>
         <jobString>Installing Cognitor Assist AI.</jobString>
         <ingredients>
             <li>
@@ -404,9 +425,20 @@
         <addsHediff>IP_CognitorAssistAI</addsHediff>
     </RecipeDef>
 
+    <RecipeDef ParentName="SurgeryRemoveImplantBase">
+        <defName>IP_Remove_CognitorAssistAI</defName>
+        <label>Remove Cognitor Assist AI</label>
+        <description>Remove Cognitor Assist AI</description>
+        <descriptionHyperlinks>
+            <ThingDef>IP_CognitorAssistAI</ThingDef>
+        </descriptionHyperlinks>
+        <jobString>Removing Cognitor Assist AI.</jobString>
+        <removesHediff>IP_CognitorAssistAI</removesHediff>
+    </RecipeDef>
+
     <!-- ORD-41 OVERSEER -->
     <!-- 매카노이드 대역폭(메카노이드 조종수 증가)+4, 메카노이드 제어 그룹(부대지정 비슷한 느낌)+1, 메카노이드 작업속도 0.08 -->
-    <HediffDef ParentName="ImplantHediffBase">
+    <HediffDef ParentName="AddedBodyPartBase">
         <defName>IP_ORD_41_OVERSEER</defName>
         <label>ORD-41 OVERSEER</label>
         <labelNoun>ORD-41 OVERSEER</labelNoun>
@@ -476,10 +508,10 @@
         </recipeMaker>
     </ThingDef>
 
-    <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
         <defName>IP_ORD_41_OVERSEER</defName>
         <label>Installing ORD-41 OVERSEER</label>
-        <description>Installs ORD-41 OVERSEER.</description>
+        <description>Installs ORD-41 OVERSEER</description>
         <jobString>Installing ORD-41 OVERSEER.</jobString>
         <ingredients>
             <li>
@@ -505,9 +537,20 @@
         <addsHediff>IP_ORD_41_OVERSEER</addsHediff>
     </RecipeDef>
 
+    <RecipeDef ParentName="SurgeryRemoveImplantBase">
+        <defName>IP_Remove_ORD_41_OVERSEER</defName>
+        <label>Remove ORD-41 OVERSEER</label>
+        <description>Remove ORD-41 OVERSEER</description>
+        <descriptionHyperlinks>
+            <ThingDef>IP_ORD_41_OVERSEER</ThingDef>
+        </descriptionHyperlinks>
+        <jobString>Removing ORD-41 OVERSEER.</jobString>
+        <removesHediff>IP_ORD_41_OVERSEER</removesHediff>
+    </RecipeDef>
+
     <!-- DAON-43 HARMONY -->
     <!-- 사교다툼 계수 50%(덜싸움), 외교적 영향력 10%증가(사교, 연설 등 다양한 사교활동에 이점), 정신이상 임계치 5%감소(덜미침) -->
-    <HediffDef ParentName="ImplantHediffBase">
+    <HediffDef ParentName="AddedBodyPartBase">
         <defName>IP_DAON_43_HARMONY</defName>
         <label>DAON-43 HARMONY</label>
         <labelNoun>DAON-43 HARMONY</labelNoun>
@@ -578,10 +621,10 @@
         </recipeMaker>
     </ThingDef>
 
-    <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
         <defName>IP_DAON_43_HARMONY</defName>
         <label>Installing DAON-43 HARMONY</label>
-        <description>Installs DAON-43 HARMONY.</description>
+        <description>Installs DAON-43 HARMONY</description>
         <jobString>Installing DAON-43 HARMONY.</jobString>
         <ingredients>
             <li>
@@ -607,9 +650,20 @@
         <addsHediff>IP_DAON_43_HARMONY</addsHediff>
     </RecipeDef>
 
+    <RecipeDef ParentName="SurgeryRemoveImplantBase">
+        <defName>IP_Remove_DAON_43_HARMONY</defName>
+        <label>Remove DAON-43 HARMONY</label>
+        <description>Remove DAON-43 HARMONY</description>
+        <descriptionHyperlinks>
+            <ThingDef>IP_DAON_43_HARMONY</ThingDef>
+        </descriptionHyperlinks>
+        <jobString>Removing DAON-43 HARMONY.</jobString>
+        <removesHediff>IP_DAON_43_HARMONY</removesHediff>
+    </RecipeDef>
+
     <!-- DAON-44 APPRENTICE -->
     <!-- 의식 5%증가, 학습속도 110%, 피로도 85% -->
-    <HediffDef ParentName="ImplantHediffBase">
+    <HediffDef ParentName="AddedBodyPartBase">
         <defName>IP_DAON_44_APPRENTICE</defName>
         <label>DAON-44 APPRENTICE</label>
         <labelNoun>DAON-44 APPRENTICE</labelNoun>
@@ -681,10 +735,10 @@
         </recipeMaker>
     </ThingDef>
 
-    <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
         <defName>IP_DAON_44_APPRENTICE</defName>
         <label>Installing DAON-44 APPRENTICE</label>
-        <description>Installs DAON-44 APPRENTICE.</description>
+        <description>Installs DAON-44 APPRENTICE</description>
         <jobString>Installing DAON-44 APPRENTICE.</jobString>
         <ingredients>
             <li>
@@ -710,9 +764,20 @@
         <addsHediff>IP_DAON_44_APPRENTICE</addsHediff>
     </RecipeDef>
 
+    <RecipeDef ParentName="SurgeryRemoveImplantBase">
+        <defName>IP_Remove_DAON_44_APPRENTICE</defName>
+        <label>Remove DAON-44 APPRENTICE</label>
+        <description>Remove DAON-44 APPRENTICE</description>
+        <descriptionHyperlinks>
+            <ThingDef>IP_DAON_44_APPRENTICE</ThingDef>
+        </descriptionHyperlinks>
+        <jobString>Remove DAON-44 APPRENTICE.</jobString>
+        <removesHediff>IP_DAON_44_APPRENTICE</removesHediff>
+    </RecipeDef>
+
     <!-- IMSL SENTINEL OFFICER -->
     <!-- 사격, 근접 전투, 사교 1씩 증가, 정신민감도(초능력을더 잘 쓸 수 있음)+12%, 신경열 한계치 10증가(마나통 증가와 비슷), 신경열 회복속도 0.05 증가 (마나재생 증가) -->
-    <HediffDef ParentName="ImplantHediffBase">
+    <HediffDef ParentName="AddedBodyPartBase">
         <defName>IP_IMSL_SENTINEL_OFFICER</defName>
         <label>IMSL SENTINEL OFFICER</label>
         <labelNoun>IMSL SENTINEL OFFICER</labelNoun>
@@ -782,10 +847,10 @@
         </recipeMaker>
     </ThingDef>
 
-    <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
         <defName>IP_IMSL_SENTINEL_OFFICER</defName>
         <label>Installing IMSL SENTINEL OFFICER</label>
-        <description>Installs IMSL SENTINEL OFFICER.</description>
+        <description>Installs IMSL SENTINEL OFFICER</description>
         <jobString>Installing IMSL SENTINEL OFFICER.</jobString>
         <ingredients>
             <li>
@@ -809,6 +874,17 @@
             <li>Brain</li>
         </appliedOnFixedBodyParts>
         <addsHediff>IP_IMSL_SENTINEL_OFFICER</addsHediff>
+    </RecipeDef>
+
+    <RecipeDef ParentName="SurgeryRemoveImplantBase">
+        <defName>IP_Remove_IMSL_SENTINEL_OFFICER</defName>
+        <label>Remove IMSL SENTINEL OFFICER</label>
+        <description>Remove IMSL SENTINEL OFFICER</description>
+        <descriptionHyperlinks>
+            <ThingDef>IP_IMSL_SENTINEL_OFFICER</ThingDef>
+        </descriptionHyperlinks>
+        <jobString>Remove IMSL SENTINEL OFFICER.</jobString>
+        <removesHediff>IP_IMSL_SENTINEL_OFFICER</removesHediff>
     </RecipeDef>
 
 </Defs>

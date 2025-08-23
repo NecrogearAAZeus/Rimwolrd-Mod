@@ -17,15 +17,13 @@
         <stages>
             <li>
                 <statOffsets>
-                    <ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+                    <ArmorRating_Sharp>0.30</ArmorRating_Sharp>
                     <ArmorRating_Blunt>0.15</ArmorRating_Blunt>
                     <ArmorRating_Heat>0.20</ArmorRating_Heat>
                     <VEF_MassCarryCapacity>10</VEF_MassCarryCapacity>
+                    <MeleeCooldownFactor>-0.1</MeleeCooldownFactor>
+                    <AimingDelayFactor>-0.1</AimingDelayFactor>
                 </statOffsets>
-                <statFactors>
-                    <AimingDelayFactor>0.9</AimingDelayFactor>
-                    <MeleeCooldownFactor>0.9</MeleeCooldownFactor>
-                </statFactors>
                 <capMods>
                     <li>
                         <capacity>Moving</capacity>
@@ -37,7 +35,7 @@
         <comps>
             <li Class="Implant_Plus.HediffCompProperties_EMPReaction" />
         </comps>
-
+        <spawnThingOnRemoved>IP_CombatInnerFrame</spawnThingOnRemoved>
     </HediffDef>
 
     <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
@@ -82,7 +80,7 @@
     <RecipeDef ParentName="SurgeryInstallImplantBase">
         <defName>IP_CombatInnerFrame</defName>
         <label>Installing Combat Inner Frame</label>
-        <description>Installs Combat Inner Frame.</description>
+        <description>Installs Combat Inner Frame</description>
         <jobString>Installing Combat Inner Frame.</jobString>
         <ingredients>
             <li>
@@ -103,9 +101,20 @@
             </thingDefs>
         </fixedIngredientFilter>
         <appliedOnFixedBodyParts>
-            <li>Body</li>
+            <li>Torso</li>
         </appliedOnFixedBodyParts>
         <addsHediff>IP_CombatInnerFrame</addsHediff>
+    </RecipeDef>
+
+    <RecipeDef ParentName="SurgeryRemoveImplantBase">
+        <defName>IP_Remove_CombatInnerFrame</defName>
+        <label>Remove Combat Inner Frame</label>
+        <description>Remove Combat Inner Frame</description>
+        <descriptionHyperlinks>
+            <ThingDef>IP_CombatInnerFrame</ThingDef>
+        </descriptionHyperlinks>
+        <jobString>Removing Combat Inner Frame.</jobString>
+        <removesHediff>IP_CombatInnerFrame</removesHediff>
     </RecipeDef>
 
     <!-- Worker Inner Frame -->
@@ -138,7 +147,7 @@
         <comps>
             <li Class="Implant_Plus.HediffCompProperties_EMPReaction" />
         </comps>
-
+        <spawnThingOnRemoved>IP_WorkerInnerFrame</spawnThingOnRemoved>
     </HediffDef>
 
     <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
@@ -183,7 +192,7 @@
     <RecipeDef ParentName="SurgeryInstallImplantBase">
         <defName>IP_WorkerInnerFrame</defName>
         <label>Installing Worker Inner Frame</label>
-        <description>Installs Worker Inner Frame.</description>
+        <description>Installs Worker Inner Frame</description>
         <jobString>Installing Worker Inner Frame.</jobString>
         <ingredients>
             <li>
@@ -204,9 +213,20 @@
             </thingDefs>
         </fixedIngredientFilter>
         <appliedOnFixedBodyParts>
-            <li>Body</li>
+            <li>Torso</li>
         </appliedOnFixedBodyParts>
         <addsHediff>IP_WorkerInnerFrame</addsHediff>
+    </RecipeDef>
+
+    <RecipeDef ParentName="SurgeryRemoveImplantBase">
+        <defName>IP_Remove_WorkerInnerFrame</defName>
+        <label>Remove worker inner frame</label>
+        <description>Remove worker inner frame</description>
+        <descriptionHyperlinks>
+            <ThingDef>IP_WorkerInnerFrame</ThingDef>
+        </descriptionHyperlinks>
+        <jobString>Removing worker inner frame.</jobString>
+        <removesHediff>IP_WorkerInnerFrame</removesHediff>
     </RecipeDef>
 
     <!-- Standard Inner Frame  -->
@@ -241,7 +261,7 @@
         <comps>
             <li Class="Implant_Plus.HediffCompProperties_EMPReaction" />
         </comps>
-
+        <spawnThingOnRemoved>IP_StandardInnerFrame</spawnThingOnRemoved>
     </HediffDef>
 
     <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
@@ -287,7 +307,7 @@
         <defName>IP_StandardInnerFrame</defName>
         <label>Installing Standard Inner Frame</label>
         <description>Installs Standard Inner Frame</description>
-        <jobString>Installing Standard Inner Frame</jobString>
+        <jobString>Installing Standard Inner Frame.</jobString>
         <ingredients>
             <li>
                 <filter>
@@ -307,9 +327,20 @@
             </thingDefs>
         </fixedIngredientFilter>
         <appliedOnFixedBodyParts>
-            <li>Body</li>
+            <li>Torso</li>
         </appliedOnFixedBodyParts>
         <addsHediff>IP_StandardInnerFrame</addsHediff>
+    </RecipeDef>
+
+    <RecipeDef ParentName="SurgeryRemoveImplantBase">
+        <defName>IP_Remove_StandardInnerFrame</defName>
+        <label>Remove standard inner frame</label>
+        <description>Remove standard inner frame</description>
+        <descriptionHyperlinks>
+            <ThingDef>IP_StandardInnerFrame</ThingDef>
+        </descriptionHyperlinks>
+        <jobString>Removing standard inner frame.</jobString>
+        <removesHediff>IP_StandardInnerFrame</removesHediff>
     </RecipeDef>
 
     <!-- IDC-23 SURVIVOR  -->
@@ -349,7 +380,7 @@
         <comps>
             <li Class="Implant_Plus.HediffCompProperties_EMPReaction" />
         </comps>
-
+        <spawnThingOnRemoved>IP_IDC_23_SURVIVOR</spawnThingOnRemoved>
     </HediffDef>
 
     <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
@@ -398,7 +429,7 @@
         <defName>IP_IDC_23_SURVIVOR</defName>
         <label>Installing IDC-23 SURVIVOR</label>
         <description>Installs IDC-23 SURVIVOR</description>
-        <jobString>Installing IDC-23 SURVIVOR</jobString>
+        <jobString>Installing IDC-23 SURVIVOR.</jobString>
         <ingredients>
             <li>
                 <filter>
@@ -418,9 +449,20 @@
             </thingDefs>
         </fixedIngredientFilter>
         <appliedOnFixedBodyParts>
-            <li>Body</li>
+            <li>Torso</li>
         </appliedOnFixedBodyParts>
-        <addsHediff>IP_StandardInnerFrame</addsHediff>
+        <addsHediff>IP_IDC_23_SURVIVOR</addsHediff>
+    </RecipeDef>
+
+    <RecipeDef ParentName="SurgeryRemoveImplantBase">
+        <defName>IP_Remove_IDC_23_SURVIVOR</defName>
+        <label>Remove IDC-23 SURVIVOR</label>
+        <description>Remove IDC-23 SURVIVOR</description>
+        <descriptionHyperlinks>
+            <ThingDef>IP_IDC_23_SURVIVOR</ThingDef>
+        </descriptionHyperlinks>
+        <jobString>Removing IDC-23 SURVIVOR.</jobString>
+        <removesHediff>IP_IDC_23_SURVIVOR</removesHediff>
     </RecipeDef>
 
     <!-- DAON-31 VAITALBOOST  -->
@@ -457,7 +499,7 @@
         <comps>
             <li Class="Implant_Plus.HediffCompProperties_EMPReaction" />
         </comps>
-
+        <spawnThingOnRemoved>IP_DAON_31_VAITALBOOST</spawnThingOnRemoved>
     </HediffDef>
 
     <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
@@ -506,7 +548,7 @@
         <defName>IP_DAON_31_VAITALBOOST</defName>
         <label>Installing DAON-31 VAITALBOOST</label>
         <description>Installs DAON-31 VAITALBOOST</description>
-        <jobString>Installing DAON-31 VAITALBOOST</jobString>
+        <jobString>Installing DAON-31 VAITALBOOST.</jobString>
         <ingredients>
             <li>
                 <filter>
@@ -526,9 +568,20 @@
             </thingDefs>
         </fixedIngredientFilter>
         <appliedOnFixedBodyParts>
-            <li>Body</li>
+            <li>Torso</li>
         </appliedOnFixedBodyParts>
-        <addsHediff>IP_StandardInnerFrame</addsHediff>
+        <addsHediff>IP_DAON_31_VAITALBOOST</addsHediff>
+    </RecipeDef>
+
+    <RecipeDef ParentName="SurgeryRemoveImplantBase">
+        <defName>IP_Remove_DAON_31_VAITALBOOST</defName>
+        <label>Remove DAON-31 VAITALBOOST</label>
+        <description>Remove DAON-31 VAITALBOOST</description>
+        <descriptionHyperlinks>
+            <ThingDef>IP_DAON_31_VAITALBOOST</ThingDef>
+        </descriptionHyperlinks>
+        <jobString>Removing DAON-31 VAITALBOOST.</jobString>
+        <removesHediff>IP_DAON_31_VAITALBOOST</removesHediff>
     </RecipeDef>
 
     <!-- ORD-25 EVOLUTION -->
@@ -556,7 +609,7 @@
                     </li>
                     <li>
                         <capacity>Consciousness</capacity>
-                        <offset>0.1</offset>
+                        <offset>0.05</offset>
                     </li>
                 </capMods>
                 <statOffsets>
@@ -569,7 +622,7 @@
         <comps>
             <li Class="Implant_Plus.HediffCompProperties_EMPReaction" />
         </comps>
-
+        <spawnThingOnRemoved>IP_ORD_25_EVOLUTION</spawnThingOnRemoved>
     </HediffDef>
 
     <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
@@ -618,7 +671,7 @@
         <defName>IP_ORD_25_EVOLUTION</defName>
         <label>Installing ORD-25 EVOLUTION</label>
         <description>Installs ORD-25 EVOLUTION</description>
-        <jobString>Installing ORD-25 EVOLUTION</jobString>
+        <jobString>Installing ORD-25 EVOLUTION.</jobString>
         <ingredients>
             <li>
                 <filter>
@@ -638,9 +691,20 @@
             </thingDefs>
         </fixedIngredientFilter>
         <appliedOnFixedBodyParts>
-            <li>Body</li>
+            <li>Torso</li>
         </appliedOnFixedBodyParts>
-        <addsHediff>IP_StandardInnerFrame</addsHediff>
+        <addsHediff>IP_ORD_25_EVOLUTION</addsHediff>
+    </RecipeDef>
+
+    <RecipeDef ParentName="SurgeryRemoveImplantBase">
+        <defName>IP_Remove_ORD_25_EVOLUTION</defName>
+        <label>Remove ORD-25 EVOLUTION</label>
+        <description>Remove ORD-25 EVOLUTION</description>
+        <descriptionHyperlinks>
+            <ThingDef>IP_ORD_25_EVOLUTION</ThingDef>
+        </descriptionHyperlinks>
+        <jobString>Removing ORD-25 EVOLUTION.</jobString>
+        <removesHediff>IP_ORD_25_EVOLUTION</removesHediff>
     </RecipeDef>
 
     <!-- IMSL BASTION SHIELD -->
@@ -657,27 +721,28 @@
         <spawnThingOnRemoved>IP_IMSL_BASTION_SHIELD</spawnThingOnRemoved>
         <stages>
             <li>
+                <statOffsets>
+                    <ArmorRating_Sharp>0.50</ArmorRating_Sharp>
+                    <ArmorRating_Blunt>0.25</ArmorRating_Blunt>
+                    <ArmorRating_Heat>0.35</ArmorRating_Heat>
+                    <StaggerDurationFactor>0.75</StaggerDurationFactor>
+                </statOffsets>
+                <statFactors>
+                    <IncomingDamageFactor>0.80</IncomingDamageFactor>
+
+                </statFactors>
                 <capMods>
                     <li>
                         <capacity>Moving</capacity>
                         <offset>-0.25</offset>
                     </li>
                 </capMods>
-                <statOffsets>
-                    <ArmorRating_Sharp>0.50</ArmorRating_Sharp>
-                    <ArmorRating_Blunt>0.25</ArmorRating_Blunt>
-                    <ArmorRating_Heat>0.35</ArmorRating_Heat>
-                </statOffsets>
-                <statFactors>
-                    <IncomingDamageFactor>0.80</IncomingDamageFactor>
-                    <StaggerDurationFactor>0.75</StaggerDurationFactor>
-                </statFactors>
             </li>
         </stages>
         <comps>
             <li Class="Implant_Plus.HediffCompProperties_EMPReaction" />
         </comps>
-
+        <spawnThingOnRemoved>IP_IMSL_BASTION_SHIELD</spawnThingOnRemoved>
     </HediffDef>
 
     <ThingDef ParentName="IP_BodyPartAdvancedProstheticMakeableBase">
@@ -726,7 +791,7 @@
         <defName>IP_IMSL_BASTION_SHIELD</defName>
         <label>Installing IMSL BASTION SHIELD</label>
         <description>Installs IMSL BASTION SHIELD</description>
-        <jobString>Installing IMSL BASTION SHIELD</jobString>
+        <jobString>Installing IMSL BASTION SHIELD.</jobString>
         <ingredients>
             <li>
                 <filter>
@@ -746,9 +811,20 @@
             </thingDefs>
         </fixedIngredientFilter>
         <appliedOnFixedBodyParts>
-            <li>Body</li>
+            <li>Torso</li>
         </appliedOnFixedBodyParts>
-        <addsHediff>IP_StandardInnerFrame</addsHediff>
+        <addsHediff>IP_IMSL_BASTION_SHIELD</addsHediff>
+    </RecipeDef>
+
+    <RecipeDef ParentName="SurgeryRemoveImplantBase">
+        <defName>IP_Remove_IMSL_BASTION_SHIELD</defName>
+        <label>Remove IMSL BASTION SHIELD</label>
+        <description>Remove IMSL BASTION SHIELD</description>
+        <descriptionHyperlinks>
+            <ThingDef>IP_IMSL_BASTION_SHIELD</ThingDef>
+        </descriptionHyperlinks>
+        <jobString>Removing IMSL BASTION SHIELD.</jobString>
+        <removesHediff>IP_IMSL_BASTION_SHIELD</removesHediff>
     </RecipeDef>
 
 </Defs>

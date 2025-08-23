@@ -6,7 +6,7 @@
 
     <!-- AdvancedProsthesis Kideny -->
 
-    <HediffDef ParentName="ImplantHediffBase">
+    <HediffDef ParentName="AddedBodyPartBase">
         <defName>IP_AdvancedProsthesisKideny</defName>
         <label>Advanced Prosthesis Kideny</label>
         <labelNoun>Advanced Prosthesis Kideny</labelNoun>
@@ -61,10 +61,10 @@
         </recipeMaker>
     </ThingDef>
 
-    <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
         <defName>IP_AdvancedProsthesisKideny</defName>
         <label>Installing Advanced Prosthesis Kideny</label>
-        <description>Installs Advanced Prosthesis Kideny.</description>
+        <description>Installs Advanced Prosthesis Kideny</description>
         <jobString>Installing Advanced Prosthesis Kideny.</jobString>
         <ingredients>
             <li>

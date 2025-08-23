@@ -65,7 +65,7 @@
     <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
         <defName>IP_AdvancedCochlearImplant</defName>
         <label>Installing Advanced Cochlear Implant</label>
-        <description>Installs Advanced Cochlear Implant.</description>
+        <description>Installs Advanced Cochlear Implant</description>
         <jobString>Installing Advanced Cochlear Implant.</jobString>
         <ingredients>
             <li>

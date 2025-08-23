@@ -60,10 +60,10 @@
         </recipeMaker>
     </ThingDef>
 
-    <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
         <defName>IP_AdvancedProsthesisNose</defName>
         <label>Installing Advanced Prosthesis Nose</label>
-        <description>Installs Advanced Prosthesis Nose.</description>
+        <description>Installs Advanced Prosthesis Nose</description>
         <jobString>Installing Advanced Prosthesis Nose.</jobString>
         <ingredients>
             <li>
@@ -155,10 +155,10 @@
         </recipeMaker>
     </ThingDef>
 
-    <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
         <defName>IP_IDC_31_VEINHOUND</defName>
         <label>Installing IDC-31 VEINHOUND</label>
-        <description>Installs IDC-31 VEINHOUND.</description>
+        <description>Installs IDC-31 VEINHOUND</description>
         <jobString>Installing IDC-31 VEINHOUND.</jobString>
         <ingredients>
             <li>
@@ -234,7 +234,7 @@
         <recipeMaker>
             <researchPrerequisites>
                 <li>IP_AdvancedProsthetic</li>
-                <li>IP_IDC_BasicModule</li>
+                <li>IP_DaoN_StandardSeries</li>
             </researchPrerequisites>
             <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
             <workSkill>Crafting</workSkill>
@@ -251,10 +251,10 @@
         </recipeMaker>
     </ThingDef>
 
-    <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
         <defName>IP_DAON_28_CHEF_FRESHPRO</defName>
         <label>Installing DAON-28 CHEF FRESHPRO</label>
-        <description>Installs DAON-28 CHEF FRESHPRO.</description>
+        <description>Installs DAON-28 CHEF FRESHPRO</description>
         <jobString>Installing DAON-28 CHEF FRESHPRO.</jobString>
         <ingredients>
             <li>
@@ -342,10 +342,10 @@
         </recipeMaker>
     </ThingDef>
 
-    <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
         <defName>IP_IMSL_SENTINEL_STALKER</defName>
         <label>Installing IMSL SENTINEL STALKER</label>
-        <description>Installs IMSL SENTINEL STALKER.</description>
+        <description>Installs IMSL SENTINEL STALKER</description>
         <jobString>Installing IMSL SENTINEL STALKER.</jobString>
         <ingredients>
             <li>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- IP_ORD_03_CODEX_SHIELD_BUBBLE -->
+
+    <ThingDef ParentName="ApparelBase">
+        <defName>IP_ORD_03_CODEX_SHIELD_BUBBLE</defName>
+        <label>Codex shield</label>
+        <description>An energe Shield from ORD-03 CODEX SHIELD.</description>
+        <graphicData>
+            <texPath>Things/Pawn/Humanlike/Apparel/ShieldBelt/ShieldBelt</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <apparel>
+            <layers>
+                <li>IP_ProstheticShieldLayer</li>
+            </layers>
+            <bodyPartGroups>
+                <li>Torso</li>
+            </bodyPartGroups>
+            <careIfWornByCorpse>false</careIfWornByCorpse>
+        </apparel>
+        <smeltable>false</smeltable>
+        <tradeability>None</tradeability>
+        <generateCommonality>0</generateCommonality>
+        <techLevel>Industrial</techLevel>
+        <tickerType>Normal</tickerType>
+        <statBases>
+            <Mass>0</Mass>
+            <MarketValue>0</MarketValue>
+            <ArmorRating_Sharp>0</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0</ArmorRating_Blunt>
+            <ArmorRating_Heat>0</ArmorRating_Heat>
+            <EnergyShieldRechargeRate>0.02</EnergyShieldRechargeRate>
+            <EnergyShieldEnergyMax>1</EnergyShieldEnergyMax>
+        </statBases>
+
+        <tradeTags>
+            <li>IP_ORD_ShieldEmitter</li>
+        </tradeTags>
+        <comps>
+            <li Class="VEF.Apparels.CompProperties_ShieldBubble">
+                <compClass>VEF.Apparels.CompShieldBubble</compClass>
+                <EnergyShieldRechargeRate>0.1</EnergyShieldRechargeRate>
+                <EnergyShieldEnergyMax>90</EnergyShieldEnergyMax>
+                <blockRangedAttack>true</blockRangedAttack>
+                <blockMeleeAttack>false</blockMeleeAttack>
+                <dontAllowRangedAttack>true</dontAllowRangedAttack>
+                <dontAllowMeleeAttack>false</dontAllowMeleeAttack>
+                <shieldTexPath>Other/ShieldBubble</shieldTexPath>
+                <showWhenDrafted>true</showWhenDrafted>
+                <showAlways>false</showAlways>
+                <maxShieldSize>2.0</maxShieldSize>
+                <minShieldSize>1.8</minShieldSize>
+                <shieldColor>(1,1,1,1)</shieldColor>
+                <absorbDamageSound>EnergyShield_AbsorbDamage</absorbDamageSound>
+                <brokenSound>EnergyShield_Broken</brokenSound>
+                <resetSound>EnergyShield_Reset</resetSound>
+            </li>
+        </comps>
+    </ThingDef>
+</Defs>
